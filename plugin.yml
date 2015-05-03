@@ -1,11 +1,22 @@
-name: HexiTrading
-main: com.hexicraft.trading.Main
+name: HexiTrade
+main: com.hexicraft.trade.Main
 version: 1.0
 description: A trading plugin that varies the price of items depending on their demand.
 commands:
     trade:
         description: Gives information on the trading plugin.
         usage: /trade
-        permission: hexitrading.user
+        permission: hexitrade.user
         permission-message: You don't have permission to do this.
         aliases: [hexitrade, ht]
+    sell:
+        description: Sells the item in your hand
+        usage: /sell
+        permission: hexitrade.user
+        permission-message: You don't have permission to do this.
+    price:
+        description: Gives the price of the item in your hand
+        usage: /price
+        permission: hexitrade.user
+        permission-message: You don't have permission to do this.
+        aliases: [value, worth]
