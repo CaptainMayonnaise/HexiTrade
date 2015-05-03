@@ -6,8 +6,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Timer;
-import java.util.TimerTask;
 
 /**
  * @author Ollie
@@ -23,22 +21,6 @@ public class YamlFile extends YamlConfiguration {
         configFile = new File(plugin.getDataFolder(), fileName);
 
         loadFile();
-
-        periodicSave(60);
-    }
-
-    /**
-     * Saves the file every few seconds
-     * @param seconds The period to save the file after
-     */
-    private void periodicSave(long seconds) {
-        long milliseconds = seconds * 1000;
-        Timer timer = new Timer();
-        timer.schedule( new TimerTask() {
-            public void run() {
-                saveFile();
-            }
-        }, milliseconds, milliseconds);
     }
 
     /**

@@ -16,14 +16,13 @@ public class Main extends JavaPlugin {
 
     private YamlFile items;
 
-    public static final double PERCENT_CHANGE = 0.9;
+    public static final double PERCENT_CHANGE = 1.1;
 
     /**
      * Run when the plugin is enabled, loads the item prices
      */
     @Override
     public void onEnable() {
-        // TODO: This should only be loaded each time it is needed (seems to be how other people do it)
         items = new YamlFile(this, "items.yml");
         updateItems();
     }
@@ -95,8 +94,9 @@ public class Main extends JavaPlugin {
         MaterialData data = player.getItemInHand().getData();
         String path = data.getItemType().getId() + "." + data.getData();
         double price = items.getDouble(path);
-        price = price * PERCENT_CHANGE;
+        price = price / PERCENT_CHANGE;
         items.set(path, price);
+        items.saveFile();
         return ReturnCode.SUCCESS;
     }
 
