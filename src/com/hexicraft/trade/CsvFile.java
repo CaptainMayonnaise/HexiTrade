@@ -27,6 +27,10 @@ public class CsvFile implements Iterable<CSVRecord> {
         }
     }
 
+    /**
+     * The iterator of the CSVParser
+     * @return The iterator
+     */
     public Iterator<CSVRecord> iterator() {
         return parser.iterator();
     }

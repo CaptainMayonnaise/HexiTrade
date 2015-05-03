@@ -75,12 +75,22 @@ public class Main extends JavaPlugin {
         return true;
     }
 
+    /**
+     * Will probably be a help command later
+     * @param player Player who needs help
+     * @return Success!
+     */
     private ReturnCode trade(Player player) {
         player.sendMessage("Well done on typing this command :).");
         return ReturnCode.SUCCESS;
     }
 
-    @SuppressWarnings("deprecation") // FU Mojang
+    /**
+     * 'Sells' the item in player's hand
+     * @param player Player who is selling their item
+     * @return Success!
+     */
+    @SuppressWarnings("deprecation") // FU Mojang (/ Bukkit?)
     private ReturnCode sell(Player player) {
         MaterialData data = player.getItemInHand().getData();
         String path = data.getItemType().getId() + "." + data.getData();
@@ -90,7 +100,12 @@ public class Main extends JavaPlugin {
         return ReturnCode.SUCCESS;
     }
 
-    @SuppressWarnings("deprecation") // FU Mojang
+    /**
+     * Reports the price of the item in hand
+     * @param player Player who asked for price
+     * @return Success!
+     */
+    @SuppressWarnings("deprecation") // FU Mojang (/ Bukkit?)
     private ReturnCode price(Player player) {
         MaterialData data = player.getItemInHand().getData();
         String path = data.getItemType().getId() + "." + data.getData();
@@ -98,6 +113,9 @@ public class Main extends JavaPlugin {
         return ReturnCode.SUCCESS;
     }
 
+    /**
+     * Updates the item price list with any new items in the essentials items.csv file
+     */
     private void updateItems() {
         try {
             CsvFile csv = new CsvFile(this,

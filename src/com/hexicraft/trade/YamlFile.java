@@ -17,7 +17,6 @@ public class YamlFile extends YamlConfiguration {
 
     private JavaPlugin plugin;
     private File configFile;
-    private boolean newFile = false;
 
     YamlFile(JavaPlugin plugin, String fileName) {
         this.plugin = plugin;
@@ -30,7 +29,7 @@ public class YamlFile extends YamlConfiguration {
 
     /**
      * Saves the file every few seconds
-     * @param seconds the period to save the file after
+     * @param seconds The period to save the file after
      */
     private void periodicSave(long seconds) {
         long milliseconds = seconds * 1000;
@@ -49,7 +48,6 @@ public class YamlFile extends YamlConfiguration {
         try {
             if (!configFile.exists()) {
                 saveFile();
-                newFile = true;
             }
             load(configFile);
         } catch (InvalidConfigurationException | IOException e) {
@@ -66,9 +64,5 @@ public class YamlFile extends YamlConfiguration {
         } catch (IOException e) {
             plugin.getLogger().warning("Error saving configuration file.\n" + e.getMessage());
         }
-    }
-
-    public boolean isNewFile() {
-        return newFile;
     }
 }
