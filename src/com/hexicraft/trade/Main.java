@@ -1,12 +1,15 @@
 package com.hexicraft.trade;
 
+import net.milkbowl.vault.economy.Economy;
 import org.apache.commons.csv.CSVRecord;
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.material.MaterialData;
+import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.io.File;
 
 /**
  * @author Ollie
@@ -15,6 +18,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin {
 
     private YamlFile items;
+    public static Economy econ = null;
 
     public static final double PERCENT_CHANGE = 1.1;
 
@@ -23,8 +27,63 @@ public class Main extends JavaPlugin {
      */
     @Override
     public void onEnable() {
+        if (!setupEconomy()) {
+            getLogger().severe("Missing dependency: Vault.");
+            getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
+
         items = new YamlFile(this, "items.yml");
-        updateItems();
+        if (!updateItems()) {
+            getLogger().severe("Missing dependency: Vault.");
+            getServer().getPluginManager().disablePlugin(this);
+        }
+    }
+
+    /**
+     * Sets the economy plugin
+     * @return True if Vault is found, false otherwise
+     */
+    private boolean setupEconomy() {
+        if (getServer().getPluginManager().getPlugin("Vault") == null) {
+            return false;
+        }
+
+        RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
+        if (rsp == null) {
+            return false;
+        }
+
+        econ = rsp.getProvider();
+        return econ != null;
+    }
+
+    /**
+     * Updates the item price list with any new items in the essentials items.csv file
+     * @return True if Essentials is found, false otherwise
+     */
+    private boolean updateItems() {
+        if (getServer().getPluginManager().getPlugin("Essentials") == null) {
+            return false;
+        }
+
+        File file = new File(getServer().getPluginManager().getPlugin("Essentials").getDataFolder(), "items.csv");
+        if (!file.exists()) {
+            return false;
+        }
+
+        CsvFile csv = new CsvFile(this, file);
+        for (CSVRecord record : csv) {
+            if (record.size() >= 3 && !record.get(1).equals("id")) {
+                String path = record.get(1) + "." + record.get(2);
+                if (items.get(path) == null) {
+                    items.set(path, 50.0);
+                }
+            }
+        }
+        items.saveFile();
+
+        return true;
     }
 
     /**
@@ -97,6 +156,7 @@ public class Main extends JavaPlugin {
         price = price / PERCENT_CHANGE;
         items.set(path, price);
         items.saveFile();
+        player.getInventory().setItemInHand(null);
         return ReturnCode.SUCCESS;
     }
 
@@ -111,26 +171,5 @@ public class Main extends JavaPlugin {
         String path = data.getItemType().getId() + "." + data.getData();
         player.sendMessage(String.valueOf(items.getDouble(path)));
         return ReturnCode.SUCCESS;
-    }
-
-    /**
-     * Updates the item price list with any new items in the essentials items.csv file
-     */
-    private void updateItems() {
-        try {
-            CsvFile csv = new CsvFile(this,
-                    Bukkit.getServer().getPluginManager().getPlugin("Essentials").getDataFolder(), "items.csv");
-            for (CSVRecord record : csv) {
-                if (record.size() >= 3 && !record.get(1).equals("id")) {
-                    String path = record.get(1) + "." + record.get(2);
-                    if (items.get(path) == null) {
-                        items.set(path, 50.0);
-                    }
-                }
-            }
-            items.saveFile();
-        } catch (NullPointerException e) {
-            getLogger().warning("Missing dependency: Essentials.\n" + e.getMessage());
-        }
     }
 }

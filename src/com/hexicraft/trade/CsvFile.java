@@ -18,8 +18,7 @@ public class CsvFile implements Iterable<CSVRecord> {
 
     CSVParser parser;
 
-    CsvFile(JavaPlugin plugin, File dataFolder, String fileName) {
-        File file = new File(dataFolder, fileName);
+    CsvFile(JavaPlugin plugin, File file) {
         try {
             parser = new CSVParser(new FileReader(file), CSVFormat.DEFAULT);
         } catch (IOException e) {

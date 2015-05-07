@@ -2,6 +2,7 @@ name: HexiTrade
 main: com.hexicraft.trade.Main
 version: 1.0
 description: A trading plugin that varies the price of items depending on their demand.
+depend: [Essentials, Vault]
 commands:
     trade:
         description: Gives information on the trading plugin.
