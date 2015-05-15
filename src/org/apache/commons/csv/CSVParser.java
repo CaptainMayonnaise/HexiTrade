@@ -129,6 +129,7 @@ import static org.apache.commons.csv.Token.Type.*;
  *
  * @see <a href="package-summary.html">package documentation for more details</a>
  */
+@SuppressWarnings("ALL")
 public final class CSVParser implements Iterable<CSVRecord>, Closeable {
 
     /**

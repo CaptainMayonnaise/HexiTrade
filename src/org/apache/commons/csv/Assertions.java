@@ -22,6 +22,7 @@ package org.apache.commons.csv;
  *
  * @version $Id: Assertions.java 1559908 2014-01-21 02:44:30Z ggregory $
  */
+@SuppressWarnings("ALL")
 final class Assertions {
 
     private Assertions() {

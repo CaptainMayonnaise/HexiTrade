@@ -17,27 +17,19 @@
 
 package org.apache.commons.csv;
 
-import static org.apache.commons.csv.Constants.BACKSPACE;
-import static org.apache.commons.csv.Constants.CR;
-import static org.apache.commons.csv.Constants.END_OF_STREAM;
-import static org.apache.commons.csv.Constants.FF;
-import static org.apache.commons.csv.Constants.LF;
-import static org.apache.commons.csv.Constants.TAB;
-import static org.apache.commons.csv.Constants.UNDEFINED;
-import static org.apache.commons.csv.Token.Type.COMMENT;
-import static org.apache.commons.csv.Token.Type.EOF;
-import static org.apache.commons.csv.Token.Type.EORECORD;
-import static org.apache.commons.csv.Token.Type.INVALID;
-import static org.apache.commons.csv.Token.Type.TOKEN;
-
 import java.io.Closeable;
 import java.io.IOException;
+
+import static org.apache.commons.csv.Constants.*;
+import static org.apache.commons.csv.Token.Type.COMMENT;
+import static org.apache.commons.csv.Token.Type.*;
 
 /**
  * Lexical analyzer.
  *
  * @version $Id: Lexer.java 1635502 2014-10-30 14:01:43Z ggregory $
  */
+@SuppressWarnings("ALL")
 final class Lexer implements Closeable {
 
     /**

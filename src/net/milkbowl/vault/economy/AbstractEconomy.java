@@ -2,7 +2,7 @@ package net.milkbowl.vault.economy;
 
 import org.bukkit.OfflinePlayer;
 
-@SuppressWarnings("deprecation")
+@SuppressWarnings("ALL")
 public abstract class AbstractEconomy implements Economy {
 
 	@Override

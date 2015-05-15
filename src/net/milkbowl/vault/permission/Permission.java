@@ -15,8 +15,6 @@
  */
 package net.milkbowl.vault.permission;
 
-import java.util.logging.Logger;
-
 import org.bukkit.OfflinePlayer;
 import org.bukkit.World;
 import org.bukkit.command.CommandSender;
@@ -25,10 +23,13 @@ import org.bukkit.permissions.PermissionAttachment;
 import org.bukkit.permissions.PermissionAttachmentInfo;
 import org.bukkit.plugin.Plugin;
 
+import java.util.logging.Logger;
+
 /**
  * The main Permission API - allows for group and player based permission tests
  *
  */
+@SuppressWarnings("ALL")
 public abstract class Permission {
 
 	protected static final Logger log = Logger.getLogger("Minecraft");

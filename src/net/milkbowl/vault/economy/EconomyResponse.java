@@ -21,6 +21,7 @@ package net.milkbowl.vault.economy;
  * the method, or if the operation was a success or failure.
  *
  */
+@SuppressWarnings("ALL")
 public class EconomyResponse {
 
     /**

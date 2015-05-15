@@ -18,6 +18,7 @@ package net.milkbowl.vault.item;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
+@SuppressWarnings("ALL")
 public class ItemInfo {
 
     public final Material material;

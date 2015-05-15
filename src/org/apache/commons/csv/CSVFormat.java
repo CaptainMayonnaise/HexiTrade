@@ -17,14 +17,6 @@
 
 package org.apache.commons.csv;
 
-import static org.apache.commons.csv.Constants.BACKSLASH;
-import static org.apache.commons.csv.Constants.COMMA;
-import static org.apache.commons.csv.Constants.CR;
-import static org.apache.commons.csv.Constants.CRLF;
-import static org.apache.commons.csv.Constants.DOUBLE_QUOTE_CHAR;
-import static org.apache.commons.csv.Constants.LF;
-import static org.apache.commons.csv.Constants.TAB;
-
 import java.io.IOException;
 import java.io.Reader;
 import java.io.Serializable;
@@ -35,6 +27,8 @@ import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+
+import static org.apache.commons.csv.Constants.*;
 
 /**
  * Specifies the format of a CSV file and parses input.
@@ -145,6 +139,7 @@ import java.util.Set;
  *
  * @version $Id: CSVFormat.java 1638699 2014-11-12 03:49:31Z ggregory $
  */
+@SuppressWarnings("ALL")
 public final class CSVFormat implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -16,14 +16,15 @@
 
 package net.milkbowl.vault.economy;
 
-import java.util.List;
-
 import org.bukkit.OfflinePlayer;
+
+import java.util.List;
 
 /**
  * The main economy API
  *
  */
+@SuppressWarnings("ALL")
 public interface Economy {
 
     /**

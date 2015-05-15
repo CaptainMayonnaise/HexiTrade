@@ -22,6 +22,7 @@ package org.apache.commons.csv;
  *
  * @version $Id: Constants.java 1582822 2014-03-28 16:52:17Z sebb $
  */
+@SuppressWarnings("ALL")
 final class Constants {
 
     static final char BACKSPACE = '\b';

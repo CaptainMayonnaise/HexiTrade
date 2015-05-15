@@ -17,14 +17,11 @@
 
 package org.apache.commons.csv;
 
-import static org.apache.commons.csv.Constants.CR;
-import static org.apache.commons.csv.Constants.END_OF_STREAM;
-import static org.apache.commons.csv.Constants.LF;
-import static org.apache.commons.csv.Constants.UNDEFINED;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
+
+import static org.apache.commons.csv.Constants.*;
 
 /**
  * A special buffered reader which supports sophisticated read access.
@@ -35,6 +32,7 @@ import java.io.Reader;
  *
  * @version $Id: ExtendedBufferedReader.java 1635146 2014-10-29 14:31:07Z ggregory $
  */
+@SuppressWarnings("ALL")
 final class ExtendedBufferedReader extends BufferedReader {
 
     /** The last char returned */

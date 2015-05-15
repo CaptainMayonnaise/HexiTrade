@@ -21,6 +21,7 @@ package org.apache.commons.csv;
  *
  * @version $Id: QuoteMode.java 1612344 2014-07-21 16:32:08Z britter $
  */
+@SuppressWarnings("ALL")
 public enum QuoteMode {
 
     /**

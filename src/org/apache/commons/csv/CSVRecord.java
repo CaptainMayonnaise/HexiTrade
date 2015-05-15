@@ -30,6 +30,7 @@ import java.util.Map.Entry;
  *
  * @version $Id: CSVRecord.java 1635147 2014-10-29 14:31:37Z ggregory $
  */
+@SuppressWarnings("ALL")
 public final class CSVRecord implements Serializable, Iterable<String> {
 
     private static final String[] EMPTY_STRING_ARRAY = new String[0];

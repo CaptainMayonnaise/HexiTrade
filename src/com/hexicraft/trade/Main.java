@@ -150,13 +150,16 @@ public class Main extends JavaPlugin {
      */
     @SuppressWarnings("deprecation") // FU Mojang (/ Bukkit?)
     private ReturnCode sell(Player player) {
-        MaterialData data = player.getItemInHand().getData();
-        String path = data.getItemType().getId() + "." + data.getData();
-        double price = items.getDouble(path);
-        price = price / PERCENT_CHANGE;
-        items.set(path, price);
+        MaterialData data = player.getItemInHand().getData(); // Data of item in hand
+        String path = data.getItemType().getId() + "." + data.getData(); // YAML path of item
+        double price = items.getDouble(path) / PERCENT_CHANGE; // Set price as old price / %change
+
+        items.set(path, price); // Set new price of item
         items.saveFile();
-        player.getInventory().setItemInHand(null);
+
+        econ.depositPlayer(player, price); // Give the player the money
+        player.getInventory().setItemInHand(null); // Take the item
+
         return ReturnCode.SUCCESS;
     }
 

@@ -25,6 +25,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@SuppressWarnings("ALL")
 public class Items {
 
     private static final List<ItemInfo> items = new CopyOnWriteArrayList<ItemInfo>();

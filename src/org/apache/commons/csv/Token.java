@@ -26,6 +26,7 @@ import static org.apache.commons.csv.Token.Type.INVALID;
  *
  * @version $Id: Token.java 1509069 2013-08-01 02:04:27Z ggregory $
  */
+@SuppressWarnings("ALL")
 final class Token {
 
     /** length of the initial token (content-)buffer */
