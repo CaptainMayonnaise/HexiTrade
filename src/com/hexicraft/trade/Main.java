@@ -1,24 +1,35 @@
 package com.hexicraft.trade;
 
 import net.milkbowl.vault.economy.Economy;
-import org.apache.commons.csv.CSVRecord;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.material.MaterialData;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.File;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author Ollie
  * @version 1.0
  */
-public class Main extends JavaPlugin {
+public class Main extends JavaPlugin implements Listener {
 
-    private YamlFile items;
-    public static Economy econ = null;
+    private ItemsFile items;
+    private Economy econ = null;
+    private ArrayList<Inventory> inventories = new ArrayList<>();
 
     public static final double PERCENT_CHANGE = 1.1;
 
@@ -27,17 +38,18 @@ public class Main extends JavaPlugin {
      */
     @Override
     public void onEnable() {
+        getServer().getPluginManager().registerEvents(this, this);
+
+
         if (!setupEconomy()) {
             getLogger().severe("Missing dependency: Vault.");
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
 
-        items = new YamlFile(this, "items.yml");
-        if (!updateItems()) {
-            getLogger().severe("Missing dependency: Vault.");
-            getServer().getPluginManager().disablePlugin(this);
-        }
+        items = new ItemsFile(this, "items.yml");
+
+        setupInventories();
     }
 
     /**
@@ -58,32 +70,62 @@ public class Main extends JavaPlugin {
         return econ != null;
     }
 
-    /**
-     * Updates the item price list with any new items in the essentials items.csv file
-     * @return True if Essentials is found, false otherwise
-     */
-    private boolean updateItems() {
-        if (getServer().getPluginManager().getPlugin("Essentials") == null) {
-            return false;
-        }
+    @SuppressWarnings("deprecation")  // FU Mojang (/ Bukkit?)
+    private void setupInventories() {
+        Set<String> itemSet = items.getKeys(true);
 
-        File file = new File(getServer().getPluginManager().getPlugin("Essentials").getDataFolder(), "items.csv");
-        if (!file.exists()) {
-            return false;
-        }
-
-        CsvFile csv = new CsvFile(this, file);
-        for (CSVRecord record : csv) {
-            if (record.size() >= 3 && !record.get(1).equals("id")) {
-                String path = record.get(1) + "." + record.get(2);
-                if (items.get(path) == null) {
-                    items.set(path, 50.0);
-                }
+        // Remove the root elements
+        Set<String> removeSet = new HashSet<>();
+        for (String element : itemSet) {
+            if (!element.contains(".")) {
+                removeSet.add(element);
             }
         }
-        items.saveFile();
+        itemSet.removeAll(removeSet);
 
-        return true;
+        // Initialise variables for loop
+        Inventory inventory = Bukkit.createInventory(null, 54, "HexiTrade");
+        inventory.setItem(4, generatePage("Page 1", "Current page"));
+        int count = 0;
+
+        // Add each item to an inventory
+        for (String element : itemSet) {
+            int slot = count % 45; // Each inventory can have 45 items
+            String[] split = element.split("\\.");
+            inventory.setItem(
+                    slot + 9,
+                    new MaterialData(
+                            Integer.parseInt(split[0]),
+                            (byte) Integer.parseInt(split[1])
+                    ).toItemStack(1)
+            );
+
+            if (slot == 44) { // If the last slot was filled
+                inventory.setItem(6, generatePage("Page " + (count / 45 + 2), "Next page"));
+                inventories.add(inventory);
+                inventory = Bukkit.createInventory(null, 54, "HexiTrade");
+                inventory.setItem(2, generatePage("Page " + (count / 45 + 1), "Previous page"));
+                count++;
+                inventory.setItem(4, generatePage("Page " + (count / 45 + 1), "Current page"));
+            } else {
+                count++;
+            }
+        }
+        inventories.add(inventory); // Add the last incomplete inventory
+    }
+
+    private ItemStack generatePage(String title, String desc) {
+        ItemStack paper = new MaterialData(Material.PAPER).toItemStack(1);
+
+        ItemMeta meta = paper.getItemMeta();
+        meta.setDisplayName(ChatColor.RESET + title);
+
+        ArrayList<String> descList = new ArrayList<>();
+        descList.add(ChatColor.GOLD + desc);
+        meta.setLore(descList);
+
+        paper.setItemMeta(meta);
+        return paper;
     }
 
     /**
@@ -118,6 +160,9 @@ public class Main extends JavaPlugin {
                     break;
                 case "price":
                     code = price(player);
+                    break;
+                case "buy":
+                    code = buy(player);
                     break;
                 default:
                     code = ReturnCode.UNRECOGNISED_COMMAND;
@@ -174,5 +219,28 @@ public class Main extends JavaPlugin {
         String path = data.getItemType().getId() + "." + data.getData();
         player.sendMessage(String.valueOf(items.getDouble(path)));
         return ReturnCode.SUCCESS;
+    }
+
+    private ReturnCode buy(Player player) {
+        player.openInventory(inventories.get(0));
+        return ReturnCode.SUCCESS;
+    }
+
+    @EventHandler
+    public void inventoryClick(InventoryClickEvent event) {
+        if (event.getCurrentItem() != null && event.getInventory().getTitle().contains("HexiTrade")) {
+            event.setCancelled(true);
+            int slot = event.getSlot();
+            int inv = Integer.parseInt(
+                    event.getInventory().getItem(4).getItemMeta().getDisplayName().split("\\s+")[1]
+            ) - 1; // Subtract 1 since page numbering starts at 1
+            if (event.getCurrentItem().getData().getItemType() == Material.PAPER) {
+                if (slot == 2) {
+                    event.getWhoClicked().openInventory(inventories.get(inv - 1));
+                } else if (slot == 6) {
+                    event.getWhoClicked().openInventory(inventories.get(inv + 1));
+                }
+            }
+        }
     }
 }

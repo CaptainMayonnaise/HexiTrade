@@ -2,7 +2,7 @@ name: HexiTrade
 main: com.hexicraft.trade.Main
 version: 1.0
 description: A trading plugin that varies the price of items depending on their demand.
-depend: [Essentials, Vault]
+depend: [Vault]
 commands:
     trade:
         description: Gives information on the trading plugin.
@@ -21,3 +21,9 @@ commands:
         permission: hexitrade.user
         permission-message: You don't have permission to do this.
         aliases: [value, worth]
+    buy:
+        description: Opens up the buy interface
+        usage: /buy
+        permission: hexitrade.user
+        permission-message: You don't have permission to do this.
+        aliases: []
