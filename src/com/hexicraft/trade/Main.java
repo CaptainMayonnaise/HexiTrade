@@ -70,6 +70,9 @@ public class Main extends JavaPlugin implements Listener {
         return econ != null;
     }
 
+    /**
+     * Generates the inventories of items that users will use to buy items
+     */
     @SuppressWarnings("deprecation")  // FU Mojang (/ Bukkit?)
     private void setupInventories() {
         Set<String> itemSet = items.getKeys(true);
@@ -114,6 +117,12 @@ public class Main extends JavaPlugin implements Listener {
         inventories.add(inventory); // Add the last incomplete inventory
     }
 
+    /**
+     * Generates a page item for the buy inventory
+     * @param title The display name of the page
+     * @param desc The description of the page
+     * @return The generated page
+     */
     private ItemStack generatePage(String title, String desc) {
         ItemStack paper = new MaterialData(Material.PAPER).toItemStack(1);
 
@@ -221,11 +230,20 @@ public class Main extends JavaPlugin implements Listener {
         return ReturnCode.SUCCESS;
     }
 
+    /**
+     * Opens the first inventory for the player
+     * @param player The player that typed the command
+     * @return Success!
+     */
     private ReturnCode buy(Player player) {
         player.openInventory(inventories.get(0));
         return ReturnCode.SUCCESS;
     }
 
+    /**
+     * Detects whether or not the player tried to change page and stops them from picking up the items
+     * @param event The inventory click event
+     */
     @EventHandler
     public void inventoryClick(InventoryClickEvent event) {
         if (event.getCurrentItem() != null && event.getInventory().getTitle().contains("HexiTrade")) {
