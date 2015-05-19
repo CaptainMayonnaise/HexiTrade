@@ -1,25 +1,41 @@
 package com.hexicraft.trade;
 
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+
 /**
  * @author Ollie
  * @version 1.0
  */
 public enum ReturnCode {
-    SUCCESS(""),
-    NOT_PLAYER("Only players can run this command."),
-    UNRECOGNISED_COMMAND("The command you entered was not recognised.");
+    SUCCESS("", false),
+    NOT_PLAYER("Only players can run this command.", false),
+    UNRECOGNISED_COMMAND("The command you entered was not recognised.", false),
+    INVALID_ARGUMENT("The arguments entered were not valid.", true),
+    TOO_FEW_ITEMS("You don't have that many items in your hand.", false);
 
-    String message;
+    private String message;
+    private boolean sendUsage;
 
-    ReturnCode(String message) {
+    ReturnCode(String message, boolean sendUsage) {
         this.message = message;
+        this.sendUsage = sendUsage;
     }
 
     /**
      * Does the code have a message
      * @return true if has a message, false if empty
      */
-    boolean hasMessage() {
+    public boolean hasMessage() {
         return !(message.equals(""));
+    }
+
+    /**
+     * Gets the return message, along with usage if required
+     * @param cmd The command that was sent
+     * @return The message
+     */
+    public String getMessage(Command cmd) {
+        return message + (sendUsage ? ("\n" + ChatColor.GOLD + "Usage: " + ChatColor.RESET + cmd.getUsage()) : "");
     }
 }
