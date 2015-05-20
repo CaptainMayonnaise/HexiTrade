@@ -31,7 +31,7 @@ public class Main extends JavaPlugin implements Listener {
     private Economy econ = null;
     private LinkedHashMap<String, ItemStack> itemMap = new LinkedHashMap<>();
 
-    public static final double PERCENT_CHANGE = 1.01;
+    public static final double PERCENT_CHANGE = 1.001;
 
     /**
      * Run when the plugin is enabled, loads the item prices
@@ -166,8 +166,8 @@ public class Main extends JavaPlugin implements Listener {
             }
 
             MaterialData data = itemInHand.getData(); // Data of item in hand
-            String element = data.getItemType().getId() + "-" + data.getData() + ".price"; // YAML path of item price
-            econ.depositPlayer(player, makeSale(element, amount)); // Give the player the money
+            String yamlPath = data.getItemType().getId() + "-" + data.getData();
+            econ.depositPlayer(player, makeSale(yamlPath, amount)); // Give the player the money
 
             if (itemInHand.getAmount() <= amount) {
                 player.setItemInHand(null); // Take the item
@@ -180,28 +180,31 @@ public class Main extends JavaPlugin implements Listener {
         return ReturnCode.SUCCESS;
     }
 
-    private synchronized double makeSale(String element, int numOfSales) {
-        double price = items.getDouble(element);
+    private synchronized double makeSale(String yamlPath, int numOfSales) {
+        String yamlPrice = yamlPath + ".price";
+        double price = items.getDouble(yamlPrice);
         double profit = 0;
         for (int i = 0; i < numOfSales; i++) {
             profit = profit + price;
             price = price / PERCENT_CHANGE;
         }
-        items.set(element, price);
+        items.set(yamlPrice, price);
         items.saveFile();
-        setItemPrice(itemMap.get(element), items.getDouble(element));
+        setItemPrice(itemMap.get(yamlPath), items.getDouble(yamlPrice));
         return profit;
     }
 
-    private synchronized double makePurchase(String element, int numOfPurchases) {
-        double price = items.getDouble(element);
+    private synchronized double makePurchase(String yamlPath, int numOfPurchases) {
+        String yamlPrice = yamlPath + ".price";
+        double price = items.getDouble(yamlPrice);
         double cost = 0;
         for (int i = 0; i < numOfPurchases; i++) {
             cost = cost + price;
             price = price * PERCENT_CHANGE;
         }
-        items.set(element, price);
+        items.set(yamlPrice, price);
         items.saveFile();
+        setItemPrice(itemMap.get(yamlPath), items.getDouble(yamlPrice));
         return cost;
     }
 
@@ -213,8 +216,8 @@ public class Main extends JavaPlugin implements Listener {
     @SuppressWarnings("deprecation") // FU Mojang (/ Bukkit?)
     private ReturnCode price(Player player) {
         MaterialData data = player.getItemInHand().getData();
-        String element = data.getItemType().getId() + "-" + data.getData() + ".price";
-        player.sendMessage(String.valueOf(items.getDouble(element)));
+        String yamlPrice = data.getItemType().getId() + "-" + data.getData() + ".price";
+        player.sendMessage(String.valueOf(items.getDouble(yamlPrice)));
         return ReturnCode.SUCCESS;
     }
 
@@ -274,21 +277,62 @@ public class Main extends JavaPlugin implements Listener {
      * Detects whether or not the player tried to change page and stops them from picking up the items
      * @param event The inventory click event
      */
+    @SuppressWarnings("deprecation") // FU Mojang (/ Bukkit?)
     @EventHandler
     public void inventoryClick(InventoryClickEvent event) {
         if (event.getInventory().getTitle().contains("HexiTrade") &&
                 event.getCurrentItem() != null &&
-                event.getCurrentItem().getData().getItemType() != Material.AIR) {
+                event.getCurrentItem().getData().getItemType() != Material.AIR &&
+                event.getWhoClicked() instanceof Player) {
+            Player player = (Player) event.getWhoClicked();
             event.setCancelled(true);
-            int slot = event.getSlot();
+            int slot = event.getRawSlot();
             int inv = Integer.parseInt(
                     event.getInventory().getItem(4).getItemMeta().getDisplayName().split("\\s+")[1]
             );
             if (slot == 1) {
-                event.getWhoClicked().openInventory(generateInventory(inv - 1));
+                player.openInventory(generateInventory(inv - 1));
             } else if (slot == 7) {
-                event.getWhoClicked().openInventory(generateInventory(inv + 1));
+                player.openInventory(generateInventory(inv + 1));
+            } else if (slot >= 9 && slot < 54) {
+                ItemStack currentItem = event.getCurrentItem().clone();
+                int amount;
+                if (event.isShiftClick()) {
+                    amount = currentItem.getMaxStackSize();
+                } else {
+                    amount = 1;
+                }
+                MaterialData data = currentItem.getData();
+                String yamlPath = data.getItemType().getId() + "-" + data.getData();
+                econ.withdrawPlayer(player, makePurchase(yamlPath, amount));
+                setItemPrice(event.getCurrentItem(), items.getDouble(yamlPath + ".price"));
+
+                currentItem.setAmount(amount);
+                ItemMeta meta = currentItem.getItemMeta();
+                meta.setLore(new ArrayList<String>());
+                currentItem.setItemMeta(meta);
+
+                addItem(player.getInventory(), currentItem);
             }
+        }
+    }
+
+    @SuppressWarnings("deprecation") // FU Mojang (/ Bukkit?)
+    private void addItem(Inventory inv, ItemStack item) {
+        for (ItemStack invItem : inv) {
+            if (invItem != null && invItem == item) {
+                int amount = invItem.getAmount() + item.getAmount();
+                if (amount > invItem.getMaxStackSize()) {
+                    invItem.setAmount(invItem.getMaxStackSize());
+                    item.setAmount(amount - invItem.getMaxStackSize());
+                } else {
+                    invItem.setAmount(amount);
+                    item.setAmount(0);
+                }
+            }
+        }
+        if (item.getAmount() > 0) {
+            inv.addItem(item);
         }
     }
 }

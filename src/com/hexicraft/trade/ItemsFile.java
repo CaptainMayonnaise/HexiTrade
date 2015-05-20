@@ -4,9 +4,7 @@ import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 /**
  * @author Ollie
@@ -30,6 +28,7 @@ public class ItemsFile extends YamlConfiguration {
     public void loadFile() {
         try {
             if (!configFile.exists()) {
+                System.out.println(getClass().getClassLoader().getResource("items.yml"));
                 load(new InputStreamReader(getClass().getClassLoader().getResourceAsStream("items.yml")));
                 saveFile();
             } else {

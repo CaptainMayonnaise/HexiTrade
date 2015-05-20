@@ -4,7 +4,7 @@
   - sstone
   - smoothstone
   - rock
-  price: 50.0
+  price: 645.0049780625004
 1-1:
   name:
   - granite
@@ -66,7 +66,7 @@
 3-2:
   name:
   - podzol
-  price: 50.0
+  price: 95.46832440871759
 4-0:
   name:
   - cobblestone
@@ -483,7 +483,7 @@
   - plog
   - ptrunk
   - pwood
-  price: 50.0
+  price: 56.90466402166447
 17-2:
   name:
   - birch
