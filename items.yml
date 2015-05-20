@@ -1,0 +1,8434 @@
+1-0:
+  name:
+  - stone
+  - sstone
+  - smoothstone
+  - rock
+  price: 50.0
+1-1:
+  name:
+  - granite
+  - gstone
+  price: 50.0
+1-2:
+  name:
+  - polishedgranite
+  - pgranite
+  - pgstone
+  - polishedgstone
+  price: 50.0
+1-3:
+  name:
+  - diorite
+  - dstone
+  price: 50.0
+1-4:
+  name:
+  - polisheddiorite
+  - pdiorite
+  - pdstone
+  - polisheddstone
+  price: 50.0
+1-5:
+  name:
+  - andesite
+  - astone
+  price: 50.0
+1-6:
+  name:
+  - polishedandesite
+  - pandesite
+  - pastone
+  price: 50.0
+2-0:
+  name:
+  - grass
+  - greendirt
+  - greenearth
+  - greenland
+  price: 50.0
+3-0:
+  name:
+  - dirt
+  - earth
+  - land
+  price: 50.0
+3-1:
+  name:
+  - cdirt
+  - grasslessdirt
+  - grasslessearth
+  - grasslessland
+  - coarsedirt
+  - coarseland
+  - coarseearth
+  price: 50.0
+3-2:
+  name:
+  - podzol
+  price: 50.0
+4-0:
+  name:
+  - cobblestone
+  - cstone
+  - cobble
+  price: 50.0
+5-0:
+  name:
+  - wood
+  - plank
+  - woodenplank
+  - woodplank
+  - wplank
+  - plankwooden
+  - plankwood
+  - plankw
+  - oakplank
+  - oakwoodenplank
+  - oakwoodplank
+  - oakwplank
+  - oakplankwooden
+  - oakplankwood
+  - oakplankw
+  - oplank
+  - owoodenplank
+  - owoodplank
+  - owplank
+  - oplankwooden
+  - oplankwood
+  - oplankw
+  price: 50.0
+5-1:
+  name:
+  - pineplank
+  - pinewoodenplank
+  - pinewoodplank
+  - pinewplank
+  - pineplankwooden
+  - pineplankwood
+  - pineplankw
+  - pplank
+  - pwoodenplank
+  - pwoodplank
+  - pwplank
+  - pplankwooden
+  - pplankwood
+  - pplankw
+  - darkplank
+  - darkwoodenplank
+  - darkwoodplank
+  - darkwplank
+  - darkplankwooden
+  - darkplankwood
+  - darkplankw
+  - dplank
+  - dwoodenplank
+  - dwoodplank
+  - dwplank
+  - dplankwooden
+  - dplankwood
+  - dplankw
+  - spruceplank
+  - sprucewoodenplank
+  - sprucewoodplank
+  - sprucewplank
+  - spruceplankwooden
+  - spruceplankwood
+  - spruceplankw
+  - splank
+  - swoodenplank
+  - swoodplank
+  - swplank
+  - splankwooden
+  - splankwood
+  - splankw
+  price: 50.0
+5-2:
+  name:
+  - birchplank
+  - birchwoodenplank
+  - birchwoodplank
+  - birchwplank
+  - birchplankwooden
+  - birchplankwood
+  - birchplankw
+  - bplank
+  - bwoodenplank
+  - bwoodplank
+  - bwplank
+  - bplankwooden
+  - bplankwood
+  - bplankw
+  - lightplank
+  - lightwoodenplank
+  - lightwoodplank
+  - lightwplank
+  - lightplankwooden
+  - lightplankwood
+  - lightplankw
+  - lplank
+  - lwoodenplank
+  - lwoodplank
+  - lwplank
+  - lplankwooden
+  - lplankwood
+  - lplankw
+  - whiteplank
+  - whitewoodenplank
+  - whitewoodplank
+  - whitewplank
+  - whiteplankwooden
+  - whiteplankwood
+  - whiteplankw
+  - wwoodenplank
+  - wwoodplank
+  - wwplank
+  - wplankwooden
+  - wplankwood
+  - wplankw
+  price: 50.0
+5-3:
+  name:
+  - jungleplank
+  - junglewoodenplank
+  - junglewoodplank
+  - junglewplank
+  - jungleplankwooden
+  - jungleplankwood
+  - jungleplankw
+  - jplank
+  - jwoodenplank
+  - jwoodplank
+  - jwplank
+  - jplankwooden
+  - jplankwood
+  - jplankw
+  - forestplank
+  - forestwoodenplank
+  - forestwoodplank
+  - forestwplank
+  - forestplankwooden
+  - forestplankwood
+  - forestplankw
+  - fplank
+  - fwoodenplank
+  - fwoodplank
+  - fwplank
+  - fplankwooden
+  - fplankwood
+  - fplankw
+  price: 50.0
+5-4:
+  name:
+  - acaciaplank
+  - acaciawoodenplank
+  - acaciawoodplank
+  - acaciawplank
+  - acaciaplankwooden
+  - acaciaplankwood
+  - acaciaplankw
+  - aplank
+  - awoodenplank
+  - awoodplank
+  - awplank
+  - aplankwooden
+  - aplankwood
+  - aplankw
+  price: 50.0
+5-5:
+  name:
+  - darkoakplank
+  - darkoakwoodenplank
+  - darkoakwoodplank
+  - darkoakwplank
+  - darkoakplankwooden
+  - darkoakplankwood
+  - darkoakplankw
+  - doakplank
+  - doakwoodenplank
+  - doakwoodplank
+  - doakwplank
+  - doakplankwooden
+  - doakplankwood
+  - doakplankw
+  - doplank
+  - dowoodenplank
+  - dowoodplank
+  - dowplank
+  - doplankwooden
+  - doplankwood
+  - doplankw
+  price: 50.0
+6-0:
+  name:
+  - sapling
+  - treesapling
+  - logsapling
+  - trunksapling
+  - woodsapling
+  - oaktreesapling
+  - oaklogsapling
+  - oaktrunksapling
+  - oakwoodsapling
+  - osapling
+  - otreesapling
+  - ologsapling
+  - otrunksapling
+  - owoodsapling
+  price: 50.0
+6-1:
+  name:
+  - darksapling
+  - darktreesapling
+  - darklogsapling
+  - darktrunksapling
+  - darkwoodsapling
+  - sprucesapling
+  - sprucetreesapling
+  - sprucelogsapling
+  - sprucetrunksapling
+  - sprucewoodsapling
+  - pinesapling
+  - pinetreesapling
+  - pinelogsapling
+  - pinetrunksapling
+  - pinewoodsapling
+  - dsapling
+  - dtreesapling
+  - dlogsapling
+  - dtrunksapling
+  - dwoodsapling
+  - ssapling
+  - streesapling
+  - slogsapling
+  - strunksapling
+  - swoodsapling
+  - psapling
+  - ptreesapling
+  - plogsapling
+  - ptrunksapling
+  - pwoodsapling
+  price: 50.0
+6-2:
+  name:
+  - birchsapling
+  - birchtreesapling
+  - birchlogsapling
+  - birchtrunksapling
+  - birchwoodsapling
+  - lightsapling
+  - lighttreesapling
+  - lightlogsapling
+  - lighttrunksapling
+  - lightwoodsapling
+  - whitesapling
+  - whitetreesapling
+  - whitelogsapling
+  - whitetrunksapling
+  - whitewoodsapling
+  - bsapling
+  - btreesapling
+  - blogsapling
+  - btrunksapling
+  - bwoodsapling
+  - lsapling
+  - ltreesapling
+  - llogsapling
+  - ltrunksapling
+  - lwoodsapling
+  - wsapling
+  - wtreesapling
+  - wlogsapling
+  - wtrunksapling
+  - wwoodsapling
+  price: 50.0
+6-3:
+  name:
+  - junglesapling
+  - jungletreesapling
+  - junglelogsapling
+  - jungletrunksapling
+  - junglewoodsapling
+  - forestsapling
+  - foresttreesapling
+  - forestlogsapling
+  - foresttrunksapling
+  - forestwoodsapling
+  - jsapling
+  - jtreesapling
+  - jlogsapling
+  - jtrunksapling
+  - jwoodsapling
+  - fsapling
+  - ftreesapling
+  - flogsapling
+  - ftrunksapling
+  - fwoodsapling
+  price: 50.0
+6-4:
+  name:
+  - acaciasapling
+  - acaciatreesapling
+  - acacialogsapling
+  - acaciatrunksapling
+  - acaciawoodsapling
+  - asapling
+  - atreesapling
+  - alogsapling
+  - atrunksapling
+  - awoodsapling
+  price: 50.0
+6-5:
+  name:
+  - darkoaksapling
+  - darkoaktreesapling
+  - darkoaklogsapling
+  - darkoaktrunksapling
+  - darkoakwoodsapling
+  - doaksapling
+  - doaktreesapling
+  - doaklogsapling
+  - doaktrunksapling
+  - dosapling
+  - dowoodsapling
+  - dotreesapling
+  - dologsapling
+  - dotrunksapling
+  price: 50.0
+12-0:
+  name:
+  - sand
+  price: 50.0
+12-1:
+  name:
+  - redsand
+  - rsand
+  price: 50.0
+13-0:
+  name:
+  - gravel
+  price: 50.0
+14-0:
+  name:
+  - goldore
+  - oregold
+  - gore
+  - oreg
+  - ogold
+  - goldo
+  price: 50.0
+15-0:
+  name:
+  - ironore
+  - oreiron
+  - irono
+  - oiron
+  - steelore
+  - oresteel
+  - steelo
+  - osteel
+  - iore
+  - orei
+  - sore
+  - ores
+  price: 50.0
+16-0:
+  name:
+  - coalore
+  - orecoal
+  - coalo
+  - ocoal
+  - core
+  price: 50.0
+17-0:
+  name:
+  - tree
+  - log
+  - trunk
+  - oak
+  - oaktree
+  - oaklog
+  - oaktrunk
+  - oakwood
+  - otree
+  - olog
+  - otrunk
+  - owood
+  price: 50.0
+17-1:
+  name:
+  - pine
+  - pinetree
+  - pinelog
+  - pinetrunk
+  - pinewood
+  - darktree
+  - darklog
+  - darktrunk
+  - darkwood
+  - spruce
+  - sprucetree
+  - sprucelog
+  - sprucetrunk
+  - sprucewood
+  - dtree
+  - dlog
+  - dtrunk
+  - dwood
+  - stree
+  - slog
+  - strunk
+  - swood
+  - ptree
+  - plog
+  - ptrunk
+  - pwood
+  price: 50.0
+17-2:
+  name:
+  - birch
+  - birchtree
+  - birchlog
+  - birchtrunk
+  - birchwood
+  - whitetree
+  - whitelog
+  - whitetrunk
+  - whitewood
+  - lighttree
+  - lightlog
+  - lighttrunk
+  - lightwood
+  - btree
+  - blog
+  - btrunk
+  - bwood
+  - wtree
+  - wlog
+  - wtrunk
+  - wwood
+  - ltree
+  - llog
+  - ltrunk
+  - lwood
+  price: 50.0
+17-3:
+  name:
+  - jungletree
+  - junglelog
+  - jungletrunk
+  - junglewood
+  - jungle
+  - forest
+  - foresttree
+  - forestlog
+  - foresttrunk
+  - forestwood
+  - jtree
+  - jlog
+  - jtrunk
+  - jwood
+  - ftree
+  - flog
+  - ftrunk
+  - fwood
+  price: 50.0
+18-0:
+  name:
+  - leaves
+  - leaf
+  - treeleaves
+  - logleaves
+  - trunkleaves
+  - woodleaves
+  - oakleaves
+  - oakleaf
+  - oleaves
+  - oleaf
+  - oaktreeleaves
+  - oaklogleaves
+  - oaktrunkleaves
+  - oakwoodleaves
+  - otreeleaves
+  - ologleaves
+  - otrunkleaves
+  - owoodleaves
+  - treeleaf
+  - logleaf
+  - trunkleaf
+  - woodleaf
+  - oaktreeleaf
+  - oaklogleaf
+  - oaktrunkleaf
+  - oakwoodleaf
+  - otreeleaf
+  - ologleaf
+  - otrunkleaf
+  - owoodleaf
+  price: 50.0
+18-1:
+  name:
+  - pineleaves
+  - pineleaf
+  - pleaves
+  - pleaf
+  - pinetreeleaves
+  - pinelogleaves
+  - pinetrunkleaves
+  - pinewoodleaves
+  - ptreeleaves
+  - plogleaves
+  - ptrunkleaves
+  - pwoodleaves
+  - spruceleaves
+  - spruceleaf
+  - sleaves
+  - sleaf
+  - sprucetreeleaves
+  - sprucelogleaves
+  - sprucetrunkleaves
+  - sprucewoodleaves
+  - streeleaves
+  - slogleaves
+  - strunkleaves
+  - swoodleaves
+  - darkleaves
+  - darkleaf
+  - dleaves
+  - dleaf
+  - darktreeleaves
+  - darklogleaves
+  - darktrunkleaves
+  - darkwoodleaves
+  - dtreeleaves
+  - dlogleaves
+  - dtrunkleaves
+  - dwoodleaves
+  - sprucetreeleaf
+  - sprucelogleaf
+  - sprucetrunkleaf
+  - sprucewoodleaf
+  - streeleaf
+  - slogleaf
+  - strunkleaf
+  - swoodleaf
+  - pinetreeleaf
+  - pinelogleaf
+  - pinetrunkleaf
+  - pinewoodleaf
+  - ptreeleaf
+  - plogleaf
+  - ptrunkleaf
+  - pwoodleaf
+  - darktreeleaf
+  - darklogleaf
+  - darktrunkleaf
+  - darkwoodleaf
+  - dtreeleaf
+  - dlogleaf
+  - dtrunkleaf
+  - dwoodleaf
+  price: 50.0
+18-2:
+  name:
+  - birchleaves
+  - birchleaf
+  - bleaves
+  - bleaf
+  - birchtreeleaves
+  - birchlogleaves
+  - birchtrunkleaves
+  - birchwoodleaves
+  - btreeleaves
+  - blogleaves
+  - btrunkleaves
+  - bwoodleaves
+  - lightleaves
+  - lightleaf
+  - lleaves
+  - lleaf
+  - lighttreeleaves
+  - lightlogleaves
+  - lighttrunkleaves
+  - lightwoodleaves
+  - ltreeleaves
+  - llogleaves
+  - ltrunkleaves
+  - lwoodleaves
+  - whiteleaves
+  - whiteleaf
+  - wleaves
+  - wleaf
+  - whitetreeleaves
+  - whitelogleaves
+  - whitetrunkleaves
+  - whitewoodleaves
+  - wtreeleaves
+  - wlogleaves
+  - wtrunkleaves
+  - wwoodleaves
+  - birchtreeleaf
+  - birchlogleaf
+  - birchtrunkleaf
+  - birchwoodleaf
+  - btreeleaf
+  - blogleaf
+  - btrunkleaf
+  - bwoodleaf
+  - lighttreeleaf
+  - lightlogleaf
+  - lighttrunkleaf
+  - lightwoodleaf
+  - ltreeleaf
+  - llogleaf
+  - ltrunkleaf
+  - lwoodleaf
+  - whitetreeleaf
+  - whitelogleaf
+  - whitetrunkleaf
+  - whitewoodleaf
+  - wtreeleaf
+  - wlogleaf
+  - wtrunkleaf
+  - wwoodleaf
+  price: 50.0
+18-3:
+  name:
+  - jungleleaves
+  - jungleleaf
+  - jleaves
+  - jleaf
+  - jungletreeleaves
+  - junglelogleaves
+  - jungletrunkleaves
+  - junglewoodleaves
+  - jtreeleaves
+  - jlogleaves
+  - jtrunkleaves
+  - jwoodleaves
+  - forestleaves
+  - forestleaf
+  - fleaves
+  - fleaf
+  - foresttreeleaves
+  - forestlogleaves
+  - foresttrunkleaves
+  - forestwoodleaves
+  - ftreeleaves
+  - flogleaves
+  - ftrunkleaves
+  - fwoodleaves
+  - jungletreeleaf
+  - junglelogleaf
+  - jungletrunkleaf
+  - junglewoodleaf
+  - jtreeleaf
+  - jlogleaf
+  - jtrunkleaf
+  - jwoodleaf
+  - foresttreeleaf
+  - forestlogleaf
+  - foresttrunkleaf
+  - forestwoodleaf
+  - ftreeleaf
+  - flogleaf
+  - ftrunkleaf
+  - fwoodleaf
+  price: 50.0
+19-0:
+  name:
+  - sponge
+  price: 50.0
+19-1:
+  name:
+  - wetsponge
+  price: 50.0
+20-0:
+  name:
+  - glass
+  - blockglass
+  - glassblock
+  price: 50.0
+21-0:
+  name:
+  - lapislazuliore
+  - lapislazulio
+  - orelapislazuli
+  - olapislazuli
+  - lapisore
+  - lapiso
+  - orelapis
+  - olapis
+  - lore
+  - orel
+  price: 50.0
+22-0:
+  name:
+  - lapislazuliblock
+  - blocklapislazuli
+  - lapisblock
+  - blocklapis
+  - lblock
+  - blockl
+  price: 50.0
+23-0:
+  name:
+  - dispenser
+  - dispense
+  price: 50.0
+24-0:
+  name:
+  - sandstone
+  - sastone
+  price: 50.0
+24-1:
+  name:
+  - cpstone
+  - creepersandstone
+  - creepersastone
+  - creepsandstone
+  - creepsastone
+  - csandstone
+  - csastone
+  - hieroglyphicsandstone
+  - hieroglyphicsastone
+  - hieroglyphsandstone
+  - hieroglyphsastone
+  - hsandstone
+  - hsastone
+  - pyramidsandstone
+  - pyramidsastone
+  - psandstone
+  - psastone
+  - chiseledsandstone
+  - chiseledsastone
+  - chiselsandstone
+  - chiselsastone
+  price: 50.0
+24-2:
+  name:
+  - smstone
+  - smoothsandstone
+  - smoothsastone
+  - ssandstone
+  - smsastone
+  - ssastone
+  price: 50.0
+25-0:
+  name:
+  - noteblock
+  - musicblock
+  - nblock
+  - mblock
+  price: 50.0
+27-0:
+  name:
+  - poweredtrack
+  - poweredrails
+  - poweredrail
+  - boostertrack
+  - boosterrails
+  - boosterrail
+  - powertrack
+  - powerrails
+  - powerrail
+  - boosttrack
+  - boostrails
+  - boostrail
+  - ptrack
+  - prails
+  - prail
+  - btrack
+  - brails
+  - brail
+  price: 50.0
+28-0:
+  name:
+  - detectortrack
+  - detectorrails
+  - detectorrail
+  - detectingtrack
+  - detectingrails
+  - detectingrail
+  - detecttrack
+  - detectrails
+  - detectrail
+  - dtrack
+  - drails
+  - drail
+  price: 50.0
+29-0:
+  name:
+  - stickypistonbase
+  - stickypiston
+  - stickpistonbase
+  - stickpiston
+  - stickyp
+  - spistonbase
+  - spiston
+  - pistonstickybase
+  - pistonsticky
+  - pistonstickbase
+  - pistonstick
+  - pistonsbase
+  - pistons
+  - psticky
+  - pstick
+  price: 50.0
+30-0:
+  name:
+  - spiderweb
+  - cobweb
+  - sweb
+  - cweb
+  - web
+  price: 50.0
+31-1:
+  name:
+  - longgrass
+  - tallgrass
+  - wildgrass
+  - grasslong
+  - grasstall
+  - grasswild
+  - lgrass
+  - tgrass
+  - wgrass
+  price: 50.0
+31-2:
+  name:
+  - fern
+  - bush
+  price: 50.0
+32-0:
+  name:
+  - deadshrub
+  - dshrub
+  - deadbush
+  - dbush
+  - deadsapling
+  price: 50.0
+33-0:
+  name:
+  - piston
+  - pistonbase
+  - pistonblock
+  price: 50.0
+35-0:
+  name:
+  - whitewool
+  - whitecloth
+  - whitecotton
+  - wcloth
+  - wwool
+  - wcotton
+  - cloth
+  - wool
+  - cotton
+  price: 50.0
+35-1:
+  name:
+  - orangewool
+  - orangecloth
+  - orangecotton
+  - ocloth
+  - owool
+  - ocotton
+  price: 50.0
+35-2:
+  name:
+  - magentawool
+  - magentacloth
+  - magentacotton
+  - mcloth
+  - mwool
+  - mcotton
+  price: 50.0
+35-3:
+  name:
+  - lightbluewool
+  - lightbluecloth
+  - lightbluecotton
+  - lbluecloth
+  - lbluewool
+  - lbluecotton
+  - lightblucloth
+  - lightbluwool
+  - lightblucotton
+  - lblucloth
+  - lbluwool
+  - lblucotton
+  - lbcloth
+  - lbwool
+  - lbcotton
+  price: 50.0
+35-4:
+  name:
+  - yellowwool
+  - yellowcloth
+  - yellowcotton
+  - ycloth
+  - ywool
+  - ycotton
+  price: 50.0
+35-5:
+  name:
+  - lightgreenwool
+  - lightgreencloth
+  - lightgreencotton
+  - lgreencloth
+  - lgreenwool
+  - lgreencotton
+  - lightgrecloth
+  - lightgrewool
+  - lightgrecotton
+  - lgrecloth
+  - lgrewool
+  - lgrecotton
+  - limecloth
+  - limewool
+  - limecotton
+  - lcloth
+  - lwool
+  - lcotton
+  price: 50.0
+35-6:
+  name:
+  - pinkwool
+  - pinkcloth
+  - pinkcotton
+  - picloth
+  - piwool
+  - picotton
+  price: 50.0
+35-7:
+  name:
+  - darkgraywool
+  - darkgraycloth
+  - darkgraycotton
+  - darkgreywool
+  - darkgreycloth
+  - darkgreycotton
+  - dgraycloth
+  - dgraywool
+  - dgraycotton
+  - dgreycloth
+  - dgreywool
+  - dgreycotton
+  - darkgracloth
+  - darkgrawool
+  - darkgracotton
+  - dgracloth
+  - dgrawool
+  - dgracotton
+  - graycloth
+  - graywool
+  - graycotton
+  - greycloth
+  - greywool
+  - greycotton
+  - gracloth
+  - grawool
+  - gracotton
+  price: 50.0
+35-8:
+  name:
+  - lgwool
+  - lightgraywool
+  - lightgraycloth
+  - lightgraycotton
+  - lgraycloth
+  - lgraywool
+  - lgraycotton
+  - lightgreywool
+  - lightgreycloth
+  - lightgreycotton
+  - lgreycloth
+  - lgreywool
+  - lgreycotton
+  - lightgracloth
+  - lightgrawool
+  - lightgracotton
+  - lgracloth
+  - lgrawool
+  - lgracotton
+  - silvercloth
+  - silverwool
+  - silvercotton
+  - sicloth
+  - siawool
+  - siacotton
+  price: 50.0
+35-9:
+  name:
+  - cyanwool
+  - cyancloth
+  - cyancotton
+  - ccloth
+  - cwool
+  - ccotton
+  price: 50.0
+35-10:
+  name:
+  - purplewool
+  - purplecloth
+  - purplecotton
+  - pucloth
+  - puwool
+  - pucotton
+  price: 50.0
+35-11:
+  name:
+  - bluewool
+  - bluecloth
+  - bluecotton
+  - blucloth
+  - bluwool
+  - blucotton
+  price: 50.0
+35-12:
+  name:
+  - brownwool
+  - browncloth
+  - browncotton
+  - brocloth
+  - browool
+  - brocotton
+  price: 50.0
+35-13:
+  name:
+  - darkgreenwool
+  - darkgreencloth
+  - darkgreencotton
+  - dgreencloth
+  - dgreenwool
+  - dgreencotton
+  - greencloth
+  - greenwool
+  - greencotton
+  - darkgrecloth
+  - darkgrewool
+  - darkgrecotton
+  - dgrecloth
+  - dgrewool
+  - dgrecotton
+  - grecloth
+  - grewool
+  - grecotton
+  price: 50.0
+35-14:
+  name:
+  - redwool
+  - redcloth
+  - redcotton
+  - rcloth
+  - rwool
+  - rcotton
+  price: 50.0
+35-15:
+  name:
+  - blackwool
+  - blackcloth
+  - blackcotton
+  - blacloth
+  - blawool
+  - blacotton
+  price: 50.0
+37-0:
+  name:
+  - dandelion
+  - yellowdandelion
+  - ydandelion
+  - yellowflower
+  - yflower
+  - flower
+  price: 50.0
+38-0:
+  name:
+  - rose
+  - redrose
+  - rrose
+  - redflower
+  - rflower
+  - poppy
+  - redpoppy
+  price: 50.0
+38-1:
+  name:
+  - blueorchid
+  - cyanorchid
+  - lightblueorchid
+  - lblueorchid
+  - orchid
+  price: 50.0
+38-3:
+  name:
+  - azurebluet
+  - whiteazurebluet
+  - abluet
+  - azureb
+  - houstonia
+  price: 50.0
+38-4:
+  name:
+  - redtulip
+  - tulipred
+  - rtulip
+  - tulipr
+  price: 50.0
+38-5:
+  name:
+  - orangetulip
+  - tuliporange
+  - otulip
+  - tulipo
+  price: 50.0
+38-6:
+  name:
+  - whitetulip
+  - tulipwhite
+  - wtulip
+  - tulipw
+  price: 50.0
+38-7:
+  name:
+  - pinktulip
+  - tulippink
+  - ptulip
+  - tulipp
+  price: 50.0
+38-8:
+  name:
+  - oxeye
+  - daisy
+  - oxeyedaisy
+  - daisyoxeye
+  - moondaisy
+  - daisymoon
+  - lightgrayoxeye
+  - lgrayoxeye
+  - lightgreyoxeye
+  - lgreyoxeye
+  price: 50.0
+39-0:
+  name:
+  - brownmushroom
+  - brownshroom
+  - brownmush
+  - bmushroom
+  - bshroom
+  - bmush
+  price: 50.0
+40-0:
+  name:
+  - redmushroom
+  - redshroom
+  - redmush
+  - rmushroom
+  - rshroom
+  - rmush
+  price: 50.0
+41-0:
+  name:
+  - goldblock
+  - blockgold
+  - gblock
+  - blockg
+  price: 50.0
+42-0:
+  name:
+  - ironblock
+  - steelblock
+  - blockiron
+  - blocksteel
+  - iblock
+  - stblock
+  - blocki
+  - blockst
+  price: 50.0
+44-0:
+  name:
+  - sslab
+  - slab
+  - smoothstonehalfblock
+  - stonehalfblock
+  - shalfblock
+  - halfblock
+  price: 50.0
+182-0:
+  name:
+  - rsslab
+  - redsandstoneslab
+  price: 50.0
+44-1:
+  name:
+  - sandstonestep
+  - sstonestep
+  - ssstep
+  - sandstoneslab
+  - sstoneslab
+  - ssslab
+  - sandstonehalfblock
+  - sstonehalfblock
+  - sshalfblock
+  price: 50.0
+44-3:
+  name:
+  - cobblestonestep
+  - cobblestep
+  - cstonestep
+  - csstep
+  - cobblestoneslab
+  - cobbleslab
+  - cstoneslab
+  - csslab
+  - cobblestonehalfblock
+  - cobblehalfblock
+  - cstonehalfblock
+  - cshalfblock
+  price: 50.0
+44-4:
+  name:
+  - brickstep
+  - bstep
+  - brickslab
+  - bslab
+  - brickhalfblock
+  - bhalfblock
+  price: 50.0
+44-5:
+  name:
+  - stonebrickstep
+  - stonebstep
+  - sbrickstep
+  - sbstep
+  - stonebrickslab
+  - stonebslab
+  - sbrickslab
+  - sbslab
+  - stonebrickhalfblock
+  - stonebhalfblock
+  - sbrickhalfblock
+  - sbhalfblock
+  price: 50.0
+44-6:
+  name:
+  - netherbrickslab
+  - hellbrickslab
+  - nbrickslab
+  - hbrickslab
+  - netherslab
+  - hellslab
+  - nbslab
+  - hbslab
+  - hslab
+  - nslab
+  - netherbrickstep
+  - hellbrickstep
+  - nbrickstep
+  - hbrickstep
+  - netherstep
+  - hellstep
+  - nbstep
+  - hbstep
+  - nstep
+  - hstep
+  - netherbrickhalfblock
+  - hellbrickhalfblock
+  - nbrickhalfblock
+  - hbrickhalfblock
+  - netherhalfblock
+  - hellhalfblock
+  - nbhalfblock
+  - hbhalfblock
+  - nhalfblock
+  - hhalfblock
+  price: 50.0
+44-7:
+  name:
+  - netherquartzstep
+  - hellquartzstep
+  - deathquartzstep
+  - nquartzstep
+  - hquartzstep
+  - dquartzstep
+  - quartzstep
+  - nqstep
+  - hqstep
+  - dqstep
+  - qstep
+  - netherquartzslab
+  - hellquartzslab
+  - deathquartzslab
+  - nquartzslab
+  - hquartzslab
+  - dquartzslab
+  - quartzslab
+  - nqslab
+  - hqslab
+  - dqslab
+  - qslab
+  - netherquartzhalfblock
+  - hellquartzhalfblock
+  - deathquartzhalfblock
+  - nquartzhalfblock
+  - hquartzhalfblock
+  - dquartzhalfblock
+  - quartzhalfblock
+  - nqhalfblock
+  - hqhalfblock
+  - dqhalfblock
+  - qhalfblock
+  price: 50.0
+45-0:
+  name:
+  - brickblock
+  - blockbrick
+  - bblock
+  - blockb
+  price: 50.0
+46-0:
+  name:
+  - tnt
+  - tntblock
+  - blocktnt
+  - bombblock
+  - blockbomb
+  - dynamiteblock
+  - blockdynamite
+  - bomb
+  - dynamite
+  price: 50.0
+47-0:
+  name:
+  - bshelf
+  - bookcase
+  - casebook
+  - bookshelf
+  - shelfbook
+  - bookblock
+  - blockbook
+  price: 50.0
+48-0:
+  name:
+  - mossycobblestone
+  - mosscobblestone
+  - mcobblestone
+  - mossycobble
+  - mosscobble
+  - mcobble
+  - mossstone
+  - mossystone
+  - mstone
+  price: 50.0
+49-0:
+  name:
+  - obsidian
+  - obsi
+  - obby
+  price: 50.0
+50-0:
+  name:
+  - torch
+  - burningstick
+  - burnstick
+  price: 50.0
+53-0:
+  name:
+  - woodenstairs
+  - woodstairs
+  - wstairs
+  - woodenstair
+  - woodstair
+  - wstair
+  price: 50.0
+54-0:
+  name:
+  - chest
+  - container
+  price: 50.0
+56-0:
+  name:
+  - diamondore
+  - crystalore
+  - orediamond
+  - orecrystal
+  - dore
+  - ored
+  price: 50.0
+57-0:
+  name:
+  - diamondblock
+  - blockdiamond
+  - crystalblock
+  - blockcrystal
+  - dblock
+  - blockd
+  price: 50.0
+58-0:
+  name:
+  - workbench
+  - craftingbench
+  - crafterbench
+  - craftbench
+  - worktable
+  - craftingtable
+  - craftertable
+  - crafttable
+  - wbench
+  - cbench
+  price: 50.0
+61-0:
+  name:
+  - furnace
+  price: 50.0
+65-0:
+  name:
+  - ladder
+  price: 50.0
+66-0:
+  name:
+  - minecarttrack
+  - minecartrails
+  - minecartrail
+  - mcarttrack
+  - mcartrails
+  - mcartrail
+  - mctrack
+  - mcrails
+  - mcrail
+  - track
+  - rails
+  - rail
+  price: 50.0
+67-0:
+  name:
+  - cobblestonestairs
+  - cstonestairs
+  - stonestairs
+  - cobblestairs
+  - csstairs
+  - sstairs
+  - cstairs
+  - cobblestonestair
+  - cstonestair
+  - stonestair
+  - cobblestair
+  - csstair
+  - sstair
+  - cstair
+  price: 50.0
+69-0:
+  name:
+  - lever
+  price: 50.0
+70-0:
+  name:
+  - stonepressureplate
+  - stonepressplate
+  - stonepplate
+  - stoneplate
+  - spressureplate
+  - spressplate
+  - spplate
+  - splate
+  - smoothstonepressureplate
+  - smoothstonepressplate
+  - smoothstonepplate
+  - smoothstoneplate
+  - sstonepressureplate
+  - sstonepressplate
+  - sstonepplate
+  - sstoneplate
+  price: 50.0
+72-0:
+  name:
+  - woodenpressureplate
+  - woodenpressplate
+  - woodenpplate
+  - woodenplate
+  - woodpressureplate
+  - woodpressplate
+  - woodpplate
+  - woodplate
+  - wpressureplate
+  - wpressplate
+  - wpplate
+  - wplate
+  price: 50.0
+73-0:
+  name:
+  - redstoneore
+  - redsore
+  - redore
+  - rstoneore
+  - rsore
+  - rore
+  - oreredstone
+  - orereds
+  - orered
+  - orerstone
+  - orers
+  - orer
+  price: 50.0
+76-0:
+  name:
+  - redstonetorch
+  - rstonetorch
+  - redstorch
+  - redtorch
+  - rstorch
+  price: 50.0
+77-0:
+  name:
+  - stonebutton
+  - smoothstonebutton
+  - sstonebutton
+  - sbutton
+  - button
+  price: 50.0
+78-0:
+  name:
+  - snowcover
+  - snowcovering
+  - scover
+  price: 50.0
+79-0:
+  name:
+  - ice
+  - frozenwater
+  - waterfrozen
+  - freezewater
+  - waterfreeze
+  price: 50.0
+80-0:
+  name:
+  - snowblock
+  - blocksnow
+  - sblock
+  - blocks
+  price: 50.0
+81-0:
+  name:
+  - cactus
+  - cactuses
+  - cacti
+  price: 50.0
+82-0:
+  name:
+  - clayblock
+  - blockclay
+  - cblock
+  - blockc
+  price: 50.0
+84-0:
+  name:
+  - jukebox
+  - jbox
+  price: 50.0
+85-0:
+  name:
+  - woodenfence
+  - fence
+  - woodfence
+  - wfence
+  - fencewooden
+  - fencewood
+  - fencew
+  - oakfence
+  - ofence
+  price: 50.0
+86-0:
+  name:
+  - pumpkin
+  price: 50.0
+87-0:
+  name:
+  - netherrack
+  - netherrock
+  - netherstone
+  - hellrack
+  - hellrock
+  - hellstone
+  - deathrack
+  - deathrock
+  - deathstone
+  - nrack
+  - nrock
+  - nstone
+  - hrack
+  - hrock
+  - hstone
+  - drack
+  - drock
+  - dstone
+  price: 50.0
+88-0:
+  name:
+  - soulsand
+  - slowsand
+  - slowmud
+  - ssand
+  - smud
+  - mud
+  price: 50.0
+89-0:
+  name:
+  - glowstone
+  - glowingstoneblock
+  - lightstoneblock
+  - glowstoneblock
+  - blockglowingstone
+  - blocklightstone
+  - blockglowstone
+  - glowingstone
+  - lightstone
+  - glowingblock
+  - lightblock
+  - glowblock
+  - lstone
+  - gstone
+  price: 50.0
+91-0:
+  name:
+  - jackolantern
+  - pumpkinlantern
+  - glowingpumpkin
+  - lightpumpkin
+  - jpumpkin
+  - plantren
+  - glowpumpkin
+  - gpumpkin
+  - lpumpkin
+  price: 50.0
+95-0:
+  name:
+  - lockedchest
+  - lockchest
+  - jokechest
+  - whiteglass
+  - whitesglass
+  - whitestainedglass
+  - wglass
+  - wsglass
+  - wstainedglass
+  - sglass
+  - stainedglass
+  price: 50.0
+95-1:
+  name:
+  - orangeglass
+  - orangesglass
+  - orangestainedglass
+  - oglass
+  - osglass
+  - ostainedglass
+  price: 50.0
+95-2:
+  name:
+  - magentaglass
+  - magentasglass
+  - magentastainedglass
+  - mglass
+  - msglass
+  - mstainedglass
+  price: 50.0
+95-3:
+  name:
+  - lightblueglass
+  - lightbluesglass
+  - lightbluestainedglass
+  - lblueglass
+  - lbluesglass
+  - lbluestainedglass
+  - lightbluglass
+  - lightblusglass
+  - lightblustainedglass
+  - lbluglass
+  - lblusglass
+  - lblustainedglass
+  - lbglass
+  - lbsglass
+  - lbstainedglass
+  price: 50.0
+95-4:
+  name:
+  - yellowglass
+  - yellowsglass
+  - yellowstainedglass
+  - yglass
+  - ysglass
+  - ystainedglass
+  price: 50.0
+95-5:
+  name:
+  - lightgreenglass
+  - lightgreensglass
+  - lightgreenstainedglass
+  - lgreenglass
+  - lgreensglass
+  - lgreenstainedglass
+  - lightgreglass
+  - lightgresglass
+  - lightgrestainedglass
+  - lgreglass
+  - lgresglass
+  - lgrestainedglass
+  - limeglass
+  - limesglass
+  - limestainedglass
+  - lglass
+  - lsglass
+  - lstainedglass
+  price: 50.0
+95-6:
+  name:
+  - pinkglass
+  - pinksglass
+  - pinkstainedglass
+  - piglass
+  - pisglass
+  - pistainedglass
+  price: 50.0
+95-7:
+  name:
+  - gyglass
+  - darkgrayglass
+  - darkgraysglass
+  - darkgraystainedglass
+  - dgrayglass
+  - dgraysglass
+  - dgraystainedglass
+  - darkgreyglass
+  - darkgreysglass
+  - darkgreystainedglass
+  - dgreyglass
+  - dgreysglass
+  - dgreystainedglass
+  - darkgraglass
+  - darkgrasglass
+  - darkgrastainedglass
+  - dgraglass
+  - dgrasglass
+  - dgrastainedglass
+  - grayglass
+  - graysglass
+  - graystainedglass
+  - greyglass
+  - greysglass
+  - greystainedglass
+  - graglass
+  - grasglass
+  - grastainedglass
+  price: 50.0
+95-8:
+  name:
+  - lgglass
+  - lightgrayglass
+  - lightgraysglass
+  - lightgraystainedglass
+  - lgrayglass
+  - lgraysglass
+  - lgraystainedglass
+  - lightgreyglass
+  - lightgreysglass
+  - lightgreystainedglass
+  - lgreyglass
+  - lgreysglass
+  - lgreystainedglass
+  - lightgraglass
+  - lightgrasglass
+  - lightgrastainedglass
+  - lgraglass
+  - lgrasglass
+  - lgrastainedglass
+  - silverglass
+  - silversglass
+  - silverstainedglass
+  - siglass
+  - siasglass
+  - siastainedglass
+  price: 50.0
+95-9:
+  name:
+  - cyanglass
+  - cyansglass
+  - cyanstainedglass
+  - cglass
+  - csglass
+  - cstainedglass
+  price: 50.0
+95-10:
+  name:
+  - purpleglass
+  - purplesglass
+  - purplestainedglass
+  - puglass
+  - pusglass
+  - pustainedglass
+  price: 50.0
+95-11:
+  name:
+  - blglass
+  - blueglass
+  - bluesglass
+  - bluestainedglass
+  - bluglass
+  - blusglass
+  - blustainedglass
+  price: 50.0
+95-12:
+  name:
+  - brglass
+  - brownglass
+  - brownsglass
+  - brownstainedglass
+  - broglass
+  - brosglass
+  - brostainedglass
+  price: 50.0
+95-13:
+  name:
+  - grglass
+  - darkgreenglass
+  - darkgreensglass
+  - darkgreenstainedglass
+  - dgreenglass
+  - dgreensglass
+  - dgreenstainedglass
+  - greenglass
+  - greensglass
+  - greenstainedglass
+  - darkgreglass
+  - darkgresglass
+  - darkgrestainedglass
+  - dgreglass
+  - dgresglass
+  - dgrestainedglass
+  - greglass
+  - gresglass
+  - grestainedglass
+  price: 50.0
+95-14:
+  name:
+  - redglass
+  - redsglass
+  - redstainedglass
+  - rglass
+  - rsglass
+  - rstainedglass
+  price: 50.0
+95-15:
+  name:
+  - bkglass
+  - blackglass
+  - blacksglass
+  - blackstainedglass
+  - blaglass
+  - blasglass
+  - blastainedglass
+  price: 50.0
+96-0:
+  name:
+  - trapdoor
+  - doortrap
+  - hatch
+  - tdoor
+  - doort
+  - trapd
+  - dtrap
+  price: 50.0
+98-0:
+  name:
+  - stonebrick
+  - stonebricks
+  - stonebrickblock
+  - stonebb
+  - sbrick
+  price: 50.0
+98-1:
+  name:
+  - mossystonebrick
+  - mossystonebricks
+  - mossystonebrickblock
+  - mossystonebb
+  - mossstonebrick
+  - mossstonebricks
+  - mossstonebrickblock
+  - mossstonebb
+  - mstonebrick
+  - mstonebricks
+  - mstonebrickblock
+  - mstonebb
+  - mosssbrick
+  - mosssbricks
+  - mosssbrickblock
+  - mosssbb
+  - msbrick
+  - msbricks
+  - msbrickblock
+  price: 50.0
+98-2:
+  name:
+  - csbrick
+  - crackedstone
+  - crackedstonebrick
+  - crackedstonebricks
+  - crackedstonebrickblock
+  - crackedstonebb
+  - crackstonebrick
+  - crackstonebricks
+  - crackstonebrickblock
+  - crackstonebb
+  - crstonebrick
+  - crstonebricks
+  - crstonebrickblock
+  - crstonebb
+  - cracksbrick
+  - cracksbricks
+  - cracksbrickblock
+  - cracksbb
+  - crsbrick
+  - crsbricks
+  - crsbrickblock
+  price: 50.0
+98-3:
+  name:
+  - crstone
+  - circlestone
+  - circlestonebrick
+  - circlestonebricks
+  - circlestonebrickblock
+  - circlestonebb
+  - cistonebrick
+  - cistonebricks
+  - cistonebrickblock
+  - cistonebb
+  - circlesbrick
+  - circlesbricks
+  - circlesbrickblock
+  - circlesbb
+  - cisbrick
+  - cisbricks
+  - cisbrickblock
+  price: 50.0
+99-0:
+  name:
+  - giantbrownmushroom
+  - hugebrownmushroom
+  - bigbrownmushroom
+  - gbrownmushroom
+  - hbrownmushroom
+  - bbrownmushroom
+  - giantbmushroom
+  - hugebmushroom
+  - bigbmushroom
+  - gbmushroom
+  - hbmushroom
+  - bbmushroom
+  - giantbrownmush
+  - hugebrownmush
+  - bigbrownmush
+  - gbrownmush
+  - hbrownmush
+  - bbrownmush
+  - giantbmush
+  - hugebmush
+  - bigbmush
+  - gbmush
+  - hbmush
+  - bbmush
+  price: 50.0
+100-0:
+  name:
+  - giantredmushroom
+  - hugeredmushroom
+  - bigredmushroom
+  - gredmushroom
+  - hredmushroom
+  - bredmushroom
+  - giantrmushroom
+  - hugermushroom
+  - bigrmushroom
+  - grmushroom
+  - hrmushroom
+  - brmushroom
+  - giantredmush
+  - hugeredmush
+  - bigredmush
+  - gredmush
+  - hredmush
+  - bredmush
+  - giantrmush
+  - hugermush
+  - bigrmush
+  - grmush
+  - hrmush
+  - brmush
+  price: 50.0
+101-0:
+  name:
+  - ironbars
+  - ironbarsb
+  - ironbarsblock
+  - ironfence
+  - metalbars
+  - metalbarsb
+  - metalbarsblock
+  - metalfence
+  - jailbars
+  - jailbarsb
+  - jailbarsblock
+  - jailfence
+  - mbars
+  - mbarsb
+  - mbarsblock
+  - mfence
+  - jbars
+  - jbarsb
+  - jbarsblock
+  - jfence
+  - ibars
+  - ibarsb
+  - ibarsblock
+  - ifence
+  price: 50.0
+102-0:
+  name:
+  - glasspane
+  - glassp
+  - paneglass
+  - pglass
+  - flatglass
+  - fglass
+  - skinnyglass
+  - glassflat
+  - glassf
+  - glassskinny
+  - glasss
+  price: 50.0
+103-0:
+  name:
+  - melon
+  - watermelon
+  - greenmelon
+  - melongreen
+  - melonblock
+  - watermelonblock
+  - greenmelonblock
+  price: 50.0
+106-0:
+  name:
+  - vines
+  - vine
+  - greenvines
+  - greenvine
+  - gardenvines
+  - gardenvine
+  - vinesgreen
+  - vinegreen
+  - vinesgarden
+  - vinegarden
+  - vinesg
+  - vineg
+  - gvines
+  - gvine
+  price: 50.0
+107-0:
+  name:
+  - woodgate
+  - woodenfencegate
+  - wfencegate
+  - woodfencegate
+  - woodengate
+  - wgate
+  - gate
+  - gardengate
+  - ggate
+  - fencegate
+  - fgate
+  price: 50.0
+108-0:
+  name:
+  - brickstairs
+  - redbrickstairs
+  - redbstairs
+  - rbrickstairs
+  - bstairs
+  - redstairs
+  - brickstair
+  - redbrickstair
+  - redbstair
+  - rbrickstair
+  - bstair
+  - redstair
+  price: 50.0
+109-0:
+  name:
+  - sbstair
+  - stonebrickstairs
+  - stonebstairs
+  - sbstairs
+  - cementbrickstairs
+  - cementstairs
+  - cementbstairs
+  - cbstairs
+  - greybrickstairs
+  - greybstairs
+  - greystairs
+  price: 50.0
+110-0:
+  name:
+  - mycelium
+  - purplegrass
+  - pinkgrass
+  - mycel
+  - swampgrass
+  - sgrass
+  - mushroomgrass
+  - mushgrass
+  price: 50.0
+111-0:
+  name:
+  - lilypad
+  - waterlily
+  - lily
+  - swamppad
+  - lpad
+  - wlily
+  price: 50.0
+112-0:
+  name:
+  - netherbrickblock
+  - hellbrickblock
+  - deathbrickblock
+  - nbrickblock
+  - hbrickblock
+  - dbrickblock
+  - netherbblock
+  - hellbblock
+  - deathbblock
+  - nbblock
+  - hbblock
+  - dbblock
+  price: 50.0
+113-0:
+  name:
+  - netherbrickfence
+  - hellbrickfence
+  - nbrickfence
+  - hbrickfence
+  - netherbfence
+  - hellbfence
+  - netherfence
+  - hellfence
+  - nbfence
+  - hbfence
+  - nfence
+  - hfence
+  price: 50.0
+114-0:
+  name:
+  - netherbrickstairs
+  - hellbrickstairs
+  - nbrickstairs
+  - hbrickstairs
+  - netherbstairs
+  - hellbstairs
+  - netherstairs
+  - hellstairs
+  - nbstairs
+  - hbstairs
+  - nstairs
+  - hstairs
+  - netherbrickstair
+  - hellbrickstair
+  - nbrickstair
+  - hbrickstair
+  - netherbstair
+  - hellbstair
+  - netherstair
+  - hellstair
+  - nbstair
+  - hbstair
+  - nstair
+  - hstair
+  price: 50.0
+116-0:
+  name:
+  - enchantmenttable
+  - enchantingtable
+  - enchanttable
+  - etable
+  - magicaltable
+  - magictable
+  - mtable
+  - enchantmentdesk
+  - enchantingdesk
+  - enchantdesk
+  - edesk
+  - magicaldesk
+  - magicdesk
+  - mdesk
+  - booktable
+  - bookdesk
+  - btable
+  - bdesk
+  price: 50.0
+121-0:
+  name:
+  - enderstone
+  - endstone
+  - endrock
+  - enderrock
+  - erock
+  - estone
+  price: 50.0
+123-0:
+  name:
+  - redstonelamp
+  - redlamp
+  - rslamp
+  price: 50.0
+126-0:
+  name:
+  - woodenstep
+  - woodstep
+  - wstep
+  - woodenslab
+  - woodslab
+  - wslab
+  - woodenhalfblock
+  - woodhalfblock
+  - whalfblock
+  - oakwoodenstep
+  - oakwoodstep
+  - oakwstep
+  - oakstep
+  - ostep
+  - oakwoodenslab
+  - oakwoodslab
+  - oakwslab
+  - oakslab
+  - oslab
+  - oakwoodenhalfblock
+  - oakwoodhalfblock
+  - oakwhalfblock
+  - oakhalfblock
+  - ohalfblock
+  price: 50.0
+126-1:
+  name:
+  - spslab
+  - spstep
+  - sprucewoodenstep
+  - sprucewoodstep
+  - sprucewstep
+  - sprucestep
+  - sprucewoodenslab
+  - sprucewoodslab
+  - sprucewslab
+  - spruceslab
+  - sprucewoodenhalfblock
+  - sprucewoodhalfblock
+  - sprucewhalfblock
+  - sprucehalfblock
+  - darkwoodenstep
+  - darkwoodstep
+  - darkwstep
+  - darkstep
+  - darkwoodenslab
+  - darkwoodslab
+  - darkwslab
+  - darkslab
+  - darkwoodenhalfblock
+  - darkwoodhalfblock
+  - darkwhalfblock
+  - darkhalfblock
+  price: 50.0
+126-2:
+  name:
+  - birchwoodenstep
+  - birchwoodstep
+  - birchwstep
+  - birchstep
+  - birchwoodenslab
+  - birchwoodslab
+  - birchwslab
+  - birchslab
+  - birchwoodenhalfblock
+  - birchwoodhalfblock
+  - birchwhalfblock
+  - birchhalfblock
+  - lightwoodenstep
+  - lightwoodstep
+  - lightwstep
+  - lightstep
+  - lstep
+  - lightwoodenslab
+  - lightwoodslab
+  - lightwslab
+  - lightslab
+  - lslab
+  - lightwoodenhalfblock
+  - lightwoodhalfblock
+  - lightwhalfblock
+  - lighthalfblock
+  - lhalfblock
+  price: 50.0
+126-3:
+  name:
+  - junglewoodenstep
+  - junglewoodstep
+  - junglewstep
+  - junglestep
+  - jstep
+  - junglewoodenslab
+  - junglewoodslab
+  - junglewslab
+  - jungleslab
+  - jslab
+  - junglewoodenhalfblock
+  - junglewoodhalfblock
+  - junglewhalfblock
+  - junglehalfblock
+  - jhalfblock
+  - forestwoodenstep
+  - forestwoodstep
+  - forestwstep
+  - foreststep
+  - fstep
+  - forestwoodenslab
+  - forestwoodslab
+  - forestwslab
+  - forestslab
+  - fslab
+  - forestwoodenhalfblock
+  - forestwoodhalfblock
+  - forestwhalfblock
+  - foresthalfblock
+  - fhalfblock
+  price: 50.0
+126-4:
+  name:
+  - acaciawoodenstep
+  - acaciawoodstep
+  - acaciawstep
+  - acaciastep
+  - astep
+  - acaciawoodenslab
+  - acaciawoodslab
+  - acaciawslab
+  - acaciaslab
+  - aslab
+  - acaciawoodenhalfblock
+  - acaciawoodhalfblock
+  - acaciawhalfblock
+  - acaciahalfblock
+  - ahalfblock
+  price: 50.0
+126-5:
+  name:
+  - darkoakwoodenstep
+  - darkoakwoodstep
+  - darkoakwstep
+  - darkoakstep
+  - dostep
+  - darkoakwoodenslab
+  - darkoakwoodslab
+  - darkoakwslab
+  - darkoakslab
+  - doslab
+  - darkoakwoodenhalfblock
+  - darkoakwoodhalfblock
+  - darkoakwhalfblock
+  - darkoakhalfblock
+  - dohalfblock
+  price: 50.0
+128-0:
+  name:
+  - sandstonestairs
+  - sandstairs
+  - sandsstairs
+  - sstonestairs
+  - ssstairs
+  - sandstair
+  - sandstonestair
+  - sandsstair
+  - sstonestair
+  - ssstair
+  price: 50.0
+129-0:
+  name:
+  - emeraldore
+  - eore
+  - oreemerald
+  - oree
+  price: 50.0
+130-0:
+  name:
+  - enderchest
+  - endchest
+  - echest
+  - chestender
+  - chestend
+  - cheste
+  - endercontainer
+  - endcontainer
+  - econtainer
+  price: 50.0
+131-0:
+  name:
+  - tripwirehook
+  - tripwire
+  - trip
+  - tripwirelever
+  - triphook
+  price: 50.0
+133-0:
+  name:
+  - emeraldblock
+  - blockemerald
+  - eblock
+  - blocke
+  price: 50.0
+134-0:
+  name:
+  - sprucewoodenstairs
+  - sprucewoodstairs
+  - sprucewstairs
+  - sprucestairs
+  - darkwoodenstairs
+  - darkwoodstairs
+  - darkwstairs
+  - darkstairs
+  - dstairs
+  - sprucewoodenstair
+  - sprucewoodstair
+  - sprucewstair
+  - sprucestair
+  - darkwoodenstair
+  - darkwoodstair
+  - darkwstair
+  - darkstair
+  - dstair
+  price: 50.0
+135-0:
+  name:
+  - birchwoodenstairs
+  - birchwoodstairs
+  - birchwstairs
+  - birchstairs
+  - lightwoodenstairs
+  - lightwoodstairs
+  - lightwstairs
+  - lightstairs
+  - lstairs
+  - birchwoodenstair
+  - birchwoodstair
+  - birchwstair
+  - birchstair
+  - lightwoodenstair
+  - lightwoodstair
+  - lightwstair
+  - lightstair
+  - lstair
+  price: 50.0
+136-0:
+  name:
+  - junglewoodenstairs
+  - junglewoodstairs
+  - junglewstairs
+  - junglestairs
+  - jstairs
+  - forestwoodenstairs
+  - forestwoodstairs
+  - forestwstairs
+  - foreststairs
+  - fstairs
+  - junglewoodenstair
+  - junglewoodstair
+  - junglewstair
+  - junglestair
+  - jstair
+  - forestwoodenstair
+  - forestwoodstair
+  - forestwstair
+  - foreststair
+  - fstair
+  price: 50.0
+137-0:
+  name:
+  - commandblock
+  - blockcommand
+  - cmdblock
+  - blockcmd
+  - macroblock
+  - blockmacro
+  price: 50.0
+138-0:
+  name:
+  - beacon
+  - beaconblock
+  price: 50.0
+139-0:
+  name:
+  - cobblestonewall
+  - cstonewall
+  - cobblewall
+  - cobblestonefence
+  - cstonefence
+  - cobblefence
+  - cswall
+  - csfence
+  - cwall
+  - cfence
+  - mcswall
+  - mcsfence
+  - mcfence
+  price: 50.0
+139-1:
+  name:
+  - mcwall
+  - mosscobblestonewall
+  - mosscstonewall
+  - mosscobblewall
+  - mcobblestonewall
+  - mcstonewall
+  - mcobblewall
+  - mosscobblestonefence
+  - mosscstonefence
+  - mosscobblefence
+  - mcobblestonefence
+  - mcstonefence
+  - mcobblefence
+  price: 50.0
+143-0:
+  name:
+  - woodenbutton
+  - woodenplankbutton
+  - woodplankbutton
+  - wplankbutton
+  - plankbutton
+  - woodbutton
+  - wbutton
+  price: 50.0
+145-0:
+  name:
+  - anvil
+  price: 50.0
+145-1:
+  name:
+  - slightlydamagedanvil
+  - slightdamageanvil
+  - damagedanvil
+  price: 50.0
+145-2:
+  name:
+  - verydamagedanvil
+  price: 50.0
+146-0:
+  name:
+  - trapchest
+  - trappedchest
+  - chesttrapped
+  - chesttrap
+  price: 50.0
+147-0:
+  name:
+  - goldpressureplate
+  - weightedgoldpressureplate
+  - weightgoldpressureplate
+  - wgoldpressureplate
+  - weightedgoldpressplate
+  - weightgoldpressplate
+  - wgoldpressplate
+  - goldpressplate
+  - weightedgoldpplate
+  - weightgoldpplate
+  - wgoldpplate
+  - goldpplate
+  - weightedgoldplate
+  - weightgoldplate
+  - wgoldplate
+  - goldplate
+  - weightedgpressureplate
+  - weightgpressureplate
+  - wgpressureplate
+  - gpressureplate
+  - weightedgpressplate
+  - weightgpressplate
+  - wgpressplate
+  - gpressplate
+  - weightedgpplate
+  - weightgpplate
+  - wgpplate
+  - gpplate
+  - weightedgplate
+  - weightgplate
+  - wgplate
+  - gplate
+  price: 50.0
+148-0:
+  name:
+  - ironpressureplate
+  - weightedironpressureplate
+  - weightironpressureplate
+  - wironpressureplate
+  - weightedironpressplate
+  - weightironpressplate
+  - wironpressplate
+  - ironpressplate
+  - weightedironpplate
+  - weightironpplate
+  - wironpplate
+  - ironpplate
+  - weightedironplate
+  - weightironplate
+  - wironplate
+  - ironplate
+  - weightedipressureplate
+  - weightipressureplate
+  - wipressureplate
+  - ipressureplate
+  - weightedipressplate
+  - weightipressplate
+  - wipressplate
+  - ipressplate
+  - weightedipplate
+  - weightipplate
+  - wipplate
+  - ipplate
+  - weightediplate
+  - weightiplate
+  - wiplate
+  - iplate
+  price: 50.0
+151-0:
+  name:
+  - daylightsensor
+  - daylightsense
+  - lightsensor
+  - lightsense
+  - daysensor
+  - daysense
+  - timesensor
+  - timesense
+  price: 50.0
+152-0:
+  name:
+  - redstoneblock
+  - rstoneblock
+  - redsblock
+  - rsblock
+  - blockredstone
+  - blockrstone
+  - blockreds
+  - blockrs
+  price: 50.0
+153-0:
+  name:
+  - netherquartzore
+  - hellquartzore
+  - deathquartzore
+  - nquartzore
+  - hquartzore
+  - dquartzore
+  - quartzore
+  - netherqore
+  - hellqore
+  - deathqore
+  - nqore
+  - hqore
+  - dqore
+  - qore
+  price: 50.0
+154-0:
+  name:
+  - hopper
+  - chestpuller
+  - chestpull
+  - cheststorer
+  - cheststore
+  - itempuller
+  - itempull
+  - itemstorer
+  - itemstore
+  price: 50.0
+155-0:
+  name:
+  - quartzblock
+  - netherquartzblock
+  - nqblock
+  - qblock
+  price: 50.0
+155-1:
+  name:
+  - chiseledquartzblock
+  - chiselquartzblock
+  - cquartzblock
+  - cqblock
+  price: 50.0
+155-2:
+  name:
+  - pillarquartzblock
+  - pquartzblock
+  - pqblock
+  price: 50.0
+156-0:
+  name:
+  - quartzstairs
+  - qstairs
+  - quartzstair
+  - qstair
+  price: 50.0
+157-0:
+  name:
+  - activatorrails
+  - activaterails
+  - triggerrails
+  - arails
+  - trails
+  - activatorrail
+  - activaterail
+  - triggerrail
+  - arail
+  - trail
+  - activatortrack
+  - activatetrack
+  - triggertrack
+  - atrack
+  - ttrack
+  price: 50.0
+158-0:
+  name:
+  - dropper
+  - drop
+  - chestdispenser
+  - chestdispense
+  - chestdropper
+  - chestdrop
+  price: 50.0
+159-0:
+  name:
+  - whiteclay
+  - whitesclay
+  - whitestainedclay
+  - wclay
+  - wsclay
+  - wstainedclay
+  - sclay
+  - stainedclay
+  price: 50.0
+159-1:
+  name:
+  - orangeclay
+  - orangesclay
+  - orangestainedclay
+  - oclay
+  - osclay
+  - ostainedclay
+  price: 50.0
+159-2:
+  name:
+  - magentaclay
+  - magentasclay
+  - magentastainedclay
+  - mclay
+  - msclay
+  - mstainedclay
+  price: 50.0
+159-3:
+  name:
+  - lightblueclay
+  - lightbluesclay
+  - lightbluestainedclay
+  - lblueclay
+  - lbluesclay
+  - lbluestainedclay
+  - lightbluclay
+  - lightblusclay
+  - lightblustainedclay
+  - lbluclay
+  - lblusclay
+  - lblustainedclay
+  - lbclay
+  - lbsclay
+  - lbstainedclay
+  price: 50.0
+159-4:
+  name:
+  - yellowclay
+  - yellowsclay
+  - yellowstainedclay
+  - yclay
+  - ysclay
+  - ystainedclay
+  price: 50.0
+159-5:
+  name:
+  - lightgreenclay
+  - lightgreensclay
+  - lightgreenstainedclay
+  - lgreenclay
+  - lgreensclay
+  - lgreenstainedclay
+  - lightgreclay
+  - lightgresclay
+  - lightgrestainedclay
+  - lgreclay
+  - lgresclay
+  - lgrestainedclay
+  - limeclay
+  - limesclay
+  - limestainedclay
+  - lclay
+  - lsclay
+  - lstainedclay
+  price: 50.0
+159-6:
+  name:
+  - pinkclay
+  - pinksclay
+  - pinkstainedclay
+  - piclay
+  - pisclay
+  - pistainedclay
+  price: 50.0
+159-7:
+  name:
+  - darkgrayclay
+  - darkgraysclay
+  - darkgraystainedclay
+  - dgrayclay
+  - dgraysclay
+  - dgraystainedclay
+  - darkgreyclay
+  - darkgreeysclay
+  - darkgreystainedclay
+  - dgreyclay
+  - dgreysclay
+  - dgreystainedclay
+  - darkgraclay
+  - darkgrasclay
+  - darkgrastainedclay
+  - dgraclay
+  - dgrasclay
+  - dgrastainedclay
+  - grayclay
+  - graysclay
+  - graystainedclay
+  - greyclay
+  - greysclay
+  - greystainedclay
+  - graclay
+  - grasclay
+  - grastainedclay
+  price: 50.0
+159-8:
+  name:
+  - lgclay
+  - lightgrayclay
+  - lightgraysclay
+  - lightgraystainedclay
+  - lgrayclay
+  - lgraysclay
+  - lgraystainedclay
+  - lightgreyclay
+  - lightgreysclay
+  - lightgreystainedclay
+  - lgreyclay
+  - lgreysclay
+  - lgreystainedclay
+  - lightgraclay
+  - lightgrasclay
+  - lightgrastainedclay
+  - lgraclay
+  - lgrasclay
+  - lgrastainedclay
+  - silverclay
+  - silversclay
+  - silverstainedclay
+  - siclay
+  - siasclay
+  - siastainedclay
+  price: 50.0
+159-9:
+  name:
+  - cyanclay
+  - cyansclay
+  - cyanstainedclay
+  - cclay
+  - csclay
+  - cstainedclay
+  price: 50.0
+159-10:
+  name:
+  - purpleclay
+  - purplesclay
+  - purplestainedclay
+  - puclay
+  - pusclay
+  - pustainedclay
+  price: 50.0
+159-11:
+  name:
+  - blueclay
+  - bluesclay
+  - bluestainedclay
+  - bluclay
+  - blusclay
+  - blustainedclay
+  price: 50.0
+159-12:
+  name:
+  - brownclay
+  - brownsclay
+  - brownstainedclay
+  - broclay
+  - brosclay
+  - brostainedclay
+  price: 50.0
+159-13:
+  name:
+  - darkgreenclay
+  - darkgreensclay
+  - darkgreenstainedclay
+  - dgreenclay
+  - dgreensclay
+  - dgreenstainedclay
+  - greenclay
+  - greensclay
+  - greenstainedclay
+  - darkgreclay
+  - darkgresclay
+  - darkgrestainedclay
+  - dgreclay
+  - dgresclay
+  - dgrestainedclay
+  - greclay
+  - gresclay
+  - grestainedclay
+  price: 50.0
+159-14:
+  name:
+  - redclay
+  - redsclay
+  - redstainedclay
+  - rclay
+  - rsclay
+  - rstainedclay
+  price: 50.0
+159-15:
+  name:
+  - blackclay
+  - blacksclay
+  - blackstainedclay
+  - blaclay
+  - blasclay
+  - blastainedclay
+  price: 50.0
+160-0:
+  name:
+  - wgpane
+  - whiteglasspane
+  - whitesglasspane
+  - whitestainedglasspane
+  - wglasspane
+  - wsglasspane
+  - wstainedglasspane
+  - sglasspane
+  - stainedglasspane
+  price: 50.0
+160-1:
+  name:
+  - ogpane
+  - orangeglasspane
+  - orangesglasspane
+  - orangestainedglasspane
+  - oglasspane
+  - osglasspane
+  - ostainedglasspane
+  price: 50.0
+160-2:
+  name:
+  - mgpane
+  - magentaglasspane
+  - magentasglasspane
+  - magentastainedglasspane
+  - mglasspane
+  - msglasspane
+  - mstainedglasspane
+  price: 50.0
+160-3:
+  name:
+  - lbpane
+  - lightblueglasspane
+  - lightbluesglasspane
+  - lightbluestainedglasspane
+  - lblueglasspane
+  - lbluesglasspane
+  - lbluestainedglasspane
+  - lightbluglasspane
+  - lightblusglasspane
+  - lightblustainedglasspane
+  - lbluglasspane
+  - lblusglasspane
+  - lblustainedglasspane
+  - lbglasspane
+  - lbsglasspane
+  - lbstainedglasspane
+  price: 50.0
+160-4:
+  name:
+  - ygpane
+  - yellowglasspane
+  - yellowsglasspane
+  - yellowstainedglasspane
+  - yglasspane
+  - ysglasspane
+  - ystainedglasspane
+  price: 50.0
+160-5:
+  name:
+  - lgrpane
+  - lightgreenglasspane
+  - lightgreensglasspane
+  - lightgreenstainedglasspane
+  - lgreenglasspane
+  - lgreensglasspane
+  - lgreenstainedglasspane
+  - lightgreglasspane
+  - lightgresglasspane
+  - lightgrestainedglasspane
+  - lgreglasspane
+  - lgresglasspane
+  - lgrestainedglasspane
+  - limeglasspane
+  - limesglasspane
+  - limestainedglasspane
+  - lglasspane
+  - lsglasspane
+  - lstainedglasspane
+  price: 50.0
+160-6:
+  name:
+  - pgpane
+  - pinkglasspane
+  - pinksglasspane
+  - pinkstainedglasspane
+  - piglasspane
+  - pisglasspane
+  - pistainedglasspane
+  price: 50.0
+160-7:
+  name:
+  - dgpane
+  - darkgrayglasspane
+  - darkgraysglasspane
+  - darkgraystainedglasspane
+  - dgrayglasspane
+  - dgraysglasspane
+  - dgraystainedglasspane
+  - darkgreyglasspane
+  - darkgreysglasspane
+  - darkgreystainedglasspane
+  - dgreyglasspane
+  - dgreysglasspane
+  - dgreystainedglasspane
+  - darkgraglasspane
+  - darkgrasglasspane
+  - darkgrastainedglasspane
+  - dgraglasspane
+  - dgrasglasspane
+  - dgrastainedglasspane
+  - grayglasspane
+  - graysglasspane
+  - graystainedglasspane
+  - greyglasspane
+  - greysglasspane
+  - greystainedglasspane
+  - graglasspane
+  - grasglasspane
+  - grastainedglasspane
+  price: 50.0
+160-8:
+  name:
+  - lgypane
+  - lightgrayglasspane
+  - lightgraysglasspane
+  - lightgraystainedglasspane
+  - lgrayglasspane
+  - lgraysglasspane
+  - lgraystainedglasspane
+  - lightgreyglasspane
+  - lightgreysglasspane
+  - lightgreystainedglasspane
+  - lgreyglasspane
+  - lgreysglasspane
+  - lgreystainedglasspane
+  - lightgraglasspane
+  - lightgrasglasspane
+  - lightgrastainedglasspane
+  - lgraglasspane
+  - lgrasglasspane
+  - lgrastainedglasspane
+  - silverglasspane
+  - silversglasspane
+  - silverstainedglasspane
+  - siglasspane
+  - siasglasspane
+  - siastainedglasspane
+  price: 50.0
+160-9:
+  name:
+  - cgpane
+  - cyanglasspane
+  - cyansglasspane
+  - cyanstainedglasspane
+  - cglasspane
+  - csglasspane
+  - cstainedglasspane
+  price: 50.0
+160-10:
+  name:
+  - prpane
+  - purpleglasspane
+  - purplesglasspane
+  - purplestainedglasspane
+  - puglasspane
+  - pusglasspane
+  - pustainedglasspane
+  price: 50.0
+160-11:
+  name:
+  - bgpane
+  - blueglasspane
+  - bluesglasspane
+  - bluestainedglasspane
+  - bluglasspane
+  - blusglasspane
+  - blustainedglasspane
+  price: 50.0
+160-12:
+  name:
+  - brgpane
+  - brownglasspane
+  - brownsglasspane
+  - brownstainedglasspane
+  - broglasspane
+  - brosglasspane
+  - brostainedglasspane
+  price: 50.0
+160-13:
+  name:
+  - dgrpane
+  - darkgreenglasspane
+  - darkgreensglasspane
+  - darkgreenstainedglasspane
+  - dgreenglasspane
+  - dgreensglasspane
+  - dgreenstainedglasspane
+  - greenglasspane
+  - greensglasspane
+  - greenstainedglasspane
+  - darkgreglasspane
+  - darkgresglasspane
+  - darkgrestainedglasspane
+  - dgreglasspane
+  - dgresglasspane
+  - dgrestainedglasspane
+  - greglasspane
+  - gresglasspane
+  - grestainedglasspane
+  price: 50.0
+160-14:
+  name:
+  - rgpane
+  - redglasspane
+  - redsglasspane
+  - redstainedglasspane
+  - rglasspane
+  - rsglasspane
+  - rstainedglasspane
+  price: 50.0
+160-15:
+  name:
+  - blgpane
+  - blackglasspane
+  - blacksglasspane
+  - blackstainedglasspane
+  - blaglasspane
+  - blasglasspane
+  - blastainedglasspane
+  price: 50.0
+161-0:
+  name:
+  - acacialeaves
+  - acaciatreeleaves
+  - acacialogleaves
+  - acaciatrunkleaves
+  - acaciawoodleaves
+  - aleaves
+  - atreeleaves
+  - alogleaves
+  - atrunkleaves
+  - awoodleaves
+  - acacialeave
+  - acaciatreeleave
+  - acacialogleave
+  - acaciatrunkleave
+  - acaciawoodleave
+  - aleave
+  - atreeleave
+  - alogleave
+  - atrunkleave
+  - awoodleave
+  - acaciatreeleaf
+  - acacialogleaf
+  - acaciatrunkleaf
+  - acaciawoodleaf
+  - aleaf
+  - atreeleaf
+  - alogleaf
+  - atrunkleaf
+  - awoodleaf
+  price: 50.0
+161-1:
+  name:
+  - darkoakleaves
+  - darkoaktreeleaves
+  - darkoaklogleaves
+  - darkoaktrunkleaves
+  - darkoakwoodleaves
+  - doakleaves
+  - doaktreeleaves
+  - doaklogleaves
+  - doaktrunkleaves
+  - doakwoodleaves
+  - doleaves
+  - dotreeleaves
+  - dologleaves
+  - dotrunkleaves
+  - dowoodleaves
+  - darkoakleave
+  - darkoaktreeleave
+  - darkoaklogleave
+  - darkoaktrunkleave
+  - darkoakwoodleave
+  - doakleave
+  - doaktreeleave
+  - doaklogleave
+  - doaktrunkleave
+  - doakwoodleave
+  - doleave
+  - dotreeleave
+  - dologleave
+  - dotrunkleave
+  - dowoodleave
+  - darkoaktreeleaf
+  - darkoaklogleaf
+  - darkoaktrunkleaf
+  - darkoakwoodleaf
+  - doakleaf
+  - doaktreeleaf
+  - doaklogleaf
+  - doaktrunkleaf
+  - doakwoodleaf
+  - doleaf
+  - dotreeleaf
+  - dologleaf
+  - dotrunkleaf
+  - dowoodleaf
+  price: 50.0
+162-0:
+  name:
+  - acacia
+  - acaciatree
+  - acacialog
+  - acaciatrunk
+  - acaciawood
+  - atree
+  - alog
+  - atrunk
+  - awood
+  price: 50.0
+162-1:
+  name:
+  - darkoak
+  - darkoaktree
+  - darkoaklog
+  - darkoaktrunk
+  - darkoakwood
+  - doak
+  - doaktree
+  - doaklog
+  - doaktrunk
+  - doakwood
+  - dotree
+  - dolog
+  - dotrunk
+  - dowood
+  price: 50.0
+163-0:
+  name:
+  - acaciawoodenstairs
+  - acaciawoodstairs
+  - acaciawstairs
+  - acaciastairs
+  - awoodenstairs
+  - awoodstairs
+  - awstairs
+  - astairs
+  - acaciawoodenstair
+  - acaciawoodstair
+  - acaciawstair
+  - acaciastair
+  - awoodenstair
+  - awoodstair
+  - awstair
+  - astair
+  price: 50.0
+164-0:
+  name:
+  - darkoakwoodenstairs
+  - darkoakwoodstairs
+  - darkoakwstairs
+  - darkoakstairs
+  - doakwoodenstairs
+  - doakwoodstairs
+  - doakwstairs
+  - doakstairs
+  - dowoodenstairs
+  - dowoodstairs
+  - dowstairs
+  - dostairs
+  - darkoakwoodenstair
+  - darkoakwoodstair
+  - darkoakwstair
+  - darkoakstair
+  - doakwoodenstair
+  - doakwoodstair
+  - doakwstair
+  - doakstair
+  - dowoodenstair
+  - dowoodstair
+  - dowstair
+  - dostair
+  price: 50.0
+165-0:
+  name:
+  - slime
+  - slimeblock
+  price: 50.0
+167-0:
+  name:
+  - irontrapdoor
+  - itrapdoor
+  - irondoortrap
+  - idoortrap
+  price: 50.0
+168-0:
+  name:
+  - pris
+  - prismarine
+  - prismarineblock
+  price: 50.0
+168-1:
+  name:
+  - pbrick
+  - prismarinebrick
+  price: 50.0
+168-2:
+  name:
+  - dpris
+  - darkprismarine
+  price: 50.0
+169-0:
+  name:
+  - lantern
+  - sealantern
+  - sealanternblock
+  price: 50.0
+170-0:
+  name:
+  - hay
+  - hayblock
+  - haybale
+  - baleofhay
+  - hayofbale
+  price: 50.0
+171-0:
+  name:
+  - whitecarpet
+  - whitefloor
+  - wcarpet
+  - wfloor
+  - carpet
+  - floor
+  price: 50.0
+171-1:
+  name:
+  - orangecarpet
+  - orangefloor
+  - ocarpet
+  - ofloor
+  price: 50.0
+171-2:
+  name:
+  - magentacarpet
+  - magentafloor
+  - mcarpet
+  - mfloor
+  price: 50.0
+171-3:
+  name:
+  - lightbluecarpet
+  - lightbluefloor
+  - lbluecarpet
+  - lbluefloor
+  - lbcarpet
+  - lbfloor
+  - lightblucarpet
+  - lightblufloor
+  - lblucarpet
+  - lblufloor
+  price: 50.0
+171-4:
+  name:
+  - yellowcarpet
+  - yellowfloor
+  - ycarpet
+  - yfloor
+  price: 50.0
+171-5:
+  name:
+  - lightgreencarpet
+  - lightgreenfloor
+  - lgreencarpet
+  - lgreenfloor
+  - lightgrecarpet
+  - lightgrefloor
+  - lgrecarpet
+  - lgrefloor
+  - limecarpet
+  - limefloor
+  - lcarpet
+  - lfloor
+  price: 50.0
+171-6:
+  name:
+  - pinkcarpet
+  - pinkfloor
+  - picarpet
+  - pifloor
+  price: 50.0
+171-7:
+  name:
+  - grfloor
+  - darkgraycarpet
+  - darkgrayfloor
+  - dgraycarpet
+  - dgrayfloor
+  - darkgreycarpet
+  - darkgreyfloor
+  - dgreycarpet
+  - dgreyfloor
+  - darkgracarpet
+  - darkgrafloor
+  - dgracarpet
+  - dgrafloor
+  - graycarpet
+  - grayfloor
+  - greycarpet
+  - greyfloor
+  - gracarpet
+  - grafloor
+  price: 50.0
+171-8:
+  name:
+  - lgfloor
+  - lightgraycarpet
+  - lightgrayfloor
+  - lgraycarpet
+  - lgrayfloor
+  - lightgreycarpet
+  - lightgreyfloor
+  - lgreycarpet
+  - lgreyfloor
+  - lightgracarpet
+  - lightgrafloor
+  - lgracarpet
+  - lgrafloor
+  - silvercarpet
+  - silverfloor
+  - sicarpet
+  - siafloor
+  price: 50.0
+171-9:
+  name:
+  - cyancarpet
+  - cyanfloor
+  - ccarpet
+  - cfloor
+  price: 50.0
+171-10:
+  name:
+  - purplecarpet
+  - purplefloor
+  - pucarpet
+  - pufloor
+  price: 50.0
+171-11:
+  name:
+  - blfloor
+  - bluecarpet
+  - bluefloor
+  - blucarpet
+  - blufloor
+  price: 50.0
+171-12:
+  name:
+  - brfloor
+  - browncarpet
+  - brownfloor
+  - brocarpet
+  - brofloor
+  price: 50.0
+171-13:
+  name:
+  - dgfloor
+  - darkgreencarpet
+  - darkgreenfloor
+  - dgreencarpet
+  - dgreenfloor
+  - greencarpet
+  - greenfloor
+  - darkgrecarpet
+  - darkgrefloor
+  - dgrecarpet
+  - dgrefloor
+  - grecarpet
+  - grefloor
+  price: 50.0
+171-14:
+  name:
+  - redcarpet
+  - redfloor
+  - rcarpet
+  - rfloor
+  price: 50.0
+171-15:
+  name:
+  - bkfloor
+  - blackcarpet
+  - blackfloor
+  - blacarpet
+  - blafloor
+  price: 50.0
+172-0:
+  name:
+  - hardenedclay
+  - hardclay
+  - hclay
+  price: 50.0
+173-0:
+  name:
+  - coalblock
+  - blockcoal
+  - coblock
+  - blockco
+  - coalb
+  - bcoal
+  price: 50.0
+174-0:
+  name:
+  - packedice
+  - packice
+  - solidice
+  price: 50.0
+175-0:
+  name:
+  - sunflower
+  - yellowsunflower
+  price: 50.0
+175-1:
+  name:
+  - lilac
+  - magentalilac
+  - syringa
+  price: 50.0
+175-2:
+  name:
+  - longtallgrass
+  - extratallgrass
+  - doubletallgrass
+  - largetallgrass
+  - longtgrass
+  - extratgrass
+  - doubletgrass
+  - largetgrass
+  - ltgrass
+  - etgrass
+  - dtgrass
+  price: 50.0
+175-3:
+  name:
+  - bigfern
+  - largefern
+  - doublefern
+  - bfern
+  - lfern
+  - dfern
+  price: 50.0
+175-4:
+  name:
+  - rosebush
+  - redrosebush
+  price: 50.0
+175-5:
+  name:
+  - peony
+  - pinkpeony
+  - paeonia
+  price: 50.0
+179-0:
+  name:
+  - rsstone
+  - redsandstone
+  price: 50.0
+179-1:
+  name:
+  - crstone
+  - redsandstonechiseled
+  - chiseledredsandstone
+  price: 50.0
+179-2:
+  name:
+  - srstone
+  - redsandstonesmooth
+  - smoothredsandstone
+  price: 50.0
+180-0:
+  name:
+  - redsandstonestair
+  - redsandstonestairs
+  - rsstair
+  - stairredsandstone
+  price: 50.0
+183-0:
+  name:
+  - sprucefencegate
+  - sfencegate
+  - sgate
+  - sprucegate
+  price: 50.0
+184-0:
+  name:
+  - birchfencegate
+  - bfencegate
+  - bgate
+  - birchgate
+  price: 50.0
+185-0:
+  name:
+  - junglefencegate
+  - jfencegate
+  - jgate
+  - junglegate
+  price: 50.0
+186-0:
+  name:
+  - darkoakfencegate
+  - doakfencegate
+  - darkoakgate
+  - doakgate
+  - dogate
+  price: 50.0
+187-0:
+  name:
+  - acaciafencegate
+  - afencegate
+  - acaciagate
+  - agate
+  price: 50.0
+188-0:
+  name:
+  - sprucefence
+  - sfence
+  price: 50.0
+189-0:
+  name:
+  - birchfence
+  - bfence
+  price: 50.0
+190-0:
+  name:
+  - junglefence
+  - jfence
+  price: 50.0
+191-0:
+  name:
+  - darkoakfence
+  - dofence
+  - doakfence
+  price: 50.0
+192-0:
+  name:
+  - acaciafence
+  - afence
+  price: 50.0
+256-0:
+  name:
+  - ironshovel
+  - ironspade
+  - ishovel
+  - ispade
+  - steelshovel
+  - steelspade
+  price: 50.0
+257-0:
+  name:
+  - ironpickaxe
+  - ironpick
+  - steelpickaxe
+  - steelpick
+  - ipickaxe
+  - ipick
+  price: 50.0
+258-0:
+  name:
+  - ironaxe
+  - iaxe
+  - steelaxe
+  price: 50.0
+259-0:
+  name:
+  - flintandsteel
+  - flintandiron
+  - flintandtinder
+  - flintnsteel
+  - flintniron
+  - flintntinder
+  - flintsteel
+  - flintiron
+  - flinttinder
+  - lighter
+  price: 50.0
+260-0:
+  name:
+  - apple
+  - normalapple
+  - redapple
+  price: 50.0
+261-0:
+  name:
+  - bow
+  price: 50.0
+262-0:
+  name:
+  - arrow
+  price: 50.0
+263-0:
+  name:
+  - coal
+  price: 50.0
+263-1:
+  name:
+  - charcoal
+  - ccoal
+  price: 50.0
+264-0:
+  name:
+  - diamond
+  - crystal
+  price: 50.0
+265-0:
+  name:
+  - ironingot
+  - ironbar
+  - ironi
+  - steelingot
+  - steelbar
+  - steeli
+  - iingot
+  - ibar
+  - ingotiron
+  - bariron
+  - iiron
+  - ingotsteel
+  - barsteel
+  - isteel
+  - ingoti
+  - bari
+  price: 50.0
+266-0:
+  name:
+  - goldingot
+  - goldbar
+  - goldi
+  - gingot
+  - gbar
+  - ingotgold
+  - bargold
+  - igold
+  - ingotg
+  - barg
+  price: 50.0
+267-0:
+  name:
+  - ironsword
+  - steelsword
+  - isword
+  price: 50.0
+268-0:
+  name:
+  - woodensword
+  - woodsword
+  - wsword
+  price: 50.0
+269-0:
+  name:
+  - woodenshovel
+  - woodenspade
+  - woodshovel
+  - woodspade
+  - wshovel
+  - wspade
+  price: 50.0
+270-0:
+  name:
+  - woodenpickaxe
+  - woodenpick
+  - woodpickaxe
+  - woodpick
+  - wpickaxe
+  - wpick
+  price: 50.0
+271-0:
+  name:
+  - woodenaxe
+  - woodaxe
+  - waxe
+  price: 50.0
+272-0:
+  name:
+  - stonesword
+  - cobblestonesword
+  - cstonesword
+  - cssword
+  - ssword
+  price: 50.0
+273-0:
+  name:
+  - stoneshovel
+  - cobblestoneshovel
+  - cobblestonespade
+  - cstoneshovel
+  - cstonespade
+  - stonespade
+  - csshovel
+  - csspade
+  - sshovel
+  - sspade
+  price: 50.0
+274-0:
+  name:
+  - stonepickaxe
+  - cobblestonepickaxe
+  - cobblestonepick
+  - cstonepickaxe
+  - cstonepick
+  - stonepick
+  - cspickaxe
+  - cspick
+  - spickaxe
+  - spick
+  price: 50.0
+275-0:
+  name:
+  - stoneaxe
+  - cobblestoneaxe
+  - cstoneaxe
+  - csaxe
+  - saxe
+  price: 50.0
+276-0:
+  name:
+  - diamondsword
+  - crystalsword
+  - dsword
+  price: 50.0
+277-0:
+  name:
+  - diamondshovel
+  - diamondspade
+  - crystalshovel
+  - crystalspade
+  - dshovel
+  - dspade
+  price: 50.0
+278-0:
+  name:
+  - diamondpickaxe
+  - diamondpick
+  - crystalpickaxe
+  - crystalpick
+  - dpickaxe
+  - dpick
+  price: 50.0
+279-0:
+  name:
+  - diamondaxe
+  - crystalaxe
+  - daxe
+  price: 50.0
+280-0:
+  name:
+  - stick
+  - twig
+  - branch
+  price: 50.0
+281-0:
+  name:
+  - bowl
+  - woodenbowl
+  - woodbowl
+  price: 50.0
+282-0:
+  name:
+  - mushroomsoup
+  - mrsoup
+  - soup
+  price: 50.0
+283-0:
+  name:
+  - goldsword
+  - gsword
+  price: 50.0
+284-0:
+  name:
+  - goldshovel
+  - goldspade
+  - gshovel
+  - gspade
+  price: 50.0
+285-0:
+  name:
+  - goldpickaxe
+  - goldpick
+  - gpickaxe
+  - gpick
+  price: 50.0
+286-0:
+  name:
+  - goldaxe
+  - gaxe
+  price: 50.0
+287-0:
+  name:
+  - string
+  - thread
+  price: 50.0
+288-0:
+  name:
+  - feather
+  price: 50.0
+289-0:
+  name:
+  - gunpowder
+  - sulfur
+  price: 50.0
+290-0:
+  name:
+  - woodenhoe
+  - woodhoe
+  - whoe
+  price: 50.0
+291-0:
+  name:
+  - stonehoe
+  - cobblestonehoe
+  - cstonehoe
+  - cshoe
+  - shoe
+  price: 50.0
+292-0:
+  name:
+  - ironhoe
+  - steelhoe
+  - ihoe
+  price: 50.0
+293-0:
+  name:
+  - diamondhoe
+  - crystalhoe
+  - dhoe
+  price: 50.0
+294-0:
+  name:
+  - goldhoe
+  - ghoe
+  price: 50.0
+295-0:
+  name:
+  - seeds
+  - seed
+  price: 50.0
+296-0:
+  name:
+  - wheat
+  - crops
+  - crop
+  price: 50.0
+297-0:
+  name:
+  - bread
+  price: 50.0
+298-0:
+  name:
+  - leatherhelmet
+  - leatherhelm
+  - leatherhat
+  - leathercoif
+  - lhelmet
+  - lhelm
+  - lhat
+  - lcoif
+  price: 50.0
+299-0:
+  name:
+  - leatherchestplate
+  - leatherplatebody
+  - leatherplate
+  - leathershirt
+  - leathertunic
+  - lchestplate
+  - lplatebody
+  - lplate
+  - lshirt
+  - ltunic
+  price: 50.0
+300-0:
+  name:
+  - leatherleggings
+  - leatherlegs
+  - leatherpants
+  - lleggings
+  - llegs
+  - lpants
+  price: 50.0
+301-0:
+  name:
+  - leatherboots
+  - leathershoes
+  - lboots
+  - lshoes
+  price: 50.0
+302-0:
+  name:
+  - chainmailhelmet
+  - chainmailhelm
+  - chainmailhat
+  - chainmailcoif
+  - chainmhelmet
+  - chainmhelm
+  - chainmhat
+  - chainmcoif
+  - cmailhelmet
+  - cmailhelm
+  - cmailhat
+  - cmailcoif
+  - chainhelmet
+  - chainhelm
+  - chainhat
+  - chaincoif
+  - cmhelmet
+  - cmhelm
+  - cmhat
+  - cmcoif
+  price: 50.0
+303-0:
+  name:
+  - chainmailchestplate
+  - chainmailplatebody
+  - chainmailplate
+  - chainmailshirt
+  - chainmailtunic
+  - chainmchestplate
+  - chainmplatebody
+  - chainmplate
+  - chainmshirt
+  - chainmtunic
+  - cmailchestplate
+  - cmailplatebody
+  - cmailplate
+  - cmailshirt
+  - cmailtunic
+  - chainchestplate
+  - chainplatebody
+  - chainplate
+  - chainshirt
+  - chaintunic
+  - cmchestplate
+  - cmplatebody
+  - cmplate
+  - cmshirt
+  - cmtunic
+  price: 50.0
+304-0:
+  name:
+  - chainmailleggings
+  - chainmaillegs
+  - chainmailpants
+  - chainmleggings
+  - chainmlegs
+  - chainmpants
+  - cmailleggings
+  - cmaillegs
+  - cmailpants
+  - chainleggings
+  - chainlegs
+  - chainpants
+  - cmleggings
+  - cmlegs
+  - cmpants
+  price: 50.0
+305-0:
+  name:
+  - chainmailboots
+  - chainmailshoes
+  - chainmboots
+  - chainmshoes
+  - cmailboots
+  - cmailshoes
+  - chainboots
+  - chainshoes
+  - cmboots
+  - cmshoes
+  price: 50.0
+306-0:
+  name:
+  - ironhelmet
+  - ironhelm
+  - ironhat
+  - ironcoif
+  - ihelmet
+  - ihelm
+  - ihat
+  - icoif
+  - steelhelmet
+  - steelhelm
+  - steelhat
+  - steelcoif
+  - shelmet
+  - shelm
+  - shat
+  - scoif
+  price: 50.0
+307-0:
+  name:
+  - ironchestplate
+  - ironplatebody
+  - ironshirt
+  - irontunic
+  - ichestplate
+  - iplatebody
+  - ishirt
+  - itunic
+  - steelchestplate
+  - steelplatebody
+  - steelplate
+  - steelshirt
+  - steeltunic
+  - schestplate
+  - splatebody
+  - sshirt
+  - stunic
+  price: 50.0
+308-0:
+  name:
+  - ironleggings
+  - ironlegs
+  - ironpants
+  - ileggings
+  - ilegs
+  - ipants
+  - steelleggings
+  - steellegs
+  - steelpants
+  - sleggings
+  - slegs
+  - spants
+  price: 50.0
+309-0:
+  name:
+  - ironboots
+  - ironshoes
+  - iboots
+  - ishoes
+  - steelboots
+  - steelshoes
+  - sboots
+  - sshoes
+  price: 50.0
+310-0:
+  name:
+  - diamondhelmet
+  - diamondhelm
+  - diamondhat
+  - diamondcoif
+  - dhelmet
+  - dhelm
+  - dhat
+  - dcoif
+  - crystalhelmet
+  - crystalhelm
+  - crystalhat
+  - crystalcoif
+  - chelmet
+  - chelm
+  - chat
+  - ccoif
+  price: 50.0
+311-0:
+  name:
+  - diamondchestplate
+  - diamondplatebody
+  - diamondplate
+  - diamondshirt
+  - diamondtunic
+  - dchestplate
+  - dplatebody
+  - dplate
+  - dshirt
+  - dtunic
+  - crystalchestplate
+  - crystalplatebody
+  - crystalplate
+  - crystalshirt
+  - crystaltunic
+  - cchestplate
+  - cplatebody
+  - cplate
+  - cshirt
+  - ctunic
+  price: 50.0
+312-0:
+  name:
+  - diamondleggings
+  - diamondlegs
+  - diamondpants
+  - dleggings
+  - dlegs
+  - dpants
+  - crystalleggings
+  - crystallegs
+  - crystalpants
+  - cleggings
+  - clegs
+  - cpants
+  price: 50.0
+313-0:
+  name:
+  - diamondboots
+  - diamondshoes
+  - dboots
+  - dshoes
+  - crystalboots
+  - crystalshoes
+  - cboots
+  - cshoes
+  price: 50.0
+314-0:
+  name:
+  - goldhelmet
+  - goldhelm
+  - goldhat
+  - goldcoif
+  - ghelmet
+  - ghelm
+  - ghat
+  - gcoif
+  price: 50.0
+315-0:
+  name:
+  - goldchestplate
+  - goldplatebody
+  - goldshirt
+  - goldtunic
+  - gchestplate
+  - gplatebody
+  - gplateplate
+  - gshirt
+  - gtunic
+  price: 50.0
+316-0:
+  name:
+  - goldleggings
+  - goldlegs
+  - goldpants
+  - gleggings
+  - glegs
+  - gpants
+  price: 50.0
+317-0:
+  name:
+  - goldboots
+  - goldshoes
+  - gboots
+  - gshoes
+  price: 50.0
+318-0:
+  name:
+  - flint
+  price: 50.0
+319-0:
+  name:
+  - pork
+  - porkchop
+  - rawpork
+  - rpork
+  - rawporkchop
+  - rporkchop
+  price: 50.0
+320-0:
+  name:
+  - cookedpork
+  - grilledpork
+  - grillpork
+  - gpork
+  - cookpork
+  - cpork
+  - grilledporkchop
+  - grillporkchop
+  - gporkchop
+  - cookedporkchop
+  - cookporkchop
+  - cporkchop
+  - bacon
+  price: 50.0
+321-0:
+  name:
+  - painting
+  - picture
+  price: 50.0
+322-0:
+  name:
+  - goldenapple
+  - goldapple
+  - gapple
+  price: 50.0
+322-1:
+  name:
+  - enchantedgoldenapple
+  - enchantedgoldapple
+  - enchantedgapple
+  - supergoldenapple
+  - supergoldapple
+  - supergapple
+  - magicalgoldenapple
+  - magicalgoldapple
+  - magicalgapple
+  - magicgoldenapple
+  - magicgoldapple
+  - magicgapple
+  - egoldenapple
+  - egoldapple
+  - egapple
+  - sgoldenapple
+  - sgoldapple
+  - sgapple
+  - mgoldenapple
+  - mgoldapple
+  - mgapple
+  price: 50.0
+323-0:
+  name:
+  - sign
+  price: 50.0
+324-0:
+  name:
+  - woodendoor
+  - wooddoor
+  - wdoor
+  - door
+  - oakdoor
+  - odoor
+  price: 50.0
+325-0:
+  name:
+  - bucket
+  - bukkit
+  price: 50.0
+326-0:
+  name:
+  - waterbucket
+  - waterbukkit
+  - wbucket
+  - wbukkit
+  price: 50.0
+327-0:
+  name:
+  - magmabucket
+  - magmabukkit
+  - lavabucket
+  - lavabukkit
+  - lbucket
+  - lbukkit
+  price: 50.0
+328-0:
+  name:
+  - minecart
+  - mcart
+  - cart
+  price: 50.0
+329-0:
+  name:
+  - saddle
+  price: 50.0
+330-0:
+  name:
+  - irondoor
+  - idoor
+  - steeldoor
+  - sdoor
+  - dooriron
+  - doori
+  - doorsteel
+  - doors
+  price: 50.0
+331-0:
+  name:
+  - redstonedust
+  - redstone
+  - rstonedust
+  - rstone
+  - redsdust
+  - reddust
+  - rsdust
+  - rdust
+  price: 50.0
+332-0:
+  name:
+  - snow
+  - snowball
+  - snball
+  - sball
+  price: 50.0
+333-0:
+  name:
+  - boat
+  price: 50.0
+334-0:
+  name:
+  - leather
+  - cowhide
+  - hide
+  price: 50.0
+335-0:
+  name:
+  - milkbucket
+  - milkbukkit
+  - mbucket
+  - mbukkit
+  price: 50.0
+336-0:
+  name:
+  - claybrick
+  - brick
+  - redbrick
+  - rbrick
+  price: 50.0
+337-0:
+  name:
+  - clayball
+  - cball
+  - clay
+  price: 50.0
+338-0:
+  name:
+  - reeds
+  - reed
+  - sugarcane
+  - scane
+  - bamboo
+  price: 50.0
+339-0:
+  name:
+  - paper
+  - papyrus
+  price: 50.0
+340-0:
+  name:
+  - book
+  price: 50.0
+341-0:
+  name:
+  - slimeball
+  - slball
+  price: 50.0
+342-0:
+  name:
+  - chestminecart
+  - storageminecart
+  - storagemcart
+  - chestmcart
+  - storagecart
+  - chestcart
+  - sminecart
+  - cminecart
+  - smcart
+  - cmcart
+  - scart
+  - ccart
+  price: 50.0
+343-0:
+  name:
+  - furnaceminecart
+  - engineminecart
+  - poweredminecart
+  - powerminecart
+  - enginemcart
+  - poweredmcart
+  - powermcart
+  - furnacemcart
+  - enginecart
+  - poweredcart
+  - powercart
+  - furnacecart
+  - eminecart
+  - pminecart
+  - fminecart
+  - emcart
+  - pmcart
+  - fmcart
+  - ecart
+  - pcart
+  - fcart
+  price: 50.0
+344-0:
+  name:
+  - egg
+  price: 50.0
+345-0:
+  name:
+  - compass
+  price: 50.0
+346-0:
+  name:
+  - fishingrod
+  - fishrod
+  - frod
+  - rod
+  price: 50.0
+347-0:
+  name:
+  - watch
+  - goldwatch
+  - goldclock
+  - gwatch
+  - gclock
+  - clock
+  price: 50.0
+348-0:
+  name:
+  - glowstonedust
+  - glowingstonedust
+  - lightstonedust
+  - lbdust
+  - gbdust
+  - lsdust
+  - gsdust
+  price: 50.0
+349-0:
+  name:
+  - rawfish
+  - rafish
+  - fish
+  price: 50.0
+349-1:
+  name:
+  - rawsalmonfish
+  - rasalmonfish
+  - salmonfish
+  - rawsalmon
+  - rasalmon
+  - salmon
+  - sfish
+  - fishs
+  price: 50.0
+349-2:
+  name:
+  - rawclownfish
+  - raclownfish
+  - clownfish
+  - rawnemo
+  - ranemo
+  - nemo
+  - nemofish
+  - fishnemo
+  - clfish
+  - fishcl
+  - nfish
+  - fishn
+  price: 50.0
+349-3:
+  name:
+  - rawpufferfish
+  - rapufferfish
+  - pufferfish
+  - pufffish
+  - fishpuff
+  - pfish
+  - fishp
+  price: 50.0
+350-0:
+  name:
+  - cookedfish
+  - cookfish
+  - cfish
+  - grilledfish
+  - grillfish
+  - gfish
+  - roastedfish
+  - roastfish
+  - rofish
+  price: 50.0
+350-1:
+  name:
+  - cookedsalmonfish
+  - cooksalmonfish
+  - csalmonfish
+  - grilledsalmonfish
+  - grillsalmonfish
+  - gsalmonfish
+  - roastedsalmonfish
+  - roastsalmonfish
+  - rosalmonfish
+  - cookedsalmon
+  - cooksalmon
+  - csalmon
+  - grilledsalmon
+  - grillsalmon
+  - gsalmon
+  - roastedsalmon
+  - roastsalmon
+  - rosalmon
+  price: 50.0
+351-0:
+  name:
+  - dye
+  - inksack
+  - inksac
+  - isack
+  - isac
+  - sack
+  - sac
+  - blackinksack
+  - blackinksac
+  - blackisack
+  - blackisac
+  - blacksack
+  - blacksac
+  - inksackblack
+  - inksacblack
+  - isackblack
+  - isacblack
+  - sackblack
+  - sacblack
+  - blackinksackcolour
+  - blackinksaccolour
+  - blackisackcolour
+  - blackisaccolour
+  - blacksackcolour
+  - blacksaccolour
+  - inksackblackcolour
+  - inksacblackcolour
+  - isackblackcolour
+  - isacclackcolour
+  - sackblackcolour
+  - sacblackcolour
+  - blackinksackcolor
+  - blackinksaccolor
+  - blackisackcolor
+  - blackisaccolor
+  - blacksackcolor
+  - blacksaccolor
+  - inksackblackcolor
+  - inksacblackcolor
+  - isackblackcolor
+  - isacblackcolor
+  - sackblackcolor
+  - sacblackcolor
+  - blackinksackdye
+  - blackinksacdye
+  - blackisackdye
+  - blackisacdye
+  - blacksackdye
+  - blacksacdye
+  - inksackblackdye
+  - inksacblackdye
+  - isackblackdye
+  - isacclackdye
+  - sackblackdye
+  - sacblackdye
+  - blackcolor
+  - blackdye
+  price: 50.0
+351-1:
+  name:
+  - rosered
+  - roseredcolor
+  - roseredcolour
+  - rosereddye
+  - redrosecolor
+  - redrosecolour
+  - redrosedye
+  - redr
+  - redrcolor
+  - redrcolour
+  - redrdye
+  - redcolor
+  - redcolour
+  - reddye
+  price: 50.0
+351-2:
+  name:
+  - cactusgreen
+  - greencactus
+  - cactusgreencolour
+  - greencactuscolour
+  - cactusgreencolor
+  - greencactuscolor
+  - cactusgreendye
+  - greencactusdye
+  - greencolour
+  - greencolor
+  - greendye
+  price: 50.0
+351-3:
+  name:
+  - cocoabeans
+  - cocoabean
+  - cocobeans
+  - cocobean
+  - cbeans
+  - cbean
+  - beans
+  - bean
+  - browncocoabeans
+  - browncocoabean
+  - browncocobeans
+  - browncocobean
+  - browncbeans
+  - browncbean
+  - brownbeans
+  - brownbean
+  - brownb
+  - cocoabeanscolour
+  - cocoabeancolour
+  - cocobeanscolour
+  - cocobeancolour
+  - cbeanscolour
+  - cbeancolour
+  - beanscolour
+  - beancolour
+  - browncocoabeanscolour
+  - browncocoabeancolour
+  - browncocobeanscolour
+  - browncocobeancolour
+  - browncbeanscolour
+  - browncbeancolour
+  - brownbeanscolour
+  - brownbeancolour
+  - brownbcolour
+  - cocoabeanscolor
+  - cocoabeancolor
+  - cocobeanscolor
+  - cocobeancolor
+  - cbeanscolor
+  - cbeancolor
+  - beanscolor
+  - beancolor
+  - browncocoabeanscolor
+  - browncocoabeancolor
+  - browncocobeanscolor
+  - browncocobeancolor
+  - browncbeanscolor
+  - browncbeancolor
+  - brownbeanscolor
+  - brownbeancolor
+  - brownbcolor
+  - cocoabeansdye
+  - cocoabeandye
+  - cocobeansdye
+  - cocobeandye
+  - cbeansdye
+  - cbeandye
+  - beansdye
+  - beandye
+  - browncocoabeansdye
+  - browncocoabeandye
+  - browncocobeansdye
+  - browncocobeandye
+  - browncbeansdye
+  - browncbeandye
+  - brownbeansdye
+  - brownbeandye
+  - brownbdye
+  - browncolour
+  - browncolor
+  - browndye
+  price: 50.0
+351-4:
+  name:
+  - lapislazuli
+  - bluelapislazuli
+  - bluelapisl
+  - bluelapis
+  - bluel
+  - lapislazuliblue
+  - lapislblue
+  - lapisblue
+  - lapisl
+  - lapis
+  - bluelapislazulicolour
+  - bluelapislcolour
+  - bluelapiscolour
+  - lapislazulibluecolour
+  - lapislbluecolour
+  - lapisbluecolour
+  - lapislazulicolour
+  - lapislcolour
+  - lapiscolour
+  - bluelapislazulicolor
+  - bluelapislcolor
+  - bluelapiscolor
+  - lapislazulibluecolor
+  - lapislbluecolor
+  - lapisbluecolor
+  - lapislazulicolor
+  - lapislcolor
+  - lapiscolor
+  - bluelapislazulidye
+  - bluelapisldye
+  - bluelapisdye
+  - lapislazulibluedye
+  - lapislbluedye
+  - lapisbluedye
+  - lapislazulidye
+  - lapisldye
+  - lapisdye
+  - bluecolour
+  - bluecolor
+  - bluedye
+  price: 50.0
+351-5:
+  name:
+  - purpledye
+  - purplecolour
+  - purplecolor
+  price: 50.0
+351-6:
+  name:
+  - cyandye
+  - cyancolour
+  - cyancolor
+  price: 50.0
+351-7:
+  name:
+  - lightgraydye
+  - lightgraycolour
+  - lightgraycolor
+  - lgraycolour
+  - lgraycolor
+  - lgraydye
+  - lightgreydye
+  - lightgreycolour
+  - lightgreycolor
+  - lgreycolour
+  - lgreycolor
+  - lgreydye
+  - silvercolour
+  - silvercolor
+  - silverdye
+  price: 50.0
+351-8:
+  name:
+  - darkgraydye
+  - darkgraycolour
+  - darkgraycolor
+  - dgraycolour
+  - dgraycolor
+  - dgraydye
+  - graycolour
+  - graycolor
+  - graydye
+  - darkgreydye
+  - darkgreycolour
+  - darkgreycolor
+  - dgreycolour
+  - dgreycolor
+  - dgreydye
+  - greycolour
+  - greycolor
+  - greydye
+  price: 50.0
+351-9:
+  name:
+  - pinkdye
+  - pinkcolour
+  - pinkcolor
+  price: 50.0
+351-10:
+  name:
+  - limedye
+  - limecolour
+  - limecolor
+  price: 50.0
+351-11:
+  name:
+  - dandelionyellow
+  - dandelionyellowcolour
+  - dandelionyellowcolor
+  - dandelionyellowdye
+  - yellowdandelioncolour
+  - yellowdandelioncolor
+  - yellowdandeliondye
+  - yellowd
+  - yellowdcolour
+  - yellowdcolor
+  - yellowddye
+  - dyellow
+  - dyellowcolour
+  - dyellowcolor
+  - dyellowdye
+  - yellowcolour
+  - yellowcolor
+  - yellowdye
+  price: 50.0
+351-12:
+  name:
+  - lightbluecolour
+  - lightbluecolor
+  - lightbluedye
+  - lbluecolour
+  - lbluecolor
+  - lbluedye
+  price: 50.0
+351-13:
+  name:
+  - magentacolour
+  - magentacolor
+  - magentadye
+  price: 50.0
+351-14:
+  name:
+  - orangecolour
+  - orangecolor
+  - orangedye
+  price: 50.0
+351-15:
+  name:
+  - bonemeal
+  - whitebonemeal
+  - whitebonemealcolour
+  - whitebonemealcolor
+  - whitebonemealdye
+  - bonemealwhite
+  - bonemealwhitecolour
+  - bonemealwhitecolor
+  - bonemealwhitedye
+  - whitebonem
+  - whitebonemcolour
+  - whitebonemcolor
+  - whitebonemdye
+  - bonemwhite
+  - bonemwhitecolour
+  - bonemwhitecolor
+  - bonemwhitedye
+  - bonemealcolour
+  - bonemealcolor
+  - bonemealdye
+  - bonem
+  - bonemcolour
+  - bonemcolor
+  - bonemdye
+  - whitecolour
+  - whitecolor
+  - whitedye
+  price: 50.0
+352-0:
+  name:
+  - bone
+  price: 50.0
+353-0:
+  name:
+  - sugar
+  - whitedust
+  price: 50.0
+354-0:
+  name:
+  - cake
+  price: 50.0
+355-0:
+  name:
+  - bed
+  price: 50.0
+356-0:
+  name:
+  - redstonerepeater
+  - redstonerepeat
+  - redstonedelayer
+  - redstonedelay
+  - redstonedioder
+  - redstonediode
+  - rstonerepeater
+  - rstonerepeat
+  - rstonedelayer
+  - rstonedelay
+  - rstonedioder
+  - rstonediode
+  - redsrepeater
+  - redsrepeat
+  - redsdelayer
+  - redsdelay
+  - redsdioder
+  - redsdiode
+  - rsrepeater
+  - rsrepeat
+  - rsdelayer
+  - rsdelay
+  - rsdioder
+  - rsdiode
+  - repeater
+  - repeat
+  - delayer
+  - delay
+  - dioder
+  - diode
+  price: 50.0
+357-0:
+  name:
+  - cookie
+  price: 50.0
+358-0:
+  name:
+  - chart
+  - map0
+  price: 50.0
+358-1:
+  name:
+  - map1
+  price: 50.0
+358-2:
+  name:
+  - map2
+  price: 50.0
+358-3:
+  name:
+  - map3
+  price: 50.0
+358-4:
+  name:
+  - map4
+  price: 50.0
+358-5:
+  name:
+  - map5
+  price: 50.0
+358-6:
+  name:
+  - map6
+  price: 50.0
+358-7:
+  name:
+  - map7
+  price: 50.0
+358-8:
+  name:
+  - map8
+  price: 50.0
+358-9:
+  name:
+  - map9
+  price: 50.0
+358-10:
+  name:
+  - map10
+  price: 50.0
+358-11:
+  name:
+  - map11
+  price: 50.0
+358-12:
+  name:
+  - map12
+  price: 50.0
+358-13:
+  name:
+  - map13
+  price: 50.0
+358-14:
+  name:
+  - map14
+  price: 50.0
+358-15:
+  name:
+  - map15
+  price: 50.0
+359-0:
+  name:
+  - shears
+  - shear
+  - sheers
+  - sheer
+  - woolcutters
+  - woolcutter
+  - cutterswool
+  - cutterwool
+  price: 50.0
+360-0:
+  name:
+  - melonslice
+  - mslice
+  - slicemelon
+  - watermelonslice
+  - greenmelonslice
+  - melongreenslice
+  price: 50.0
+361-0:
+  name:
+  - pumpkinseeds
+  - pseeds
+  - seedsp
+  - seedspumpkin
+  - pumpseeds
+  - seedspump
+  price: 50.0
+362-0:
+  name:
+  - melonseeds
+  - mseeds
+  - watermelonseeds
+  - greenmelonseeds
+  - gmelonseeds
+  - seedsmelon
+  - seedswatermelon
+  price: 50.0
+363-0:
+  name:
+  - rawbeef
+  - rawsteak
+  - uncookedbeef
+  - uncookedsteak
+  - cowmeat
+  - plainbeef
+  price: 50.0
+364-0:
+  name:
+  - beef
+  - steak
+  - cookedbeef
+  - grilledbeef
+  - cookedsteak
+  - grilledsteak
+  - cookedcowmeat
+  price: 50.0
+365-0:
+  name:
+  - rawchicken
+  - uncookedchicken
+  - plainchicken
+  - chickenplain
+  - chickenuncooked
+  - chickenraw
+  price: 50.0
+366-0:
+  name:
+  - cookedchicken
+  - grilledchicken
+  - toastedchicken
+  - gchicken
+  - bbqchicken
+  - friedchicken
+  - cchicken
+  price: 50.0
+367-0:
+  name:
+  - rottenflesh
+  - zombieflesh
+  - rottenmeat
+  - zombiemeat
+  - badflesh
+  - poisonflesh
+  - zombieremains
+  price: 50.0
+368-0:
+  name:
+  - enderpearl
+  - endpearl
+  - pearl
+  - epearl
+  - bluepearl
+  - endergem
+  price: 50.0
+369-0:
+  name:
+  - blazerod
+  - goldenrod
+  - goldrod
+  - blazestick
+  - goldstick
+  - brod
+  - grod
+  - bstick
+  - gstick
+  price: 50.0
+370-0:
+  name:
+  - ghasttear
+  - ghastdrop
+  - ghosttear
+  - ghostdrop
+  - gtear
+  - gdrop
+  - tear
+  price: 50.0
+371-0:
+  name:
+  - goldnugget
+  - gnugget
+  - goldpebble
+  - gpebble
+  - goldball
+  - gball
+  price: 50.0
+372-0:
+  name:
+  - netherstalk
+  - deathstalk
+  - hellstalk
+  - nstalk
+  - dstalk
+  - hstalk
+  - netherwarts
+  - netherwart
+  - netherplant
+  - nethercrop
+  - hellwarts
+  - hellwart
+  - hellplant
+  - hellcrop
+  - deathwarts
+  - deathwart
+  - deathplant
+  - deathcrop
+  - nwarts
+  - nwart
+  - ncrop
+  - nplant
+  - hwarts
+  - hwart
+  - hplant
+  - hcrop
+  - dwarts
+  - dwart
+  - dplant
+  - dcrop
+  price: 50.0
+373-0:
+  name:
+  - potion
+  - mixture
+  - potions
+  - waterbottle
+  - fullbottle
+  - watervase
+  - fullvase
+  price: 50.0
+373-6:
+  name:
+  - clearpotion
+  - clearpot
+  price: 50.0
+373-7:
+  name:
+  - clearextendedpotion
+  - clearexpotion
+  - clear2potion
+  - clearextendedpot
+  - clearexpot
+  - clear2pot
+  price: 50.0
+373-11:
+  name:
+  - diffusepotion
+  - diffusepot
+  price: 50.0
+373-13:
+  name:
+  - artlesspotion
+  - artlesspot
+  price: 50.0
+373-14:
+  name:
+  - thinpotion
+  - thinpot
+  price: 50.0
+373-15:
+  name:
+  - thinextendedpotion
+  - thinexpotion
+  - thin2potion
+  - thinextendedpot
+  - thinexpot
+  - thin2pot
+  price: 50.0
+373-16:
+  name:
+  - awkwardpotion
+  - awkwardpot
+  price: 50.0
+373-22:
+  name:
+  - bunglingpotion
+  - bunglingpot
+  price: 50.0
+373-23:
+  name:
+  - bunglingextendedpotion
+  - bunglingexpotion
+  - bungling2potion
+  - bunglingextendedpot
+  - bunglingexpot
+  - bungling2pot
+  price: 50.0
+373-27:
+  name:
+  - smoothpotion
+  - smoothpot
+  price: 50.0
+373-29:
+  name:
+  - suavepotion
+  - suavepot
+  price: 50.0
+373-30:
+  name:
+  - debonairpotion
+  - debonairpot
+  price: 50.0
+373-31:
+  name:
+  - debonairextendedpotion
+  - debonairexpotion
+  - debonair2potion
+  - debonairextendedpot
+  - debonairexpot
+  - debonair2pot
+  price: 50.0
+373-32:
+  name:
+  - thickpotion
+  - thickpot
+  price: 50.0
+373-38:
+  name:
+  - charmingpotion
+  - charmingpot
+  price: 50.0
+373-39:
+  name:
+  - charmingextendedpotion
+  - charmingexpotion
+  - charming2potion
+  - charmingextendedpot
+  - charmingexpot
+  - charming2pot
+  price: 50.0
+373-43:
+  name:
+  - refinedpotion
+  - refinedpot
+  price: 50.0
+373-45:
+  name:
+  - cordialpotion
+  - cordialpot
+  price: 50.0
+373-46:
+  name:
+  - sparklingpotion
+  - sparklingpot
+  price: 50.0
+373-47:
+  name:
+  - sparklingextendedpotion
+  - sparklingexpotion
+  - sparkling2potion
+  - sparklingextendedpot
+  - sparklingexpot
+  - sparkling2pot
+  price: 50.0
+373-48:
+  name:
+  - potentpotion
+  - potentpot
+  price: 50.0
+373-54:
+  name:
+  - rankpotion
+  - rankpot
+  price: 50.0
+373-55:
+  name:
+  - rankextendedpotion
+  - rankexpotion
+  - rank2potion
+  - rankextendedpot
+  - rankexpot
+  - rank2pot
+  price: 50.0
+373-59:
+  name:
+  - acridpotion
+  - acridpot
+  price: 50.0
+373-61:
+  name:
+  - grosspotion
+  - grosspot
+  price: 50.0
+373-62:
+  name:
+  - stinkypotion
+  - stinkypot
+  price: 50.0
+373-63:
+  name:
+  - stinkyextendedpotion
+  - stinkyexpotion
+  - stinky2potion
+  - stinkyextendedpot
+  - stinkyexpot
+  - stinky2pot
+  price: 50.0
+373-64:
+  name:
+  - mundaneextendedpotion
+  - mundaneexpotion
+  - mundane2potion
+  - mundaneextendedpot
+  - mundaneexpot
+  - mundane2pot
+  price: 50.0
+373-8192:
+  name:
+  - mundanepotion
+  - mundanepot
+  price: 50.0
+373-8193:
+  name:
+  - regenerationpotion
+  - regeneratepotion
+  - regenpotion
+  - regenerationpot
+  - regeneratepot
+  - regenpot
+  - rpot
+  price: 50.0
+373-8194:
+  name:
+  - swiftnesspotion
+  - swiftpotion
+  - speedpotion
+  - swiftnesspot
+  - swiftpot
+  - speedpot
+  - swpot
+  price: 50.0
+373-8195:
+  name:
+  - fireresistancepotion
+  - fireresistpotion
+  - firerespotion
+  - fireresistancepot
+  - fireresistpot
+  - firerespot
+  - fpot
+  price: 50.0
+373-8196:
+  name:
+  - poisonpotion
+  - acidpotion
+  - poisonpot
+  - acidpot
+  - ppot
+  price: 50.0
+373-8197:
+  name:
+  - healingpotion
+  - healpotion
+  - lifepotion
+  - healingpot
+  - healpot
+  - lifepot
+  - hpot
+  price: 50.0
+373-8198:
+  name:
+  - nightvisionpotion
+  - nvisionpotion
+  - nightvpotion
+  - darkvisionpotion
+  - dvisionpotion
+  - darkvpotion
+  - nightvisionpot
+  - nvisionpot
+  - nightvpot
+  - darkvisionpot
+  - dvisionpot
+  - darkvpot
+  - npot
+  price: 50.0
+373-8200:
+  name:
+  - weaknesspotion
+  - weakpotion
+  - weaknesspot
+  - weakpot
+  - wpot
+  price: 50.0
+373-8201:
+  name:
+  - strengthpotion
+  - strongpotion
+  - strpotion
+  - strengthpot
+  - strongpot
+  - strpot
+  - stpot
+  price: 50.0
+373-8202:
+  name:
+  - slownesspotion
+  - slowpotion
+  - slownesspot
+  - slowpot
+  - slpot
+  price: 50.0
+373-8204:
+  name:
+  - harmingpotion
+  - damagepotion
+  - dmgpotion
+  - harmingpot
+  - damagepot
+  - dmgpot
+  - dpot
+  price: 50.0
+373-8205:
+  name:
+  - waterbreathingpotion
+  - waterbreathpotion
+  - breathingpotion
+  - breathpotion
+  - waterbreathingpot
+  - waterbreathpot
+  - breathingpot
+  - breathpot
+  - wbpot
+  price: 50.0
+373-8206:
+  name:
+  - invisibilitypotion
+  - invisiblepotion
+  - invpotion
+  - invisibilitypot
+  - invisiblepot
+  - invpot
+  - ipot
+  price: 50.0
+373-8225:
+  name:
+  - regenerationleveliipotion
+  - regenerateleveliipotion
+  - regenleveliipotion
+  - regenerationlevel2potion
+  - regeneratelevel2potion
+  - regenlevel2potion
+  - regenerationiipotion
+  - regenerateiipotion
+  - regeniipotion
+  - regenerationleveliipot
+  - regenerateleveliipot
+  - regenleveliipot
+  - regenerationlevel2pot
+  - regeneratelevel2pot
+  - regenlevel2pot
+  - regenerationiipot
+  - regenerateiipot
+  - regeniipot
+  - r2pot
+  price: 50.0
+373-8226:
+  name:
+  - swiftnessleveliipotion
+  - swiftleveliipotion
+  - speedleveliipotion
+  - swiftnesslevel2potion
+  - swiftlevel2potion
+  - speedlevel2potion
+  - swiftnessiipotion
+  - swiftiipotion
+  - speediipotion
+  - swiftnessleveliipot
+  - swiftleveliipot
+  - speedleveliipot
+  - swiftnesslevel2pot
+  - swiftlevel2pot
+  - speedlevel2pot
+  - swiftnessiipot
+  - swiftiipot
+  - speediipot
+  - sw2pot
+  price: 50.0
+373-8228:
+  name:
+  - poisonleveliipotion
+  - acidleveliipotion
+  - poisonlevel2potion
+  - acidlevel2potion
+  - poisoniipotion
+  - acidiipotion
+  - poisonleveliipot
+  - acidleveliipot
+  - poisonlevel2pot
+  - acidlevel2pot
+  - poisoniipot
+  - acidiipot
+  - p2pot
+  price: 50.0
+373-8229:
+  name:
+  - healingleveliipotion
+  - healleveliipotion
+  - healinglevel2potion
+  - heallevel2potion
+  - healingiipotion
+  - healiipotion
+  - healingleveliipot
+  - healleveliipot
+  - healinglevel2pot
+  - heallevel2pot
+  - healingiipot
+  - healiipot
+  - h2pot
+  price: 50.0
+373-8233:
+  name:
+  - strengthleveliipotion
+  - strongleveliipotion
+  - strleveliipotion
+  - strengthlevel2potion
+  - stronglevel2potion
+  - strlevel2potion
+  - strengthiipotion
+  - strongiipotion
+  - striipotion
+  - strengthleveliipot
+  - strongleveliipot
+  - strleveliipot
+  - strengthlevel2pot
+  - stronglevel2pot
+  - strlevel2pot
+  - strengthiipot
+  - strongiipot
+  - striipot
+  - st2pot
+  price: 50.0
+373-8235:
+  name:
+  - leapingleveliipotion
+  - leapleveliipotion
+  - leaplevel2potion
+  - leapinglevel2potion
+  - leapingiipotion
+  - leapiipotion
+  - leapiipotion
+  - leapingiipotion
+  - leap2potion
+  - leaping2potion
+  price: 50.0
+373-8236:
+  name:
+  - harmingleveliipotion
+  - damageleveliipotion
+  - dmgleveliipotion
+  - harminglevel2potion
+  - damagelevel2potion
+  - dmglevel2potion
+  - harmingiipotion
+  - damageiipotion
+  - dmgiipotion
+  - harmingleveliipot
+  - damageleveliipot
+  - dmgleveliipot
+  - harminglevel2pot
+  - damagelevel2pot
+  - dmglevel2pot
+  - harmingiipot
+  - damageiipot
+  - dmgiipot
+  - d2pot
+  price: 50.0
+373-8257:
+  name:
+  - regenerationextendedpotion
+  - regenerateextendedpotion
+  - regenextendepotion
+  - regenerationexpotion
+  - regenerateexpotion
+  - regenexpotion
+  - regenerationextendedpot
+  - regenerateextendedpot
+  - regenextendepot
+  - regenerationexpot
+  - regenerateexpot
+  - regenexpot
+  - repot
+  price: 50.0
+373-8258:
+  name:
+  - swiftnessextendedpotion
+  - swiftextendedpotion
+  - speedextendedpotion
+  - swiftnessexpotion
+  - swiftexpotion
+  - speedexpotion
+  - swiftnessextendedpot
+  - swiftextendedpot
+  - speedextendedpot
+  - swiftnessexpot
+  - swiftexpot
+  - speedexpot
+  - swepot
+  price: 50.0
+373-8259:
+  name:
+  - fireresistanceextendedpotion
+  - fireresistextendedpotion
+  - fireresextendedpotion
+  - fireresistanceexpotion
+  - fireresistexpotion
+  - fireresexpotion
+  - fireresistanceextendedpot
+  - fireresistextendedpot
+  - fireresextendedpot
+  - fireresistanceexpot
+  - fireresistexpot
+  - fireresexpot
+  - fepot
+  price: 50.0
+373-8260:
+  name:
+  - poisonextendedpotion
+  - acidextendedpotion
+  - poisonexpotion
+  - acidexpotion
+  - poisonextendedpot
+  - acidextendedpot
+  - poisonexpot
+  - acidexpot
+  - pepot
+  price: 50.0
+373-8262:
+  name:
+  - nightvisionextendedpotion
+  - nvisionextendedpotion
+  - nightvextendedpotion
+  - darkvisionextendedpotion
+  - dvisionextendedpotion
+  - darkvextendedpotion
+  - nightvisionexpotion
+  - nvisionexpotion
+  - nightvexpotion
+  - darkvisionexpotion
+  - dvisionexpotion
+  - darkvexpotion
+  - nightvisionextendedpot
+  - nvisionextendedpot
+  - nightvextendedpot
+  - darkvisionextendedpot
+  - dvisionextendedpot
+  - darkvextendedpot
+  - nightvisionexpot
+  - nvisionexpot
+  - nightvexpot
+  - darkvisionexpot
+  - dvisionexpot
+  - darkvexpot
+  - nepot
+  price: 50.0
+373-8264:
+  name:
+  - weaknessextendedpotion
+  - weakextendedpotion
+  - weaknessexpotion
+  - weakexpotion
+  - weaknessextendedpot
+  - weakextendedpot
+  - weaknessexpot
+  - weakexpot
+  - wepot
+  price: 50.0
+373-8265:
+  name:
+  - strengthextendedpotion
+  - strongextendedpotion
+  - strextendedpotion
+  - strengthexpotion
+  - strongexpotion
+  - strexpotion
+  - strengthextendedpot
+  - strongextendedpot
+  - strextendedpot
+  - strengthexpot
+  - strongexpot
+  - strexpot
+  - stepot
+  price: 50.0
+373-8266:
+  name:
+  - slownessextendedpotion
+  - slowextenedpotion
+  - slownessexpotion
+  - slowexpotion
+  - slownessextendedpot
+  - slowextenedpot
+  - slownessexpot
+  - slowexpot
+  - slepot
+  price: 50.0
+373-8267:
+  name:
+  - leapingpotion
+  - leappotion
+  price: 50.0
+373-8269:
+  name:
+  - waterbreathingextendedpotion
+  - waterbreathextendedpotion
+  - breathingextendedpotion
+  - breathextendedpotion
+  - waterbreathingextendedpot
+  - waterbreathextendedpot
+  - breathingextendedpot
+  - breathextendedpot
+  - waterbreathingexpotion
+  - waterbreathexpotion
+  - breathingexpotion
+  - breathexpotion
+  - waterbreathingexpot
+  - waterbreathexpot
+  - breathingexpot
+  - breathexpot
+  - wbepot
+  price: 50.0
+373-8270:
+  name:
+  - invisibilityextendedpotion
+  - invisibleextendedpotion
+  - invextendedpotion
+  - invisibilityexpotion
+  - invisibleexpotion
+  - invexpotion
+  - invisibilityextendedpot
+  - invisibleextendedpot
+  - invextendedpot
+  - invisibilityexpot
+  - invisibleexpot
+  - invexpot
+  - iepot
+  price: 50.0
+373-8289:
+  name:
+  - regenerationdualbitpotion
+  - regeneratedualbitpotion
+  - regendualbitpotion
+  - regenerationdbpotion
+  - regeneratedbpotion
+  - regendbpotion
+  - regenerationdualbitpot
+  - regeneratedualbitpot
+  - regendualbitpot
+  - regenerationdbpot
+  - regeneratedbpot
+  - regendbpot
+  - rdbpot
+  price: 50.0
+373-8290:
+  name:
+  - swiftnessdualbitpotion
+  - swiftdualbitpotion
+  - speeddualbitpotion
+  - swiftnessdualbitpot
+  - swiftdualbitpot
+  - speeddualbitpot
+  - swiftnessdbpotion
+  - swiftdbpotion
+  - speeddbpotion
+  - swiftnessdbpot
+  - swiftdbpot
+  - speeddbpot
+  - swdbpot
+  price: 50.0
+373-8292:
+  name:
+  - poisondualbitpotion
+  - aciddualbitpotion
+  - poisondualbitpot
+  - aciddualbitpot
+  - poisondbpotion
+  - aciddbpotion
+  - poisondbpot
+  - aciddbpot
+  - pdbpot
+  price: 50.0
+373-8297:
+  name:
+  - strengthdualbitpotion
+  - strongdualbitpotion
+  - strdualbitpotion
+  - strengthdualbitpot
+  - strongdualbitpot
+  - strdualbitpot
+  - strengthdbpotion
+  - strongdbpotion
+  - strdbpotion
+  - strengthdbpot
+  - strongdbpot
+  - strdbpot
+  - stdbpot
+  price: 50.0
+373-16384:
+  name:
+  - splashmundanepotion
+  - splmundanepotion
+  price: 50.0
+373-16385:
+  name:
+  - splashregenerationpotion
+  - splashregeneratepotion
+  - splashregenpotion
+  - splashregenerationpot
+  - splashregeneratepot
+  - splashregenpot
+  - regenerationsplashpotion
+  - regeneratesplashpotion
+  - regensplashpotion
+  - splregenerationpotion
+  - splregeneratepotion
+  - splregenpotion
+  - splregenerationpot
+  - splregeneratepot
+  - splregenpot
+  - sprpot
+  price: 50.0
+373-16386:
+  name:
+  - splashswiftnesspotion
+  - splashswiftpotion
+  - splashspeedpotion
+  - splashswiftnesspot
+  - splashswiftpot
+  - splashspeedpot
+  - splswiftnesspotion
+  - splswiftpotion
+  - splspeedpotion
+  - splswiftnesspot
+  - splswiftpot
+  - splspeedpot
+  - spswpot
+  price: 50.0
+373-16387:
+  name:
+  - splashfireresistancepotion
+  - splashfireresistpotion
+  - splashfirerespotion
+  - splashfireresistancepot
+  - splashfireresistpot
+  - splashfirerespot
+  - splfireresistancepotion
+  - splfireresistpotion
+  - splfirerespotion
+  - splfireresistancepot
+  - splfireresistpot
+  - splfirerespot
+  - spfpot
+  price: 50.0
+373-16388:
+  name:
+  - splashpoisonpotion
+  - splashacidpotion
+  - splashpoisonpot
+  - splashacidpot
+  - splpoisonpotion
+  - splacidpotion
+  - splpoisonpot
+  - splacidpot
+  - spppot
+  price: 50.0
+373-16389:
+  name:
+  - splashhealingpotion
+  - splashhealpotion
+  - splashlifepotion
+  - splashhealingpot
+  - splashhealpot
+  - splashlifepot
+  - splhealingpotion
+  - splhealpotion
+  - spllifepotion
+  - splhealingpot
+  - splhealpot
+  - spllifepot
+  - sphpot
+  price: 50.0
+373-16390:
+  name:
+  - splashclearpotion
+  - splashclearpot
+  - splclearpotion
+  - splclearpot
+  - splashnightvisionpotion
+  - splashnvisionpotion
+  - splashnightvpotion
+  - splashdarkvisionpotion
+  - splashdvisionpotion
+  - splashdarkvpotion
+  - splashnightvisionpot
+  - splashnvisionpot
+  - splashnightvpot
+  - splashdarkvisionpot
+  - splashdvisionpot
+  - splashdarkvpot
+  - splnightvisionpotion
+  - splnvisionpotion
+  - splnightvpotion
+  - spldarkvisionpotion
+  - spldvisionpotion
+  - spldarkvpotion
+  - splnightvisionpot
+  - splnvisionpot
+  - splnightvpot
+  - spldarkvisionpot
+  - spldvisionpot
+  - spldarkvpot
+  - spnpot
+  price: 50.0
+373-16391:
+  name:
+  - splashclearextendedpotion
+  - splashclearexpotion
+  - splashclear2potion
+  - splashclearextendedpot
+  - splashclearexpot
+  - splashclear2pot
+  - splclearextendedpotion
+  - splclearexpotion
+  - splclear2potion
+  - splclearextendedpot
+  - splclearexpot
+  - splclear2pot
+  price: 50.0
+373-16392:
+  name:
+  - splashweaknesspotion
+  - splashweakpotion
+  - splashweaknesspot
+  - splashweakpot
+  - splweaknesspotion
+  - splweakpotion
+  - splweaknesspot
+  - splweakpot
+  - spwpot
+  price: 50.0
+373-16393:
+  name:
+  - splashstrengthpotion
+  - splashstrongpotion
+  - splashstrpotion
+  - splashstrengthpot
+  - splashstrongpot
+  - splashstrpot
+  - splstrengthpotion
+  - splstrongpotion
+  - splstrpotion
+  - splstrengthpot
+  - splstrongpot
+  - splstrpot
+  - spstpot
+  price: 50.0
+373-16394:
+  name:
+  - splashslownesspotion
+  - splashslowpotion
+  - splashslownesspot
+  - splashslowpot
+  - splslownesspotion
+  - splslowpotion
+  - splslownesspot
+  - splslowpot
+  - spslpot
+  price: 50.0
+373-16395:
+  name:
+  - splashdiffusepotion
+  - splashdiffusepot
+  - spldiffusepotion
+  - spldiffusepot
+  price: 50.0
+373-16396:
+  name:
+  - splashharmingpotion
+  - splashdamagepotion
+  - splashdmgpotion
+  - splashharmingpot
+  - splashdamagepot
+  - splashdmgpot
+  - splharmingpotion
+  - spldamagepotion
+  - spldmgpotion
+  - splharmingpot
+  - spldamagepot
+  - spldmgpot
+  - spdpot
+  price: 50.0
+373-16397:
+  name:
+  - splashartlesspotion
+  - splashartlesspot
+  - splartlesspotion
+  - splartlesspot
+  - splashwaterbreathingpotion
+  - splashwaterbreathpotion
+  - splashbreathingpotion
+  - splashbreathpotion
+  - splashwaterbreathingpot
+  - splashwaterbreathpot
+  - splashbreathingpot
+  - splashbreathpot
+  - splwaterbreathingpotion
+  - splwaterbreathpotion
+  - splbreathingpotion
+  - splbreathpotion
+  - splwaterbreathingpot
+  - splwaterbreathpot
+  - splbreathingpot
+  - splbreathpot
+  - spwbpot
+  price: 50.0
+373-16398:
+  name:
+  - splashthinpotion
+  - splashthinpot
+  - splthinpotion
+  - splthinpot
+  - splashinvisibilitypotion
+  - splashinvisiblepotion
+  - splashinvpotion
+  - splashinvisibilitypot
+  - splashinvisiblepot
+  - splashinvpot
+  - splinvisibilitypotion
+  - splinvisiblepotion
+  - splinvpotion
+  - splinvisibilitypot
+  - splinvisiblepot
+  - splinvpot
+  - spipot
+  price: 50.0
+373-16399:
+  name:
+  - splashthinextendedpotion
+  - splashthinexpotion
+  - splashthin2potion
+  - splashthinextendedpot
+  - splashthinexpot
+  - splashthin2pot
+  - splthinextendedpotion
+  - splthinexpotion
+  - splthin2potion
+  - splthinextendedpot
+  - splthinexpot
+  - splthin2pot
+  price: 50.0
+373-16400:
+  name:
+  - splashawkwardpotion
+  - splashawkwardpot
+  - splawkwardpotion
+  - splawkwardpot
+  price: 50.0
+373-16406:
+  name:
+  - splashbunglingpotion
+  - splashbunglingpot
+  - splbunglingpotion
+  - splbunglingpot
+  price: 50.0
+373-16407:
+  name:
+  - splashbunglingextendedpotion
+  - splashbunglingexpotion
+  - splashbungling2potion
+  - splashbunglingextendedpot
+  - splashbunglingexpot
+  - splashbungling2pot
+  - splbunglingextendedpotion
+  - splbunglingexpotion
+  - splbungling2potion
+  - splbunglingextendedpot
+  - splbunglingexpot
+  - splbungling2pot
+  price: 50.0
+373-16411:
+  name:
+  - splashsmoothpotion
+  - splashsmoothpot
+  - splsmoothpotion
+  - splsmoothpot
+  price: 50.0
+373-16413:
+  name:
+  - splashsuavepotion
+  - splashsuavepot
+  - splsuavepotion
+  - splsuavepot
+  price: 50.0
+373-16414:
+  name:
+  - splashdebonairpotion
+  - splashdebonairpot
+  - spldebonairpotion
+  - spldebonairpot
+  price: 50.0
+373-16415:
+  name:
+  - splashdebonairextendedpotion
+  - splashdebonairexpotion
+  - splashdebonair2potion
+  - splashdebonairextendedpot
+  - splashdebonairexpot
+  - splashdebonair2pot
+  - spldebonairextendedpotion
+  - spldebonairexpotion
+  - spldebonair2potion
+  - spldebonairextendedpot
+  - spldebonairexpot
+  - spldebonair2pot
+  price: 50.0
+373-16416:
+  name:
+  - splashthickpotion
+  - splashthickpot
+  - splthickpotion
+  - splthickpot
+  price: 50.0
+373-16417:
+  name:
+  - splashregenerationleveliipotion
+  - splashregenerateleveliipotion
+  - splashregenleveliipotion
+  - splashregenerationlevel2potion
+  - splashregeneratelevel2potion
+  - splashregenlevel2potion
+  - splashregenerationiipotion
+  - splashregenerateiipotion
+  - splashregeniipotion
+  - splashregenerationleveliipot
+  - splashregenerateleveliipot
+  - splashregenleveliipot
+  - splashregenerationlevel2pot
+  - splashregeneratelevel2pot
+  - splashregenlevel2pot
+  - splashregenerationiipot
+  - splashregenerateiipot
+  - splashregeniipot
+  - splregenerationleveliipotion
+  - splregenerateleveliipotion
+  - splregenleveliipotion
+  - splregenerationlevel2potion
+  - splregeneratelevel2potion
+  - splregenlevel2potion
+  - splregenerationiipotion
+  - splregenerateiipotion
+  - splregeniipotion
+  - splregenerationleveliipot
+  - splregenerateleveliipot
+  - splregenleveliipot
+  - splregenerationlevel2pot
+  - splregeneratelevel2pot
+  - splregenlevel2pot
+  - splregenerationiipot
+  - splregenerateiipot
+  - splregeniipot
+  - spr2pot
+  price: 50.0
+373-16418:
+  name:
+  - splashswiftnessleveliipotion
+  - splashswiftleveliipotion
+  - splashspeedleveliipotion
+  - splashswiftnesslevel2potion
+  - splashswiftlevel2potion
+  - splashspeedlevel2potion
+  - splashswiftnessiipotion
+  - splashswiftiipotion
+  - splashspeediipotion
+  - splashswiftnessleveliipot
+  - splashswiftleveliipot
+  - splashspeedleveliipot
+  - splashswiftnesslevel2pot
+  - splashswiftlevel2pot
+  - splashspeedlevel2pot
+  - splashswiftnessiipot
+  - splashswiftiipot
+  - splashspeediipot
+  - splswiftnessleveliipotion
+  - splswiftleveliipotion
+  - splspeedleveliipotion
+  - splswiftnesslevel2potion
+  - splswiftlevel2potion
+  - splspeedlevel2potion
+  - splswiftnessiipotion
+  - splswiftiipotion
+  - splspeediipotion
+  - splswiftnessleveliipot
+  - splswiftleveliipot
+  - splspeedleveliipot
+  - splswiftnesslevel2pot
+  - splswiftlevel2pot
+  - splspeedlevel2pot
+  - splswiftnessiipot
+  - splswiftiipot
+  - splspeediipot
+  - spsw2pot
+  price: 50.0
+373-16420:
+  name:
+  - splashpoisonleveliipotion
+  - splashacidleveliipotion
+  - splashpoisonlevel2potion
+  - splashacidlevel2potion
+  - splashpoisoniipotion
+  - splashacidiipotion
+  - splashpoisonleveliipot
+  - splashacidleveliipot
+  - splashpoisonlevel2pot
+  - splashacidlevel2pot
+  - splashpoisoniipot
+  - splashacidiipot
+  - splpoisonleveliipotion
+  - splacidleveliipotion
+  - splpoisonlevel2potion
+  - splcidlevel2potion
+  - splpoisoniipotion
+  - splacidiipotion
+  - splpoisonleveliipot
+  - splacidleveliipot
+  - splpoisonlevel2pot
+  - splacidlevel2pot
+  - splpoisoniipot
+  - splacidiipot
+  - spp2pot
+  price: 50.0
+373-16421:
+  name:
+  - splashhealingleveliipotion
+  - splashhealleveliipotion
+  - splashhealinglevel2potion
+  - splashheallevel2potion
+  - splashhealingiipotion
+  - splashhealiipotion
+  - splashhealingleveliipot
+  - splashhealleveliipot
+  - splashhealinglevel2pot
+  - splashheallevel2pot
+  - splashhealingiipot
+  - splashhealiipot
+  - splhealingleveliipotion
+  - splhealleveliipotion
+  - splhealinglevel2potion
+  - splheallevel2potion
+  - splhealingiipotion
+  - splhealiipotion
+  - splhealingleveliipot
+  - splhealleveliipot
+  - splhealinglevel2pot
+  - splheallevel2pot
+  - splhealingiipot
+  - splhealiipot
+  - sph2pot
+  price: 50.0
+373-16422:
+  name:
+  - splashcharmingpotion
+  - splashcharmingpot
+  - splcharmingpotion
+  - splcharmingpot
+  price: 50.0
+373-16423:
+  name:
+  - splashcharmingextendedpotion
+  - splashcharmingexpotion
+  - splashcharming2potion
+  - splashcharmingextendedpot
+  - splashcharmingexpot
+  - splashcharming2pot
+  - splcharmingextendedpotion
+  - splcharmingexpotion
+  - splcharming2potion
+  - splcharmingextendedpot
+  - splcharmingexpot
+  - splcharming2pot
+  price: 50.0
+373-16425:
+  name:
+  - splashstrengthleveliipotion
+  - splashstrongleveliipotion
+  - splashstrleveliipotion
+  - splashstrengthlevel2potion
+  - splashstronglevel2potion
+  - splashstrlevel2potion
+  - splashstrengthiipotion
+  - splashstrongiipotion
+  - splashstriipotion
+  - splashstrengthleveliipot
+  - splashstrongleveliipot
+  - splashstrleveliipot
+  - splashstrengthlevel2pot
+  - splashstronglevel2pot
+  - splashstrlevel2pot
+  - splashstrengthiipot
+  - splashstrongiipot
+  - splashstriipot
+  - splstrengthleveliipotion
+  - splstrongleveliipotion
+  - splstrleveliipotion
+  - splstrengthlevel2potion
+  - splstronglevel2potion
+  - splstrlevel2potion
+  - splstrengthiipotion
+  - splstrongiipotion
+  - splstriipotion
+  - splstrengthleveliipot
+  - splstrongleveliipot
+  - splstrleveliipot
+  - splstrengthlevel2pot
+  - splstronglevel2pot
+  - splstrlevel2pot
+  - splstrengthiipot
+  - splstrongiipot
+  - splstriipot
+  - spst2pot
+  price: 50.0
+373-16427:
+  name:
+  - splashrefinedpotion
+  - splashrefinedpot
+  - splrefinedpotion
+  - splrefinedpot
+  price: 50.0
+373-16428:
+  name:
+  - splashharmingleveliipotion
+  - splashdamageleveliipotion
+  - splashdmgleveliipotion
+  - splashharminglevel2potion
+  - splashdamagelevel2potion
+  - splashdmglevel2potion
+  - splashharmingiipotion
+  - splashdamageiipotion
+  - splashdmgiipotion
+  - splashharmingleveliipot
+  - splashdamageleveliipot
+  - splashdmgleveliipot
+  - splashharminglevel2pot
+  - splashdamagelevel2pot
+  - splashdmglevel2pot
+  - splashharmingiipot
+  - splashdamageiipot
+  - splashdmgiipot
+  - splharmingleveliipotion
+  - spldamageleveliipotion
+  - spldmgleveliipotion
+  - splharminglevel2potion
+  - spldamagelevel2potion
+  - spldmglevel2potion
+  - splharmingiipotion
+  - spldamageiipotion
+  - spldmgiipotion
+  - splharmingleveliipot
+  - spldamageleveliipot
+  - spldmgleveliipot
+  - splharminglevel2pot
+  - spldamagelevel2pot
+  - spldmglevel2pot
+  - splharmingiipot
+  - spldamageiipot
+  - spldmgiipot
+  - spd2pot
+  price: 50.0
+373-16429:
+  name:
+  - splashcordialpotion
+  - splashcordialpot
+  - splcordialpotion
+  - splcordialpot
+  price: 50.0
+373-16430:
+  name:
+  - splashsparklingpotion
+  - splashsparklingpot
+  - splsparklingpotion
+  - splsparklingpot
+  price: 50.0
+373-16431:
+  name:
+  - splashsparklingextendedpotion
+  - splashsparklingexpotion
+  - splashsparkling2potion
+  - splashsparklingextendedpot
+  - splashsparklingexpot
+  - splashsparkling2pot
+  - splsparklingextendedpotion
+  - splsparklingexpotion
+  - splsparkling2potion
+  - splsparklingextendedpot
+  - splsparklingexpot
+  - splsparkling2pot
+  price: 50.0
+373-16432:
+  name:
+  - splashpotentpotion
+  - splashpotentpot
+  - splpotentpotion
+  - splpotentpot
+  price: 50.0
+373-16438:
+  name:
+  - splashrankpotion
+  - splashrankpot
+  - splrankpotion
+  - splrankpot
+  price: 50.0
+373-16439:
+  name:
+  - splashrankextendedpotion
+  - splashrankexpotion
+  - splashrank2potion
+  - splashrankextendedpot
+  - splashrankexpot
+  - splashrank2pot
+  - splrankextendedpotion
+  - splrankexpotion
+  - splrank2potion
+  - splrankextendedpot
+  - splrankexpot
+  - splrank2pot
+  price: 50.0
+373-16443:
+  name:
+  - splashacridpotion
+  - splashacridpot
+  - splacridpotion
+  - splacridpot
+  price: 50.0
+373-16445:
+  name:
+  - splashgrosspotion
+  - splashgrosspot
+  - splgrosspotion
+  - splgrosspot
+  price: 50.0
+373-16446:
+  name:
+  - splashstinkypotion
+  - splashstinkypot
+  - splstinkypotion
+  - splstinkypot
+  price: 50.0
+373-16447:
+  name:
+  - splashstinkyextendedpotion
+  - splashstinkyexpotion
+  - splashstinky2potion
+  - splashstinkyextendedpot
+  - splashstinkyexpot
+  - splashstinky2pot
+  - splstinkyextendedpotion
+  - splstinkyexpotion
+  - splstinky2potion
+  - splstinkyextendedpot
+  - splstinkyexpot
+  - splstinky2pot
+  price: 50.0
+373-16448:
+  name:
+  - splashmundaneextendedpotion
+  - splashmundaneexpotion
+  - splashmundane2potion
+  - splashmundaneextendedpot
+  - splashmundaneexpot
+  - splashmundane2pot
+  - splmundaneextendedpotion
+  - splmundaneexpotion
+  - splmundane2potion
+  - splmundaneextendedpot
+  - splmundaneexpot
+  - splmundane2pot
+  price: 50.0
+373-16449:
+  name:
+  - splashregenerationextendedpotion
+  - splashregenerateextendedpotion
+  - splashregenextendepotion
+  - splashregenerationexpotion
+  - splashregenerateexpotion
+  - splashregenexpotion
+  - splashregenerationextendedpot
+  - splashregenerateextendedpot
+  - splashregenextendepot
+  - splashregenerationexpot
+  - splashregenerateexpot
+  - splashregenexpot
+  - splregenerationextendedpotion
+  - splregenerateextendedpotion
+  - splregenextendepotion
+  - splregenerationexpotion
+  - splregenerateexpotion
+  - splregenexpotion
+  - splregenerationextendedpot
+  - splregenerateextendedpot
+  - splregenextendepot
+  - splregenerationexpot
+  - splregenerateexpot
+  - splregenexpot
+  - sprepot
+  price: 50.0
+373-16450:
+  name:
+  - splashswiftnessextendedpotion
+  - splashswiftextendedpotion
+  - splashspeedextendedpotion
+  - splashswiftnessexpotion
+  - splashswiftexpotion
+  - splashspeedexpotion
+  - splashswiftnessextendedpot
+  - splashswiftextendedpot
+  - splashspeedextendedpot
+  - splashswiftnessexpot
+  - splashswiftexpot
+  - splashspeedexpot
+  - splswiftnessextendedpotion
+  - splswiftextendedpotion
+  - splspeedextendedpotion
+  - splswiftnessexpotion
+  - splswiftexpotion
+  - splspeedexpotion
+  - splswiftnessextendedpot
+  - splswiftextendedpot
+  - splspeedextendedpot
+  - splswiftnessexpot
+  - splswiftexpot
+  - splspeedexpot
+  - spswepot
+  price: 50.0
+373-16451:
+  name:
+  - splashfireresistanceextendedpotion
+  - splashfireresistextendedpotion
+  - splashfireresextendedpotion
+  - splashfireresistanceexpotion
+  - splashfireresistexpotion
+  - splashfireresexpotion
+  - splashfireresistanceextendedpot
+  - splashfireresistextendedpot
+  - splashfireresextendedpot
+  - splashfireresistanceexpot
+  - splashfireresistexpot
+  - splashfireresexpot
+  - splfireresistanceextendedpotion
+  - splfireresistextendedpotion
+  - splfireresextendedpotion
+  - splfireresistanceexpotion
+  - splfireresistexpotion
+  - splfireresexpotion
+  - splfireresistanceextendedpot
+  - splfireresistextendedpot
+  - splfireresextendedpot
+  - splfireresistanceexpot
+  - splfireresistexpot
+  - splfireresexpot
+  - spfepot
+  price: 50.0
+373-16452:
+  name:
+  - splashpoisonextendedpotion
+  - splashacidextendedpotion
+  - splashpoisonexpotion
+  - splashacidexpotion
+  - splashpoisonextendedpot
+  - splashacidextendedpot
+  - splashpoisonexpot
+  - splashacidexpot
+  - splpoisonextendedpotion
+  - splacidextendedpotion
+  - splpoisonexpotion
+  - splacidexpotion
+  - splpoisonextendedpot
+  - splacidextendedpot
+  - splpoisonexpot
+  - splacidexpot
+  - sppepot
+  price: 50.0
+373-16454:
+  name:
+  - splashnightvisionextendedpotion
+  - splashnvisionextendedpotion
+  - splashnightvextendedpotion
+  - splashdarkvisionextendedpotion
+  - splashdvisionextendedpotion
+  - splashdarkvextendedpotion
+  - splashnightvisionextendedpot
+  - splashnvisionextendedpot
+  - splashnightvextendedpot
+  - splashdarkvisionextendedpot
+  - splashdvisionextendedpot
+  - splashdarkvextendedpot
+  - splashnightvisionexpotion
+  - splashnvisionexpotion
+  - splashnightvexpotion
+  - splashdarkvisionexpotion
+  - splashdvisionexpotion
+  - splashdarkvexpotion
+  - splashnightvisionexpot
+  - splashnvisionexpot
+  - splashnightvexpot
+  - splashdarkvisionexpot
+  - splashdvisionexpot
+  - splashdarkvexpot
+  - splnightvisionextendedpotion
+  - splnvisionextendedpotion
+  - splnightvextendedpotion
+  - spldarkvisionextendedpotion
+  - spldvisionextendedpotion
+  - spldarkvextendedpotion
+  - splnightvisionextendedpot
+  - splnvisionextendedpot
+  - splnightvextendedpot
+  - spldarkvisionextendedpot
+  - spldvisionextendedpot
+  - spldarkvextendedpot
+  - splnightvisionexpotion
+  - splnvisionexpotion
+  - splnightvexpotion
+  - spldarkvisionexpotion
+  - spldvisionexpotion
+  - spldarkvexpotion
+  - splnightvisionexpot
+  - splnvisionexpot
+  - splnightvexpot
+  - spldarkvisionexpot
+  - spldvisionexpot
+  - spldarkvexpot
+  - spnepot
+  price: 50.0
+373-16456:
+  name:
+  - splashweaknessextendedpotion
+  - splashweakextendedpotion
+  - splashweaknessexpotion
+  - splashweakexpotion
+  - splashweaknessextendedpot
+  - splashweakextendedpot
+  - splashweaknessexpot
+  - splashweakexpot
+  - splweaknessextendedpotion
+  - sphweakextendedpotion
+  - splweaknessexpotion
+  - splweakexpotion
+  - splweaknessextendedpot
+  - splweakextendedpot
+  - splweaknessexpot
+  - splweakexpot
+  - spwepot
+  price: 50.0
+373-16457:
+  name:
+  - splashstrengthextendedpotion
+  - splashstrongextendedpotion
+  - splashstrextendedpotion
+  - splashstrengthexpotion
+  - splashstrongexpotion
+  - splashstrexpotion
+  - splashstrengthextendedpot
+  - splashstrongextendedpot
+  - splashstrextendedpot
+  - splashstrengthexpot
+  - splashstrongexpot
+  - splashstrexpot
+  - splstrengthextendedpotion
+  - splstrongextendedpotion
+  - splstrextendedpotion
+  - splstrengthexpotion
+  - splstrongexpotion
+  - splstrexpotion
+  - splstrengthextendedpot
+  - splstrongextendedpot
+  - splstrextendedpot
+  - splstrengthexpot
+  - splstrongexpot
+  - splstrexpot
+  - spstepot
+  price: 50.0
+373-16458:
+  name:
+  - splashslownessextendedpotion
+  - splashslowextenedpotion
+  - splashslownessexpotion
+  - splashslowexpotion
+  - splashslownessextendedpot
+  - splashslowextenedpot
+  - splashslownessexpot
+  - splashslowexpot
+  - splslownessextendedpotion
+  - splslowextenedpotion
+  - splslownessexpotion
+  - splslowexpotion
+  - splslownessextendedpot
+  - splslowextenedpot
+  - splslownessexpot
+  - splslowexpot
+  - spslepot
+  price: 50.0
+373-16459:
+  name:
+  - splashleapingpotion
+  - splashleappotion
+  - splleapingpotion
+  - splleappotion
+  - leapingsplashpotion
+  - leapsplashpotion
+  - leapingsplpotion
+  - leapsplpotion
+  price: 50.0
+373-16461:
+  name:
+  - splashwaterbreathingextendedpotion
+  - splashwaterbreathextendedpotion
+  - splashbreathingextendedpotion
+  - splashbreathextendedpotion
+  - splashwaterbreathingextendedpot
+  - splashwaterbreathextendedpot
+  - splashbreathingextendedpot
+  - splashbreathextendedpot
+  - splwaterbreathingextendedpotion
+  - splwaterbreathextendedpotion
+  - splbreathingextendedpotion
+  - splbreathextendedpotion
+  - splwaterbreathingextendedpot
+  - splwaterbreathextendedpot
+  - splbreathingextendedpot
+  - splbreathextendedpot
+  - splashwaterbreathingexpotion
+  - splashwaterbreathexpotion
+  - splashbreathingexpotion
+  - splashbreathexpotion
+  - splashwaterbreathingexpot
+  - splashwaterbreathexpot
+  - splashbreathingexpot
+  - splashbreathexpot
+  - splwaterbreathingexpotion
+  - splwaterbreathexpotion
+  - splbreathingexpotion
+  - splbreathexpotion
+  - splwaterbreathingexpot
+  - splwaterbreathexpot
+  - splbreathingexpot
+  - splbreathexpot
+  - spwbepot
+  price: 50.0
+373-16462:
+  name:
+  - splashinvisibilityextendedpotion
+  - splashinvisibleextendedpotion
+  - splashinvextendedpotion
+  - splashinvisibilityextendedpot
+  - splashinvisibleextendedpot
+  - splashinvextendedpot
+  - splashinvisibilityexpotion
+  - splashinvisibleexpotion
+  - splashinvexpotion
+  - splashinvisibilityexpot
+  - splashinvisibleexpot
+  - splashinvexpot
+  - splinvisibilityextendedpotion
+  - splinvisibleextendedpotion
+  - splinvextendedpotion
+  - splinvisibilityextendedpot
+  - splinvisibleextendedpot
+  - splinvextendedpot
+  - splinvisibilityexpotion
+  - splinvisibleexpotion
+  - splinvexpotion
+  - splinvisibilityexpot
+  - splinvisibleexpot
+  - splinvexpot
+  - spiepot
+  price: 50.0
+373-16481:
+  name:
+  - splashregenerationdualbitpotion
+  - splashregeneratedualbitpotion
+  - splashregendualbitpotion
+  - splashregenerationdualbitpot
+  - splashregeneratedualbitpot
+  - splashregendualbitpot
+  - splregenerationdualbitpotion
+  - splregeneratedualbitpotion
+  - splregendualbitpotion
+  - splregenerationdualbitpot
+  - splregeneratedualbitpot
+  - splregendualbitpot
+  - splashregenerationdbpotion
+  - splashregeneratedbpotion
+  - splashregendbpotion
+  - splashregenerationdbpot
+  - splashregeneratedbpot
+  - splashregendbpot
+  - splregenerationdbpotion
+  - splregeneratedbpotion
+  - splregendbpotion
+  - splregenerationdbpot
+  - splregeneratedbpot
+  - splregendbpot
+  - sprdbpot
+  price: 50.0
+373-16482:
+  name:
+  - splashswiftnessdualbitpotion
+  - splashswiftdualbitpotion
+  - splashspeeddualbitpotion
+  - splashswiftnessdualbitpot
+  - splashswiftdualbitpot
+  - splashspeeddualbitpot
+  - splswiftnessdualbitpotion
+  - splswiftdualbitpotion
+  - splspeeddualbitpotion
+  - splswiftnessdualbitpot
+  - splswiftdualbitpot
+  - splspeeddualbitpot
+  - splashswiftnessdbpotion
+  - splashswiftdbpotion
+  - splashspeeddbpotion
+  - splashswiftnessdbpot
+  - splashswiftdbpot
+  - splashspeeddbpot
+  - splswiftnessdbpotion
+  - splswiftdbpotion
+  - splspeeddbpotion
+  - splswiftnessdbpot
+  - splswiftdbpot
+  - splspeeddbpot
+  - spswdbpot
+  price: 50.0
+373-16484:
+  name:
+  - splashpoisondualbitpotion
+  - splashaciddualbitpotion
+  - splashpoisondualbitpot
+  - splashaciddualbitpot
+  - splpoisondualbitpotion
+  - splaciddualbitpotion
+  - splpoisondualbitpot
+  - splaciddualbitpot
+  - splashpoisondbpotion
+  - splashaciddbpotion
+  - splashpoisondbpot
+  - splashaciddbpot
+  - splpoisondbpotion
+  - splaciddbpotion
+  - splpoisondbpot
+  - splaciddbpot
+  - sppdbpot
+  price: 50.0
+373-16489:
+  name:
+  - splashstrengthdualbitpotion
+  - splashstrongdualbitpotion
+  - splashstrdualbitpotion
+  - splashstrengthdualbitpot
+  - splashstrongdualbitpot
+  - splashstrdualbitpot
+  - splstrengthdualbitpotion
+  - splstrongdualbitpotion
+  - splstrdualbitpotion
+  - splstrengthdualbitpot
+  - splstrongdualbitpot
+  - splstrdualbitpot
+  - splashstrengthdbpotion
+  - splashstrongdbpotion
+  - splashstrdbpotion
+  - splashstrengthdbpot
+  - splashstrongdbpot
+  - splashstrdbpot
+  - splstrengthdbpotion
+  - splstrongdbpotion
+  - splstrdbpotion
+  - splstrengthdbpot
+  - splstrongdbpot
+  - splstrdbpot
+  - spstdbpot
+  price: 50.0
+374-0:
+  name:
+  - glassbottle
+  - bottle
+  - gbottle
+  - gvase
+  - vase
+  - glassvase
+  - emptyglassbottle
+  - emptybottle
+  - emptygbottle
+  - emptygvase
+  - emptyvase
+  - emptyglassvase
+  - eglassbottle
+  - ebottle
+  - egbottle
+  - egvase
+  - evase
+  - eglassvase
+  price: 50.0
+375-0:
+  name:
+  - spidereye
+  - eyeofspider
+  - seye
+  price: 50.0
+376-0:
+  name:
+  - fermentedspidereye
+  - craftedspidereye
+  - fspidereye
+  - cspidereye
+  - fermentedeyeofspider
+  - craftedeyeofspider
+  - feyeofspider
+  - ceyeofspider
+  - fermentedseye
+  - craftedseye
+  - fseye
+  - cseye
+  price: 50.0
+377-0:
+  name:
+  - blazepowder
+  - blazedust
+  - goldpowder
+  - golddust
+  - gdust
+  - gpowder
+  - bpowder
+  - bdust
+  price: 50.0
+378-0:
+  name:
+  - magmacream
+  - goldcream
+  - blazecream
+  - mcream
+  - gcream
+  - bcream
+  - combinedcream
+  - ccream
+  price: 50.0
+379-0:
+  name:
+  - bstand
+  - pstand
+  - brewingstand
+  - potionstand
+  price: 50.0
+380-0:
+  name:
+  - cauld
+  - cauldron
+  - steelcauldron
+  - ironcauldron
+  - icauldron
+  - scauldron
+  - potioncauldron
+  - pcauldron
+  price: 50.0
+381-0:
+  name:
+  - eyeofender
+  - endereye
+  - endeye
+  - evilendereye
+  - evileyeofender
+  - evilenderpearl
+  - eeye
+  - eofender
+  price: 50.0
+382-0:
+  name:
+  - glisteringmelon
+  - speckledmelon
+  - goldmelon
+  - sparklymelon
+  - shiningmelon
+  - gmelon
+  - smelon
+  price: 50.0
+383-50:
+  name:
+  - creeperegg
+  - eggcreeper
+  price: 50.0
+383-51:
+  name:
+  - skeletonegg
+  - eggskeleton
+  price: 50.0
+383-52:
+  name:
+  - spideregg
+  - eggspider
+  price: 50.0
+383-53:
+  name:
+  - giantegg
+  - egggiant
+  price: 50.0
+383-54:
+  name:
+  - zombieegg
+  - eggzombie
+  price: 50.0
+383-55:
+  name:
+  - slimeegg
+  - eggslime
+  price: 50.0
+383-56:
+  name:
+  - ghastegg
+  - eggghast
+  price: 50.0
+383-57:
+  name:
+  - zombiepigmanegg
+  - zpigmanegg
+  - pigmanegg
+  - zombiepmanegg
+  - zpmanegg
+  - zombiepigmegg
+  - zpigmegg
+  - zombiepigegg
+  - zpigegg
+  - zombiepmegg
+  - zombiepegg
+  - eggzombiepigman
+  - eggzpigman
+  - eggpigman
+  - eggzombiepman
+  - eggzpman
+  - eggzombiepigm
+  - eggzpigm
+  - eggzombiepig
+  - eggzpig
+  - eggzombiepm
+  - eggzombiep
+  price: 50.0
+383-58:
+  name:
+  - endermanegg
+  - eggenderman
+  price: 50.0
+383-59:
+  name:
+  - eggcavespider
+  - cavespideregg
+  price: 50.0
+383-60:
+  name:
+  - silverfishegg
+  - eggsilverfish
+  price: 50.0
+383-61:
+  name:
+  - blazeegg
+  - eggblaze
+  price: 50.0
+383-62:
+  name:
+  - lavaslimeegg
+  - lavacubeegg
+  - magmacubeegg
+  - magmaslimeegg
+  - egglavaslime
+  - egglavacube
+  - eggmagmacube
+  - eggmagmaslime
+  price: 50.0
+383-65:
+  name:
+  - bategg
+  - eggbat
+  price: 50.0
+383-66:
+  name:
+  - witchegg
+  - eggwitch
+  price: 50.0
+383-67:
+  name:
+  - endermiteegg
+  - endermitespawnegg
+  - eggendermite
+  price: 50.0
+383-68:
+  name:
+  - guardianegg
+  - guardianspawnegg
+  - eggguardian
+  price: 50.0
+383-90:
+  name:
+  - pigegg
+  - eggpig
+  price: 50.0
+383-91:
+  name:
+  - sheepegg
+  - eggsheep
+  price: 50.0
+383-92:
+  name:
+  - cowegg
+  - eggcow
+  price: 50.0
+383-93:
+  name:
+  - chickenegg
+  - eggchicken
+  price: 50.0
+383-94:
+  name:
+  - squidegg
+  - eggsquid
+  price: 50.0
+383-95:
+  name:
+  - wolfegg
+  - eggwolf
+  price: 50.0
+383-96:
+  name:
+  - mooshroomegg
+  - mushroomcowegg
+  - eggmooshroom
+  - eggmushroomcow
+  price: 50.0
+383-97:
+  name:
+  - snowgolemegg
+  - sgolemegg
+  - eggsnowgolem
+  - eggsgolem
+  price: 50.0
+383-98:
+  name:
+  - ocelotegg
+  - eggocelot
+  price: 50.0
+383-99:
+  name:
+  - irongolemegg
+  - igolemegg
+  - eggirongolem
+  - eggigolem
+  price: 50.0
+383-100:
+  name:
+  - egghorse
+  - horseegg
+  price: 50.0
+383-101:
+  name:
+  - rabbitegg
+  - rabbitspawnegg
+  price: 50.0
+383-120:
+  name:
+  - villageregg
+  - eggvillager
+  price: 50.0
+384-0:
+  name:
+  - bottleofenchanting
+  - enchantingbottle
+  - expbottle
+  - xpbottle
+  - bottleexp
+  - bottlexp
+  - enchantbottle
+  - bottleenchanting
+  - bottleenchant
+  - bottleoenchanting
+  price: 50.0
+385-0:
+  name:
+  - firecharge
+  - fireball
+  - grenade
+  price: 50.0
+386-0:
+  name:
+  - bookandquill
+  - booknquill
+  - bookandfeather
+  - booknfeather
+  - writeablebook
+  price: 50.0
+387-0:
+  name:
+  - writtenbook
+  - readablebook
+  - sealedbook
+  - diary
+  - ownedbook
+  price: 50.0
+388-0:
+  name:
+  - emerald
+  price: 50.0
+389-0:
+  name:
+  - itemframe
+  - pictureframe
+  - iframe
+  - pframe
+  price: 50.0
+390-0:
+  name:
+  - flowerpot
+  - pot
+  price: 50.0
+391-0:
+  name:
+  - carrot
+  price: 50.0
+392-0:
+  name:
+  - potato
+  - rawpotato
+  price: 50.0
+393-0:
+  name:
+  - bakedpotato
+  - roastedpotato
+  - cookedpotato
+  - bakepotato
+  - roastpotato
+  - cookpotato
+  - bpotato
+  - rpotato
+  - cpotato
+  price: 50.0
+394-0:
+  name:
+  - poisonouspotato
+  - poisonpotato
+  - ppotato
+  price: 50.0
+395-0:
+  name:
+  - emptymap
+  - map
+  price: 50.0
+396-0:
+  name:
+  - goldencarrot
+  - goldcarrot
+  - gcarrot
+  price: 50.0
+397-0:
+  name:
+  - head
+  - skull
+  - skhead
+  - skeletonhead
+  - headskeleton
+  - skeletonskull
+  - skullskeleton
+  price: 50.0
+397-1:
+  name:
+  - witherhead
+  - witherskeletonhead
+  - wskeletionhead
+  - headwither
+  - headwitherskeleton
+  - headwskeletion
+  - witherskull
+  - witherskeletonskull
+  - wskeletionskull
+  - skullwither
+  - skullwitherskeleton
+  - skullwskeletion
+  price: 50.0
+397-2:
+  name:
+  - zohead
+  - zombiehead
+  - headzombie
+  - zombieskull
+  - skullzombie
+  price: 50.0
+397-3:
+  name:
+  - playerhead
+  - humanhead
+  - stevehead
+  - headplayer
+  - headhuman
+  - headsteve
+  - playerskull
+  - humanskull
+  - steveskull
+  - skullplayer
+  - skullhuman
+  - skullsteve
+  price: 50.0
+397-4:
+  name:
+  - crhead
+  - creeperhead
+  - headcreeper
+  - creeperskull
+  - skullcreeper
+  price: 50.0
+398-0:
+  name:
+  - carrotonastick
+  - carrotonstick
+  price: 50.0
+399-0:
+  name:
+  - netherstar
+  - hellstar
+  - nstar
+  - hstar
+  - star
+  price: 50.0
+400-0:
+  name:
+  - pumpkinpie
+  - pumpkincake
+  - ppie
+  - pcake
+  - pie
+  price: 50.0
+401-0:
+  name:
+  - fireworkrocket
+  - fireworkmissle
+  - firework
+  - fworkrocket
+  - fworkmissle
+  - fwork
+  - fwrocket
+  - fwmissle
+  price: 50.0
+402-0:
+  name:
+  - fireworkstar
+  - fworkstar
+  - fwstar
+  - fireworkball
+  - fworkball
+  - fwball
+  - fireworkpowder
+  - fworkpowder
+  - fwpowder
+  - fireworkcharge
+  - fworkcharge
+  - fwcharge
+  price: 50.0
+403-0:
+  name:
+  - enchantedbook
+  - enchantmentbook
+  - enchantingbook
+  - enchantbook
+  - magicalbook
+  - magicbook
+  - ebook
+  - mbook
+  price: 50.0
+404-0:
+  name:
+  - redstonecomparator
+  - redstonecomparer
+  - redstonecompare
+  - rstonecomparator
+  - rstonecomparer
+  - rstonecompare
+  - redscomparator
+  - redscomparer
+  - redscompare
+  - rscomparator
+  - rscomparer
+  - rscompare
+  - comparator
+  - comparer
+  - compare
+  price: 50.0
+405-0:
+  name:
+  - netherbrick
+  - nbrick
+  - hellbrick
+  - deathbrick
+  - dbrick
+  - hbrick
+  price: 50.0
+406-0:
+  name:
+  - netherquartz
+  - deathquartz
+  - hellquartz
+  - nquartz
+  - dquartz
+  - hquartz
+  - quartz
+  price: 50.0
+407-0:
+  name:
+  - tntminecart
+  - dynamiteminecart
+  - dynamitemcart
+  - dynamitecart
+  - bombminecart
+  - bombmcart
+  - bombcart
+  - tntmcart
+  - tntcart
+  - dminecart
+  - dmcart
+  - dcart
+  - bminecart
+  - bmcart
+  - bcart
+  - tminecart
+  - tmcart
+  - tcart
+  price: 50.0
+408-0:
+  name:
+  - hopperminecart
+  - hoppermcart
+  - hoppercart
+  - hopminecart
+  - hopmcart
+  - hopcart
+  - hminecart
+  - hmcart
+  - hcart
+  price: 50.0
+409-0:
+  name:
+  - prismarineshard
+  - priseshard
+  price: 50.0
+410-0:
+  name:
+  - prisemarinecrystals
+  - prisecrystals
+  price: 50.0
+411-0:
+  name:
+  - rabbit
+  - rabbitmeat
+  price: 50.0
+412-0:
+  name:
+  - cookedrabbit
+  price: 50.0
+413-0:
+  name:
+  - rabbitstew
+  - hasenpfeffer
+  price: 50.0
+414-0:
+  name:
+  - rabbitfoot
+  price: 50.0
+415-0:
+  name:
+  - rabbithide
+  price: 50.0
+416-0:
+  name:
+  - armorstand
+  price: 50.0
+417-0:
+  name:
+  - ironhorsearmor
+  - ironharmor
+  - ironarmor
+  - ihorsearmor
+  - iharmor
+  - iarmor
+  - steelhorsearmor
+  - steelharmor
+  - steelarmor
+  - shorsearmor
+  - sharmor
+  - sarmor
+  price: 50.0
+418-0:
+  name:
+  - goldenhorsearmor
+  - goldenharmor
+  - goldenarmor
+  - goldhorsearmor
+  - goldharmor
+  - goldarmor
+  - ghorsearmor
+  - gharmor
+  - garmor
+  price: 50.0
+419-0:
+  name:
+  - diamondhorsearmor
+  - diamondharmor
+  - diamondarmor
+  - dhorsearmor
+  - dharmor
+  - darmor
+  - crystalhorsearmor
+  - crystalharmor
+  - crystalarmor
+  - chorsearmor
+  - charmor
+  - carmor
+  price: 50.0
+420-0:
+  name:
+  - lead
+  - leash
+  - rope
+  price: 50.0
+421-0:
+  name:
+  - nametag
+  - tag
+  price: 50.0
+422-0:
+  name:
+  - commandblockminecart
+  - cmdblockminecart
+  - cblockminecart
+  - commandminecart
+  - cmdminecart
+  - cbminecart
+  - commandblockcart
+  - cmdblockcart
+  - cblockcart
+  - commandcart
+  - cmdcart
+  - cbcart
+  price: 50.0
+423-0:
+  name:
+  - mutton
+  - sheepmeat
+  price: 50.0
+424-0:
+  name:
+  - cookedmutton
+  - cookedsheep
+  price: 50.0
+425-0:
+  name:
+  - banner
+  - blackbanner
+  - standingbanner
+  - wallbanner
+  price: 50.0
+425-1:
+  name:
+  - redbanner
+  price: 50.0
+425-2:
+  name:
+  - greenbanner
+  price: 50.0
+425-3:
+  name:
+  - brownbanner
+  price: 50.0
+425-4:
+  name:
+  - bluebanner
+  price: 50.0
+425-5:
+  name:
+  - purplebanner
+  price: 50.0
+425-6:
+  name:
+  - cyanbanner
+  price: 50.0
+425-7:
+  name:
+  - lgreybanner
+  - lightgreybanner
+  price: 50.0
+425-8:
+  name:
+  - greybanner
+  price: 50.0
+425-9:
+  name:
+  - pinkbanner
+  price: 50.0
+425-10:
+  name:
+  - limebanner
+  price: 50.0
+425-11:
+  name:
+  - yellowbanner
+  price: 50.0
+425-12:
+  name:
+  - lbluebanner
+  - lightbluebanner
+  price: 50.0
+425-13:
+  name:
+  - magentabanner
+  price: 50.0
+425-14:
+  name:
+  - orangebanner
+  price: 50.0
+425-15:
+  name:
+  - whitebanner
+  price: 50.0
+427-0:
+  name:
+  - sprucedooritem
+  price: 50.0
+428-0:
+  name:
+  - birchdoor
+  - birchdooritem
+  price: 50.0
+429-0:
+  name:
+  - jungledooritem
+  price: 50.0
+430-0:
+  name:
+  - acaciadooritem
+  price: 50.0
+431-0:
+  name:
+  - darkoakdooritem
+  price: 50.0
+2256-0:
+  name:
+  - 13disc
+  - goldmusicrecord
+  - goldmusicdisk
+  - goldmusicdisc
+  - goldmusiccd
+  - 13musicrecord
+  - 13musicdisk
+  - 13musicdisc
+  - 13musiccd
+  - gomusicrecord
+  - gomusicdisk
+  - gomusicdisc
+  - gomusiccd
+  - goldmrecord
+  - goldmdisk
+  - goldmdisc
+  - goldmcd
+  - 13mrecord
+  - 13mdisk
+  - 13mdisc
+  - 13mcd
+  - gomrecord
+  - gomdisk
+  - gomdisc
+  - gomcd
+  - goldrecord
+  - golddisk
+  - golddisc
+  - goldcd
+  - 13record
+  - 13disk
+  - 13cd
+  - gorecord
+  - godisk
+  - godisc
+  - gocd
+  - record1
+  - disk1
+  - disc1
+  - cd1
+  - 1record
+  - 1disk
+  - 1disc
+  - 1cd
+  price: 50.0
+2257-0:
+  name:
+  - catdisc
+  - greenmusicrecord
+  - greenmusicdisk
+  - greenmusicdisc
+  - greenmusiccd
+  - catmusicrecord
+  - catmusicdisk
+  - catmusicdisc
+  - catmusiccd
+  - grmusicrecord
+  - grmusicdisk
+  - grmusicdisc
+  - grmusiccd
+  - greenmrecord
+  - greenmdisk
+  - greenmdisc
+  - greenmcd
+  - catmrecord
+  - catmdisk
+  - catmdisc
+  - catmcd
+  - grmrecord
+  - grmdisk
+  - grmdisc
+  - grmcd
+  - greenrecord
+  - greendisk
+  - greendisc
+  - greencd
+  - catrecord
+  - catdisk
+  - catcd
+  - grrecord
+  - grdisk
+  - grdisc
+  - grcd
+  - record2
+  - disk2
+  - disc2
+  - cd2
+  - 2record
+  - 2disk
+  - 2disc
+  - 2cd
+  price: 50.0
+2258-0:
+  name:
+  - blocksdisc
+  - orangemusicrecord
+  - orangemusicdisk
+  - orangemusicdisc
+  - orangemusiccd
+  - blocksmusicrecord
+  - blocksmusicdisk
+  - blocksmusicdisc
+  - blocksmusiccd
+  - ormusicrecord
+  - ormusicdisk
+  - ormusicdisc
+  - ormusiccd
+  - orangemrecord
+  - orangemdisk
+  - orangemdisc
+  - orangemcd
+  - blocksmrecord
+  - blocksmdisk
+  - blocksmdisc
+  - blocksmcd
+  - ormrecord
+  - ormdisk
+  - ormdisc
+  - ormcd
+  - orangerecord
+  - orangedisk
+  - orangedisc
+  - orangecd
+  - blocksrecord
+  - blocksdisk
+  - blockscd
+  - orrecord
+  - ordisk
+  - ordisc
+  - orcd
+  - record3
+  - disk3
+  - disc3
+  - cd3
+  - 3record
+  - 3disk
+  - 3disc
+  - 3cd
+  price: 50.0
+2259-0:
+  name:
+  - chirpdisc
+  - redmusicrecord
+  - redmusicdisk
+  - redmusicdisc
+  - redmusiccd
+  - chirpmusicrecord
+  - chirpmusicdisk
+  - chirpmusicdisc
+  - chirpmusiccd
+  - remusicrecord
+  - remusicdisk
+  - remusicdisc
+  - remusiccd
+  - redmrecord
+  - redmdisk
+  - redmdisc
+  - redmcd
+  - chirpmrecord
+  - chirpmdisk
+  - chirpmdisc
+  - chirpmcd
+  - remrecord
+  - remdisk
+  - remdisc
+  - remcd
+  - redrecord
+  - reddisk
+  - reddisc
+  - redcd
+  - chirprecord
+  - chirpdisk
+  - chirpcd
+  - rerecord
+  - redisk
+  - redisc
+  - recd
+  - record4
+  - disk4
+  - disc4
+  - cd4
+  - 4record
+  - 4disk
+  - 4disc
+  - 4cd
+  price: 50.0
+2260-0:
+  name:
+  - fardisc
+  - lightgreenmusicrecord
+  - lightgreenmusicdisk
+  - lightgreenmusicdisc
+  - lightgreenmusiccd
+  - lgreenmusicrecord
+  - lgreenmusicdisk
+  - lgreenmusicdisc
+  - lgreenmusiccd
+  - lightgrmusicrecord
+  - lightgrmusicdisk
+  - lightgrmusicdisc
+  - lightgrmusiccd
+  - farmusicrecord
+  - farmusicdisk
+  - farmusicdisc
+  - farmusiccd
+  - lgrmusicrecord
+  - lgrmusicdisk
+  - lgrmusicdisc
+  - lgrmusiccd
+  - lightgreenmrecord
+  - lightgreenmdisk
+  - lightgreenmdisc
+  - lightgreenmcd
+  - lgreenmrecord
+  - lgreenmdisk
+  - lgreenmdisc
+  - lgreenmcd
+  - lightgrmrecord
+  - lightgrmdisk
+  - lightgrmdisc
+  - lightgrmcd
+  - farmrecord
+  - farmdisk
+  - farmdisc
+  - farmcd
+  - lgrmrecord
+  - lgrmdisk
+  - lgrmdisc
+  - lgrmcd
+  - lightgreenrecord
+  - lightgreendisk
+  - lightgreendisc
+  - lightgreencd
+  - lgreenrecord
+  - lgreendisk
+  - lgreendisc
+  - lgreencd
+  - lightgrrecord
+  - lightgrdisk
+  - lightgrdisc
+  - lightgrcd
+  - farrecord
+  - fardisk
+  - farcd
+  - lgrrecord
+  - lgrdisk
+  - lgrdisc
+  - lgrcd
+  - record5
+  - disk5
+  - disc5
+  - cd5
+  - 5record
+  - 5disk
+  - 5disc
+  - 5cd
+  price: 50.0
+2261-0:
+  name:
+  - malldisc
+  - purplemusicrecord
+  - purplemusicdisk
+  - purplemusicdisc
+  - purplemusiccd
+  - mallmusicrecord
+  - mallmusicdisk
+  - mallmusicdisc
+  - mallmusiccd
+  - pumusicrecord
+  - pumusicdisk
+  - pumusicdisc
+  - pumusiccd
+  - purplemrecord
+  - purplemdisk
+  - purplemdisc
+  - purplemcd
+  - mallmrecord
+  - mallmdisk
+  - mallmdisc
+  - mallmcd
+  - pumrecord
+  - pumdisk
+  - pumdisc
+  - pumcd
+  - purplerecord
+  - purpledisk
+  - purpledisc
+  - purplecd
+  - mallrecord
+  - malldisk
+  - mallcd
+  - purecord
+  - pudisk
+  - pudisc
+  - pucd
+  - record6
+  - disk6
+  - disc6
+  - cd6
+  - 6record
+  - 6disk
+  - 6disc
+  - 6cd
+  price: 50.0
+2262-0:
+  name:
+  - mellohidisc
+  - pinkmusicrecord
+  - pinkmusicdisk
+  - pinkmusicdisc
+  - pinkmusiccd
+  - mellohimusicrecord
+  - mellohimusicdisk
+  - mellohimusicdisc
+  - mellohimusiccd
+  - pimusicrecord
+  - pimusicdisk
+  - pimusicdisc
+  - pimusiccd
+  - pinkmrecord
+  - pinkmdisk
+  - pinkmdisc
+  - pinkmcd
+  - mellohimrecord
+  - mellohimdisk
+  - mellohimdisc
+  - mellohimcd
+  - pimrecord
+  - pimdisk
+  - pimdisc
+  - pimcd
+  - pinkrecord
+  - pinkdisk
+  - pinkdisc
+  - pinkcd
+  - mellohirecord
+  - mellohidisk
+  - mellohicd
+  - pirecord
+  - pidisk
+  - pidisc
+  - picd
+  - record7
+  - disk7
+  - disc7
+  - cd7
+  - 7record
+  - 7disk
+  - 7disc
+  - 7cd
+  price: 50.0
+2263-0:
+  name:
+  - staldisc
+  - blackmusicrecord
+  - blackmusicdisk
+  - blackmusicdisc
+  - blackmusiccd
+  - stalmusicrecord
+  - stalmusicdisk
+  - stalmusicdisc
+  - stalmusiccd
+  - blmusicrecord
+  - blmusicdisk
+  - blmusicdisc
+  - blmusiccd
+  - blackmrecord
+  - blackmdisk
+  - blackmdisc
+  - blackmcd
+  - stalmrecord
+  - stalmdisk
+  - stalmdisc
+  - stalmcd
+  - blmrecord
+  - blmdisk
+  - blmdisc
+  - blmcd
+  - blackrecord
+  - blackdisk
+  - blackdisc
+  - blackcd
+  - stalrecord
+  - staldisk
+  - stalcd
+  - blrecord
+  - bldisk
+  - bldisc
+  - blcd
+  - record8
+  - disk8
+  - disc8
+  - cd8
+  - 8record
+  - 8disk
+  - 8disc
+  - 8cd
+  price: 50.0
+2264-0:
+  name:
+  - straddisc
+  - whitemusicrecord
+  - whitemusicdisk
+  - whitemusicdisc
+  - whitemusiccd
+  - stradmusicrecord
+  - stradmusicdisk
+  - stradmusicdisc
+  - stradmusiccd
+  - whmusicrecord
+  - whmusicdisk
+  - whmusicdisc
+  - whmusiccd
+  - whitemrecord
+  - whitemdisk
+  - whitemdisc
+  - whitemcd
+  - stradmrecord
+  - stradmdisk
+  - stradmdisc
+  - stradmcd
+  - whmrecord
+  - whmdisk
+  - whmdisc
+  - whmcd
+  - whiterecord
+  - whitedisk
+  - whitedisc
+  - whitecd
+  - stradrecord
+  - straddisk
+  - stradcd
+  - whrecord
+  - whdisk
+  - whdisc
+  - whcd
+  - record9
+  - disk9
+  - disc9
+  - cd9
+  - 9record
+  - 9disk
+  - 9disc
+  - 9cd
+  price: 50.0
+2265-0:
+  name:
+  - warddisc
+  - darkgreenmusicrecord
+  - darkgreenmusicdisk
+  - darkgreenmusicdisc
+  - darkgreenmusiccd
+  - dgreenmusicrecord
+  - dgreenmusicdisk
+  - dgreenmusicdisc
+  - dgreenmusiccd
+  - darkgrmusicrecord
+  - darkgrmusicdisk
+  - darkgrmusicdisc
+  - darkgrmusiccd
+  - wardmusicrecord
+  - wardmusicdisk
+  - wardmusicdisc
+  - wardmusiccd
+  - dgrmusicrecord
+  - dgrmusicdisk
+  - dgrmusicdisc
+  - dgrmusiccd
+  - darkgreenmrecord
+  - darkgreenmdisk
+  - darkgreenmdisc
+  - darkgreenmcd
+  - dgreenmrecord
+  - dgreenmdisk
+  - dgreenmdisc
+  - dgreenmcd
+  - darkgrmrecord
+  - darkgrmdisk
+  - darkgrmdisc
+  - darkgrmcd
+  - wardmrecord
+  - wardmdisk
+  - wardmdisc
+  - wardmcd
+  - dgrmrecord
+  - dgrmdisk
+  - dgrmdisc
+  - dgrmcd
+  - darkgreenrecord
+  - darkgreendisk
+  - darkgreendisc
+  - darkgreencd
+  - dgreenrecord
+  - dgreendisk
+  - dgreendisc
+  - dgreencd
+  - darkgrrecord
+  - darkgrdisk
+  - darkgrdisc
+  - darkgrcd
+  - wardrecord
+  - warddisk
+  - wardcd
+  - dgrrecord
+  - dgrdisk
+  - dgrdisc
+  - dgrcd
+  - record10
+  - disk10
+  - disc10
+  - cd10
+  - 10record
+  - 10disk
+  - 10disc
+  - 10cd
+  price: 50.0
+2266-0:
+  name:
+  - 11disc
+  - crackedmusicrecord
+  - crackedmusicdisk
+  - crackedmusicdisc
+  - crackedmusiccd
+  - crackmusicrecord
+  - crackmusicdisk
+  - crackmusicdisc
+  - crackmusiccd
+  - 11musicrecord
+  - 11musicdisk
+  - 11musicdisc
+  - 11musiccd
+  - cmusicrecord
+  - cmusicdisk
+  - cmusicdisc
+  - cmusiccd
+  - crackedmrecord
+  - crackedmdisk
+  - crackedmdisc
+  - crackedmcd
+  - crackmrecord
+  - crackmdisk
+  - crackmdisc
+  - crackmcd
+  - 11mrecord
+  - 11mdisk
+  - 11mdisc
+  - 11mcd
+  - cmrecord
+  - cmdisk
+  - cmdisc
+  - cmcd
+  - crackedrecord
+  - crackeddisk
+  - crackeddisc
+  - crackedcd
+  - crackrecord
+  - crackdisk
+  - crackdisc
+  - crackcd
+  - crecord
+  - cdisk
+  - cdisc
+  - ccd
+  - record11
+  - disk11
+  - disc11
+  - cd11
+  - 11record
+  - 11disk
+  - 11cd
+  price: 50.0

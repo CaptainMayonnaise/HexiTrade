@@ -31,7 +31,7 @@ public class Main extends JavaPlugin implements Listener {
     private Economy econ = null;
     private LinkedHashMap<String, ItemStack> itemMap = new LinkedHashMap<>();
 
-    public static final double PERCENT_CHANGE = 1.05;
+    public static final double PERCENT_CHANGE = 1.01;
 
     /**
      * Run when the plugin is enabled, loads the item prices
@@ -39,7 +39,6 @@ public class Main extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
-
 
         if (!setupEconomy()) {
             getLogger().severe("Missing dependency: Vault.");
@@ -72,34 +71,25 @@ public class Main extends JavaPlugin implements Listener {
 
     @SuppressWarnings("deprecation") // FU Mojang (/ Bukkit?)
     private void setupItemMap() {
-        Set<String> itemSet = items.getKeys(true);
+        Set<String> itemSet = items.getKeys(false);
 
         for (String element : itemSet) {
-            if (element.contains(".")) {
-                String[] split = element.split("\\.");
-                ItemStack item = new MaterialData(Integer.parseInt(split[0]),
-                        (byte) Integer.parseInt(split[1])).toItemStack(1);
-                setItemPrice(item, items.getInt(element));
-                itemMap.put(element, item);
-            }
+            String[] split = element.split("-");
+            ItemStack item = new MaterialData(Integer.parseInt(split[0]),
+                    (byte) Integer.parseInt(split[1])).toItemStack(1);
+            setItemPrice(item, items.getDouble(element + ".price"));
+            itemMap.put(element, item);
         }
     }
 
-    private void setItemPrice(ItemStack itemStack, int price) {
+    private void setItemPrice(ItemStack itemStack, double price) {
         ItemMeta meta = itemStack.getItemMeta();
         ArrayList<String> lore = new ArrayList<>();
-        lore.add(ChatColor.RESET + "Price: " + price);
+        lore.add(ChatColor.RESET + "Price: " + econ.format(price));
         lore.add(ChatColor.GOLD + "<click to buy>");
+        lore.add(ChatColor.GOLD + "<shift-click to buy stack>");
         meta.setLore(lore);
         itemStack.setItemMeta(meta);
-    }
-
-    /**
-     * Run when the plugin is disabled
-     */
-    @Override
-    public void onDisable() {
-        items.saveFile();
     }
 
     /**
@@ -176,7 +166,7 @@ public class Main extends JavaPlugin implements Listener {
             }
 
             MaterialData data = itemInHand.getData(); // Data of item in hand
-            String element = data.getItemType().getId() + "." + data.getData(); // YAML path of item
+            String element = data.getItemType().getId() + "-" + data.getData() + ".price"; // YAML path of item price
             econ.depositPlayer(player, makeSale(element, amount)); // Give the player the money
 
             if (itemInHand.getAmount() <= amount) {
@@ -199,7 +189,7 @@ public class Main extends JavaPlugin implements Listener {
         }
         items.set(element, price);
         items.saveFile();
-        setItemPrice(itemMap.get(element), items.getInt(element));
+        setItemPrice(itemMap.get(element), items.getDouble(element));
         return profit;
     }
 
@@ -223,7 +213,7 @@ public class Main extends JavaPlugin implements Listener {
     @SuppressWarnings("deprecation") // FU Mojang (/ Bukkit?)
     private ReturnCode price(Player player) {
         MaterialData data = player.getItemInHand().getData();
-        String element = data.getItemType().getId() + "." + data.getData();
+        String element = data.getItemType().getId() + "-" + data.getData() + ".price";
         player.sendMessage(String.valueOf(items.getDouble(element)));
         return ReturnCode.SUCCESS;
     }
@@ -286,18 +276,18 @@ public class Main extends JavaPlugin implements Listener {
      */
     @EventHandler
     public void inventoryClick(InventoryClickEvent event) {
-        if (event.getCurrentItem() != null && event.getInventory().getTitle().contains("HexiTrade")) {
+        if (event.getInventory().getTitle().contains("HexiTrade") &&
+                event.getCurrentItem() != null &&
+                event.getCurrentItem().getData().getItemType() != Material.AIR) {
             event.setCancelled(true);
             int slot = event.getSlot();
             int inv = Integer.parseInt(
                     event.getInventory().getItem(4).getItemMeta().getDisplayName().split("\\s+")[1]
             );
-            if (event.getCurrentItem().getData().getItemType() == Material.PAPER) {
-                if (slot == 1) {
-                    event.getWhoClicked().openInventory(generateInventory(inv - 1));
-                } else if (slot == 7) {
-                    event.getWhoClicked().openInventory(generateInventory(inv + 1));
-                }
+            if (slot == 1) {
+                event.getWhoClicked().openInventory(generateInventory(inv - 1));
+            } else if (slot == 7) {
+                event.getWhoClicked().openInventory(generateInventory(inv + 1));
             }
         }
     }
