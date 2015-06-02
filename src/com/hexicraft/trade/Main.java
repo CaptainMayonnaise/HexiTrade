@@ -167,45 +167,64 @@ public class Main extends JavaPlugin implements Listener {
 
             MaterialData data = itemInHand.getData(); // Data of item in hand
             String yamlPath = data.getItemType().getId() + "-" + data.getData();
-            econ.depositPlayer(player, makeSale(yamlPath, amount)); // Give the player the money
+            makeSale(yamlPath, amount, player);
 
             if (itemInHand.getAmount() <= amount) {
                 player.setItemInHand(null); // Take the item
             } else {
                 itemInHand.setAmount(itemInHand.getAmount() - amount);
             }
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException e) { // Caused by args[0] not being an integer
             return ReturnCode.INVALID_ARGUMENT;
         }
         return ReturnCode.SUCCESS;
     }
 
-    private synchronized double makeSale(String yamlPath, int numOfSales) {
+    private synchronized void makeSale(String yamlPath, int numOfSales, Player player) {
         String yamlPrice = yamlPath + ".price";
         double price = items.getDouble(yamlPrice);
-        double profit = 0;
-        for (int i = 0; i < numOfSales; i++) {
-            profit = profit + price;
-            price = price / PERCENT_CHANGE;
-        }
-        items.set(yamlPrice, price);
+        double profit = calcCost(price, numOfSales, PERCENT_CHANGE);
+        econ.depositPlayer(player, profit);
+        items.set(yamlPrice, calcNewPrice(price, numOfSales, PERCENT_CHANGE));
         items.saveFile();
         setItemPrice(itemMap.get(yamlPath), items.getDouble(yamlPrice));
-        return profit;
     }
 
-    private synchronized double makePurchase(String yamlPath, int numOfPurchases) {
+    private synchronized boolean makePurchase(String yamlPath, int numOfPurchases, Player player) {
         String yamlPrice = yamlPath + ".price";
         double price = items.getDouble(yamlPrice);
-        double cost = 0;
-        for (int i = 0; i < numOfPurchases; i++) {
-            cost = cost + price;
-            price = price * PERCENT_CHANGE;
+        double cost = calcCost(price, numOfPurchases, PERCENT_CHANGE);
+        if (econ.has(player, cost)) {
+            econ.withdrawPlayer(player, cost);
+            items.set(yamlPrice, calcNewPrice(price, numOfPurchases, PERCENT_CHANGE));
+            items.saveFile();
+            setItemPrice(itemMap.get(yamlPath), items.getDouble(yamlPrice));
+            return true;
+        } else {
+            return false;
         }
-        items.set(yamlPrice, price);
-        items.saveFile();
-        setItemPrice(itemMap.get(yamlPath), items.getDouble(yamlPrice));
-        return cost;
+    }
+
+    /**
+     * Calculates the new price of an item based on the number of purchases made
+     * @param price The current price of the item
+     * @param numOfPurchases The number of items that have been bought
+     * @param percent The percent increase
+     * @return The new price of the item
+     */
+    private double calcNewPrice(double price, int numOfPurchases, double percent) {
+        return price * Math.pow(percent, numOfPurchases);
+    }
+
+    /**
+     * Calculates how much the player pays/ receives
+     * @param price The current price of the item
+     * @param numOfPurchases The number of items that have been bought
+     * @param percent The percent increase
+     * @return The resulting cost of buying/ selling at that rate
+     */
+    private double calcCost(double price, int numOfPurchases, double percent) {
+        return ((price * percent) * (Math.pow(percent, numOfPurchases) - 1)) / (percent - 1);
     }
 
     /**
@@ -304,15 +323,18 @@ public class Main extends JavaPlugin implements Listener {
                 }
                 MaterialData data = currentItem.getData();
                 String yamlPath = data.getItemType().getId() + "-" + data.getData();
-                econ.withdrawPlayer(player, makePurchase(yamlPath, amount));
-                setItemPrice(event.getCurrentItem(), items.getDouble(yamlPath + ".price"));
+                if (makePurchase(yamlPath, amount, player)) {
+                    setItemPrice(event.getCurrentItem(), items.getDouble(yamlPath + ".price"));
 
-                currentItem.setAmount(amount);
-                ItemMeta meta = currentItem.getItemMeta();
-                meta.setLore(new ArrayList<String>());
-                currentItem.setItemMeta(meta);
+                    currentItem.setAmount(amount);
+                    ItemMeta meta = currentItem.getItemMeta();
+                    meta.setLore(new ArrayList<String>());
+                    currentItem.setItemMeta(meta);
 
-                addItem(player.getInventory(), currentItem);
+                    addItem(player.getInventory(), currentItem);
+                } else {
+                    player.sendMessage(ChatColor.RED + "You can't afford this.");
+                }
             }
         }
     }

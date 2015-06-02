@@ -28,7 +28,6 @@ public class ItemsFile extends YamlConfiguration {
     public void loadFile() {
         try {
             if (!configFile.exists()) {
-                System.out.println(getClass().getClassLoader().getResource("items.yml"));
                 load(new InputStreamReader(getClass().getClassLoader().getResourceAsStream("items.yml")));
                 saveFile();
             } else {
