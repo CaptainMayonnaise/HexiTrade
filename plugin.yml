@@ -16,7 +16,7 @@ commands:
         permission: hexitrade.user
         permission-message: You don't have permission to do this.
     price:
-        description: Gives the price of the item in your hand
+        description: Gives the sell price of the item in your hand
         usage: /price
         permission: hexitrade.user
         permission-message: You don't have permission to do this.

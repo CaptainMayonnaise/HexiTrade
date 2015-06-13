@@ -31,7 +31,7 @@ public class Main extends JavaPlugin implements Listener {
     private Economy econ = null;
     private LinkedHashMap<String, ItemStack> itemMap = new LinkedHashMap<>();
 
-    public static final double PERCENT_CHANGE = 1.001;
+    public static final double PERCENT_CHANGE = 1.01;
 
     /**
      * Run when the plugin is enabled, loads the item prices
@@ -140,7 +140,10 @@ public class Main extends JavaPlugin implements Listener {
      * @return Success!
      */
     private ReturnCode trade(Player player) {
-        player.sendMessage("Well done on typing this command :).");
+        player.sendMessage("Help for " + ChatColor.GOLD + "HexiTrade");
+        player.sendMessage(ChatColor.GOLD + "/buy" + ChatColor.WHITE + " - Opens up the buy interface");
+        player.sendMessage(ChatColor.GOLD + "/sell" + ChatColor.WHITE + " - Sells the item in your hand");
+        player.sendMessage(ChatColor.GOLD + "/price" + ChatColor.WHITE + " - Gives the sell price of the item in your hand");
         return ReturnCode.SUCCESS;
     }
 
@@ -167,33 +170,35 @@ public class Main extends JavaPlugin implements Listener {
 
             MaterialData data = itemInHand.getData(); // Data of item in hand
             String yamlPath = data.getItemType().getId() + "-" + data.getData();
-            makeSale(yamlPath, amount, player);
+            double saleProfit = makeSale(yamlPath, amount, player);
 
             if (itemInHand.getAmount() <= amount) {
                 player.setItemInHand(null); // Take the item
             } else {
                 itemInHand.setAmount(itemInHand.getAmount() - amount);
             }
+            player.sendMessage("Sold item for " + ChatColor.GOLD + econ.format(saleProfit));
         } catch (NumberFormatException e) { // Caused by args[0] not being an integer
             return ReturnCode.INVALID_ARGUMENT;
         }
         return ReturnCode.SUCCESS;
     }
 
-    private synchronized void makeSale(String yamlPath, int numOfSales, Player player) {
+    private synchronized double makeSale(String yamlPath, int numOfSales, Player player) {
         String yamlPrice = yamlPath + ".price";
         double price = items.getDouble(yamlPrice);
-        double profit = calcCost(price, numOfSales, PERCENT_CHANGE);
+        double profit = calcSellCost(price, numOfSales, 1 / PERCENT_CHANGE);
         econ.depositPlayer(player, profit);
-        items.set(yamlPrice, calcNewPrice(price, numOfSales, PERCENT_CHANGE));
+        items.set(yamlPrice, calcNewPrice(price, numOfSales, 1 / PERCENT_CHANGE));
         items.saveFile();
         setItemPrice(itemMap.get(yamlPath), items.getDouble(yamlPrice));
+        return profit;
     }
 
     private synchronized boolean makePurchase(String yamlPath, int numOfPurchases, Player player) {
         String yamlPrice = yamlPath + ".price";
         double price = items.getDouble(yamlPrice);
-        double cost = calcCost(price, numOfPurchases, PERCENT_CHANGE);
+        double cost = calcBuyCost(price, numOfPurchases, PERCENT_CHANGE);
         if (econ.has(player, cost)) {
             econ.withdrawPlayer(player, cost);
             items.set(yamlPrice, calcNewPrice(price, numOfPurchases, PERCENT_CHANGE));
@@ -223,8 +228,25 @@ public class Main extends JavaPlugin implements Listener {
      * @param percent The percent increase
      * @return The resulting cost of buying/ selling at that rate
      */
-    private double calcCost(double price, int numOfPurchases, double percent) {
+    /*private double calcSellCost(double price, int numOfPurchases, double percent) {
         return ((price * percent) * (Math.pow(percent, numOfPurchases) - 1)) / (percent - 1);
+    }*/
+    private double calcSellCost(double price, int numOfPurchases, double percent) {
+        double retPrice = 0;
+        while (numOfPurchases-- > 0) {
+            retPrice += price;
+            price *= percent;
+        }
+        return retPrice;
+    }
+
+    private double calcBuyCost(double price, int numOfPurchases, double percent) {
+        double retPrice = 0;
+        while (numOfPurchases-- > 0) {
+            price *= percent;
+            retPrice += price;
+        }
+        return retPrice;
     }
 
     /**
@@ -236,7 +258,8 @@ public class Main extends JavaPlugin implements Listener {
     private ReturnCode price(Player player) {
         MaterialData data = player.getItemInHand().getData();
         String yamlPrice = data.getItemType().getId() + "-" + data.getData() + ".price";
-        player.sendMessage(String.valueOf(items.getDouble(yamlPrice)));
+        player.sendMessage("That item is worth " + ChatColor.GOLD +
+                econ.format(items.getDouble(yamlPrice)));
         return ReturnCode.SUCCESS;
     }
 
