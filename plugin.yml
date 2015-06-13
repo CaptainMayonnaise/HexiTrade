@@ -5,14 +5,14 @@ description: A trading plugin that varies the price of items depending on their 
 depend: [Vault]
 commands:
     trade:
-        description: Gives information on the trading plugin.
+        description: Gives information about HexiTrade.
         usage: /trade
         permission: hexitrade.user
         permission-message: You don't have permission to do this.
         aliases: [hexitrade, ht]
     sell:
         description: Sells the item in your hand
-        usage: /sell
+        usage: /sell <amount>
         permission: hexitrade.user
         permission-message: You don't have permission to do this.
     price:
@@ -22,8 +22,8 @@ commands:
         permission-message: You don't have permission to do this.
         aliases: [value, worth]
     buy:
-        description: Opens up the buy interface
-        usage: /buy
+        description: Opens the buy interface or buys the item specified
+        usage: /buy <item> <amount>
         permission: hexitrade.user
         permission-message: You don't have permission to do this.
         aliases: []

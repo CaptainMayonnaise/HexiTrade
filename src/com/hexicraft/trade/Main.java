@@ -19,6 +19,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -31,7 +32,7 @@ public class Main extends JavaPlugin implements Listener {
     private Economy econ = null;
     private LinkedHashMap<String, ItemStack> itemMap = new LinkedHashMap<>();
 
-    public static final double PERCENT_CHANGE = 1.01;
+    public static final double PERCENT_CHANGE = 1.001;
 
     /**
      * Run when the plugin is enabled, loads the item prices
@@ -83,6 +84,7 @@ public class Main extends JavaPlugin implements Listener {
     }
 
     private void setItemPrice(ItemStack itemStack, double price) {
+        itemStack.setAmount(1);
         ItemMeta meta = itemStack.getItemMeta();
         ArrayList<String> lore = new ArrayList<>();
         lore.add(ChatColor.RESET + "Price: " + econ.format(price));
@@ -109,7 +111,7 @@ public class Main extends JavaPlugin implements Listener {
             Player player = (Player) sender;
             switch (cmd.getName().toLowerCase()) {
                 case "trade":
-                    code = trade(player);
+                    code = trade(player, args);
                     break;
                 case "sell":
                     code = sell(player, args);
@@ -118,7 +120,7 @@ public class Main extends JavaPlugin implements Listener {
                     code = price(player);
                     break;
                 case "buy":
-                    code = buy(player);
+                    code = buy(player, args);
                     break;
                 default:
                     code = ReturnCode.UNRECOGNISED_COMMAND;
@@ -139,11 +141,45 @@ public class Main extends JavaPlugin implements Listener {
      * @param player Player who needs help
      * @return Success!
      */
-    private ReturnCode trade(Player player) {
-        player.sendMessage("Help for " + ChatColor.GOLD + "HexiTrade");
-        player.sendMessage(ChatColor.GOLD + "/buy" + ChatColor.WHITE + " - Opens up the buy interface");
-        player.sendMessage(ChatColor.GOLD + "/sell" + ChatColor.WHITE + " - Sells the item in your hand");
-        player.sendMessage(ChatColor.GOLD + "/price" + ChatColor.WHITE + " - Gives the sell price of the item in your hand");
+    private ReturnCode trade(Player player, String[] args) {
+        if (args.length > 0 && Objects.equals(args[0], "admin") && player.hasPermission("hexitrade.admin")) {
+            if (args.length > 1 && Objects.equals(args[1], "setprice")) {
+                if (args.length > 3) {
+                    for (String key : items.getKeys(false)) {
+                        for (String name : items.getStringList(key + ".name")) {
+                            if (Objects.equals(args[2], name)) {
+                                setItemPrice(itemMap.get(key), items.getDouble(key + ".price"));
+                                try {
+                                    items.set(key + ".price", Double.parseDouble(args[3]));
+                                    items.saveFile();
+                                    setItemPrice(itemMap.get(key), Double.parseDouble(args[3]));
+                                    player.sendMessage("Setting price of " + args[2] + " to " + ChatColor.GOLD +
+                                            econ.format(Double.parseDouble(args[3])));
+                                } catch (NumberFormatException e) {
+                                    return ReturnCode.INVALID_ARGUMENT;
+                                }
+                                return ReturnCode.SUCCESS;
+                            }
+                        }
+                    }
+                    return ReturnCode.ITEM_NOT_FOUND;
+                } else {
+                    return ReturnCode.TOO_FEW_ARGUMENTS;
+                }
+            } else {
+                player.sendMessage("Admin help for " + ChatColor.GOLD + "HexiTrade");
+                player.sendMessage(ChatColor.GOLD + "/trade admin setprice <item> <price>" + ChatColor.WHITE + " - Sets the price of the item.");
+            }
+        } else {
+            player.sendMessage("Help for " + ChatColor.GOLD + "HexiTrade");
+            player.sendMessage(ChatColor.GOLD + "/buy" + ChatColor.WHITE + " - Opens the buy interface");
+            player.sendMessage(ChatColor.GOLD + "/buy <item> <amount>" + ChatColor.WHITE + " - Buys an item");
+            player.sendMessage(ChatColor.GOLD + "/sell <amount>" + ChatColor.WHITE + " - Sells the item in your hand");
+            player.sendMessage(ChatColor.GOLD + "/price" + ChatColor.WHITE + " - Gives the sell price of the item in your hand");
+            if (player.hasPermission("hexitrade.admin")) {
+                player.sendMessage(ChatColor.GOLD + "/trade admin" + ChatColor.WHITE + " - Lists HexiTrade admin commands");
+            }
+        }
         return ReturnCode.SUCCESS;
     }
 
@@ -170,18 +206,24 @@ public class Main extends JavaPlugin implements Listener {
 
             MaterialData data = itemInHand.getData(); // Data of item in hand
             String yamlPath = data.getItemType().getId() + "-" + data.getData();
-            double saleProfit = makeSale(yamlPath, amount, player);
+            if (items.contains(yamlPath + ".name") && items.contains(yamlPath + ".price")) {
+                double saleProfit = makeSale(yamlPath, amount, player);
 
-            if (itemInHand.getAmount() <= amount) {
-                player.setItemInHand(null); // Take the item
+                if (itemInHand.getAmount() <= amount) {
+                    player.setItemInHand(null); // Take the item
+                } else {
+                    itemInHand.setAmount(itemInHand.getAmount() - amount);
+                }
+
+                player.sendMessage("Sold " + amount + " " + items.getStringList(yamlPath + ".name").get(0) + " for " +
+                        ChatColor.GOLD + econ.format(saleProfit));
+                return ReturnCode.SUCCESS;
             } else {
-                itemInHand.setAmount(itemInHand.getAmount() - amount);
+                return ReturnCode.INVALID_ITEM;
             }
-            player.sendMessage("Sold item for " + ChatColor.GOLD + econ.format(saleProfit));
-        } catch (NumberFormatException e) { // Caused by args[0] not being an integer
+        } catch (NumberFormatException e) { // Thrown when args[0] is not an integer
             return ReturnCode.INVALID_ARGUMENT;
         }
-        return ReturnCode.SUCCESS;
     }
 
     private synchronized double makeSale(String yamlPath, int numOfSales, Player player) {
@@ -195,7 +237,7 @@ public class Main extends JavaPlugin implements Listener {
         return profit;
     }
 
-    private synchronized boolean makePurchase(String yamlPath, int numOfPurchases, Player player) {
+    private synchronized double makePurchase(String yamlPath, int numOfPurchases, Player player) throws CantAffordException {
         String yamlPrice = yamlPath + ".price";
         double price = items.getDouble(yamlPrice);
         double cost = calcBuyCost(price, numOfPurchases, PERCENT_CHANGE);
@@ -204,9 +246,9 @@ public class Main extends JavaPlugin implements Listener {
             items.set(yamlPrice, calcNewPrice(price, numOfPurchases, PERCENT_CHANGE));
             items.saveFile();
             setItemPrice(itemMap.get(yamlPath), items.getDouble(yamlPrice));
-            return true;
+            return cost;
         } else {
-            return false;
+            throw new CantAffordException();
         }
     }
 
@@ -257,10 +299,14 @@ public class Main extends JavaPlugin implements Listener {
     @SuppressWarnings("deprecation") // FU Mojang (/ Bukkit?)
     private ReturnCode price(Player player) {
         MaterialData data = player.getItemInHand().getData();
-        String yamlPrice = data.getItemType().getId() + "-" + data.getData() + ".price";
-        player.sendMessage("That item is worth " + ChatColor.GOLD +
-                econ.format(items.getDouble(yamlPrice)));
-        return ReturnCode.SUCCESS;
+        String yamlPath = data.getItemType().getId() + "-" + data.getData();
+        if (items.contains(yamlPath + ".name") && items.contains(yamlPath + ".price")) {
+            player.sendMessage("Price of " + items.getStringList(yamlPath + ".name").get(0) + ": " + ChatColor.GOLD +
+                    econ.format(items.getDouble(yamlPath + ".price")));
+            return ReturnCode.SUCCESS;
+        } else {
+            return ReturnCode.INVALID_ITEM;
+        }
     }
 
     /**
@@ -268,9 +314,33 @@ public class Main extends JavaPlugin implements Listener {
      * @param player The player that typed the command
      * @return Success!
      */
-    private ReturnCode buy(Player player) {
-        player.openInventory(generateInventory(1));
-        return ReturnCode.SUCCESS;
+    private ReturnCode buy(Player player, String[] args) {
+        if (args.length == 0) {
+            player.openInventory(generateInventory(1));
+            return ReturnCode.SUCCESS;
+        } else {
+            int amount;
+            try {
+                if (args.length > 1) {
+                    amount = Integer.parseInt(args[1]);
+                } else {
+                    amount = 1;
+                }
+            } catch (NumberFormatException e) {
+                return ReturnCode.INVALID_ARGUMENT;
+            }
+
+            for (String key : items.getKeys(false)) {
+                for (String name : items.getStringList(key + ".name")) {
+                    if (Objects.equals(args[0], name)) {
+                        doSale(key, amount, player, itemMap.get(key));
+                        setItemPrice(itemMap.get(key), items.getDouble(key + ".price"));
+                        return ReturnCode.SUCCESS;
+                    }
+                }
+            }
+            return ReturnCode.ITEM_NOT_FOUND;
+        }
     }
 
     private Inventory generateInventory(int page) {
@@ -346,19 +416,27 @@ public class Main extends JavaPlugin implements Listener {
                 }
                 MaterialData data = currentItem.getData();
                 String yamlPath = data.getItemType().getId() + "-" + data.getData();
-                if (makePurchase(yamlPath, amount, player)) {
-                    setItemPrice(event.getCurrentItem(), items.getDouble(yamlPath + ".price"));
-
-                    currentItem.setAmount(amount);
-                    ItemMeta meta = currentItem.getItemMeta();
-                    meta.setLore(new ArrayList<String>());
-                    currentItem.setItemMeta(meta);
-
-                    addItem(player.getInventory(), currentItem);
-                } else {
-                    player.sendMessage(ChatColor.RED + "You can't afford this.");
-                }
+                doSale(yamlPath, amount, player, currentItem);
+                setItemPrice(event.getCurrentItem(), items.getDouble(yamlPath + ".price"));
             }
+        }
+    }
+
+    private void doSale(String yamlPath, int amount, Player player, ItemStack currentItem) {
+        try {
+            double buyCost = makePurchase(yamlPath, amount, player);
+
+            currentItem.setAmount(amount);
+            ItemMeta meta = currentItem.getItemMeta();
+            meta.setLore(new ArrayList<String>());
+            currentItem.setItemMeta(meta);
+
+            addItem(player.getInventory(), currentItem);
+
+            player.sendMessage("Bought " + amount + " " + items.getStringList(yamlPath + ".name").get(0) + " for " +
+                    ChatColor.GOLD + econ.format(buyCost));
+        } catch (CantAffordException e) {
+            player.sendMessage(ChatColor.RED + "You can't afford this.");
         }
     }
 

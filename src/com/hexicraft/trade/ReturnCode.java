@@ -12,7 +12,10 @@ public enum ReturnCode {
     NOT_PLAYER("Only players can run this command.", false),
     UNRECOGNISED_COMMAND("The command you entered was not recognised.", false),
     INVALID_ARGUMENT("The arguments entered were invalid.", true),
-    TOO_FEW_ITEMS("You don't have enough items in your hand.", false);
+    TOO_FEW_ARGUMENTS("You didn't enter enough arguments.", true),
+    TOO_FEW_ITEMS("You don't have enough items in your hand.", false),
+    INVALID_ITEM("The item in your hand can't be sold.", false),
+    ITEM_NOT_FOUND("Item wasn't found.", false);
 
     private String message;
     private boolean sendUsage;
