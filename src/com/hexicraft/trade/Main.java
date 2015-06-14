@@ -32,7 +32,7 @@ public class Main extends JavaPlugin implements Listener {
     private Economy econ = null;
     private LinkedHashMap<String, ItemStack> itemMap = new LinkedHashMap<>();
 
-    public static final double PERCENT_CHANGE = 1.001;
+    public static final double PERCENT_CHANGE = 1.01;
 
     /**
      * Run when the plugin is enabled, loads the item prices
@@ -137,7 +137,7 @@ public class Main extends JavaPlugin implements Listener {
     }
 
     /**
-     * Will probably be a help command later
+     * The help and admin command
      * @param player Player who needs help
      * @return Success!
      */
@@ -145,42 +145,66 @@ public class Main extends JavaPlugin implements Listener {
         if (args.length > 0 && Objects.equals(args[0], "admin") && player.hasPermission("hexitrade.admin")) {
             if (args.length > 1 && Objects.equals(args[1], "setprice")) {
                 if (args.length > 3) {
-                    for (String key : items.getKeys(false)) {
-                        for (String name : items.getStringList(key + ".name")) {
-                            if (Objects.equals(args[2], name)) {
-                                setItemPrice(itemMap.get(key), items.getDouble(key + ".price"));
-                                try {
-                                    items.set(key + ".price", Double.parseDouble(args[3]));
-                                    items.saveFile();
-                                    setItemPrice(itemMap.get(key), Double.parseDouble(args[3]));
-                                    player.sendMessage("Setting price of " + args[2] + " to " + ChatColor.GOLD +
-                                            econ.format(Double.parseDouble(args[3])));
-                                } catch (NumberFormatException e) {
-                                    return ReturnCode.INVALID_ARGUMENT;
-                                }
-                                return ReturnCode.SUCCESS;
-                            }
-                        }
-                    }
-                    return ReturnCode.ITEM_NOT_FOUND;
+                    return setPrice(player, args[2], args[3]);
                 } else {
                     return ReturnCode.TOO_FEW_ARGUMENTS;
                 }
             } else {
-                player.sendMessage("Admin help for " + ChatColor.GOLD + "HexiTrade");
-                player.sendMessage(ChatColor.GOLD + "/trade admin setprice <item> <price>" + ChatColor.WHITE + " - Sets the price of the item.");
+                return sendAdminHelp(player);
             }
         } else {
-            player.sendMessage("Help for " + ChatColor.GOLD + "HexiTrade");
-            player.sendMessage(ChatColor.GOLD + "/buy" + ChatColor.WHITE + " - Opens the buy interface");
-            player.sendMessage(ChatColor.GOLD + "/buy <item> <amount>" + ChatColor.WHITE + " - Buys an item");
-            player.sendMessage(ChatColor.GOLD + "/sell <amount>" + ChatColor.WHITE + " - Sells the item in your hand");
-            player.sendMessage(ChatColor.GOLD + "/price" + ChatColor.WHITE + " - Gives the sell price of the item in your hand");
-            if (player.hasPermission("hexitrade.admin")) {
-                player.sendMessage(ChatColor.GOLD + "/trade admin" + ChatColor.WHITE + " - Lists HexiTrade admin commands");
-            }
+            return sendHelp(player);
+        }
+    }
+
+    private ReturnCode sendAdminHelp(Player player) {
+        player.sendMessage("Admin help for " + ChatColor.GOLD + "HexiTrade");
+        player.sendMessage(ChatColor.GOLD + "/trade admin setprice <item> <price>" + ChatColor.WHITE +
+                " - Sets the price of the item.");
+        return ReturnCode.SUCCESS;
+    }
+
+    private ReturnCode sendHelp(Player player) {
+        player.sendMessage("Help for " + ChatColor.GOLD + "HexiTrade");
+        player.sendMessage(ChatColor.GOLD + "/buy" + ChatColor.WHITE + " - Opens the buy interface");
+        player.sendMessage(ChatColor.GOLD + "/buy <item> <amount>" + ChatColor.WHITE + " - Buys an item");
+        player.sendMessage(ChatColor.GOLD + "/sell <amount>" + ChatColor.WHITE + " - Sells the item in your hand");
+        player.sendMessage(ChatColor.GOLD + "/price" + ChatColor.WHITE +
+                " - Gives the sell price of the item in your hand");
+        if (player.hasPermission("hexitrade.admin")) {
+            player.sendMessage(ChatColor.GOLD + "/trade admin" + ChatColor.WHITE + " - Lists HexiTrade admin commands");
         }
         return ReturnCode.SUCCESS;
+    }
+
+    private ReturnCode setPrice(Player player, String item, String priceStr) {
+        String key = findKey(item);
+        if (key == null) { // Check there's an item by that name
+            return ReturnCode.ITEM_NOT_FOUND;
+        }
+        double price;
+        try { // Check the price argument was a number
+            price = Double.parseDouble(priceStr);
+        } catch (NumberFormatException e) {
+            return ReturnCode.INVALID_ARGUMENT;
+        }
+        items.set(key + ".price", price);
+        items.saveFile();
+        setItemPrice(itemMap.get(key), price);
+        player.sendMessage("Setting price of " + item + " to " + ChatColor.GOLD +
+                econ.format(price));
+        return ReturnCode.SUCCESS;
+    }
+
+    private String findKey(String name) {
+        for (String key : items.getKeys(false)) {
+            for (String keyName : items.getStringList(key + ".name")) {
+                if (Objects.equals(name, keyName)) {
+                    return key;
+                }
+            }
+        }
+        return null;
     }
 
     /**
@@ -319,8 +343,12 @@ public class Main extends JavaPlugin implements Listener {
             player.openInventory(generateInventory(1));
             return ReturnCode.SUCCESS;
         } else {
+            String key = findKey(args[0]);
+            if (key == null) { // Check there's an item by that name
+                return ReturnCode.ITEM_NOT_FOUND;
+            }
             int amount;
-            try {
+            try { // Check the price argument was a number
                 if (args.length > 1) {
                     amount = Integer.parseInt(args[1]);
                 } else {
@@ -329,17 +357,9 @@ public class Main extends JavaPlugin implements Listener {
             } catch (NumberFormatException e) {
                 return ReturnCode.INVALID_ARGUMENT;
             }
-
-            for (String key : items.getKeys(false)) {
-                for (String name : items.getStringList(key + ".name")) {
-                    if (Objects.equals(args[0], name)) {
-                        doSale(key, amount, player, itemMap.get(key));
-                        setItemPrice(itemMap.get(key), items.getDouble(key + ".price"));
-                        return ReturnCode.SUCCESS;
-                    }
-                }
-            }
-            return ReturnCode.ITEM_NOT_FOUND;
+            doSale(key, amount, player, itemMap.get(key));
+            setItemPrice(itemMap.get(key), items.getDouble(key + ".price"));
+            return ReturnCode.SUCCESS;
         }
     }
 
