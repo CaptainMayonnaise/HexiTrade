@@ -165,14 +165,22 @@ public class Main extends JavaPlugin implements Listener {
     }
 
     private ReturnCode sendHelp(Player player) {
-        player.sendMessage("Help for " + ChatColor.GOLD + "HexiTrade");
-        player.sendMessage(ChatColor.GOLD + "/buy" + ChatColor.WHITE + " - Opens the buy interface");
-        player.sendMessage(ChatColor.GOLD + "/buy <item> <amount>" + ChatColor.WHITE + " - Buys an item");
-        player.sendMessage(ChatColor.GOLD + "/sell <amount>" + ChatColor.WHITE + " - Sells the item in your hand");
-        player.sendMessage(ChatColor.GOLD + "/price" + ChatColor.WHITE +
+        player.sendMessage(ChatColor.DARK_GRAY + "- - - " +
+                ChatColor.RED + "⬢" + ChatColor.GOLD + "⬢" + ChatColor.DARK_RED + "⬢" +
+                ChatColor.WHITE + " HexiTrade " +
+                ChatColor.RED + "⬢" + ChatColor.GOLD + "⬢" + ChatColor.DARK_RED + "⬢" +
+                ChatColor.DARK_GRAY + " - - -");
+        player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/buy <warp>" + ChatColor.WHITE +
+                " - Opens the buy interface");
+        player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/buy <item> <amount>" + ChatColor.WHITE +
+                " - Buys an item");
+        player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/sell <amount>" + ChatColor.WHITE +
+                " - Sells the item in your hand");
+        player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/price" + ChatColor.WHITE +
                 " - Gives the sell price of the item in your hand");
         if (player.hasPermission("hexitrade.admin")) {
-            player.sendMessage(ChatColor.GOLD + "/trade admin" + ChatColor.WHITE + " - Lists HexiTrade admin commands");
+            player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/trade admin" + ChatColor.WHITE +
+                    " - Lists HexiTrade admin commands");
         }
         return ReturnCode.SUCCESS;
     }
