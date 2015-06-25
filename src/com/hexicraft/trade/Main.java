@@ -28,11 +28,11 @@ import java.util.Set;
  */
 public class Main extends JavaPlugin implements Listener {
 
-    private ItemsFile items;
+    private YamlFile items;
     private Economy econ = null;
     private LinkedHashMap<String, ItemStack> itemMap = new LinkedHashMap<>();
 
-    public static final double PERCENT_CHANGE = 1.01;
+    public static final double PERCENT_CHANGE = 1.001;
 
     /**
      * Run when the plugin is enabled, loads the item prices
@@ -47,7 +47,7 @@ public class Main extends JavaPlugin implements Listener {
             return;
         }
 
-        items = new ItemsFile(this, "items.yml");
+        items = new YamlFile(this, "items.yml");
 
         setupItemMap();
     }
@@ -170,7 +170,7 @@ public class Main extends JavaPlugin implements Listener {
                 ChatColor.WHITE + " HexiTrade " +
                 ChatColor.RED + "⬢" + ChatColor.GOLD + "⬢" + ChatColor.DARK_RED + "⬢" +
                 ChatColor.DARK_GRAY + " - - -");
-        player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/buy <warp>" + ChatColor.WHITE +
+        player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/buy" + ChatColor.WHITE +
                 " - Opens the buy interface");
         player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/buy <item> <amount>" + ChatColor.WHITE +
                 " - Buys an item");

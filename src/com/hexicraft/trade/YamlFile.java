@@ -10,13 +10,15 @@ import java.io.*;
  * @author Ollie
  * @version 1.0
  */
-public class ItemsFile extends YamlConfiguration {
+public class YamlFile extends YamlConfiguration {
 
     private JavaPlugin plugin;
+    private String fileName;
     private File configFile;
 
-    ItemsFile(JavaPlugin plugin, String fileName) {
+    YamlFile(JavaPlugin plugin, String fileName) {
         this.plugin = plugin;
+        this.fileName = fileName;
         configFile = new File(plugin.getDataFolder(), fileName);
 
         loadFile();
@@ -28,7 +30,7 @@ public class ItemsFile extends YamlConfiguration {
     public void loadFile() {
         try {
             if (!configFile.exists()) {
-                load(new InputStreamReader(getClass().getClassLoader().getResourceAsStream("items.yml")));
+                load(new InputStreamReader(getClass().getClassLoader().getResourceAsStream(fileName)));
                 saveFile();
             } else {
                 load(configFile);
