@@ -50,4 +50,19 @@ public class YamlFile extends YamlConfiguration {
             plugin.getLogger().warning("Error saving configuration file.\n" + e.getMessage());
         }
     }
+
+    /**
+     * Sets values and then saves file
+     * @param path Yaml path.
+     * @param value Object to set.
+     */
+    @Override
+    public void set(String path, Object value) {
+        super.set(path, value);
+        saveFile();
+    }
+
+    public void setNoSave(String path, Object value) {
+        super.set(path, value);
+    }
 }
