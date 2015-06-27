@@ -74,8 +74,30 @@ public class ItemListing {
                 ChatColor.WHITE + econ.format(profit) + ChatColor.GOLD + ".");
     }
 
-    public void price(Player player) {
-        player.sendMessage(ChatColor.GOLD + "Price of " + aliases.get(0) + ": " + ChatColor.WHITE + econ.format(price));
+    public void sellPrice(int amount, Player player) {
+        double price = this.price;
+        double profit = 0;
+        for (int i = 0; i < amount; i++) {
+            profit += price;
+            price *= 1 / Main.PERCENT_CHANGE;
+        }
+        player.sendMessage(ChatColor.GOLD + "Value of " + amount + " " + aliases.get(0) + ": " +
+                ChatColor.WHITE + econ.format(profit));
+        if (amount != 1) {
+            player.sendMessage(ChatColor.GOLD + "Value of 1 " + aliases.get(0) + ": " +
+                    ChatColor.WHITE + econ.format(price));
+        }
+    }
+
+    public void buyPrice(int amount, Player player) {
+        double price = this.price;
+        double cost = 0;
+        for (int i = 0; i < amount; i++) {
+            price *= Main.PERCENT_CHANGE;
+            cost += price;
+        }
+        player.sendMessage(ChatColor.GOLD + "Price of " + amount + " " + aliases.get(0) + ": " +
+                ChatColor.WHITE + econ.format(cost));
     }
 
     /**

@@ -3,27 +3,28 @@ main: com.hexicraft.trade.Main
 version: 1.1
 description: A trading plugin that varies the price of items depending on their demand.
 depend: [Vault]
+softdepend: [Essentials]
 commands:
-    trade:
-        description: Gives information about HexiTrade.
-        usage: /trade
-        permission: hexitrade.user
-        permission-message: You don't have permission to do this.
-        aliases: [hexitrade, ht]
-    sell:
-        description: Sells the item in your hand
-        usage: /sell <amount>
-        permission: hexitrade.user
-        permission-message: You don't have permission to do this.
-    price:
-        description: Gives the sell price of the item in your hand
-        usage: /price
-        permission: hexitrade.user
-        permission-message: You don't have permission to do this.
-        aliases: [value, worth]
-    buy:
-        description: Opens the buy interface or buys the item specified
-        usage: /buy <item> <amount>
-        permission: hexitrade.user
-        permission-message: You don't have permission to do this.
-        aliases: []
+  trade:
+    description: Gives information about HexiTrade.
+    usage: /trade
+    permission: hexitrade.user
+    permission-message: You don't have permission to do this.
+    aliases: [hexitrade, ht]
+  sell:
+    description: Sells the item in your hand
+    usage: /sell <amount>
+    permission: hexitrade.user
+    permission-message: You don't have permission to do this.
+  price:
+    description: Gives the sell price of the item in your hand
+    usage: /price
+    permission: hexitrade.user
+    permission-message: You don't have permission to do this.
+    aliases: [value, worth]
+  buy:
+    description: Opens the buy interface or buys the item specified
+    usage: /buy <item> <amount>
+    permission: hexitrade.user
+    permission-message: You don't have permission to do this.
+    aliases: []

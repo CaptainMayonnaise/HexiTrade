@@ -11,7 +11,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.material.MaterialData;
 import org.bukkit.plugin.RegisteredServiceProvider;
@@ -95,8 +94,10 @@ public class Main extends JavaPlugin implements Listener {
                 case "price":
                     if (args.length == 0) {
                         code = price(player);
-                    } else {
+                    } else if (args.length == 1) {
                         code = price(player, args[0]);
+                    } else {
+                        code = price(player, args[0], args[1]);
                     }
                     break;
                 case "buy":
@@ -205,12 +206,16 @@ public class Main extends JavaPlugin implements Listener {
     @SuppressWarnings("deprecation")
     private ReturnCode sell(Player player, String amountStr) {
         int amount;
-        try {
-            amount = Integer.parseInt(amountStr);
-        } catch (NumberFormatException e) {
-            return ReturnCode.INVALID_ARGUMENT;
-        }
         ItemStack itemInHand = player.getItemInHand();
+        if (Objects.equals(amountStr, "all")) {
+            amount = itemInHand.getAmount();
+        } else {
+            try {
+                amount = Integer.parseInt(amountStr);
+            } catch (NumberFormatException e) {
+                return ReturnCode.INVALID_ARGUMENT;
+            }
+        }
         MaterialData data = itemInHand.getData();
         String key = data.getItemType().getId() + "-" + data.getData();
         if (itemInHand.getAmount() < amount) {
@@ -241,17 +246,27 @@ public class Main extends JavaPlugin implements Listener {
         if (!itemMap.containsKey(key)) {
             return ReturnCode.INVALID_ITEM;
         } else {
-            itemMap.get(key).price(player);
+            itemMap.get(key).sellPrice(player.getItemInHand().getAmount(), player);
             return ReturnCode.SUCCESS;
         }
     }
 
     private ReturnCode price(Player player, String alias) {
+        return price(player, alias, "1");
+    }
+
+    private ReturnCode price(Player player, String alias, String amountStr) {
+        int amount;
+        try {
+            amount = Integer.parseInt(amountStr);
+        } catch (NumberFormatException e) {
+            return ReturnCode.INVALID_ARGUMENT;
+        }
         ItemListing itemListing = itemMap.getFromAlias(alias);
         if (itemListing == null) {
             return ReturnCode.ITEM_NOT_FOUND;
         } else {
-            itemListing.price(player);
+            itemListing.buyPrice(amount, player);
             return ReturnCode.SUCCESS;
         }
     }
@@ -283,9 +298,7 @@ public class Main extends JavaPlugin implements Listener {
             return ReturnCode.ITEM_NOT_FOUND;
         } else {
             ItemStack item = listing.buy(amount, player);
-            if (item != null) {
-                addItem(player.getInventory(), item);
-            }
+            addItem(item, player);
             return ReturnCode.SUCCESS;
         }
     }
@@ -310,35 +323,20 @@ public class Main extends JavaPlugin implements Listener {
                 int amount = event.isShiftClick() ? listing.getItem().getMaxStackSize() : 1;
                 ItemStack item = listing.buy(amount, player);
                 event.getInventory().setItem(event.getRawSlot(), listing.getItem());
-                if (item != null) {
-                    //addItem(player.getInventory(), item);
-                    HashMap<Integer, ItemStack> dropItems = player.getInventory().addItem(item);
-                    if (dropItems.size() != 0) {
-                        Location location = player.getLocation();
-                        location.setY(location.getY() + 1);
-                        player.getWorld().dropItem(location, dropItems.get(0));
-                    }
-                }
+                addItem(item, player);
             }
         }
     }
 
     @SuppressWarnings("deprecation")
-    private void addItem(Inventory inv, ItemStack item) {
-        for (ItemStack invItem : inv) {
-            if (invItem != null && invItem == item) {
-                int amount = invItem.getAmount() + item.getAmount();
-                if (amount > invItem.getMaxStackSize()) {
-                    invItem.setAmount(invItem.getMaxStackSize());
-                    item.setAmount(amount - invItem.getMaxStackSize());
-                } else {
-                    invItem.setAmount(amount);
-                    item.setAmount(0);
-                }
+    private void addItem(ItemStack item, Player player) {
+        if (item != null) {
+            HashMap<Integer, ItemStack> dropItems = player.getInventory().addItem(item);
+            if (dropItems.size() != 0) {
+                Location location = player.getLocation();
+                location.setY(location.getY() + 1);
+                player.getWorld().dropItem(location, dropItems.get(0));
             }
-        }
-        if (item.getAmount() > 0) {
-            inv.addItem(item);
         }
     }
 }

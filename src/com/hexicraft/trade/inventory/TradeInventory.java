@@ -26,7 +26,8 @@ public class TradeInventory {
         tab = InventoryTab.BUILDING;
         page = InventoryPage.firstPage();
 
-        for (int i = 0; i < 10; i++) {
+        inventory.setItem(tab.slot, tab.currentTab());
+        for (int i = 1; i < 10; i++) {
             inventory.setItem(InventoryTab.values()[i].slot, InventoryTab.values()[i].getItem());
         }
         setItems();
@@ -52,7 +53,7 @@ public class TradeInventory {
             } else if (slot == 8) {
                 page = page.getNext(tab.getItemKeys().size()).getCurrent();
                 setItems();
-            } else {
+            } else if (slot != 7) {
                 MaterialData data = event.getCurrentItem().clone().getData();
                 listing = itemMap.get(data.getItemTypeId() + "-" + data.getData());
             }
