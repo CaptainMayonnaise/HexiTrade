@@ -25,26 +25,45 @@ import java.util.Objects;
  */
 public class Main extends JavaPlugin implements Listener {
 
-    private Economy econ = null;
+    private Economy econ;
     private ItemMap itemMap;
+    private boolean enabled;
 
     public static final double PERCENT_CHANGE = 1.001;
+
+    @Override
+    public void onLoad() {
+        getServer().getPluginManager().registerEvents(this, this);
+    }
 
     /**
      * Run when the plugin is enabled, loads the item prices
      */
     @Override
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(this, this);
+        enabled = false;
 
         if (!setupEconomy()) {
-            getLogger().severe("Missing dependency: Vault.");
-            getServer().getPluginManager().disablePlugin(this);
+            getLogger().severe("Missing dependency: Vault and/or compatible economy plugin.");
             return;
         }
 
+        if (!setupItems()) {
+            getLogger().severe("Could not load items.yml.");
+            return;
+        }
+        enabled = true;
+    }
+
+    private boolean setupItems() {
+        itemMap = null;
         YamlFile items = new YamlFile(this, "items.yml");
+        if (!items.loadFile()) {
+            return false;
+        }
+
         itemMap = new ItemMap(this, econ, items);
+        return true;
     }
 
     /**
@@ -52,6 +71,7 @@ public class Main extends JavaPlugin implements Listener {
      * @return True if Vault is found, false otherwise
      */
     private boolean setupEconomy() {
+        econ = null;
         if (getServer().getPluginManager().getPlugin("Vault") == null) {
             return false;
         }
@@ -80,37 +100,47 @@ public class Main extends JavaPlugin implements Listener {
 
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            switch (cmd.getName().toLowerCase()) {
-                case "trade":
-                    code = trade(player, args);
-                    break;
-                case "sell":
-                    if (args.length == 0) {
-                        code = sell(player);
-                    } else {
-                        code = sell(player, args[0]);
-                    }
-                    break;
-                case "price":
-                    if (args.length == 0) {
-                        code = price(player);
-                    } else if (args.length == 1) {
-                        code = price(player, args[0]);
-                    } else {
-                        code = price(player, args[0], args[1]);
-                    }
-                    break;
-                case "buy":
-                    if (args.length == 0) {
-                        code = buy(player);
-                    } else if (args.length == 1) {
-                        code = buy(player, args[0]);
-                    } else {
-                        code = buy(player, args[0], args[1]);
-                    }
-                    break;
-                default:
-                    code = ReturnCode.UNRECOGNISED_COMMAND;
+            String command = cmd.getName().toLowerCase();
+            if (!enabled) {
+                if ((Objects.equals(command, "trade") && args.length > 0 && Objects.equals(args[0], "reload"))) {
+                    onEnable();
+                    code = ReturnCode.SUCCESS;
+                } else {
+                    code = ReturnCode.NOT_ENABLED;
+                }
+            } else {
+                switch (command) {
+                    case "trade":
+                        code = trade(player, args);
+                        break;
+                    case "sell":
+                        if (args.length == 0) {
+                            code = sell(player);
+                        } else {
+                            code = sell(player, args[0]);
+                        }
+                        break;
+                    case "price":
+                        if (args.length == 0) {
+                            code = price(player);
+                        } else if (args.length == 1) {
+                            code = price(player, args[0]);
+                        } else {
+                            code = price(player, args[0], args[1]);
+                        }
+                        break;
+                    case "buy":
+                        if (args.length == 0) {
+                            code = buy(player);
+                        } else if (args.length == 1) {
+                            code = buy(player, args[0]);
+                        } else {
+                            code = buy(player, args[0], args[1]);
+                        }
+                        break;
+                    default:
+                        code = ReturnCode.UNRECOGNISED_COMMAND;
+                }
             }
         } else {
             code = ReturnCode.NOT_PLAYER;
@@ -129,15 +159,18 @@ public class Main extends JavaPlugin implements Listener {
      * @return Success!
      */
     private ReturnCode trade(Player player, String[] args) {
-        if (args.length > 0 && Objects.equals(args[0], "admin") && player.hasPermission("hexitrade.admin")) {
-            if (args.length > 1 && Objects.equals(args[1], "setprice")) {
-                if (args.length > 3) {
-                    return setPrice(player, args[2], args[3]);
-                } else {
-                    return ReturnCode.TOO_FEW_ARGUMENTS;
-                }
-            } else {
-                return sendAdminHelp(player);
+        if (args.length > 0 && player.hasPermission("hexitrade.admin")) {
+            switch (args[0]) {
+                case "admin":
+                    return sendAdminHelp(player);
+                case "setprice":
+                    if (args.length > 3) {
+                        return setPrice(player, args[2], args[3]);
+                    } else {
+                        return ReturnCode.TOO_FEW_ARGUMENTS;
+                    }
+                default:
+                    return ReturnCode.INVALID_ARGUMENT;
             }
         } else {
             return sendHelp(player);
@@ -145,9 +178,15 @@ public class Main extends JavaPlugin implements Listener {
     }
 
     private ReturnCode sendAdminHelp(Player player) {
-        player.sendMessage("Admin help for " + ChatColor.GOLD + "HexiTrade");
-        player.sendMessage(ChatColor.GOLD + "/trade admin setprice <item> <price>" + ChatColor.WHITE +
+        player.sendMessage(ChatColor.DARK_GRAY + "- - - " +
+                ChatColor.RED + "⬢" + ChatColor.GOLD + "⬢" + ChatColor.DARK_RED + "⬢" +
+                ChatColor.WHITE + " HexiTrade Admin " +
+                ChatColor.RED + "⬢" + ChatColor.GOLD + "⬢" + ChatColor.DARK_RED + "⬢" +
+                ChatColor.DARK_GRAY + " - - -");
+        player.sendMessage(ChatColor.GOLD + "/trade setprice <item> <price>" + ChatColor.WHITE +
                 " - Sets the price of the item.");
+        player.sendMessage(ChatColor.GOLD + "/trade reload" + ChatColor.WHITE +
+                " - Reloads the plugin.");
         return ReturnCode.SUCCESS;
     }
 
@@ -165,6 +204,8 @@ public class Main extends JavaPlugin implements Listener {
                 " - Sells the item in your hand");
         player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/price" + ChatColor.WHITE +
                 " - Gives the sell price of the item in your hand");
+        player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/price <item> <amount>" + ChatColor.WHITE +
+                " - Gives the buy price of an item");
         if (player.hasPermission("hexitrade.admin")) {
             player.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/trade admin" + ChatColor.WHITE +
                     " - Lists HexiTrade admin commands");
@@ -315,15 +356,17 @@ public class Main extends JavaPlugin implements Listener {
                 event.getWhoClicked() instanceof Player) {
             Player player = (Player) event.getWhoClicked();
             event.setCancelled(true);
-            TradeInventory tradeInventory = new TradeInventory(itemMap, event.getInventory(), event);
-            ItemListing listing = tradeInventory.getListing();
-            if (listing == null) {
-                player.openInventory(tradeInventory.getInventory());
-            } else {
-                int amount = event.isShiftClick() ? listing.getItem().getMaxStackSize() : 1;
-                ItemStack item = listing.buy(amount, player);
-                event.getInventory().setItem(event.getRawSlot(), listing.getItem());
-                addItem(item, player);
+            if (enabled) {
+                TradeInventory tradeInventory = new TradeInventory(itemMap, event.getInventory(), event);
+                ItemListing listing = tradeInventory.getListing();
+                if (listing == null) {
+                    player.openInventory(tradeInventory.getInventory());
+                } else {
+                    int amount = event.isShiftClick() ? listing.getItem().getMaxStackSize() : 1;
+                    ItemStack item = listing.buy(amount, player);
+                    event.getInventory().setItem(event.getRawSlot(), listing.getItem());
+                    addItem(item, player);
+                }
             }
         }
     }
@@ -331,6 +374,7 @@ public class Main extends JavaPlugin implements Listener {
     @SuppressWarnings("deprecation")
     private void addItem(ItemStack item, Player player) {
         if (item != null) {
+            System.out.println(item.getMaxStackSize());
             HashMap<Integer, ItemStack> dropItems = player.getInventory().addItem(item);
             if (dropItems.size() != 0) {
                 Location location = player.getLocation();

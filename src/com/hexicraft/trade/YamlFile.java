@@ -20,14 +20,12 @@ public class YamlFile extends YamlConfiguration {
         this.plugin = plugin;
         this.fileName = fileName;
         configFile = new File(plugin.getDataFolder(), fileName);
-
-        loadFile();
     }
 
     /**
      * Loads the file, if it doesn't exist then it creates a new one
      */
-    public void loadFile() {
+    public boolean loadFile() {
         try {
             if (!configFile.exists()) {
                 load(new InputStreamReader(getClass().getClassLoader().getResourceAsStream(fileName)));
@@ -35,8 +33,10 @@ public class YamlFile extends YamlConfiguration {
             } else {
                 load(configFile);
             }
+            return true;
         } catch (InvalidConfigurationException | IOException e) {
-            plugin.getLogger().warning("Error loading configuration file.\n" + e.getMessage());
+            plugin.getLogger().warning("Error loading YAML file.\n" + e.getMessage());
+            return false;
         }
     }
 
