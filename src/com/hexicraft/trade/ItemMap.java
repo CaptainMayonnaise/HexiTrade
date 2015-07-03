@@ -17,7 +17,7 @@ import java.util.Set;
 public class ItemMap extends HashMap<String, ItemListing> {
 
     @SuppressWarnings("deprecation")
-    ItemMap(JavaPlugin plugin, Economy econ, YamlFile items) {
+    ItemMap(Main plugin, Economy econ, YamlFile items) {
         Set<String> keys = items.getKeys(false);
 
         for (String key : keys) {
@@ -26,7 +26,7 @@ public class ItemMap extends HashMap<String, ItemListing> {
                 ItemStack item = new MaterialData(Integer.parseInt(matData[0]),
                         (byte) Integer.parseInt(matData[1])).toItemStack(1);
                 put(key, new ItemListing(key, item, items.getDouble(key + ".price"),
-                        items.getStringList(key + ".name"), econ, items));
+                        items.getStringList(key + ".name"), econ, items, plugin.getPercentChange()));
                 InventoryTab.getTab(items.getInt(key + ".tab")).getItemKeys().add(key);
             } catch (NumberFormatException e) {
                 plugin.getLogger().warning("Error in items.yml: " + key + " is not a valid item name.");

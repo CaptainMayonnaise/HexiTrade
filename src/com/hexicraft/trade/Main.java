@@ -28,19 +28,19 @@ public class Main extends JavaPlugin implements Listener {
     private Economy econ;
     private ItemMap itemMap;
     private boolean enabled;
-
-    public static final double PERCENT_CHANGE = 1.001;
-
-    @Override
-    public void onLoad() {
-        getServer().getPluginManager().registerEvents(this, this);
-    }
+    private double percentChange;
 
     /**
      * Run when the plugin is enabled, loads the item prices
      */
     @Override
     public void onEnable() {
+        getServer().getPluginManager().registerEvents(this, this);
+
+        reload();
+    }
+
+    private void reload() {
         enabled = false;
 
         if (!setupEconomy()) {
@@ -48,22 +48,17 @@ public class Main extends JavaPlugin implements Listener {
             return;
         }
 
+        if (!setupConfig()) {
+            getLogger().severe("Could not load config.yml.");
+            return;
+        }
+
         if (!setupItems()) {
             getLogger().severe("Could not load items.yml.");
             return;
         }
+
         enabled = true;
-    }
-
-    private boolean setupItems() {
-        itemMap = null;
-        YamlFile items = new YamlFile(this, "items.yml");
-        if (!items.loadFile()) {
-            return false;
-        }
-
-        itemMap = new ItemMap(this, econ, items);
-        return true;
     }
 
     /**
@@ -85,6 +80,30 @@ public class Main extends JavaPlugin implements Listener {
         return econ != null;
     }
 
+    private boolean setupConfig() {
+        YamlFile config = new YamlFile(this, "config.yml");
+        if (!config.loadFile()) {
+            return false;
+        }
+
+        percentChange = config.getDouble("percent-change");
+        return true;
+    }
+
+    private boolean setupItems() {
+        YamlFile items = new YamlFile(this, "items.yml");
+        if (!items.loadFile()) {
+            return false;
+        }
+
+        itemMap = new ItemMap(this, econ, items);
+        return true;
+    }
+
+    public double getPercentChange() {
+        return percentChange;
+    }
+
     /**
      * Executes the given command, returning its success
      * @param sender Source of the command
@@ -101,13 +120,10 @@ public class Main extends JavaPlugin implements Listener {
         if (sender instanceof Player) {
             Player player = (Player) sender;
             String command = cmd.getName().toLowerCase();
-            if (!enabled) {
-                if ((Objects.equals(command, "trade") && args.length > 0 && Objects.equals(args[0], "reload"))) {
-                    onEnable();
-                    code = ReturnCode.SUCCESS;
-                } else {
+            if (!enabled && !(Objects.equals(command, "trade") &&
+                    args.length > 0 &&
+                    Objects.equals(args[0], "reload"))) {
                     code = ReturnCode.NOT_ENABLED;
-                }
             } else {
                 switch (command) {
                     case "trade":
@@ -169,6 +185,10 @@ public class Main extends JavaPlugin implements Listener {
                     } else {
                         return ReturnCode.TOO_FEW_ARGUMENTS;
                     }
+                case "reload":
+                    reload();
+                    player.sendMessage(ChatColor.GOLD + "HexiTrade has been reloaded.");
+                    return ReturnCode.SUCCESS;
                 default:
                     return ReturnCode.INVALID_ARGUMENT;
             }
@@ -374,7 +394,6 @@ public class Main extends JavaPlugin implements Listener {
     @SuppressWarnings("deprecation")
     private void addItem(ItemStack item, Player player) {
         if (item != null) {
-            System.out.println(item.getMaxStackSize());
             HashMap<Integer, ItemStack> dropItems = player.getInventory().addItem(item);
             if (dropItems.size() != 0) {
                 Location location = player.getLocation();

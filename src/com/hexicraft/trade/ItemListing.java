@@ -21,6 +21,7 @@ public class ItemListing {
     private List<String> aliases;
     private Economy econ;
     private YamlFile items;
+    private double percentChange;
 
     /**
      * Sets up an ItemListing object
@@ -28,13 +29,15 @@ public class ItemListing {
      * @param price The price of the item.
      * @param econ The Economy object.
      */
-    ItemListing(String key, ItemStack item, double price, List<String> aliases, Economy econ, YamlFile items) {
+    ItemListing(String key, ItemStack item, double price, List<String> aliases, Economy econ, YamlFile items,
+                double percentChange) {
         this.key = key;
         this.item = item;
         this.price = price;
         this.aliases = aliases;
         this.econ = econ;
         this.items = items;
+        this.percentChange = percentChange;
         updateItemPrice(false);
     }
 
@@ -44,7 +47,7 @@ public class ItemListing {
     private void updateItemPrice(boolean save) {
         ItemMeta meta = item.getItemMeta();
         ArrayList<String> lore = new ArrayList<>();
-        lore.add(ChatColor.RESET + "Price: " + econ.format(price * Main.PERCENT_CHANGE));
+        lore.add(ChatColor.RESET + "Price: " + econ.format(price * percentChange));
         lore.add(ChatColor.GOLD + "<click to buy>");
         lore.add(ChatColor.GOLD + "<shift-click to buy stack>");
         meta.setLore(lore);
@@ -65,7 +68,7 @@ public class ItemListing {
         double profit = 0;
         for (int i = 0; i < amount; i++) {
             profit += price;
-            price *= 1 / Main.PERCENT_CHANGE;
+            price *= 1 / percentChange;
         }
         econ.depositPlayer(player, profit);
         updateItemPrice(true);
@@ -79,7 +82,7 @@ public class ItemListing {
         double profit = 0;
         for (int i = 0; i < amount; i++) {
             profit += price;
-            price *= 1 / Main.PERCENT_CHANGE;
+            price *= 1 / percentChange;
         }
         player.sendMessage(ChatColor.GOLD + "Value of " + amount + " " + aliases.get(0) + ": " +
                 ChatColor.WHITE + econ.format(profit));
@@ -93,7 +96,7 @@ public class ItemListing {
         double price = this.price;
         double cost = 0;
         for (int i = 0; i < amount; i++) {
-            price *= Main.PERCENT_CHANGE;
+            price *= percentChange;
             cost += price;
         }
         player.sendMessage(ChatColor.GOLD + "Price of " + amount + " " + aliases.get(0) + ": " +
@@ -110,7 +113,7 @@ public class ItemListing {
         double cost = 0;
         double oldPrice = price;
         for (int i = 0; i < amount; i++) {
-            price *= Main.PERCENT_CHANGE;
+            price *= percentChange;
             cost += price;
         }
 
