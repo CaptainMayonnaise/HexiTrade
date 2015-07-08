@@ -50,6 +50,12 @@ public enum InventoryTab {
         return itemKeys;
     }
 
+    public static void resetItemKeys() {
+        for (InventoryTab tab : values()) {
+            tab.itemKeys = new ArrayList<>();
+        }
+    }
+
     public ItemStack getItem() {
         return item;
     }

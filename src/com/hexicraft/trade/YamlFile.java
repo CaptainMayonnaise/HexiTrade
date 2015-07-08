@@ -47,7 +47,7 @@ public class YamlFile extends YamlConfiguration {
         try {
             save(configFile);
         } catch (IOException e) {
-            plugin.getLogger().warning("Error saving configuration file.\n" + e.getMessage());
+            plugin.getLogger().warning("Error saving YAML file.\n" + e.getMessage());
         }
     }
 

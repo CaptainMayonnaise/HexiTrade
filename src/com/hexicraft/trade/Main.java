@@ -1,6 +1,8 @@
 package com.hexicraft.trade;
 
+import com.hexicraft.trade.inventory.InventoryTab;
 import com.hexicraft.trade.inventory.TradeInventory;
+import com.hexicraft.trade.logger.HexiLogger;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -10,6 +12,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.InventoryAction;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.material.MaterialData;
@@ -29,6 +32,7 @@ public class Main extends JavaPlugin implements Listener {
     private ItemMap itemMap;
     private boolean enabled;
     private double percentChange;
+    private HexiLogger logger = new HexiLogger(getDataFolder());
 
     /**
      * Run when the plugin is enabled, loads the item prices
@@ -87,6 +91,9 @@ public class Main extends JavaPlugin implements Listener {
         }
 
         percentChange = config.getDouble("percent-change");
+        if (percentChange == 0) {
+            percentChange = 1;
+        }
         return true;
     }
 
@@ -96,6 +103,7 @@ public class Main extends JavaPlugin implements Listener {
             return false;
         }
 
+        InventoryTab.resetItemKeys();
         itemMap = new ItemMap(this, econ, items);
         return true;
     }
@@ -180,8 +188,8 @@ public class Main extends JavaPlugin implements Listener {
                 case "admin":
                     return sendAdminHelp(player);
                 case "setprice":
-                    if (args.length > 3) {
-                        return setPrice(player, args[2], args[3]);
+                    if (args.length > 2) {
+                        return setPrice(player, args[1], args[2]);
                     } else {
                         return ReturnCode.TOO_FEW_ARGUMENTS;
                     }
@@ -244,7 +252,7 @@ public class Main extends JavaPlugin implements Listener {
         if (itemListing == null) {
             return ReturnCode.ITEM_NOT_FOUND;
         } else {
-            itemListing.setPrice(price, player);
+            itemListing.setPrice(price, player, logger);
             return ReturnCode.SUCCESS;
         }
     }
@@ -284,7 +292,7 @@ public class Main extends JavaPlugin implements Listener {
         } else if (!itemMap.containsKey(key)) {
             return ReturnCode.INVALID_ITEM;
         } else {
-            itemMap.get(key).sell(amount, player);
+            itemMap.get(key).sell(amount, player, logger);
 
             if (itemInHand.getAmount() <= amount) {
                 player.setItemInHand(null); // Take the item
@@ -358,7 +366,7 @@ public class Main extends JavaPlugin implements Listener {
         if (listing == null) {
             return ReturnCode.ITEM_NOT_FOUND;
         } else {
-            ItemStack item = listing.buy(amount, player);
+            ItemStack item = listing.buy(amount, player, logger);
             addItem(item, player);
             return ReturnCode.SUCCESS;
         }
@@ -374,16 +382,17 @@ public class Main extends JavaPlugin implements Listener {
                 event.getCurrentItem() != null &&
                 event.getCurrentItem().getData().getItemType() != Material.AIR &&
                 event.getWhoClicked() instanceof Player) {
-            Player player = (Player) event.getWhoClicked();
             event.setCancelled(true);
-            if (enabled) {
+            if (enabled && (event.getAction() == InventoryAction.PICKUP_ALL ||
+                    event.getAction() == InventoryAction.MOVE_TO_OTHER_INVENTORY)) {
                 TradeInventory tradeInventory = new TradeInventory(itemMap, event.getInventory(), event);
                 ItemListing listing = tradeInventory.getListing();
+                Player player = (Player) event.getWhoClicked();
                 if (listing == null) {
                     player.openInventory(tradeInventory.getInventory());
                 } else {
                     int amount = event.isShiftClick() ? listing.getItem().getMaxStackSize() : 1;
-                    ItemStack item = listing.buy(amount, player);
+                    ItemStack item = listing.buy(amount, player, logger);
                     event.getInventory().setItem(event.getRawSlot(), listing.getItem());
                     addItem(item, player);
                 }

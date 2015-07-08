@@ -1,5 +1,6 @@
 package com.hexicraft.trade;
 
+import com.hexicraft.trade.logger.HexiLogger;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -64,7 +65,7 @@ public class ItemListing {
      * @param amount The amount of sales to make.
      * @param player The player buying the items.
      */
-    public synchronized void sell(int amount, Player player) {
+    public synchronized void sell(int amount, Player player, HexiLogger logger) {
         double profit = 0;
         for (int i = 0; i < amount; i++) {
             profit += price;
@@ -75,6 +76,7 @@ public class ItemListing {
 
         player.sendMessage(ChatColor.GOLD + "Sold " + amount + " " + aliases.get(0) + " for " +
                 ChatColor.WHITE + econ.format(profit) + ChatColor.GOLD + ".");
+        logger.log(player.getName() + " sold " + amount + " " + aliases.get(0) + " for " + econ.format(profit));
     }
 
     public void sellPrice(int amount, Player player) {
@@ -109,7 +111,7 @@ public class ItemListing {
      * @param player The player buying the items.
      * @return The purchased items.
      */
-    public synchronized ItemStack buy(int amount, Player player) {
+    public synchronized ItemStack buy(int amount, Player player, HexiLogger logger) {
         double cost = 0;
         double oldPrice = price;
         for (int i = 0; i < amount; i++) {
@@ -129,6 +131,7 @@ public class ItemListing {
             updateItemPrice(true);
             player.sendMessage(ChatColor.GOLD + "Bought " + amount + " " + aliases.get(0) + " for " +
                     ChatColor.WHITE + econ.format(cost) + ChatColor.GOLD + ".");
+            logger.log(player.getName() + " bought " + amount + " " + aliases.get(0) + " for " + econ.format(cost));
             return item;
         } else {
             price = oldPrice;
@@ -138,11 +141,12 @@ public class ItemListing {
         }
     }
 
-    public void setPrice(double price, Player player) {
+    public void setPrice(double price, Player player, HexiLogger logger) {
         this.price = price;
         updateItemPrice(true);
         player.sendMessage(ChatColor.GOLD + "Setting price of " + aliases.get(0) + " to " + ChatColor.WHITE +
                 econ.format(price) + ChatColor.GOLD + ".");
+        logger.log(player.getName() + " set the price of " + aliases.get(0) + " to " + econ.format(price));
     }
 
     public List<String> getAliases() {
