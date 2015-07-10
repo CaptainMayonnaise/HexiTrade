@@ -1,8 +1,8 @@
 package com.hexicraft.trade;
 
-import com.hexicraft.trade.logger.HexiLogger;
-import net.milkbowl.vault.economy.Economy;
+import com.hexicraft.trade.logger.FileLogger;
 import org.bukkit.ChatColor;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -20,25 +20,22 @@ public class ItemListing {
     private ItemStack item;
     private double price;
     private List<String> aliases;
-    private Economy econ;
-    private YamlFile items;
-    private double percentChange;
+    private HexiTrade plugin;
 
     /**
-     * Sets up an ItemListing object
-     * @param item An item stack of the item.
-     * @param price The price of the item.
-     * @param econ The Economy object.
+     * Constructs an ItemListing
+     * @param key The Item's key in the ItemMap
+     * @param item The ItemStack the listing represents
+     * @param price The price of the item
+     * @param aliases List of aliases for the item
+     * @param plugin The HexiTrade object
      */
-    ItemListing(String key, ItemStack item, double price, List<String> aliases, Economy econ, YamlFile items,
-                double percentChange) {
+    ItemListing(String key, ItemStack item, double price, List<String> aliases, HexiTrade plugin) {
         this.key = key;
         this.item = item;
         this.price = price;
         this.aliases = aliases;
-        this.econ = econ;
-        this.items = items;
-        this.percentChange = percentChange;
+        this.plugin = plugin;
         updateItemPrice(false);
     }
 
@@ -48,15 +45,15 @@ public class ItemListing {
     private void updateItemPrice(boolean save) {
         ItemMeta meta = item.getItemMeta();
         ArrayList<String> lore = new ArrayList<>();
-        lore.add(ChatColor.RESET + "Price: " + econ.format(price * percentChange));
+        lore.add(ChatColor.RESET + "Price: " + plugin.getEcon().format(price * plugin.getPercentChange()));
         lore.add(ChatColor.GOLD + "<click to buy>");
         lore.add(ChatColor.GOLD + "<shift-click to buy stack>");
         meta.setLore(lore);
         item.setItemMeta(meta);
         if (save) {
-            items.set(key + ".price", price);
+            plugin.getItems().set(key + ".price", price);
         } else {
-            items.setNoSave(key + ".price", price);
+            plugin.getItems().setNoSave(key + ".price", price);
         }
     }
 
@@ -65,18 +62,16 @@ public class ItemListing {
      * @param amount The amount of sales to make.
      * @param player The player buying the items.
      */
-    public synchronized void sell(int amount, Player player, HexiLogger logger) {
+    public synchronized double sell(int amount, Player player, FileLogger fileLogger) {
         double profit = 0;
         for (int i = 0; i < amount; i++) {
             profit += price;
-            price *= 1 / percentChange;
+            price *= 1 / plugin.getPercentChange();
         }
-        econ.depositPlayer(player, profit);
+        profit = profit / plugin.getSellTax();
+        plugin.getEcon().depositPlayer(player, profit);
         updateItemPrice(true);
-
-        player.sendMessage(ChatColor.GOLD + "Sold " + amount + " " + aliases.get(0) + " for " +
-                ChatColor.WHITE + econ.format(profit) + ChatColor.GOLD + ".");
-        logger.log(player.getName() + " sold " + amount + " " + aliases.get(0) + " for " + econ.format(profit));
+        return profit;
     }
 
     public void sellPrice(int amount, Player player) {
@@ -84,25 +79,22 @@ public class ItemListing {
         double profit = 0;
         for (int i = 0; i < amount; i++) {
             profit += price;
-            price *= 1 / percentChange;
+            price *= 1 / plugin.getPercentChange();
         }
+        profit = profit / plugin.getSellTax();
         player.sendMessage(ChatColor.GOLD + "Value of " + amount + " " + aliases.get(0) + ": " +
-                ChatColor.WHITE + econ.format(profit));
-        if (amount != 1) {
-            player.sendMessage(ChatColor.GOLD + "Value of 1 " + aliases.get(0) + ": " +
-                    ChatColor.WHITE + econ.format(price));
-        }
+                ChatColor.WHITE + plugin.getEcon().format(profit));
     }
 
     public void buyPrice(int amount, Player player) {
         double price = this.price;
         double cost = 0;
         for (int i = 0; i < amount; i++) {
-            price *= percentChange;
+            price *= plugin.getPercentChange();
             cost += price;
         }
         player.sendMessage(ChatColor.GOLD + "Price of " + amount + " " + aliases.get(0) + ": " +
-                ChatColor.WHITE + econ.format(cost));
+                ChatColor.WHITE + plugin.getEcon().format(cost));
     }
 
     /**
@@ -111,16 +103,16 @@ public class ItemListing {
      * @param player The player buying the items.
      * @return The purchased items.
      */
-    public synchronized ItemStack buy(int amount, Player player, HexiLogger logger) {
+    public synchronized ItemStack buy(int amount, Player player, FileLogger fileLogger) {
         double cost = 0;
         double oldPrice = price;
         for (int i = 0; i < amount; i++) {
-            price *= percentChange;
+            price *= plugin.getPercentChange();
             cost += price;
         }
 
-        if (econ.has(player, cost)) { // Check player can afford item
-            econ.withdrawPlayer(player, cost);
+        if (plugin.getEcon().has(player, cost)) { // Check player can afford item
+            plugin.getEcon().withdrawPlayer(player, cost);
 
             ItemStack item = this.item.clone();
             item.setAmount(amount);
@@ -130,8 +122,9 @@ public class ItemListing {
 
             updateItemPrice(true);
             player.sendMessage(ChatColor.GOLD + "Bought " + amount + " " + aliases.get(0) + " for " +
-                    ChatColor.WHITE + econ.format(cost) + ChatColor.GOLD + ".");
-            logger.log(player.getName() + " bought " + amount + " " + aliases.get(0) + " for " + econ.format(cost));
+                    ChatColor.WHITE + plugin.getEcon().format(cost) + ChatColor.GOLD + ".");
+            fileLogger.log(player.getName() + " bought " + amount + " " + aliases.get(0) + " for " +
+                    plugin.getEcon().format(cost));
             return item;
         } else {
             price = oldPrice;
@@ -141,12 +134,12 @@ public class ItemListing {
         }
     }
 
-    public void setPrice(double price, Player player, HexiLogger logger) {
+    public void setPrice(double price, CommandSender Sender, FileLogger logger) {
         this.price = price;
         updateItemPrice(true);
-        player.sendMessage(ChatColor.GOLD + "Setting price of " + aliases.get(0) + " to " + ChatColor.WHITE +
-                econ.format(price) + ChatColor.GOLD + ".");
-        logger.log(player.getName() + " set the price of " + aliases.get(0) + " to " + econ.format(price));
+        Sender.sendMessage(ChatColor.GOLD + "Setting price of " + aliases.get(0) + " to " + ChatColor.WHITE +
+                plugin.getEcon().format(price) + ChatColor.GOLD + ".");
+        logger.log(Sender.getName() + " set the price of " + aliases.get(0) + " to " + plugin.getEcon().format(price));
     }
 
     public List<String> getAliases() {

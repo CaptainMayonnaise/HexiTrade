@@ -16,7 +16,7 @@ public enum ReturnCode {
     TOO_FEW_ITEMS("You don't have enough items in your hand.", false),
     INVALID_ITEM("The item in your hand can't be sold.", false),
     ITEM_NOT_FOUND("Item wasn't found.", false),
-    NOT_ENABLED("The plugin hasn't been loaded properly.", false);
+    NOT_ACTIVE("The plugin hasn't been loaded properly.", false);
 
     private String message;
     private boolean sendUsage;

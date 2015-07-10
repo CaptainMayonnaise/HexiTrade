@@ -1,5 +1,6 @@
 package com.hexicraft.trade.inventory;
 
+import com.hexicraft.trade.HexiTrade;
 import com.hexicraft.trade.ItemListing;
 import com.hexicraft.trade.ItemMap;
 import org.bukkit.Bukkit;
@@ -16,12 +17,12 @@ public class TradeInventory {
     private Inventory inventory;
     private InventoryTab tab;
     private InventoryPage page;
-    private ItemMap itemMap;
+    private HexiTrade plugin;
     private ItemListing listing = null;
 
 
-    public TradeInventory(ItemMap itemMap) {
-        this.itemMap = itemMap;
+    public TradeInventory(HexiTrade plugin) {
+        this.plugin = plugin;
         inventory = Bukkit.createInventory(null, 54, "HexiTrade");
         tab = InventoryTab.BUILDING;
         page = InventoryPage.firstPage();
@@ -34,8 +35,8 @@ public class TradeInventory {
     }
 
     @SuppressWarnings("deprecation")
-    public TradeInventory(ItemMap itemMap, Inventory inventory, InventoryClickEvent event) {
-        this.itemMap = itemMap;
+    public TradeInventory(HexiTrade plugin, Inventory inventory, InventoryClickEvent event) {
+        this.plugin = plugin;
         this.inventory = inventory;
         int slot = event.getRawSlot();
         if (slot < 54) {
@@ -51,11 +52,10 @@ public class TradeInventory {
                 page = page.getPrevious().getCurrent();
                 setItems();
             } else if (slot == 8) {
-                page = page.getNext(tab.getItemKeys().size()).getCurrent();
+                page = page.getNext(plugin.getTabs().get(tab).size()).getCurrent();
                 setItems();
             } else if (slot != 7) {
-                MaterialData data = event.getCurrentItem().clone().getData();
-                listing = itemMap.get(data.getItemTypeId() + "-" + data.getData());
+                listing = plugin.getItemMap().getFromStack(event.getCurrentItem());
             }
         }
     }
@@ -63,11 +63,11 @@ public class TradeInventory {
     private void setItems() {
         inventory.setItem(6, page.getPrevious().getItem());
         inventory.setItem(7, page.getItem());
-        inventory.setItem(8, page.getNext(tab.getItemKeys().size()).getItem());
+        inventory.setItem(8, page.getNext(plugin.getTabs().get(tab).size()).getItem());
         int offset = ((page.getNumber() - 1) * 36) - 9;
         for (int i = 9; i < 45; i++) {
-            if (offset + i < tab.getItemKeys().size()) {
-                inventory.setItem(i, itemMap.get(tab.getItemKeys().get(offset + i)).getItem());
+            if (offset + i < plugin.getTabs().get(tab).size()) {
+                inventory.setItem(i, plugin.getItemMap().get(plugin.getTabs().get(tab).get(offset + i)).getItem());
             } else {
                 inventory.setItem(i, null);
             }

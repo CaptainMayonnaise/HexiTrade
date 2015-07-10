@@ -8,13 +8,13 @@ import java.util.Date;
  * @author Ollie
  * @version 1.0
  */
-public class HexiLogger {
+public class FileLogger {
 
     private File logFolder;
     private SimpleDateFormat day = new SimpleDateFormat("yyyy-MM-dd");
     private SimpleDateFormat time = new SimpleDateFormat("[hh:mm:ss]: ");
 
-    public HexiLogger(File dataFolder) {
+    public FileLogger(File dataFolder) {
         this.logFolder = new File(dataFolder, "logs");
     }
 
