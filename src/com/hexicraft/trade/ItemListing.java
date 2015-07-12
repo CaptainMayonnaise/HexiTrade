@@ -21,6 +21,7 @@ public class ItemListing {
     private double price;
     private List<String> aliases;
     private HexiTrade plugin;
+    private ItemMap itemMap;
 
     /**
      * Constructs an ItemListing
@@ -30,12 +31,13 @@ public class ItemListing {
      * @param aliases List of aliases for the item
      * @param plugin The HexiTrade object
      */
-    ItemListing(String key, ItemStack item, double price, List<String> aliases, HexiTrade plugin) {
+    ItemListing(String key, ItemStack item, double price, List<String> aliases, HexiTrade plugin, ItemMap itemMap) {
         this.key = key;
         this.item = item;
         this.price = price;
         this.aliases = aliases;
         this.plugin = plugin;
+        this.itemMap = itemMap;
         updateItemPrice(false);
     }
 
@@ -51,9 +53,9 @@ public class ItemListing {
         meta.setLore(lore);
         item.setItemMeta(meta);
         if (save) {
-            plugin.getItems().set(key + ".price", price);
+            itemMap.getItems().set(key + ".price", price);
         } else {
-            plugin.getItems().setNoSave(key + ".price", price);
+            itemMap.getItems().setNoSave(key + ".price", price);
         }
     }
 
@@ -134,12 +136,12 @@ public class ItemListing {
         }
     }
 
-    public void setPrice(double price, CommandSender Sender, FileLogger logger) {
+    public void setPrice(double price, Player player, FileLogger logger) {
         this.price = price;
         updateItemPrice(true);
-        Sender.sendMessage(ChatColor.GOLD + "Setting price of " + aliases.get(0) + " to " + ChatColor.WHITE +
+        player.sendMessage(ChatColor.GOLD + "Setting price of " + aliases.get(0) + " to " + ChatColor.WHITE +
                 plugin.getEcon().format(price) + ChatColor.GOLD + ".");
-        logger.log(Sender.getName() + " set the price of " + aliases.get(0) + " to " + plugin.getEcon().format(price));
+        logger.log(player.getName() + " set the price of " + aliases.get(0) + " to " + plugin.getEcon().format(price));
     }
 
     public List<String> getAliases() {

@@ -6,24 +6,27 @@ softdepend: [Vault, Essentials]
 commands:
   trade:
     description: Gives information about HexiTrade.
-    usage: /trade
+    usage: /trade [arg]
     permission: hexitrade.user
     permission-message: You don't have permission to do this.
     aliases: [hexitrade, ht]
   sell:
-    description: Sells the item in your hand
-    usage: /sell <amount>
+    description: Sells an item
+    usage: /sell [item] [amount]
+    permission: hexitrade.user
+    permission-message: You don't have permission to do this.
+  buy:
+    description: Opens the buy interface or buys an item
+    usage: /buy [item] [amount]
+    permission: hexitrade.user
+    permission-message: You don't have permission to do this.
+  worth:
+    description: Gives the sell worth of an item
+    usage: /worth [item] [amount]
     permission: hexitrade.user
     permission-message: You don't have permission to do this.
   price:
-    description: Gives the sell price of the item in your hand
-    usage: /price
+    description: Gives the buy price of an item
+    usage: /price [item] [amount]
     permission: hexitrade.user
     permission-message: You don't have permission to do this.
-    aliases: [value, worth]
-  buy:
-    description: Opens the buy interface or buys the item specified
-    usage: /buy <item> <amount>
-    permission: hexitrade.user
-    permission-message: You don't have permission to do this.
-    aliases: []

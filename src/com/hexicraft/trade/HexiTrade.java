@@ -1,14 +1,12 @@
 package com.hexicraft.trade;
 
-import com.hexicraft.trade.commands.BuyCommand;
-import com.hexicraft.trade.commands.PriceCommand;
-import com.hexicraft.trade.commands.SellCommand;
-import com.hexicraft.trade.commands.TradeCommand;
-import com.hexicraft.trade.inventory.InventoryTab;
+import com.hexicraft.trade.commands.*;
 import com.hexicraft.trade.inventory.TradeInventory;
 import com.hexicraft.trade.logger.FileLogger;
 import net.milkbowl.vault.economy.Economy;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,7 +16,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -28,10 +25,8 @@ import java.util.HashMap;
 public class HexiTrade extends JavaPlugin implements Listener {
 
     private Economy econ;
-    private YamlFile items;
-    private ItemMap itemMap;
-    private HashMap<InventoryTab, ArrayList<String>> tabs;
-    private boolean active;
+    private HashMap<String, ItemMap> worlds;
+    private boolean active = false;
     private double percentChange;
     private double sellTax;
     private FileLogger fileLogger = new FileLogger(getDataFolder());
@@ -42,10 +37,13 @@ public class HexiTrade extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
-        this.getCommand("trade").setExecutor(new TradeCommand(this));
-        this.getCommand("buy").setExecutor(new BuyCommand(this));
-        this.getCommand("sell").setExecutor(new SellCommand(this));
-        this.getCommand("price").setExecutor(new PriceCommand(this));
+        getCommand("trade").setExecutor(new TradeCommand(this));
+        getCommand("sell").setExecutor(new SellCommand(this));
+        getCommand("buy").setExecutor(new BuyCommand(this));
+
+        ValueCommand valueCommand = new ValueCommand(this);
+        getCommand("worth").setExecutor(valueCommand);
+        getCommand("price").setExecutor(valueCommand);
 
         reload();
     }
@@ -60,11 +58,6 @@ public class HexiTrade extends JavaPlugin implements Listener {
 
         if (!setupConfig()) {
             getLogger().severe("Could not load config.yml.");
-            return;
-        }
-
-        if (!setupItems()) {
-            getLogger().severe("Could not load items.yml.");
             return;
         }
 
@@ -106,20 +99,15 @@ public class HexiTrade extends JavaPlugin implements Listener {
             sellTax = 1.15;
             config.set("sell-tax", 1.15);
         }
-        return true;
-    }
-
-    private boolean setupItems() {
-        items = new YamlFile(this, "items.yml");
-        if (!items.loadFile()) {
-            return false;
+        worlds = new HashMap<>();
+        ConfigurationSection section = config.getConfigurationSection("groups");
+        for (String key : section.getKeys(false)) {
+            ItemMap itemMap = new ItemMap(this, new YamlFile(this, key + ".yml", "items.yml"));
+            for (String world : config.getStringList("groups." + key)) {
+                worlds.put(world, itemMap);
+            }
         }
-
-        tabs = new HashMap<>();
-        for (InventoryTab tab : InventoryTab.values()) {
-            tabs.put(tab, new ArrayList<String>());
-        }
-        itemMap = new ItemMap(this, items);
+        config.set("groups", section);
         return true;
     }
 
@@ -134,16 +122,21 @@ public class HexiTrade extends JavaPlugin implements Listener {
             if (active && event.getWhoClicked() instanceof Player &&
                     (event.getAction() == InventoryAction.PICKUP_ALL ||
                             event.getAction() == InventoryAction.MOVE_TO_OTHER_INVENTORY)) {
-                TradeInventory tradeInventory = new TradeInventory(this, event.getInventory(), event);
-                ItemListing listing = tradeInventory.getListing();
                 Player player = (Player) event.getWhoClicked();
-                if (listing == null) {
-                    player.openInventory(tradeInventory.getInventory());
+                ItemMap itemMap = getWorlds().get(event.getWhoClicked().getLocation().getWorld().getName());
+                if (itemMap == null) {
+                    player.sendMessage(ChatColor.RED + ReturnCode.INVALID_WORLD.getMessage(getCommand("buy")));
                 } else {
-                    int amount = event.isShiftClick() ? listing.getItem().getMaxStackSize() : 1;
-                    ItemStack item = listing.buy(amount, player, fileLogger);
-                    event.getInventory().setItem(event.getRawSlot(), listing.getItem());
-                    addItem(item, player);
+                    TradeInventory tradeInventory = new TradeInventory(this, event.getInventory(), event, itemMap);
+                    ItemListing listing = tradeInventory.getListing();
+                    if (listing == null) {
+                        player.openInventory(tradeInventory.getInventory());
+                    } else {
+                        int amount = event.isShiftClick() ? listing.getItem().getMaxStackSize() : 1;
+                        ItemStack item = listing.buy(amount, player, fileLogger);
+                        event.getInventory().setItem(event.getRawSlot(), listing.getItem());
+                        addItem(item, player);
+                    }
                 }
             }
         }
@@ -205,18 +198,6 @@ public class HexiTrade extends JavaPlugin implements Listener {
         return fileLogger;
     }
 
-    public ItemMap getItemMap() {
-        return itemMap;
-    }
-
-    public HashMap<InventoryTab, ArrayList<String>> getTabs() {
-        return tabs;
-    }
-
-    public YamlFile getItems() {
-        return items;
-    }
-
     public Economy getEcon() {
         return econ;
     }
@@ -227,6 +208,10 @@ public class HexiTrade extends JavaPlugin implements Listener {
 
     public double getSellTax() {
         return sellTax;
+    }
+
+    public HashMap<String, ItemMap> getWorlds() {
+        return worlds;
     }
 }
 

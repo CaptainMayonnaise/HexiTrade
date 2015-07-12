@@ -2,6 +2,7 @@ package com.hexicraft.trade.commands;
 
 import com.hexicraft.trade.HexiTrade;
 import com.hexicraft.trade.ItemListing;
+import com.hexicraft.trade.ItemMap;
 import com.hexicraft.trade.ReturnCode;
 import com.hexicraft.trade.inventory.TradeInventory;
 import org.bukkit.ChatColor;
@@ -49,7 +50,7 @@ public class BuyCommand implements CommandExecutor {
             if (args.length == 0) {
                 code = openInventory(player);
             } else {
-                code = buy(player, parseItem(args), parseAmount(args));
+                code = buy(player, parseItem(args, player), parseAmount(args));
             }
         }
 
@@ -68,8 +69,13 @@ public class BuyCommand implements CommandExecutor {
         }
     }
 
-    private ItemListing parseItem(String[] args) {
-        return plugin.getItemMap().getFromAlias(args[0]);
+    private ItemListing parseItem(String[] args, Player player) {
+        ItemMap map = plugin.getWorlds().get(player.getLocation().getWorld().getName());
+        if (map == null) {
+            return null;
+        } else {
+            return map.getFromAlias(args[0]);
+        }
     }
 
     private ReturnCode buy(Player player, ItemListing item, int amount) {
@@ -90,8 +96,13 @@ public class BuyCommand implements CommandExecutor {
      * @return Success
      */
     private ReturnCode openInventory(Player player) {
-        TradeInventory inventory = new TradeInventory(plugin);
-        player.openInventory(inventory.getInventory());
-        return ReturnCode.SUCCESS;
+        ItemMap itemMap = plugin.getWorlds().get(player.getLocation().getWorld().getName());
+        if (itemMap == null) {
+            return ReturnCode.INVALID_WORLD;
+        } else {
+            TradeInventory inventory = new TradeInventory(plugin, itemMap);
+            player.openInventory(inventory.getInventory());
+            return ReturnCode.SUCCESS;
+        }
     }
 }

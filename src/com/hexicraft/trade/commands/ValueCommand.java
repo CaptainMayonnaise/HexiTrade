@@ -2,6 +2,7 @@ package com.hexicraft.trade.commands;
 
 import com.hexicraft.trade.HexiTrade;
 import com.hexicraft.trade.ItemListing;
+import com.hexicraft.trade.ItemMap;
 import com.hexicraft.trade.ReturnCode;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -9,19 +10,21 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.util.Objects;
+
 /**
  * @author Ollie
  * @version 1.0
  */
-public class PriceCommand implements CommandExecutor {
+public class ValueCommand implements CommandExecutor {
 
     private HexiTrade plugin;
 
     /**
-     * Constructs a PriceCommand
+     * Constructs a ValueCommand
      * @param plugin The HexiTrade plugin
      */
-    public PriceCommand(HexiTrade plugin) {
+    public ValueCommand(HexiTrade plugin) {
         this.plugin = plugin;
     }
 
@@ -44,7 +47,7 @@ public class PriceCommand implements CommandExecutor {
             code = ReturnCode.NOT_ACTIVE;
         } else {
             Player player = (Player) sender;
-            code = price(player, parseItem(args, player), parseAmount(args));
+            code = price(player, parseItem(args, player), parseAmount(args), cmd);
         }
 
         if (code != null && code.hasMessage()) {
@@ -65,20 +68,27 @@ public class PriceCommand implements CommandExecutor {
     }
 
     private ItemListing parseItem(String[] args, Player player) {
-        if (args.length > 0 && !HexiTrade.isInteger(args[0])) {
-            return plugin.getItemMap().getFromAlias(args[0]);
+        ItemMap map = plugin.getWorlds().get(player.getLocation().getWorld().getName());
+        if (map == null) {
+            return null;
+        } else if (args.length > 0 && !HexiTrade.isInteger(args[0])) {
+            return map.getFromAlias(args[0]);
         } else {
-            return plugin.getItemMap().getFromStack(player.getItemInHand());
+            return map.getFromStack(player.getItemInHand());
         }
     }
 
-    private ReturnCode price(Player player, ItemListing item, int amount) {
+    private ReturnCode price(Player player, ItemListing item, int amount, Command cmd) {
         if (item == null) {
             return ReturnCode.ITEM_NOT_FOUND;
         } else if (amount < 1) {
             return ReturnCode.INVALID_ARGUMENT;
         } else {
-            item.sellPrice(amount, player);
+            if (Objects.equals(cmd.getName(), "worth")) {
+                item.sellPrice(amount, player);
+            } else {
+                item.buyPrice(amount, player);
+            }
             return ReturnCode.SUCCESS;
         }
     }

@@ -4,6 +4,7 @@ import com.hexicraft.trade.HexiTrade;
 import com.hexicraft.trade.ItemListing;
 import com.hexicraft.trade.ItemMap;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.material.MaterialData;
@@ -21,7 +22,7 @@ public class TradeInventory {
     private ItemListing listing = null;
 
 
-    public TradeInventory(HexiTrade plugin) {
+    public TradeInventory(HexiTrade plugin, ItemMap itemMap) {
         this.plugin = plugin;
         inventory = Bukkit.createInventory(null, 54, "HexiTrade");
         tab = InventoryTab.BUILDING;
@@ -31,11 +32,11 @@ public class TradeInventory {
         for (int i = 1; i < 10; i++) {
             inventory.setItem(InventoryTab.values()[i].slot, InventoryTab.values()[i].getItem());
         }
-        setItems();
+        setItems(itemMap);
     }
 
     @SuppressWarnings("deprecation")
-    public TradeInventory(HexiTrade plugin, Inventory inventory, InventoryClickEvent event) {
+    public TradeInventory(HexiTrade plugin, Inventory inventory, InventoryClickEvent event, ItemMap itemMap) {
         this.plugin = plugin;
         this.inventory = inventory;
         int slot = event.getRawSlot();
@@ -47,27 +48,27 @@ public class TradeInventory {
                 tab = InventoryTab.getFromSlot(slot);
                 page = InventoryPage.firstPage();
                 inventory.setItem(slot, tab.currentTab());
-                setItems();
+                setItems(itemMap);
             } else if (slot == 6) {
                 page = page.getPrevious().getCurrent();
-                setItems();
+                setItems(itemMap);
             } else if (slot == 8) {
-                page = page.getNext(plugin.getTabs().get(tab).size()).getCurrent();
-                setItems();
+                page = page.getNext(itemMap.getTabs().get(tab).size()).getCurrent();
+                setItems(itemMap);
             } else if (slot != 7) {
-                listing = plugin.getItemMap().getFromStack(event.getCurrentItem());
+                listing = itemMap.getFromStack(event.getCurrentItem());
             }
         }
     }
 
-    private void setItems() {
+    private void setItems(ItemMap itemMap) {
         inventory.setItem(6, page.getPrevious().getItem());
         inventory.setItem(7, page.getItem());
-        inventory.setItem(8, page.getNext(plugin.getTabs().get(tab).size()).getItem());
+        inventory.setItem(8, page.getNext(itemMap.getTabs().get(tab).size()).getItem());
         int offset = ((page.getNumber() - 1) * 36) - 9;
         for (int i = 9; i < 45; i++) {
-            if (offset + i < plugin.getTabs().get(tab).size()) {
-                inventory.setItem(i, plugin.getItemMap().get(plugin.getTabs().get(tab).get(offset + i)).getItem());
+            if (offset + i < itemMap.getTabs().get(tab).size()) {
+                inventory.setItem(i, itemMap.get(itemMap.getTabs().get(tab).get(offset + i)).getItem());
             } else {
                 inventory.setItem(i, null);
             }

@@ -2,6 +2,7 @@ package com.hexicraft.trade.commands;
 
 import com.hexicraft.trade.HexiTrade;
 import com.hexicraft.trade.ItemListing;
+import com.hexicraft.trade.ItemMap;
 import com.hexicraft.trade.ReturnCode;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -70,10 +71,13 @@ public class SellCommand implements CommandExecutor {
     }
 
     private ItemListing parseItem(String[] args, Player player) {
-        if (args.length > 0 && !HexiTrade.isInteger(args[0])) {
-            return plugin.getItemMap().getFromAlias(args[0]);
+        ItemMap map = plugin.getWorlds().get(player.getLocation().getWorld().getName());
+        if (map == null) {
+            return null;
+        } else if (args.length > 0 && !HexiTrade.isInteger(args[0])) {
+            return map.getFromAlias(args[0]);
         } else {
-            return plugin.getItemMap().getFromStack(player.getItemInHand());
+            return map.getFromStack(player.getItemInHand());
         }
     }
 
@@ -112,13 +116,17 @@ public class SellCommand implements CommandExecutor {
                 }
             }
 
-            amount = startAmount - amount;
-            player.sendMessage(ChatColor.GOLD + "Sold " + amount + " " + item.getAliases().get(0) + " for " +
-                    ChatColor.WHITE + plugin.getEcon().format(profit) + ChatColor.GOLD + ".");
-            plugin.getFileLogger().log(player.getName() + " sold " + amount + " " + item.getAliases().get(0) + " for " +
-                    plugin.getEcon().format(profit));
+            if (amount == startAmount) {
+                return ReturnCode.NONE_0F_ITEM;
+            } else {
+                amount = startAmount - amount;
+                player.sendMessage(ChatColor.GOLD + "Sold " + amount + " " + item.getAliases().get(0) + " for " +
+                        ChatColor.WHITE + plugin.getEcon().format(profit) + ChatColor.GOLD + ".");
+                plugin.getFileLogger().log(player.getName() + " sold " + amount + " " + item.getAliases().get(0) +
+                        " for " + plugin.getEcon().format(profit));
 
-            return ReturnCode.SUCCESS;
+                return ReturnCode.SUCCESS;
+            }
         }
     }
 }

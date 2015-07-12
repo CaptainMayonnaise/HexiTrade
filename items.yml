@@ -1,4 +1,4 @@
-1-0:
+'1:0':
   name:
   - stone
   - sstone
@@ -6,13 +6,13 @@
   - rock
   price: 0.01777639197493019
   tab: 0
-1-1:
+'1:1':
   name:
   - granite
   - gstone
   price: 7.121536706552335E-4
   tab: 0
-1-2:
+'1:2':
   name:
   - polishedgranite
   - pgranite
@@ -20,13 +20,13 @@
   - polishedgstone
   price: 0.022495229055831917
   tab: 0
-1-3:
+'1:3':
   name:
   - diorite
   - dstone
   price: 0.0068159369717585
   tab: 0
-1-4:
+'1:4':
   name:
   - polisheddiorite
   - pdiorite
@@ -34,20 +34,20 @@
   - polisheddstone
   price: 0.1348769388090467
   tab: 0
-1-5:
+'1:5':
   name:
   - andesite
   - astone
   price: 0.08534036707611614
   tab: 0
-1-6:
+'1:6':
   name:
   - polishedandesite
   - pandesite
   - pastone
   price: 0.27337276104373365
   tab: 0
-2-0:
+'2:0':
   name:
   - grass
   - greendirt
@@ -55,14 +55,14 @@
   - greenland
   price: 0.8844582667210645
   tab: 0
-3-0:
+'3:0':
   name:
   - dirt
   - earth
   - land
   price: 0.2146116199831567
   tab: 0
-3-1:
+'3:1':
   name:
   - cdirt
   - grasslessdirt
@@ -73,19 +73,19 @@
   - coarseearth
   price: 0.015566808747228678
   tab: 0
-3-2:
+'3:2':
   name:
   - podzol
   price: 2.0
   tab: 0
-4-0:
+'4:0':
   name:
   - cobblestone
   - cstone
   - cobble
   price: 5.535416921248159E-4
   tab: 0
-5-0:
+'5:0':
   name:
   - wood
   - plank
@@ -111,7 +111,7 @@
   - oplankw
   price: 1.3714861069491742
   tab: 0
-5-1:
+'5:1':
   name:
   - pineplank
   - pinewoodenplank
@@ -157,7 +157,7 @@
   - splankw
   price: 3.4600245031052395
   tab: 0
-5-2:
+'5:2':
   name:
   - birchplank
   - birchwoodenplank
@@ -202,7 +202,7 @@
   - wplankw
   price: 1.8857120384846726
   tab: 0
-5-3:
+'5:3':
   name:
   - jungleplank
   - junglewoodenplank
@@ -234,7 +234,7 @@
   - fplankw
   price: 0.9778330319640371
   tab: 0
-5-4:
+'5:4':
   name:
   - acaciaplank
   - acaciawoodenplank
@@ -252,7 +252,7 @@
   - aplankw
   price: 1.7071105087476852
   tab: 0
-5-5:
+'5:5':
   name:
   - darkoakplank
   - darkoakwoodenplank
@@ -277,7 +277,7 @@
   - doplankw
   price: 0.8677771666551606
   tab: 0
-6-0:
+'6:0':
   name:
   - sapling
   - treesapling
@@ -295,7 +295,7 @@
   - owoodsapling
   price: 0.10216752089793205
   tab: 1
-6-1:
+'6:1':
   name:
   - darksapling
   - darktreesapling
@@ -329,7 +329,7 @@
   - pwoodsapling
   price: 2.5927421897083724
   tab: 1
-6-2:
+'6:2':
   name:
   - birchsapling
   - birchtreesapling
@@ -363,7 +363,7 @@
   - wwoodsapling
   price: 1.4851229275856637
   tab: 1
-6-3:
+'6:3':
   name:
   - junglesapling
   - jungletreesapling
@@ -387,7 +387,7 @@
   - fwoodsapling
   price: 4.306747374141894
   tab: 1
-6-4:
+'6:4':
   name:
   - acaciasapling
   - acaciatreesapling
@@ -401,7 +401,7 @@
   - awoodsapling
   price: 3.7096145889356205
   tab: 1
-6-5:
+'6:5':
   name:
   - darkoaksapling
   - darkoaktreesapling
@@ -419,23 +419,23 @@
   - dotrunksapling
   price: 3.8602398168009073
   tab: 1
-12-0:
+'12:0':
   name:
   - sand
   price: 0.17355543333103207
   tab: 0
-12-1:
+'12:1':
   name:
   - redsand
   - rsand
   price: 2.704813829421529
   tab: 0
-13-0:
+'13:0':
   name:
   - gravel
   price: 0.058521563903418006
   tab: 0
-14-0:
+'14:0':
   name:
   - goldore
   - oregold
@@ -445,7 +445,7 @@
   - goldo
   price: 6.374492747265743
   tab: 0
-15-0:
+'15:0':
   name:
   - ironore
   - oreiron
@@ -461,7 +461,7 @@
   - ores
   price: 3.2727556997675107
   tab: 0
-16-0:
+'16:0':
   name:
   - coalore
   - orecoal
@@ -470,7 +470,7 @@
   - core
   price: 1.6746453880611853
   tab: 0
-17-0:
+'17:0':
   name:
   - tree
   - log
@@ -486,7 +486,7 @@
   - owood
   price: 5.728000776477928
   tab: 0
-17-1:
+'17:1':
   name:
   - pine
   - pinetree
@@ -516,7 +516,7 @@
   - pwood
   price: 5.237339223210915
   tab: 0
-17-2:
+'17:2':
   name:
   - birch
   - birchtree
@@ -545,7 +545,7 @@
   - lwood
   price: 4.207658464526154
   tab: 0
-17-3:
+'17:3':
   name:
   - jungletree
   - junglelog
@@ -567,7 +567,7 @@
   - fwood
   price: 3.4142210174953713
   tab: 0
-18-0:
+'18:0':
   name:
   - leaves
   - leaf
@@ -601,7 +601,7 @@
   - owoodleaf
   price: 0.07070042514567235
   tab: 1
-18-1:
+'18:1':
   name:
   - pineleaves
   - pineleaf
@@ -665,7 +665,7 @@
   - dwoodleaf
   price: 1.455860138795867
   tab: 1
-18-2:
+'18:2':
   name:
   - birchleaves
   - birchleaf
@@ -729,7 +729,7 @@
   - wwoodleaf
   price: 8.472329053387869
   tab: 1
-18-3:
+'18:3':
   name:
   - jungleleaves
   - jungleleaf
@@ -773,24 +773,24 @@
   - fwoodleaf
   price: 4.901480247034604
   tab: 1
-19-0:
+'19:0':
   name:
   - sponge
   price: 30.40194123444747
   tab: 0
-19-1:
+'19:1':
   name:
   - wetsponge
   price: 33.91848351245213
   tab: 0
-20-0:
+'20:0':
   name:
   - glass
   - blockglass
   - glassblock
   price: 6.92004900621048
   tab: 0
-21-0:
+'21:0':
   name:
   - lapislazuliore
   - lapislazulio
@@ -804,7 +804,7 @@
   - orel
   price: 33.91848351245212
   tab: 0
-22-0:
+'22:0':
   name:
   - lapislazuliblock
   - blocklapislazuli
@@ -814,19 +814,19 @@
   - blockl
   price: 8.256601985609885
   tab: 0
-23-0:
+'23:0':
   name:
   - dispenser
   - dispense
   price: 11.609689553699985
   tab: 2
-24-0:
+'24:0':
   name:
   - sandstone
   - sastone
   price: 0.9490751071425115
   tab: 0
-24-1:
+'24:1':
   name:
   - cpstone
   - creepersandstone
@@ -851,7 +851,7 @@
   - chiselsastone
   price: 0.24281324579759522
   tab: 0
-24-2:
+'24:2':
   name:
   - smstone
   - smoothsandstone
@@ -861,7 +861,7 @@
   - ssastone
   price: 0.47766760810489056
   tab: 0
-25-0:
+'25:0':
   name:
   - noteblock
   - musicblock
@@ -869,7 +869,7 @@
   - mblock
   price: 14.911884853231735
   tab: 2
-27-0:
+'27:0':
   name:
   - poweredtrack
   - poweredrails
@@ -891,7 +891,7 @@
   - brail
   price: 22.612711930598635
   tab: 3
-28-0:
+'28:0':
   name:
   - detectortrack
   - detectorrails
@@ -907,7 +907,7 @@
   - drail
   price: 50.0
   tab: 3
-29-0:
+'29:0':
   name:
   - stickypistonbase
   - stickypiston
@@ -926,7 +926,7 @@
   - pstick
   price: 27.249980987017803
   tab: 2
-30-0:
+'30:0':
   name:
   - spiderweb
   - cobweb
@@ -935,7 +935,7 @@
   - web
   price: 21.302197530396395
   tab: 1
-31-1:
+'31:1':
   name:
   - longgrass
   - tallgrass
@@ -948,13 +948,13 @@
   - wgrass
   price: 3.2272273237753426
   tab: 1
-31-2:
+'31:2':
   name:
   - fern
   - bush
   price: 3.5648667055738334
   tab: 1
-32-0:
+'32:0':
   name:
   - deadshrub
   - dshrub
@@ -963,14 +963,14 @@
   - deadsapling
   price: 3.6365205263558664
   tab: 1
-33-0:
+'33:0':
   name:
   - piston
   - pistonbase
   - pistonblock
   price: 23.471756812251094
   tab: 2
-35-0:
+'35:0':
   name:
   - whitewool
   - whitecloth
@@ -983,7 +983,7 @@
   - cotton
   price: 7.035350657092998
   tab: 0
-35-1:
+'35:1':
   name:
   - orangewool
   - orangecloth
@@ -993,7 +993,7 @@
   - ocotton
   price: 5.066177638540578
   tab: 0
-35-2:
+'35:2':
   name:
   - magentawool
   - magentacloth
@@ -1003,7 +1003,7 @@
   - mcotton
   price: 6.965693719894056
   tab: 0
-35-3:
+'35:3':
   name:
   - lightbluewool
   - lightbluecloth
@@ -1022,7 +1022,7 @@
   - lbcotton
   price: 7.618276635478071
   tab: 0
-35-4:
+'35:4':
   name:
   - yellowwool
   - yellowcloth
@@ -1032,7 +1032,7 @@
   - ycotton
   price: 3.9899499036260577
   tab: 0
-35-5:
+'35:5':
   name:
   - lightgreenwool
   - lightgreencloth
@@ -1054,7 +1054,7 @@
   - lcotton
   price: 4.917182103618824
   tab: 0
-35-6:
+'35:6':
   name:
   - pinkwool
   - pinkcloth
@@ -1064,7 +1064,7 @@
   - picotton
   price: 5.324603613698034
   tab: 0
-35-7:
+'35:7':
   name:
   - darkgraywool
   - darkgraycloth
@@ -1095,7 +1095,7 @@
   - gracotton
   price: 4.725315351820356
   tab: 0
-35-8:
+'35:8':
   name:
   - lgwool
   - lightgraywool
@@ -1124,7 +1124,7 @@
   - siacotton
   price: 4.966353924655012
   tab: 0
-35-9:
+'35:9':
   name:
   - cyanwool
   - cyancloth
@@ -1134,7 +1134,7 @@
   - ccotton
   price: 4.029849402662317
   tab: 0
-35-10:
+'35:10':
   name:
   - purplewool
   - purplecloth
@@ -1144,7 +1144,7 @@
   - pucotton
   price: 5.708695770202399
   tab: 0
-35-11:
+'35:11':
   name:
   - bluewool
   - bluecloth
@@ -1154,7 +1154,7 @@
   - blucotton
   price: 3.269941380439559
   tab: 0
-35-12:
+'35:12':
   name:
   - brownwool
   - browncloth
@@ -1164,7 +1164,7 @@
   - brocotton
   price: 6.896726455340646
   tab: 0
-35-13:
+'35:13':
   name:
   - darkgreenwool
   - darkgreencloth
@@ -1186,7 +1186,7 @@
   - grecotton
   price: 2.499556022847072
   tab: 0
-35-14:
+'35:14':
   name:
   - redwool
   - redcloth
@@ -1196,7 +1196,7 @@
   - rcotton
   price: 3.7963004285700466
   tab: 0
-35-15:
+'35:15':
   name:
   - blackwool
   - blackcloth
@@ -1206,7 +1206,7 @@
   - blacotton
   price: 4.363749448344202
   tab: 0
-37-0:
+'37:0':
   name:
   - dandelion
   - yellowdandelion
@@ -1216,7 +1216,7 @@
   - flower
   price: 3.5295709956176564
   tab: 1
-38-0:
+'38:0':
   name:
   - rose
   - redrose
@@ -1227,7 +1227,7 @@
   - redpoppy
   price: 2.082999239864432
   tab: 1
-38-1:
+'38:1':
   name:
   - blueorchid
   - cyanorchid
@@ -1236,7 +1236,7 @@
   - orchid
   price: 17.51713596684704
   tab: 1
-38-3:
+'38:3':
   name:
   - azurebluet
   - whiteazurebluet
@@ -1245,7 +1245,7 @@
   - houstonia
   price: 9.35872212613641
   tab: 1
-38-4:
+'38:4':
   name:
   - redtulip
   - tulipred
@@ -1253,7 +1253,7 @@
   - tulipr
   price: 5.3076007530050004
   tab: 1
-38-5:
+'38:5':
   name:
   - orangetulip
   - tuliporange
@@ -1261,7 +1261,7 @@
   - tulipo
   price: 5.0
   tab: 1
-38-6:
+'38:6':
   name:
   - whitetulip
   - tulipwhite
@@ -1269,7 +1269,7 @@
   - tulipw
   price: 5.1005
   tab: 1
-38-7:
+'38:7':
   name:
   - pinktulip
   - tulippink
@@ -1277,7 +1277,7 @@
   - tulipp
   price: 5.05
   tab: 1
-38-8:
+'38:8':
   name:
   - oxeye
   - daisy
@@ -1291,7 +1291,7 @@
   - lgreyoxeye
   price: 8.47232905338787
   tab: 1
-39-0:
+'39:0':
   name:
   - brownmushroom
   - brownshroom
@@ -1301,7 +1301,7 @@
   - bmush
   price: 3.6005153726295704
   tab: 1
-40-0:
+'40:0':
   name:
   - redmushroom
   - redshroom
@@ -1311,7 +1311,7 @@
   - rmush
   price: 3.325015538913059
   tab: 1
-41-0:
+'41:0':
   name:
   - goldblock
   - blockgold
@@ -1319,7 +1319,7 @@
   - blockg
   price: 79.34568923164531
   tab: 0
-42-0:
+'42:0':
   name:
   - ironblock
   - steelblock
@@ -1331,7 +1331,7 @@
   - blockst
   price: 89.63237175178054
   tab: 0
-44-0:
+'44:0':
   name:
   - sslab
   - slab
@@ -1341,13 +1341,13 @@
   - halfblock
   price: 0.03739849308102482
   tab: 0
-182-0:
+'182:0':
   name:
   - rsslab
   - redsandstoneslab
   price: 2.7522480796887985
   tab: 0
-44-1:
+'44:1':
   name:
   - sandstonestep
   - sstonestep
@@ -1360,7 +1360,7 @@
   - sshalfblock
   price: 0.07140742939712913
   tab: 0
-44-3:
+'44:3':
   name:
   - cobblestonestep
   - cobblestep
@@ -1376,7 +1376,7 @@
   - cshalfblock
   price: 0.004359506868343147
   tab: 0
-44-4:
+'44:4':
   name:
   - brickstep
   - bstep
@@ -1386,7 +1386,7 @@
   - bhalfblock
   price: 5.0
   tab: 0
-44-5:
+'44:5':
   name:
   - stonebrickstep
   - stonebstep
@@ -1402,7 +1402,7 @@
   - sbhalfblock
   price: 0.3052558329818842
   tab: 0
-44-6:
+'44:6':
   name:
   - netherbrickslab
   - hellbrickslab
@@ -1436,7 +1436,7 @@
   - hhalfblock
   price: 5.20302005
   tab: 0
-44-7:
+'44:7':
   name:
   - netherquartzstep
   - hellquartzstep
@@ -1473,7 +1473,7 @@
   - qhalfblock
   price: 4.901480247034604
   tab: 0
-45-0:
+'45:0':
   name:
   - brickblock
   - blockbrick
@@ -1481,7 +1481,7 @@
   - blockb
   price: 5.431628146333364
   tab: 0
-46-0:
+'46:0':
   name:
   - tnt
   - tntblock
@@ -1494,7 +1494,7 @@
   - dynamite
   price: 10.379894673530968
   tab: 2
-47-0:
+'47:0':
   name:
   - bshelf
   - bookcase
@@ -1505,7 +1505,7 @@
   - blockbook
   price: 38.2201962059496
   tab: 0
-48-0:
+'48:0':
   name:
   - mossycobblestone
   - mosscobblestone
@@ -1518,21 +1518,21 @@
   - mstone
   price: 4.682556691548774
   tab: 0
-49-0:
+'49:0':
   name:
   - obsidian
   - obsi
   - obby
   price: 13.311509034245082
   tab: 0
-50-0:
+'50:0':
   name:
   - torch
   - burningstick
   - burnstick
   price: 0.3761948283109203
   tab: 1
-53-0:
+'53:0':
   name:
   - woodenstairs
   - woodstairs
@@ -1542,13 +1542,13 @@
   - wstair
   price: 4.207658464526154
   tab: 0
-54-0:
+'54:0':
   name:
   - chest
   - container
   price: 11.41941952495231
   tab: 1
-56-0:
+'56:0':
   name:
   - diamondore
   - crystalore
@@ -1558,7 +1558,7 @@
   - ored
   price: 426.41797775572405
   tab: 0
-57-0:
+'57:0':
   name:
   - diamondblock
   - blockdiamond
@@ -1568,7 +1568,7 @@
   - blockd
   price: 1292.0242122425682
   tab: 0
-58-0:
+'58:0':
   name:
   - workbench
   - craftingbench
@@ -1582,17 +1582,17 @@
   - cbench
   price: 3.292094592983228
   tab: 1
-61-0:
+'61:0':
   name:
   - furnace
   price: 1.7588376642732486
   tab: 1
-65-0:
+'65:0':
   name:
   - ladder
   price: 5.4142835281404
   tab: 1
-66-0:
+'66:0':
   name:
   - minecarttrack
   - minecartrails
@@ -1608,7 +1608,7 @@
   - rail
   price: 0.19249285251926307
   tab: 3
-67-0:
+'67:0':
   name:
   - cobblestonestairs
   - cstonestairs
@@ -1626,12 +1626,12 @@
   - cstair
   price: 0.024441484443845217
   tab: 0
-69-0:
+'69:0':
   name:
   - lever
   price: 4.097722351686477
   tab: 2
-70-0:
+'70:0':
   name:
   - stonepressureplate
   - stonepressplate
@@ -1651,7 +1651,7 @@
   - sstoneplate
   price: 3.734083244524101
   tab: 2
-72-0:
+'72:0':
   name:
   - woodenpressureplate
   - woodenpressplate
@@ -1667,7 +1667,7 @@
   - wplate
   price: 7.568355684346452
   tab: 2
-73-0:
+'73:0':
   name:
   - redstoneore
   - redsore
@@ -1683,7 +1683,7 @@
   - orer
   price: 1.0242486584113002
   tab: 0
-76-0:
+'76:0':
   name:
   - redstonetorch
   - rstonetorch
@@ -1692,7 +1692,7 @@
   - rstorch
   price: 0.9745374540555978
   tab: 2
-77-0:
+'77:0':
   name:
   - stonebutton
   - smoothstonebutton
@@ -1701,14 +1701,14 @@
   - button
   price: 1.3805324432708552
   tab: 2
-78-0:
+'78:0':
   name:
   - snowcover
   - snowcovering
   - scover
   price: 11.239938550946203
   tab: 1
-79-0:
+'79:0':
   name:
   - ice
   - frozenwater
@@ -1717,7 +1717,7 @@
   - waterfreeze
   price: 0.7140742939712913
   tab: 0
-80-0:
+'80:0':
   name:
   - snowblock
   - blocksnow
@@ -1725,14 +1725,14 @@
   - blocks
   price: 7.568355684346452
   tab: 0
-81-0:
+'81:0':
   name:
   - cactus
   - cactuses
   - cacti
   price: 0.0380216256612841
   tab: 1
-82-0:
+'82:0':
   name:
   - clayblock
   - blockclay
@@ -1740,13 +1740,13 @@
   - blockc
   price: 5.271884766037656
   tab: 0
-84-0:
+'84:0':
   name:
   - jukebox
   - jbox
   price: 111.28843766806862
   tab: 1
-85-0:
+'85:0':
   name:
   - woodenfence
   - fence
@@ -1759,12 +1759,12 @@
   - ofence
   price: 4.529604005004879
   tab: 1
-86-0:
+'86:0':
   name:
   - pumpkin
   price: 0.01183961010511313
   tab: 0
-87-0:
+'87:0':
   name:
   - netherrack
   - netherrock
@@ -1786,7 +1786,7 @@
   - dstone
   price: 0.016704090216053593
   tab: 0
-88-0:
+'88:0':
   name:
   - soulsand
   - slowsand
@@ -1796,7 +1796,7 @@
   - mud
   price: 0.15412681927949184
   tab: 0
-89-0:
+'89:0':
   name:
   - glowstone
   - glowingstoneblock
@@ -1814,7 +1814,7 @@
   - gstone
   price: 7.701081742509129
   tab: 0
-91-0:
+'91:0':
   name:
   - jackolantern
   - pumpkinlantern
@@ -1827,7 +1827,7 @@
   - lpumpkin
   price: 4.281448062344133
   tab: 0
-95-0:
+'95:0':
   name:
   - lockedchest
   - lockchest
@@ -1842,7 +1842,7 @@
   - stainedglass
   price: 12.292955259047059
   tab: 0
-95-1:
+'95:1':
   name:
   - orangeglass
   - orangesglass
@@ -1852,7 +1852,7 @@
   - ostainedglass
   price: 12.92001952268811
   tab: 0
-95-2:
+'95:2':
   name:
   - magentaglass
   - magentasglass
@@ -1862,7 +1862,7 @@
   - mstainedglass
   price: 9.39678323903477
   tab: 0
-95-3:
+'95:3':
   name:
   - lightblueglass
   - lightbluesglass
@@ -1881,7 +1881,7 @@
   - lbstainedglass
   price: 9.974874759065145
   tab: 0
-95-4:
+'95:4':
   name:
   - yellowglass
   - yellowsglass
@@ -1891,7 +1891,7 @@
   - ystainedglass
   price: 13.714861069491743
   tab: 0
-95-5:
+'95:5':
   name:
   - lightgreenglass
   - lightgreensglass
@@ -1913,7 +1913,7 @@
   - lstainedglass
   price: 7.254767361833885
   tab: 0
-95-6:
+'95:6':
   name:
   - pinkglass
   - pinksglass
@@ -1923,7 +1923,7 @@
   - pistainedglass
   price: 7.400588185806746
   tab: 0
-95-7:
+'95:7':
   name:
   - gyglass
   - darkgrayglass
@@ -1955,7 +1955,7 @@
   - grastainedglass
   price: 13.990529776988527
   tab: 0
-95-8:
+'95:8':
   name:
   - lgglass
   - lightgrayglass
@@ -1984,7 +1984,7 @@
   - siastainedglass
   price: 8.677771666551608
   tab: 0
-95-9:
+'95:9':
   name:
   - cyanglass
   - cyansglass
@@ -1994,7 +1994,7 @@
   - cstainedglass
   price: 13.444624124587534
   tab: 0
-95-10:
+'95:10':
   name:
   - purpleglass
   - purplesglass
@@ -2004,7 +2004,7 @@
   - pustainedglass
   price: 13.04921971791499
   tab: 0
-95-11:
+'95:11':
   name:
   - blglass
   - blueglass
@@ -2015,7 +2015,7 @@
   - blustainedglass
   price: 6.902662216354275
   tab: 0
-95-12:
+'95:12':
   name:
   - brglass
   - brownglass
@@ -2026,7 +2026,7 @@
   - brostainedglass
   price: 13.714861069491743
   tab: 0
-95-13:
+'95:13':
   name:
   - grglass
   - darkgreenglass
@@ -2049,7 +2049,7 @@
   - grestainedglass
   price: 13.444624124587534
   tab: 0
-95-14:
+'95:14':
   name:
   - redglass
   - redsglass
@@ -2059,7 +2059,7 @@
   - rstainedglass
   price: 19.236148504582136
   tab: 0
-95-15:
+'95:15':
   name:
   - bkglass
   - blackglass
@@ -2070,7 +2070,7 @@
   - blastainedglass
   price: 9.681515167960763
   tab: 0
-96-0:
+'96:0':
   name:
   - trapdoor
   - doortrap
@@ -2081,7 +2081,7 @@
   - dtrap
   price: 6.374492747265745
   tab: 2
-98-0:
+'98:0':
   name:
   - stonebrick
   - stonebricks
@@ -2090,7 +2090,7 @@
   - sbrick
   price: 1.3499302247282612
   tab: 0
-98-1:
+'98:1':
   name:
   - mossystonebrick
   - mossystonebricks
@@ -2113,7 +2113,7 @@
   - msbrickblock
   price: 5.6570386500193255
   tab: 0
-98-2:
+'98:2':
   name:
   - csbrick
   - crackedstone
@@ -2138,7 +2138,7 @@
   - crsbrickblock
   price: 0.8888195987465078
   tab: 0
-98-3:
+'98:3':
   name:
   - crstone
   - circlestone
@@ -2159,7 +2159,7 @@
   - cisbrickblock
   price: 1.856073979157511
   tab: 0
-99-0:
+'99:0':
   name:
   - giantbrownmushroom
   - hugebrownmushroom
@@ -2187,7 +2187,7 @@
   - bbmush
   price: 18.241164740668484
   tab: 0
-100-0:
+'100:0':
   name:
   - giantredmushroom
   - hugeredmushroom
@@ -2215,7 +2215,7 @@
   - brmush
   price: 16.67862336291412
   tab: 0
-101-0:
+'101:0':
   name:
   - ironbars
   - ironbarsb
@@ -2243,7 +2243,7 @@
   - ifence
   price: 1.8560739791575112
   tab: 1
-102-0:
+'102:0':
   name:
   - glasspane
   - glassp
@@ -2258,7 +2258,7 @@
   - glasss
   price: 0.8888195987465078
   tab: 1
-103-0:
+'103:0':
   name:
   - melon
   - watermelon
@@ -2269,7 +2269,7 @@
   - greenmelonblock
   price: 1.15124919814321
   tab: 0
-106-0:
+'106:0':
   name:
   - vines
   - vine
@@ -2287,7 +2287,7 @@
   - gvine
   price: 9.514656876067484
   tab: 1
-107-0:
+'107:0':
   name:
   - woodgate
   - woodenfencegate
@@ -2302,7 +2302,7 @@
   - fgate
   price: 34.94624748136294
   tab: 2
-108-0:
+'108:0':
   name:
   - brickstairs
   - redbrickstairs
@@ -2318,7 +2318,7 @@
   - redstair
   price: 19.23614850458213
   tab: 0
-109-0:
+'109:0':
   name:
   - sbstair
   - stonebrickstairs
@@ -2333,7 +2333,7 @@
   - greystairs
   price: 7.327315035452223
   tab: 0
-110-0:
+'110:0':
   name:
   - mycelium
   - purplegrass
@@ -2345,7 +2345,7 @@
   - mushgrass
   price: 10.1
   tab: 0
-111-0:
+'111:0':
   name:
   - lilypad
   - waterlily
@@ -2355,7 +2355,7 @@
   - wlily
   price: 4.499844942504858
   tab: 1
-112-0:
+'112:0':
   name:
   - netherbrickblock
   - hellbrickblock
@@ -2371,7 +2371,7 @@
   - dbblock
   price: 4.239057487469441
   tab: 0
-113-0:
+'113:0':
   name:
   - netherbrickfence
   - hellbrickfence
@@ -2387,7 +2387,7 @@
   - hfence
   price: 2.7360804301231663
   tab: 1
-114-0:
+'114:0':
   name:
   - netherbrickstairs
   - hellbrickstairs
@@ -2415,7 +2415,7 @@
   - hstair
   price: 4.0736509245908445
   tab: 0
-116-0:
+'116:0':
   name:
   - enchantmenttable
   - enchantingtable
@@ -2437,7 +2437,7 @@
   - bdesk
   price: 52.550502505
   tab: 1
-121-0:
+'121:0':
   name:
   - enderstone
   - endstone
@@ -2447,14 +2447,14 @@
   - estone
   price: 12.292955259047059
   tab: 0
-123-0:
+'123:0':
   name:
   - redstonelamp
   - redlamp
   - rslamp
   price: 40.1698103292469
   tab: 2
-126-0:
+'126:0':
   name:
   - woodenstep
   - woodstep
@@ -2482,7 +2482,7 @@
   - ohalfblock
   price: 1.0755699299670027
   tab: 0
-126-1:
+'126:1':
   name:
   - spslab
   - spstep
@@ -2512,7 +2512,7 @@
   - darkhalfblock
   price: 0.01889913679312497
   tab: 0
-126-2:
+'126:2':
   name:
   - birchwoodenstep
   - birchwoodstep
@@ -2543,7 +2543,7 @@
   - lhalfblock
   price: 0.06958921444533304
   tab: 0
-126-3:
+'126:3':
   name:
   - junglewoodenstep
   - junglewoodstep
@@ -2577,7 +2577,7 @@
   - fhalfblock
   price: 4.0
   tab: 0
-126-4:
+'126:4':
   name:
   - acaciawoodenstep
   - acaciawoodstep
@@ -2596,7 +2596,7 @@
   - ahalfblock
   price: 0.3258920739672676
   tab: 0
-126-5:
+'126:5':
   name:
   - darkoakwoodenstep
   - darkoakwoodstep
@@ -2615,7 +2615,7 @@
   - dohalfblock
   price: 3.7681809410168268
   tab: 0
-128-0:
+'128:0':
   name:
   - sandstonestairs
   - sandstairs
@@ -2629,7 +2629,7 @@
   - ssstair
   price: 12.92001952268811
   tab: 0
-129-0:
+'129:0':
   name:
   - emeraldore
   - eore
@@ -2637,7 +2637,7 @@
   - oree
   price: 351.52746777469935
   tab: 0
-130-0:
+'130:0':
   name:
   - enderchest
   - endchest
@@ -2650,7 +2650,7 @@
   - econtainer
   price: 53.6067676053505
   tab: 1
-131-0:
+'131:0':
   name:
   - tripwirehook
   - tripwire
@@ -2659,7 +2659,7 @@
   - triphook
   price: 18.302535263817767
   tab: 2
-134-0:
+'134:0':
   name:
   - sprucewoodenstairs
   - sprucewoodstairs
@@ -2681,7 +2681,7 @@
   - dstair
   price: 6.125762236170647
   tab: 0
-135-0:
+'135:0':
   name:
   - birchwoodenstairs
   - birchwoodstairs
@@ -2703,7 +2703,7 @@
   - lstair
   price: 0.37772478011835064
   tab: 0
-136-0:
+'136:0':
   name:
   - junglewoodenstairs
   - junglewoodstairs
@@ -2727,13 +2727,13 @@
   - fstair
   price: 1.9314380255679624
   tab: 0
-138-0:
+'138:0':
   name:
   - beacon
   - beaconblock
   price: 1057.0783789310976
   tab: 4
-139-0:
+'139:0':
   name:
   - cobblestonewall
   - cstonewall
@@ -2750,7 +2750,7 @@
   - mcfence
   price: 5.49066598015466
   tab: 0
-139-1:
+'139:1':
   name:
   - mcwall
   - mosscobblestonewall
@@ -2767,7 +2767,7 @@
   - mcobblefence
   price: 6.567646252000645
   tab: 0
-143-0:
+'143:0':
   name:
   - woodenbutton
   - woodenplankbutton
@@ -2778,24 +2778,24 @@
   - wbutton
   price: 4.033317747119649
   tab: 2
-145-0:
+'145:0':
   name:
   - anvil
   price: 58.62893224618493
   tab: 1
-145-1:
+'145:1':
   name:
   - slightlydamagedanvil
   - slightdamageanvil
   - damagedanvil
   price: 47.573284380337434
   tab: 1
-145-2:
+'145:2':
   name:
   - verydamagedanvil
   price: 49.01480247034605
   tab: 1
-146-0:
+'146:0':
   name:
   - trapchest
   - trappedchest
@@ -2803,7 +2803,7 @@
   - chesttrap
   price: 37.841778421732265
   tab: 1
-147-0:
+'147:0':
   name:
   - goldpressureplate
   - weightedgoldpressureplate
@@ -2839,7 +2839,7 @@
   - gplate
   price: 34.94624748136294
   tab: 2
-148-0:
+'148:0':
   name:
   - ironpressureplate
   - weightedironpressureplate
@@ -2875,7 +2875,7 @@
   - iplate
   price: 2.452413782555713
   tab: 2
-151-0:
+'151:0':
   name:
   - daylightsensor
   - daylightsense
@@ -2887,7 +2887,7 @@
   - timesense
   price: 26.44856307721511
   tab: 2
-152-0:
+'152:0':
   name:
   - redstoneblock
   - rstoneblock
@@ -2899,7 +2899,7 @@
   - blockrs
   price: 3.0525583298188423
   tab: 2
-153-0:
+'153:0':
   name:
   - netherquartzore
   - hellquartzore
@@ -2917,7 +2917,7 @@
   - qore
   price: 3.4396991319777124
   tab: 0
-154-0:
+'154:0':
   name:
   - hopper
   - chestpuller
@@ -2930,7 +2930,7 @@
   - itemstore
   price: 27.797705604856883
   tab: 2
-155-0:
+'155:0':
   name:
   - quartzblock
   - netherquartzblock
@@ -2938,7 +2938,7 @@
   - qblock
   price: 7.474594067664812
   tab: 0
-155-1:
+'155:1':
   name:
   - chiseledquartzblock
   - chiselquartzblock
@@ -2946,14 +2946,14 @@
   - cqblock
   price: 13.990529776988527
   tab: 0
-155-2:
+'155:2':
   name:
   - pillarquartzblock
   - pquartzblock
   - pqblock
   price: 9.876113622836773
   tab: 0
-156-0:
+'156:0':
   name:
   - quartzstairs
   - qstairs
@@ -2961,7 +2961,7 @@
   - qstair
   price: 14.999741568615205
   tab: 0
-157-0:
+'157:0':
   name:
   - activatorrails
   - activaterails
@@ -2980,7 +2980,7 @@
   - ttrack
   price: 32.92094592983228
   tab: 3
-158-0:
+'158:0':
   name:
   - dropper
   - drop
@@ -2990,7 +2990,7 @@
   - chestdrop
   price: 10.483693620266287
   tab: 2
-159-0:
+'159:0':
   name:
   - whiteclay
   - whitesclay
@@ -3002,7 +3002,7 @@
   - stainedclay
   price: 0.1368974476858203
   tab: 0
-159-1:
+'159:1':
   name:
   - orangeclay
   - orangesclay
@@ -3012,7 +3012,7 @@
   - ostainedclay
   price: 4.544843391929907
   tab: 0
-159-2:
+'159:2':
   name:
   - magentaclay
   - magentasclay
@@ -3022,7 +3022,7 @@
   - mstainedclay
   price: 3.4056427049284275
   tab: 0
-159-3:
+'159:3':
   name:
   - lightblueclay
   - lightbluesclay
@@ -3041,7 +3041,7 @@
   - lbstainedclay
   price: 13.990529776988527
   tab: 0
-159-4:
+'159:4':
   name:
   - yellowclay
   - yellowsclay
@@ -3051,7 +3051,7 @@
   - ystainedclay
   price: 13.17971191509414
   tab: 0
-159-5:
+'159:5':
   name:
   - lightgreenclay
   - lightgreensclay
@@ -3073,7 +3073,7 @@
   - lstainedclay
   price: 4.5448433919299065
   tab: 0
-159-6:
+'159:6':
   name:
   - pinkclay
   - pinksclay
@@ -3083,7 +3083,7 @@
   - pistainedclay
   price: 17.241816138351624
   tab: 0
-159-7:
+'159:7':
   name:
   - darkgrayclay
   - darkgraysclay
@@ -3114,7 +3114,7 @@
   - grastainedclay
   price: 7.400588185806746
   tab: 0
-159-8:
+'159:8':
   name:
   - lgclay
   - lightgrayclay
@@ -3143,7 +3143,7 @@
   - siastainedclay
   price: 0.1542594706135643
   tab: 0
-159-9:
+'159:9':
   name:
   - cyanclay
   - cyansclay
@@ -3153,7 +3153,7 @@
   - cstainedclay
   price: 7.400588185806746
   tab: 0
-159-10:
+'159:10':
   name:
   - purpleclay
   - purplesclay
@@ -3163,7 +3163,7 @@
   - pustainedclay
   price: 7.400588185806746
   tab: 0
-159-11:
+'159:11':
   name:
   - blueclay
   - bluesclay
@@ -3173,7 +3173,7 @@
   - blustainedclay
   price: 25.927421897083732
   tab: 0
-159-12:
+'159:12':
   name:
   - brownclay
   - brownsclay
@@ -3183,7 +3183,7 @@
   - brostainedclay
   price: 1.1861332000961478
   tab: 0
-159-13:
+'159:13':
   name:
   - darkgreenclay
   - darkgreensclay
@@ -3205,7 +3205,7 @@
   - grestainedclay
   price: 4.776676081048905
   tab: 0
-159-14:
+'159:14':
   name:
   - redclay
   - redsclay
@@ -3215,7 +3215,7 @@
   - rstainedclay
   price: 3.914698468816053
   tab: 0
-159-15:
+'159:15':
   name:
   - blackclay
   - blacksclay
@@ -3225,7 +3225,7 @@
   - blastainedclay
   price: 7.400588185806746
   tab: 0
-160-0:
+'160:0':
   name:
   - wgpane
   - whiteglasspane
@@ -3238,7 +3238,7 @@
   - stainedglasspane
   price: 7.400588185806746
   tab: 1
-160-1:
+'160:1':
   name:
   - ogpane
   - orangeglasspane
@@ -3249,7 +3249,7 @@
   - ostainedglasspane
   price: 10.175369741722353
   tab: 1
-160-2:
+'160:2':
   name:
   - mgpane
   - magentaglasspane
@@ -3260,7 +3260,7 @@
   - mstainedglasspane
   price: 10.175369741722353
   tab: 1
-160-3:
+'160:3':
   name:
   - lbpane
   - lightblueglasspane
@@ -3280,7 +3280,7 @@
   - lbstainedglasspane
   price: 2.0707629876151765
   tab: 1
-160-4:
+'160:4':
   name:
   - ygpane
   - yellowglasspane
@@ -3291,7 +3291,7 @@
   - ystainedglasspane
   price: 1.7659907048280954
   tab: 1
-160-5:
+'160:5':
   name:
   - lgrpane
   - lightgreenglasspane
@@ -3314,7 +3314,7 @@
   - lstainedglasspane
   price: 10.175369741722351
   tab: 1
-160-6:
+'160:6':
   name:
   - pgpane
   - pinkglasspane
@@ -3325,7 +3325,7 @@
   - pistainedglasspane
   price: 10.175369741722353
   tab: 1
-160-7:
+'160:7':
   name:
   - dgpane
   - darkgrayglasspane
@@ -3357,7 +3357,7 @@
   - grastainedglasspane
   price: 0.306497282035015
   tab: 1
-160-8:
+'160:8':
   name:
   - lgypane
   - lightgrayglasspane
@@ -3386,7 +3386,7 @@
   - siastainedglasspane
   price: 10.175369741722353
   tab: 1
-160-9:
+'160:9':
   name:
   - cgpane
   - cyanglasspane
@@ -3397,7 +3397,7 @@
   - cstainedglasspane
   price: 10.175369741722351
   tab: 1
-160-10:
+'160:10':
   name:
   - prpane
   - purpleglasspane
@@ -3408,7 +3408,7 @@
   - pustainedglasspane
   price: 10.175369741722353
   tab: 1
-160-11:
+'160:11':
   name:
   - bgpane
   - blueglasspane
@@ -3419,7 +3419,7 @@
   - blustainedglasspane
   price: 10.175369741722351
   tab: 1
-160-12:
+'160:12':
   name:
   - brgpane
   - brownglasspane
@@ -3430,7 +3430,7 @@
   - brostainedglasspane
   price: 1.7659907048280954
   tab: 1
-160-13:
+'160:13':
   name:
   - dgrpane
   - darkgreenglasspane
@@ -3453,7 +3453,7 @@
   - grestainedglasspane
   price: 0.06237446339078467
   tab: 1
-160-14:
+'160:14':
   name:
   - rgpane
   - redglasspane
@@ -3464,7 +3464,7 @@
   - rstainedglasspane
   price: 10.175369741722351
   tab: 1
-160-15:
+'160:15':
   name:
   - blgpane
   - blackglasspane
@@ -3475,7 +3475,7 @@
   - blastainedglasspane
   price: 4.590291825849206
   tab: 1
-161-0:
+'161:0':
   name:
   - acacialeaves
   - acaciatreeleaves
@@ -3508,7 +3508,7 @@
   - awoodleaf
   price: 4.0736509245908445
   tab: 1
-161-1:
+'161:1':
   name:
   - darkoakleaves
   - darkoaktreeleaves
@@ -3556,7 +3556,7 @@
   - dowoodleaf
   price: 1.246637914058326
   tab: 1
-162-0:
+'162:0':
   name:
   - acacia
   - acaciatree
@@ -3569,7 +3569,7 @@
   - awood
   price: 2.682168836509329
   tab: 0
-162-1:
+'162:1':
   name:
   - darkoak
   - darkoaktree
@@ -3587,7 +3587,7 @@
   - dowood
   price: 1.390834460467751
   tab: 0
-163-0:
+'163:0':
   name:
   - acaciawoodenstairs
   - acaciawoodstairs
@@ -3607,7 +3607,7 @@
   - astair
   price: 3.9146984688160527
   tab: 0
-164-0:
+'164:0':
   name:
   - darkoakwoodenstairs
   - darkoakwoodstairs
@@ -3635,13 +3635,13 @@
   - dostair
   price: 4.367505168397253
   tab: 0
-165-0:
+'165:0':
   name:
   - slime
   - slimeblock
   price: 9.303745781222544
   tab: 1
-167-0:
+'167:0':
   name:
   - irontrapdoor
   - itrapdoor
@@ -3649,33 +3649,33 @@
   - idoortrap
   price: 18.485560616455945
   tab: 2
-168-0:
+'168:0':
   name:
   - pris
   - prismarine
   - prismarineblock
   price: 0.03755058951558081
   tab: 0
-168-1:
+'168:1':
   name:
   - pbrick
   - prismarinebrick
   price: 0.15121994962608015
   tab: 0
-168-2:
+'168:2':
   name:
   - dpris
   - darkprismarine
   price: 7.778092559934216
   tab: 0
-169-0:
+'169:0':
   name:
   - lantern
   - sealantern
   - sealanternblock
   price: 5.945604474974449
   tab: 0
-170-0:
+'170:0':
   name:
   - hay
   - hayblock
@@ -3684,7 +3684,7 @@
   - hayofbale
   price: 12.405208101303947
   tab: 0
-171-0:
+'171:0':
   name:
   - whitecarpet
   - whitefloor
@@ -3694,7 +3694,7 @@
   - floor
   price: 0.9720889052222786
   tab: 1
-171-1:
+'171:1':
   name:
   - orangecarpet
   - orangefloor
@@ -3702,7 +3702,7 @@
   - ofloor
   price: 3.3054832567651857
   tab: 1
-171-2:
+'171:2':
   name:
   - magentacarpet
   - magentafloor
@@ -3710,7 +3710,7 @@
   - mfloor
   price: 8.59185313519961
   tab: 1
-171-3:
+'171:3':
   name:
   - lightbluecarpet
   - lightbluefloor
@@ -3724,7 +3724,7 @@
   - lblufloor
   price: 5.657038650019327
   tab: 1
-171-4:
+'171:4':
   name:
   - yellowcarpet
   - yellowfloor
@@ -3732,7 +3732,7 @@
   - yfloor
   price: 5.0203345672546815
   tab: 1
-171-5:
+'171:5':
   name:
   - lightgreencarpet
   - lightgreenfloor
@@ -3748,7 +3748,7 @@
   - lfloor
   price: 0.9720889052222788
   tab: 1
-171-6:
+'171:6':
   name:
   - pinkcarpet
   - pinkfloor
@@ -3756,7 +3756,7 @@
   - pifloor
   price: 1.271695336130898
   tab: 1
-171-7:
+'171:7':
   name:
   - grfloor
   - darkgraycarpet
@@ -3779,7 +3779,7 @@
   - grafloor
   price: 0.5969784733787669
   tab: 1
-171-8:
+'171:8':
   name:
   - lgfloor
   - lightgraycarpet
@@ -3800,7 +3800,7 @@
   - siafloor
   price: 1.4047428050724289
   tab: 1
-171-9:
+'171:9':
   name:
   - cyancarpet
   - cyanfloor
@@ -3808,7 +3808,7 @@
   - cfloor
   price: 2.5775115324698104
   tab: 1
-171-10:
+'171:10':
   name:
   - purplecarpet
   - purplefloor
@@ -3816,7 +3816,7 @@
   - pufloor
   price: 6.311378957688857
   tab: 1
-171-11:
+'171:11':
   name:
   - blfloor
   - bluecarpet
@@ -3825,7 +3825,7 @@
   - blufloor
   price: 0.8713063412866465
   tab: 1
-171-12:
+'171:12':
   name:
   - brfloor
   - browncarpet
@@ -3834,7 +3834,7 @@
   - brofloor
   price: 5.121243292056501
   tab: 1
-171-13:
+'171:13':
   name:
   - dgfloor
   - darkgreencarpet
@@ -3851,7 +3851,7 @@
   - grefloor
   price: 0.5245426571286742
   tab: 1
-171-14:
+'171:14':
   name:
   - redcarpet
   - redfloor
@@ -3859,7 +3859,7 @@
   - rfloor
   price: 1.8560739791575112
   tab: 1
-171-15:
+'171:15':
   name:
   - bkfloor
   - blackcarpet
@@ -3868,14 +3868,14 @@
   - blafloor
   price: 1.0216752089793213
   tab: 1
-172-0:
+'172:0':
   name:
   - hardenedclay
   - hardclay
   - hclay
   price: 6.633322714520652
   tab: 0
-173-0:
+'173:0':
   name:
   - coalblock
   - blockcoal
@@ -3885,27 +3885,27 @@
   - bcoal
   price: 9.876113622836774
   tab: 0
-174-0:
+'174:0':
   name:
   - packedice
   - packice
   - solidice
   price: 5.237339223210912
   tab: 0
-175-0:
+'175:0':
   name:
   - sunflower
   - yellowsunflower
   price: 8.360173141910751
   tab: 1
-175-1:
+'175:1':
   name:
   - lilac
   - magentalilac
   - syringa
   price: 9.05286954692983
   tab: 1
-175-2:
+'175:2':
   name:
   - longtallgrass
   - extratallgrass
@@ -3920,7 +3920,7 @@
   - dtgrass
   price: 10.0
   tab: 1
-175-3:
+'175:3':
   name:
   - bigfern
   - largefern
@@ -3930,40 +3930,40 @@
   - dfern
   price: 10.0
   tab: 1
-175-4:
+'175:4':
   name:
   - rosebush
   - redrosebush
   price: 7.875661274237213
   tab: 1
-175-5:
+'175:5':
   name:
   - peony
   - pinkpeony
   - paeonia
   price: 8.613494748283788
   tab: 1
-179-0:
+'179:0':
   name:
   - rsstone
   - redsandstone
   price: 10.80136002065397
   tab: 0
-179-1:
+'179:1':
   name:
   - crstone
   - redsandstonechiseled
   - chiseledredsandstone
   price: 7.400588185806746
   tab: 0
-179-2:
+'179:2':
   name:
   - srstone
   - redsandstonesmooth
   - smoothredsandstone
   price: 13.990529776988527
   tab: 0
-180-0:
+'180:0':
   name:
   - redsandstonestair
   - redsandstonestairs
@@ -3971,7 +3971,7 @@
   - stairredsandstone
   price: 3.914698468816053
   tab: 0
-183-0:
+'183:0':
   name:
   - sprucefencegate
   - sfencegate
@@ -3979,7 +3979,7 @@
   - sprucegate
   price: 27.797705604856866
   tab: 2
-184-0:
+'184:0':
   name:
   - birchfencegate
   - bfencegate
@@ -3987,7 +3987,7 @@
   - birchgate
   price: 23.471756812251098
   tab: 2
-185-0:
+'185:0':
   name:
   - junglefencegate
   - jfencegate
@@ -3995,7 +3995,7 @@
   - junglegate
   price: 10.801360020653972
   tab: 2
-186-0:
+'186:0':
   name:
   - darkoakfencegate
   - doakfencegate
@@ -4004,7 +4004,7 @@
   - dogate
   price: 21.24867524585708
   tab: 2
-187-0:
+'187:0':
   name:
   - acaciafencegate
   - afencegate
@@ -4012,38 +4012,38 @@
   - agate
   price: 37.09614588935621
   tab: 2
-188-0:
+'188:0':
   name:
   - sprucefence
   - sfence
   price: 1.0845288217010371
   tab: 1
-189-0:
+'189:0':
   name:
   - birchfence
   - bfence
   price: 9.974874759065143
   tab: 1
-190-0:
+'190:0':
   name:
   - junglefence
   - jfence
   price: 2.551991616306742
   tab: 1
-191-0:
+'191:0':
   name:
   - darkoakfence
   - dofence
   - doakfence
   price: 15.454248737885813
   tab: 1
-192-0:
+'192:0':
   name:
   - acaciafence
   - afence
   price: 1.989962529180697
   tab: 1
-256-0:
+'256:0':
   name:
   - ironshovel
   - ironspade
@@ -4053,7 +4053,7 @@
   - steelspade
   price: 41.38699575203341
   tab: 6
-257-0:
+'257:0':
   name:
   - ironpickaxe
   - ironpick
@@ -4063,14 +4063,14 @@
   - ipick
   price: 40.97722351686476
   tab: 6
-258-0:
+'258:0':
   name:
   - ironaxe
   - iaxe
   - steelaxe
   price: 50.0
   tab: 6
-259-0:
+'259:0':
   name:
   - flintandsteel
   - flintandiron
@@ -4084,41 +4084,41 @@
   - lighter
   price: 11.230273064362171
   tab: 6
-260-0:
+'260:0':
   name:
   - apple
   - normalapple
   - redapple
   price: 4.51117938941079
   tab: 5
-261-0:
+'261:0':
   name:
   - bow
   price: 17.05642524412631
   tab: 7
-262-0:
+'262:0':
   name:
   - arrow
   price: 1.3354152357331341
   tab: 7
-263-0:
+'263:0':
   name:
   - coal
   price: 0.07046214442533374
   tab: 9
-263-1:
+'263:1':
   name:
   - charcoal
   - ccoal
   price: 9.900990099009901
   tab: 9
-264-0:
+'264:0':
   name:
   - diamond
   - crystal
   price: 147.0444074110381
   tab: 9
-265-0:
+'265:0':
   name:
   - ironingot
   - ironbar
@@ -4138,7 +4138,7 @@
   - bari
   price: 11.580519928978436
   tab: 9
-266-0:
+'266:0':
   name:
   - goldingot
   - goldbar
@@ -4152,21 +4152,21 @@
   - barg
   price: 12.540043659753904
   tab: 9
-267-0:
+'267:0':
   name:
   - ironsword
   - steelsword
   - isword
   price: 41.80086570955374
   tab: 7
-268-0:
+'268:0':
   name:
   - woodensword
   - woodsword
   - wsword
   price: 9.234832224823121
   tab: 7
-269-0:
+'269:0':
   name:
   - woodenshovel
   - woodenspade
@@ -4176,7 +4176,7 @@
   - wspade
   price: 8.874492252651534
   tab: 6
-270-0:
+'270:0':
   name:
   - woodenpickaxe
   - woodenpick
@@ -4186,14 +4186,14 @@
   - wpick
   price: 10.30301
   tab: 6
-271-0:
+'271:0':
   name:
   - woodenaxe
   - woodaxe
   - waxe
   price: 10.0
   tab: 6
-272-0:
+'272:0':
   name:
   - stonesword
   - cobblestonesword
@@ -4202,7 +4202,7 @@
   - ssword
   price: 9.234832224823121
   tab: 6
-273-0:
+'273:0':
   name:
   - stoneshovel
   - cobblestoneshovel
@@ -4216,7 +4216,7 @@
   - sspade
   price: 9.900990099009901
   tab: 6
-274-0:
+'274:0':
   name:
   - stonepickaxe
   - cobblestonepickaxe
@@ -4230,7 +4230,7 @@
   - spick
   price: 10.0
   tab: 6
-275-0:
+'275:0':
   name:
   - stoneaxe
   - cobblestoneaxe
@@ -4239,14 +4239,14 @@
   - saxe
   price: 26.182045598140068
   tab: 6
-276-0:
+'276:0':
   name:
   - diamondsword
   - crystalsword
   - dsword
   price: 328.10558180530836
   tab: 7
-277-0:
+'277:0':
   name:
   - diamondshovel
   - diamondspade
@@ -4256,7 +4256,7 @@
   - dspade
   price: 153.01500000000001
   tab: 6
-278-0:
+'278:0':
   name:
   - diamondpickaxe
   - diamondpick
@@ -4266,41 +4266,41 @@
   - dpick
   price: 469.03145796947945
   tab: 6
-279-0:
+'279:0':
   name:
   - diamondaxe
   - crystalaxe
   - daxe
   price: 61.619597017372335
   tab: 6
-280-0:
+'280:0':
   name:
   - stick
   - twig
   - branch
   price: 0.9553516757335492
   tab: 9
-281-0:
+'281:0':
   name:
   - bowl
   - woodenbowl
   - woodbowl
   price: 5.4906659801546605
   tab: 9
-282-0:
+'282:0':
   name:
   - mushroomsoup
   - mrsoup
   - soup
   price: 39.37830637118606
   tab: 5
-283-0:
+'283:0':
   name:
   - goldsword
   - gsword
   price: 23.94353912417735
   tab: 7
-284-0:
+'284:0':
   name:
   - goldshovel
   - goldspade
@@ -4308,7 +4308,7 @@
   - gspade
   price: 50.0
   tab: 6
-285-0:
+'285:0':
   name:
   - goldpickaxe
   - goldpick
@@ -4316,37 +4316,37 @@
   - gpick
   price: 50.0
   tab: 6
-286-0:
+'286:0':
   name:
   - goldaxe
   - gaxe
   price: 50.0
   tab: 7
-287-0:
+'287:0':
   name:
   - string
   - thread
   price: 1.83769700906684
   tab: 9
-288-0:
+'288:0':
   name:
   - feather
   price: 0.008697107004601428
   tab: 9
-289-0:
+'289:0':
   name:
   - gunpowder
   - sulfur
   price: 0.19980555345574808
   tab: 9
-290-0:
+'290:0':
   name:
   - woodenhoe
   - woodhoe
   - whoe
   price: 10.201
   tab: 6
-291-0:
+'291:0':
   name:
   - stonehoe
   - cobblestonehoe
@@ -4355,45 +4355,45 @@
   - shoe
   price: 9.705901479276445
   tab: 6
-292-0:
+'292:0':
   name:
   - ironhoe
   - steelhoe
   - ihoe
   price: 49.504950495049506
   tab: 6
-293-0:
+'293:0':
   name:
   - diamondhoe
   - crystalhoe
   - dhoe
   price: 200.0
   tab: 6
-294-0:
+'294:0':
   name:
   - goldhoe
   - ghoe
   price: 50.0
   tab: 6
-295-0:
+'295:0':
   name:
   - seeds
   - seed
   price: 6.758989661794363E-4
   tab: 9
-296-0:
+'296:0':
   name:
   - wheat
   - crops
   - crop
   price: 1.7414234299735143
   tab: 9
-297-0:
+'297:0':
   name:
   - bread
   price: 4.363749448344203
   tab: 5
-298-0:
+'298:0':
   name:
   - leatherhelmet
   - leatherhelm
@@ -4405,7 +4405,7 @@
   - lcoif
   price: 47.10226176271033
   tab: 7
-299-0:
+'299:0':
   name:
   - leatherchestplate
   - leatherplatebody
@@ -4419,7 +4419,7 @@
   - ltunic
   price: 48.04901722414081
   tab: 7
-300-0:
+'300:0':
   name:
   - leatherleggings
   - leatherlegs
@@ -4429,7 +4429,7 @@
   - lpants
   price: 48.04901722414081
   tab: 7
-301-0:
+'301:0':
   name:
   - leatherboots
   - leathershoes
@@ -4437,7 +4437,7 @@
   - lshoes
   price: 49.01480247034605
   tab: 7
-302-0:
+'302:0':
   name:
   - chainmailhelmet
   - chainmailhelm
@@ -4461,7 +4461,7 @@
   - cmcoif
   price: 51.005
   tab: 7
-303-0:
+'303:0':
   name:
   - chainmailchestplate
   - chainmailplatebody
@@ -4490,7 +4490,7 @@
   - cmtunic
   price: 50.5
   tab: 7
-304-0:
+'304:0':
   name:
   - chainmailleggings
   - chainmaillegs
@@ -4509,7 +4509,7 @@
   - cmpants
   price: 50.5
   tab: 7
-305-0:
+'305:0':
   name:
   - chainmailboots
   - chainmailshoes
@@ -4523,7 +4523,7 @@
   - cmshoes
   price: 51.005
   tab: 7
-306-0:
+'306:0':
   name:
   - ironhelmet
   - ironhelm
@@ -4543,7 +4543,7 @@
   - scoif
   price: 48.52950739638222
   tab: 7
-307-0:
+'307:0':
   name:
   - ironchestplate
   - ironplatebody
@@ -4564,7 +4564,7 @@
   - stunic
   price: 37.84177842173226
   tab: 7
-308-0:
+'308:0':
   name:
   - ironleggings
   - ironlegs
@@ -4580,7 +4580,7 @@
   - spants
   price: 47.10226176271033
   tab: 7
-309-0:
+'309:0':
   name:
   - ironboots
   - ironshoes
@@ -4592,7 +4592,7 @@
   - sshoes
   price: 51.005
   tab: 7
-310-0:
+'310:0':
   name:
   - diamondhelmet
   - diamondhelm
@@ -4612,7 +4612,7 @@
   - ccoif
   price: 525.50502505
   tab: 7
-311-0:
+'311:0':
   name:
   - diamondchestplate
   - diamondplatebody
@@ -4636,7 +4636,7 @@
   - ctunic
   price: 525.50502505
   tab: 7
-312-0:
+'312:0':
   name:
   - diamondleggings
   - diamondlegs
@@ -4652,7 +4652,7 @@
   - cpants
   price: 530.7600753004999
   tab: 7
-313-0:
+'313:0':
   name:
   - diamondboots
   - diamondshoes
@@ -4664,7 +4664,7 @@
   - cshoes
   price: 515.1505
   tab: 7
-314-0:
+'314:0':
   name:
   - goldhelmet
   - goldhelm
@@ -4676,7 +4676,7 @@
   - gcoif
   price: 97.05901479276444
   tab: 7
-315-0:
+'315:0':
   name:
   - goldchestplate
   - goldplatebody
@@ -4689,7 +4689,7 @@
   - gtunic
   price: 100.0
   tab: 7
-316-0:
+'316:0':
   name:
   - goldleggings
   - goldlegs
@@ -4699,7 +4699,7 @@
   - gpants
   price: 102.01
   tab: 7
-317-0:
+'317:0':
   name:
   - goldboots
   - goldshoes
@@ -4707,12 +4707,12 @@
   - gshoes
   price: 87.86625992724291
   tab: 7
-318-0:
+'318:0':
   name:
   - flint
   price: 0.08568743896288583
   tab: 9
-319-0:
+'319:0':
   name:
   - pork
   - porkchop
@@ -4722,7 +4722,7 @@
   - rporkchop
   price: 4.544843391929905
   tab: 5
-320-0:
+'320:0':
   name:
   - cookedpork
   - grilledpork
@@ -4739,20 +4739,20 @@
   - bacon
   price: 4.197086621256872
   tab: 5
-321-0:
+'321:0':
   name:
   - painting
   - picture
   price: 15.454515
   tab: 1
-322-0:
+'322:0':
   name:
   - goldenapple
   - goldapple
   - gapple
   price: 95.46832440871752
   tab: 5
-322-1:
+'322:1':
   name:
   - enchantedgoldenapple
   - enchantedgoldapple
@@ -4777,12 +4777,12 @@
   - mgapple
   price: 141.66027560312688
   tab: 5
-323-0:
+'323:0':
   name:
   - sign
   price: 7.105704163663927
   tab: 1
-324-0:
+'324:0':
   name:
   - woodendoor
   - wooddoor
@@ -4792,13 +4792,13 @@
   - odoor
   price: 21.17742597370594
   tab: 2
-325-0:
+'325:0':
   name:
   - bucket
   - bukkit
   price: 17.241816138351624
   tab: 4
-326-0:
+'326:0':
   name:
   - waterbucket
   - waterbukkit
@@ -4806,7 +4806,7 @@
   - wbukkit
   price: 46.1741611241156
   tab: 4
-327-0:
+'327:0':
   name:
   - magmabucket
   - magmabukkit
@@ -4816,19 +4816,19 @@
   - lbukkit
   price: 58.04844776849994
   tab: 4
-328-0:
+'328:0':
   name:
   - minecart
   - mcart
   - cart
   price: 44.37246126325767
   tab: 3
-329-0:
+'329:0':
   name:
   - saddle
   price: 90.5286954692983
   tab: 3
-330-0:
+'330:0':
   name:
   - irondoor
   - idoor
@@ -4840,7 +4840,7 @@
   - doors
   price: 18.302535263817763
   tab: 2
-331-0:
+'331:0':
   name:
   - redstonedust
   - redstone
@@ -4852,7 +4852,7 @@
   - rdust
   price: 0.004403101937026572
   tab: 2
-332-0:
+'332:0':
   name:
   - snow
   - snowball
@@ -4860,19 +4860,19 @@
   - sball
   price: 0.8528212622063157
   tab: 4
-333-0:
+'333:0':
   name:
   - boat
   price: 15.15
   tab: 3
-334-0:
+'334:0':
   name:
   - leather
   - cowhide
   - hide
   price: 1.2220742221922622
   tab: 9
-335-0:
+'335:0':
   name:
   - milkbucket
   - milkbukkit
@@ -4880,7 +4880,7 @@
   - mbukkit
   price: 48.52950739638222
   tab: 4
-336-0:
+'336:0':
   name:
   - claybrick
   - brick
@@ -4888,14 +4888,14 @@
   - rbrick
   price: 1.4223639568344058
   tab: 9
-337-0:
+'337:0':
   name:
   - clayball
   - cball
   - clay
   price: 2.688924824917507
   tab: 9
-338-0:
+'338:0':
   name:
   - reeds
   - reed
@@ -4904,24 +4904,24 @@
   - bamboo
   price: 0.051118646562173645
   tab: 9
-339-0:
+'339:0':
   name:
   - paper
   - papyrus
   price: 0.003120853007448569
   tab: 4
-340-0:
+'340:0':
   name:
   - book
   price: 10.69441586203364
   tab: 4
-341-0:
+'341:0':
   name:
   - slimeball
   - slball
   price: 3.508837084530462
   tab: 4
-342-0:
+'342:0':
   name:
   - chestminecart
   - storageminecart
@@ -4937,7 +4937,7 @@
   - ccart
   price: 50.0
   tab: 3
-343-0:
+'343:0':
   name:
   - furnaceminecart
   - engineminecart
@@ -4962,17 +4962,17 @@
   - fcart
   price: 50.0
   tab: 3
-344-0:
+'344:0':
   name:
   - egg
   price: 1.3266645429041322
   tab: 9
-345-0:
+'345:0':
   name:
   - compass
   price: 50.0
   tab: 6
-346-0:
+'346:0':
   name:
   - fishingrod
   - fishrod
@@ -4980,7 +4980,7 @@
   - rod
   price: 10.0
   tab: 6
-347-0:
+'347:0':
   name:
   - watch
   - goldwatch
@@ -4990,7 +4990,7 @@
   - clock
   price: 49.01480247034605
   tab: 6
-348-0:
+'348:0':
   name:
   - glowstonedust
   - glowingstonedust
@@ -5001,14 +5001,14 @@
   - gsdust
   price: 6.63332271452065
   tab: 9
-349-0:
+'349:0':
   name:
   - rawfish
   - rafish
   - fish
   price: 28.356439487514486
   tab: 5
-349-1:
+'349:1':
   name:
   - rawsalmonfish
   - rasalmonfish
@@ -5020,7 +5020,7 @@
   - fishs
   price: 43.93312996362147
   tab: 5
-349-2:
+'349:2':
   name:
   - rawclownfish
   - raclownfish
@@ -5036,7 +5036,7 @@
   - fishn
   price: 46.174161124115614
   tab: 5
-349-3:
+'349:3':
   name:
   - rawpufferfish
   - rapufferfish
@@ -5047,7 +5047,7 @@
   - fishp
   price: 33.2501553891306
   tab: 5
-350-0:
+'350:0':
   name:
   - cookedfish
   - cookfish
@@ -5060,7 +5060,7 @@
   - rofish
   price: 5.945604474974449
   tab: 5
-350-1:
+'350:1':
   name:
   - cookedsalmonfish
   - cooksalmonfish
@@ -5082,7 +5082,7 @@
   - rosalmon
   price: 27.797705604856866
   tab: 5
-351-0:
+'351:0':
   name:
   - dye
   - inksack
@@ -5143,7 +5143,7 @@
   - blackdye
   price: 9.396783239034768
   tab: 9
-351-1:
+'351:1':
   name:
   - rosered
   - roseredcolor
@@ -5161,7 +5161,7 @@
   - reddye
   price: 6.005060519724193
   tab: 9
-351-2:
+'351:2':
   name:
   - cactusgreen
   - greencactus
@@ -5176,7 +5176,7 @@
   - greendye
   price: 6.502620051485788
   tab: 9
-351-3:
+'351:3':
   name:
   - cocoabeans
   - cocoabean
@@ -5251,7 +5251,7 @@
   - browndye
   price: 2.287410612602332
   tab: 9
-351-4:
+'351:4':
   name:
   - lapislazuli
   - bluelapislazuli
@@ -5295,21 +5295,21 @@
   - bluedye
   price: 1.8560739791575125
   tab: 9
-351-5:
+'351:5':
   name:
   - purpledye
   - purplecolour
   - purplecolor
   price: 3.953845453504214
   tab: 9
-351-6:
+'351:6':
   name:
   - cyandye
   - cyancolour
   - cyancolor
   price: 7.549340008341461
   tab: 9
-351-7:
+'351:7':
   name:
   - lightgraydye
   - lightgraycolour
@@ -5328,7 +5328,7 @@
   - silverdye
   price: 3.5793647099295263
   tab: 9
-351-8:
+'351:8':
   name:
   - darkgraydye
   - darkgraycolour
@@ -5350,21 +5350,21 @@
   - greydye
   price: 8.764549383217126
   tab: 9
-351-9:
+'351:9':
   name:
   - pinkdye
   - pinkcolour
   - pinkcolor
   price: 0.9249092386222072
   tab: 9
-351-10:
+'351:10':
   name:
   - limedye
   - limecolour
   - limecolor
   price: 3.474096123297489
   tab: 9
-351-11:
+'351:11':
   name:
   - dandelionyellow
   - dandelionyellowcolour
@@ -5386,7 +5386,7 @@
   - yellowdye
   price: 9.585658582139367
   tab: 9
-351-12:
+'351:12':
   name:
   - lightbluecolour
   - lightbluecolor
@@ -5396,21 +5396,21 @@
   - lbluedye
   price: 0.30346265548021284
   tab: 9
-351-13:
+'351:13':
   name:
   - magentacolour
   - magentacolor
   - magentadye
   price: 1.1173911295274008
   tab: 9
-351-14:
+'351:14':
   name:
   - orangecolour
   - orangecolor
   - orangedye
   price: 0.49414291083564865
   tab: 9
-351-15:
+'351:15':
   name:
   - bonemeal
   - whitebonemeal
@@ -5441,28 +5441,28 @@
   - whitedye
   price: 0.004373472517121607
   tab: 9
-352-0:
+'352:0':
   name:
   - bone
   price: 0.16374953647734103
   tab: 4
-353-0:
+'353:0':
   name:
   - sugar
   - whitedust
   price: 0.006175689444632146
   tab: 9
-354-0:
+'354:0':
   name:
   - cake
   price: 39.37830637118606
   tab: 5
-355-0:
+'355:0':
   name:
   - bed
   price: 23.451572898473973
   tab: 1
-356-0:
+'356:0':
   name:
   - redstonerepeater
   - redstonerepeat
@@ -5496,12 +5496,12 @@
   - diode
   price: 32.59499597013097
   tab: 2
-357-0:
+'357:0':
   name:
   - cookie
   price: 2.5840039045376217
   tab: 5
-359-0:
+'359:0':
   name:
   - shears
   - shear
@@ -5513,7 +5513,7 @@
   - cutterwool
   price: 30.70596064679195
   tab: 6
-360-0:
+'360:0':
   name:
   - melonslice
   - mslice
@@ -5523,7 +5523,7 @@
   - melongreenslice
   price: 0.019136208345582453
   tab: 5
-361-0:
+'361:0':
   name:
   - pumpkinseeds
   - pseeds
@@ -5533,7 +5533,7 @@
   - seedspump
   price: 0.019471799537093444
   tab: 9
-362-0:
+'362:0':
   name:
   - melonseeds
   - mseeds
@@ -5544,7 +5544,7 @@
   - seedswatermelon
   price: 0.5245426571286741
   tab: 9
-363-0:
+'363:0':
   name:
   - rawbeef
   - rawsteak
@@ -5554,7 +5554,7 @@
   - plainbeef
   price: 0.9624642625963157
   tab: 5
-364-0:
+'364:0':
   name:
   - beef
   - steak
@@ -5565,7 +5565,7 @@
   - cookedcowmeat
   price: 1.2716953361308978
   tab: 5
-365-0:
+'365:0':
   name:
   - rawchicken
   - uncookedchicken
@@ -5575,7 +5575,7 @@
   - chickenraw
   price: 0.16374953647734122
   tab: 5
-366-0:
+'366:0':
   name:
   - cookedchicken
   - grilledchicken
@@ -5586,7 +5586,7 @@
   - cchicken
   price: 2.8756480299413743
   tab: 5
-367-0:
+'367:0':
   name:
   - rottenflesh
   - zombieflesh
@@ -5597,7 +5597,7 @@
   - zombieremains
   price: 0.17382343262227123
   tab: 5
-368-0:
+'368:0':
   name:
   - enderpearl
   - endpearl
@@ -5607,7 +5607,7 @@
   - endergem
   price: 4.018558681975226E-4
   tab: 4
-369-0:
+'369:0':
   name:
   - blazerod
   - goldenrod
@@ -5620,7 +5620,7 @@
   - gstick
   price: 23.00927047568973
   tab: 9
-370-0:
+'370:0':
   name:
   - ghasttear
   - ghastdrop
@@ -5631,7 +5631,7 @@
   - tear
   price: 37.46710734824976
   tab: 8
-371-0:
+'371:0':
   name:
   - goldnugget
   - gnugget
@@ -5641,7 +5641,7 @@
   - gball
   price: 2.264762982774586
   tab: 9
-372-0:
+'372:0':
   name:
   - netherstalk
   - deathstalk
@@ -5675,7 +5675,7 @@
   - dcrop
   price: 0.012567984701836806
   tab: 9
-374-0:
+'374:0':
   name:
   - glassbottle
   - bottle
@@ -5697,14 +5697,14 @@
   - eglassvase
   price: 3.4600245031052412
   tab: 8
-375-0:
+'375:0':
   name:
   - spidereye
   - eyeofspider
   - seye
   price: 4.239057487469441
   tab: 5
-376-0:
+'376:0':
   name:
   - fermentedspidereye
   - craftedspidereye
@@ -5720,7 +5720,7 @@
   - cseye
   price: 19.236148504582125
   tab: 8
-377-0:
+'377:0':
   name:
   - blazepowder
   - blazedust
@@ -5732,7 +5732,7 @@
   - bdust
   price: 11.465861315820227
   tab: 8
-378-0:
+'378:0':
   name:
   - magmacream
   - goldcream
@@ -5744,7 +5744,7 @@
   - ccream
   price: 33.5826569430219
   tab: 8
-379-0:
+'379:0':
   name:
   - bstand
   - pstand
@@ -5752,7 +5752,7 @@
   - potionstand
   price: 21.529912675834368
   tab: 8
-380-0:
+'380:0':
   name:
   - cauld
   - cauldron
@@ -5764,7 +5764,7 @@
   - pcauldron
   price: 44.959754203784826
   tab: 8
-381-0:
+'381:0':
   name:
   - eyeofender
   - endereye
@@ -5776,7 +5776,7 @@
   - eofender
   price: 8.283051950460704
   tab: 4
-382-0:
+'382:0':
   name:
   - glisteringmelon
   - speckledmelon
@@ -5787,14 +5787,14 @@
   - smelon
   price: 75.68355684346453
   tab: 8
-385-0:
+'385:0':
   name:
   - firecharge
   - fireball
   - grenade
   price: 79.0229427351468
   tab: 4
-386-0:
+'386:0':
   name:
   - bookandquill
   - booknquill
@@ -5803,7 +5803,7 @@
   - writeablebook
   price: 10.201
   tab: 4
-389-0:
+'389:0':
   name:
   - itemframe
   - pictureframe
@@ -5811,24 +5811,24 @@
   - pframe
   price: 11.609689553699988
   tab: 1
-390-0:
+'390:0':
   name:
   - flowerpot
   - pot
   price: 6.65003107782612
   tab: 1
-391-0:
+'391:0':
   name:
   - carrot
   price: 2.779770560485685
   tab: 5
-392-0:
+'392:0':
   name:
   - potato
   - rawpotato
   price: 2.592742189708373
   tab: 5
-393-0:
+'393:0':
   name:
   - bakedpotato
   - roastedpotato
@@ -5841,27 +5841,27 @@
   - cpotato
   price: 1.344462412458753
   tab: 5
-394-0:
+'394:0':
   name:
   - poisonouspotato
   - poisonpotato
   - ppotato
   price: 0.9052869546929833
   tab: 5
-395-0:
+'395:0':
   name:
   - emptymap
   - map
   price: 20.8120802
   tab: 4
-396-0:
+'396:0':
   name:
   - goldencarrot
   - goldcarrot
   - gcarrot
   price: 32.485141480526465
   tab: 8
-397-0:
+'397:0':
   name:
   - head
   - skull
@@ -5872,7 +5872,7 @@
   - skullskeleton
   price: 194.1180295855289
   tab: 1
-397-1:
+'397:1':
   name:
   - witherhead
   - witherskeletonhead
@@ -5888,7 +5888,7 @@
   - skullwskeletion
   price: 205.54601008545987
   tab: 1
-397-2:
+'397:2':
   name:
   - zohead
   - zombiehead
@@ -5897,7 +5897,7 @@
   - skullzombie
   price: 200.0
   tab: 1
-397-3:
+'397:3':
   name:
   - playerhead
   - humanhead
@@ -5913,7 +5913,7 @@
   - skullsteve
   price: 0.056086810852853046
   tab: 1
-397-4:
+'397:4':
   name:
   - crhead
   - creeperhead
@@ -5922,13 +5922,13 @@
   - skullcreeper
   price: 204.02
   tab: 1
-398-0:
+'398:0':
   name:
   - carrotonastick
   - carrotonstick
   price: 17.05642524412631
   tab: 3
-399-0:
+'399:0':
   name:
   - netherstar
   - hellstar
@@ -5937,7 +5937,7 @@
   - star
   price: 493.38104606358087
   tab: 9
-400-0:
+'400:0':
   name:
   - pumpkinpie
   - pumpkincake
@@ -5946,7 +5946,7 @@
   - pie
   price: 8.764549383217124
   tab: 5
-402-0:
+'402:0':
   name:
   - fireworkstar
   - fworkstar
@@ -5962,7 +5962,7 @@
   - fwcharge
   price: 14.130435074758413
   tab: 4
-404-0:
+'404:0':
   name:
   - redstonecomparator
   - redstonecomparer
@@ -5981,7 +5981,7 @@
   - compare
   price: 43.49814847883314
   tab: 2
-405-0:
+'405:0':
   name:
   - netherbrick
   - nbrick
@@ -5991,7 +5991,7 @@
   - hbrick
   price: 2.293172263164045
   tab: 9
-406-0:
+'406:0':
   name:
   - netherquartz
   - deathquartz
@@ -6002,7 +6002,7 @@
   - quartz
   price: 2.26281546000773
   tab: 9
-407-0:
+'407:0':
   name:
   - tntminecart
   - dynamiteminecart
@@ -6024,7 +6024,7 @@
   - tcart
   price: 50.0
   tab: 3
-408-0:
+'408:0':
   name:
   - hopperminecart
   - hoppermcart
@@ -6037,51 +6037,51 @@
   - hcart
   price: 50.0
   tab: 3
-409-0:
+'409:0':
   name:
   - prismarineshard
   - priseshard
   price: 28.075682660905432
   tab: 9
-410-0:
+'410:0':
   name:
   - prisemarinecrystals
   - prisecrystals
   price: 34.600245031052395
   tab: 9
-411-0:
+'411:0':
   name:
   - rabbit
   - rabbitmeat
   price: 30.705960646791947
   tab: 5
-412-0:
+'412:0':
   name:
   - cookedrabbit
   price: 38.60239816800908
   tab: 5
-413-0:
+'413:0':
   name:
   - rabbitstew
   - hasenpfeffer
   price: 50.0
   tab: 5
-414-0:
+'414:0':
   name:
   - rabbitfoot
   price: 44.81618587589025
   tab: 8
-415-0:
+'415:0':
   name:
   - rabbithide
   price: 6.9716888385178155
   tab: 9
-416-0:
+'416:0':
   name:
   - armorstand
   price: 51.515049999999995
   tab: 1
-417-0:
+'417:0':
   name:
   - ironhorsearmor
   - ironharmor
@@ -6097,7 +6097,7 @@
   - sarmor
   price: 46.1741611241156
   tab: 4
-418-0:
+'418:0':
   name:
   - goldenhorsearmor
   - goldenharmor
@@ -6110,7 +6110,7 @@
   - garmor
   price: 114.66058861784879
   tab: 4
-419-0:
+'419:0':
   name:
   - diamondhorsearmor
   - diamondharmor
@@ -6126,32 +6126,32 @@
   - carmor
   price: 351.46503970897163
   tab: 4
-420-0:
+'420:0':
   name:
   - lead
   - leash
   - rope
   price: 27.797705604856866
   tab: 6
-421-0:
+'421:0':
   name:
   - nametag
   - tag
   price: 56.90466402166448
   tab: 6
-423-0:
+'423:0':
   name:
   - mutton
   - sheepmeat
   price: 3.042322747756337
   tab: 5
-424-0:
+'424:0':
   name:
   - cookedmutton
   - cookedsheep
   price: 1.0387162267393955
   tab: 5
-425-0:
+'425:0':
   name:
   - banner
   - blackbanner
@@ -6159,110 +6159,110 @@
   - wallbanner
   price: 39.772089434897936
   tab: 1
-425-1:
+'425:1':
   name:
   - redbanner
   price: 51.005
   tab: 1
-425-2:
+'425:2':
   name:
   - greenbanner
   price: 45.264347734649164
   tab: 1
-425-3:
+'425:3':
   name:
   - brownbanner
   price: 40.571508432539375
   tab: 1
-425-4:
+'425:4':
   name:
   - bluebanner
   price: 50.0
   tab: 1
-425-5:
+'425:5':
   name:
   - purplebanner
   price: 50.0
   tab: 1
-425-6:
+'425:6':
   name:
   - cyanbanner
   price: 50.0
   tab: 1
-425-7:
+'425:7':
   name:
   - lgreybanner
   - lightgreybanner
   price: 40.571508432539375
   tab: 1
-425-8:
+'425:8':
   name:
   - greybanner
   price: 40.571508432539375
   tab: 1
-425-9:
+'425:9':
   name:
   - pinkbanner
   price: 50.0
   tab: 1
-425-10:
+'425:10':
   name:
   - limebanner
   price: 40.571508432539375
   tab: 1
-425-11:
+'425:11':
   name:
   - yellowbanner
   price: 40.571508432539375
   tab: 1
-425-12:
+'425:12':
   name:
   - lbluebanner
   - lightbluebanner
   price: 50.0
   tab: 1
-425-13:
+'425:13':
   name:
   - magentabanner
   price: 50.0
   tab: 1
-425-14:
+'425:14':
   name:
   - orangebanner
   price: 40.571508432539375
   tab: 1
-425-15:
+'425:15':
   name:
   - whitebanner
   price: 40.169810329246914
   tab: 1
-427-0:
+'427:0':
   name:
   - sprucedooritem
   price: 7.524026195852344
   tab: 2
-428-0:
+'428:0':
   name:
   - birchdoor
   - birchdooritem
   price: 0.6378955916288818
   tab: 2
-429-0:
+'429:0':
   name:
   - jungledooritem
   price: 3.7868273746133148
   tab: 2
-430-0:
+'430:0':
   name:
   - acaciadooritem
   price: 14.654882556343981
   tab: 2
-431-0:
+'431:0':
   name:
   - darkoakdooritem
   price: 13.943617908267978
   tab: 2
-2256-0:
+'2256:0':
   name:
   - 13disc
   - goldmusicrecord
@@ -6310,7 +6310,7 @@
   - 1cd
   price: 121.71452529761815
   tab: 4
-2257-0:
+'2257:0':
   name:
   - catdisc
   - greenmusicrecord
@@ -6358,7 +6358,7 @@
   - 2cd
   price: 125.40259712866128
   tab: 4
-2258-0:
+'2258:0':
   name:
   - blocksdisc
   - orangemusicrecord
@@ -6406,7 +6406,7 @@
   - 3cd
   price: 141.306785288131
   tab: 4
-2259-0:
+'2259:0':
   name:
   - chirpdisc
   - redmusicrecord
@@ -6454,7 +6454,7 @@
   - 4cd
   price: 141.306785288131
   tab: 4
-2260-0:
+'2260:0':
   name:
   - fardisc
   - lightgreenmusicrecord
@@ -6526,7 +6526,7 @@
   - 5cd
   price: 138.52248337234684
   tab: 4
-2261-0:
+'2261:0':
   name:
   - malldisc
   - purplemusicrecord
@@ -6574,7 +6574,7 @@
   - 6cd
   price: 138.52248337234684
   tab: 4
-2262-0:
+'2262:0':
   name:
   - mellohidisc
   - pinkmusicrecord
@@ -6622,7 +6622,7 @@
   - 7cd
   price: 147.04440741103812
   tab: 4
-2263-0:
+'2263:0':
   name:
   - staldisc
   - blackmusicrecord
@@ -6670,7 +6670,7 @@
   - 8cd
   price: 138.52248337234684
   tab: 4
-2264-0:
+'2264:0':
   name:
   - straddisc
   - whitemusicrecord
@@ -6718,7 +6718,7 @@
   - 9cd
   price: 144.14705167242244
   tab: 4
-2265-0:
+'2265:0':
   name:
   - warddisc
   - darkgreenmusicrecord
@@ -6790,7 +6790,7 @@
   - 10cd
   price: 145.58852218914666
   tab: 4
-2266-0:
+'2266:0':
   name:
   - 11disc
   - crackedmusicrecord

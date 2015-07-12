@@ -2,11 +2,13 @@ package com.hexicraft.trade.commands;
 
 import com.hexicraft.trade.HexiTrade;
 import com.hexicraft.trade.ItemListing;
+import com.hexicraft.trade.ItemMap;
 import com.hexicraft.trade.ReturnCode;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 /**
  * @author Ollie
@@ -37,7 +39,7 @@ public class TradeCommand implements CommandExecutor{
 
         ReturnCode code;
 
-        if (args.length != 0 || !sender.hasPermission("hexitrade.admin")) {
+        if (args.length == 0 || !sender.hasPermission("hexitrade.admin")) {
             code = sendTradeHelp(sender);
         } else {
             code = trade(sender, args);
@@ -63,14 +65,14 @@ public class TradeCommand implements CommandExecutor{
                 ChatColor.DARK_GRAY + " - - -");
         sender.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/buy" + ChatColor.WHITE +
                 " - Opens the buy interface");
-        sender.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/buy <item> <amount>" + ChatColor.WHITE +
+        sender.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/buy <item> [amount]" + ChatColor.WHITE +
                 " - Buys an item");
-        sender.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/sell <amount>" + ChatColor.WHITE +
-                " - Sells the item in your hand");
-        sender.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/price" + ChatColor.WHITE +
-                " - Gives the sell price of the item in your hand");
-        sender.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/price <item> <amount>" + ChatColor.WHITE +
+        sender.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/sell [item] [amount]" + ChatColor.WHITE +
+                " - Sells an item");
+        sender.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/price [item] [amount]" + ChatColor.WHITE +
                 " - Gives the buy price of an item");
+        sender.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/worth [item] [amount]" + ChatColor.WHITE +
+                " - Gives the sell worth of an item");
         if (sender.hasPermission("hexitrade.admin")) {
             sender.sendMessage(ChatColor.DARK_GRAY + "- " + ChatColor.GOLD + "/trade admin" + ChatColor.WHITE +
                     " - Lists HexiTrade admin commands");
@@ -86,28 +88,29 @@ public class TradeCommand implements CommandExecutor{
      */
     private ReturnCode trade(CommandSender sender, String[] args) {
 
-        if (plugin.isActive()) {
-            switch (args[0]) {
-                case "setprice":
+
+        switch (args[0]) {
+            case "reload":
+                plugin.reload();
+                sender.sendMessage(ChatColor.GOLD + "HexiTrade has been reloaded.");
+                return ReturnCode.SUCCESS;
+            case "admin":
+                return sendAdminHelp(sender);
+            case "setprice":
+                if (!(sender instanceof Player)) {
+                    return ReturnCode.NOT_PLAYER;
+                } else if (!plugin.isActive()) {
+                    return ReturnCode.NOT_ACTIVE;
+                } else {
+                    Player player = (Player) sender;
                     if (args.length > 2) {
-                        return setPrice(sender, args[1], args[2]);
+                        return setPrice(player, args[1], args[2]);
                     } else {
                         return ReturnCode.TOO_FEW_ARGUMENTS;
                     }
-                default:
-                    return ReturnCode.INVALID_ARGUMENT;
-            }
-        } else {
-            switch (args[0]) {
-                case "reload":
-                    plugin.reload();
-                    sender.sendMessage(ChatColor.GOLD + "HexiTrade has been reloaded.");
-                    return ReturnCode.SUCCESS;
-                case "admin":
-                    return sendAdminHelp(sender);
-                default:
-                    return ReturnCode.NOT_ACTIVE;
-            }
+                }
+            default:
+                return ReturnCode.INVALID_ARGUMENT;
         }
     }
 
@@ -131,23 +134,24 @@ public class TradeCommand implements CommandExecutor{
 
     /**
      * Sets the price of an ItemListing
-     * @param sender Source of the command
+     * @param player Source of the command
      * @param alias Alias of the item to be set
      * @param priceStr String version of the new price
      * @return Corresponding ReturnCode
      */
-    private ReturnCode setPrice(CommandSender sender, String alias, String priceStr) {
+    private ReturnCode setPrice(Player player, String alias, String priceStr) {
         double price;
         try {
             price = Double.parseDouble(priceStr);
         } catch (NumberFormatException e) {
             return ReturnCode.INVALID_ARGUMENT;
         }
-        ItemListing itemListing = plugin.getItemMap().getFromAlias(alias);
+        ItemMap map = plugin.getWorlds().get(player.getLocation().getWorld().getName());
+        ItemListing itemListing = map.getFromAlias(alias);
         if (itemListing == null) {
             return ReturnCode.ITEM_NOT_FOUND;
         } else {
-            itemListing.setPrice(price, sender, plugin.getFileLogger());
+            itemListing.setPrice(price, player, plugin.getFileLogger());
             return ReturnCode.SUCCESS;
         }
     }

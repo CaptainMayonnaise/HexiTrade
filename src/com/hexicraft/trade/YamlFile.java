@@ -12,13 +12,19 @@ import java.io.*;
  */
 public class YamlFile extends YamlConfiguration {
 
-    private JavaPlugin plugin;
     private String fileName;
+    private JavaPlugin plugin;
+    private String internalName;
     private File configFile;
 
     YamlFile(JavaPlugin plugin, String fileName) {
+        this(plugin, fileName, fileName);
+    }
+
+    YamlFile(JavaPlugin plugin, String fileName, String internalName) {
         this.plugin = plugin;
         this.fileName = fileName;
+        this.internalName = internalName;
         configFile = new File(plugin.getDataFolder(), fileName);
     }
 
@@ -28,7 +34,7 @@ public class YamlFile extends YamlConfiguration {
     public boolean loadFile() {
         try {
             if (!configFile.exists()) {
-                load(new InputStreamReader(getClass().getClassLoader().getResourceAsStream(fileName)));
+                load(new InputStreamReader(plugin.getResource(internalName)));
                 saveFile();
             } else {
                 load(configFile);
@@ -64,5 +70,9 @@ public class YamlFile extends YamlConfiguration {
 
     public void setNoSave(String path, Object value) {
         super.set(path, value);
+    }
+
+    public String getFileName() {
+        return fileName;
     }
 }
